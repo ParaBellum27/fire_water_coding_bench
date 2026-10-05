@@ -1,20 +1,7 @@
-Build one standalone, playable browser recreation of the level shown in the three attached chronological contact sheets.
+Recreate this playable level in one standalone index.html with inline HTML/CSS/JS.
 
-Evidence
-- There are 80 frames from one complete playthrough, including the starting arrangement and victory screen. They are supplied as THREE image attachments, not 80 separate images.
-- Read each sheet left to right, then top to bottom. Sheet 1 contains frames 1–27, sheet 2 frames 28–54, and sheet 3 frames 55–80 with one unused final cell.
-- Each frame is labeled with its sequence number. The accompanying timestamp list gives simulated gameplay milliseconds, not wall-clock time. Original captures are 1280 x 960; contact-sheet thumbnails are 640 x 480, with labels added above them. Small details may be difficult to resolve.
-- You receive no original game code, assets, private state, input trace, or replay controller. Do not retrieve or copy an existing implementation. Draw your own graphics with browser APIs.
-- One successful route does not establish every rule. Infer a coherent interactive game from the visible transitions; do not assume certainty about behavior absent from the images.
+Evidence: 80 chronological frames in three sheets (1–27, 28–54, 55–80). Read left-to-right, top-to-bottom; last cell blank. Captures 1280x960, thumbnails 640x480. Labels are frame numbers; supplied times are simulated seconds. No original code, assets, private state, or input trace. Draw original graphics; do not fetch an existing game. Infer only a coherent game from visible transitions, not certainty about unseen rules.
 
-Requirements
-- Return a complete index.html containing all HTML, CSS, and JavaScript. It must run in Chromium from a basic static HTTP server, with no dependencies, external assets, network calls, imports, build tools, or backend.
-- Recreate this level only, with its recognizable layout, characters, colored pools, gems, switches, barriers/bridges, hanging platforms, and matching exits.
-- Fireboy: ArrowLeft/ArrowRight to move, ArrowUp to jump. Watergirl: A/D to move, W to jump. Support simultaneous held keys and prevent page scrolling.
-- Implement interactive movement, gravity, collisions, and visible mechanisms. Moving/hanging platforms must participate in gameplay. Players must be able to take routes other than the supplied route.
-- Implement the cooperative progression, collectibles, and completion suggested by the images. Include a restart button and R shortcut that restore the initial scene and progress.
-- Show visible loss/win feedback. Fit the browser window without changing the logical layout.
-- Do not automatically animate the demonstrated route, interpolate recorded positions, use the screenshots as backgrounds, or declare victory based only on elapsed time. No mockup, scaffold, TODOs, or explanations.
+Match the layout, characters, pools, gems, switches, bridges/barriers, hanging platforms, exits, and cooperative progression. Real gravity, collisions, interactive platforms, and alternative routes—not decoration or playback. Fireboy: arrows left/right/up. Watergirl: A/D/W. Simultaneous held controls; prevent scrolling. Restart button and R reset all progress. Visible loss/win; responsive scaling. No screenshot backgrounds, scripted routes, position interpolation, or timed victory.
 
-Output
-Return only the complete HTML source, starting with <!doctype html>. No Markdown fences or additional commentary. You have one submission. It will be exercised unchanged, without model feedback or assistant repairs.
+Run from a static server in Chromium: no dependencies, external assets, imports, network, or backend. Complete implementation, no TODOs. Return only HTML starting <!doctype html>, no fences/commentary. One unchanged submission; no feedback or repairs.

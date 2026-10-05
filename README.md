@@ -6,6 +6,17 @@ The current experiment is **screenshot-first model recreation**: use captured ga
 
 The documents in `docs/` preserve earlier specification-driven behavioral-benchmark designs as historical background. They are not a claim that the current screenshot-first experiment has a finished grader or released candidate package.
 
+## Current branch: minimal Groq pilot
+
+`experiment/screenshot-pilot-next` uses only Groq for this attempted recreation; candidate providers in scope are Mistral, Gemini, and Groq, not OpenAI. Groq hosts the selected Alibaba model `qwen/qwen3.8-27b`.
+
+- [Browse the 80 original screenshots](task-public/groq-screenshot-pilot/screenshots/) and [three contact sheets](task-public/groq-screenshot-pilot/). Sheets resize and label the frames; they are not equivalent to 80 separate image inputs. Groq's documented limit is three images per request.
+- One tiny key-check generation returned HTTP 200 and `OK` (19 tokens). The local key variable was named `GROQ_API_Key`; standard scripts expect `GROQ_API_KEY`. No key values are published.
+- Two recreation requests were rejected before any code was generated: first HTTP 413 (7,557 requested input tokens versus a 7,000 ITPM allowance), then HTTP 429 (1,291 expected output tokens versus a 1,000 OTPM allowance). The second request shortened wording and timestamp formatting without changing the images or game requirements.
+- [Request settings, responses, and short checklist](results/groq-screenshot-pilot/) are committed directly for inspection. Zero submissions, zero code repairs, no gameplay assessment or percentage score. This is an account-limit blocker, not evidence of the model's reconstruction ability.
+
+No new recorder, grader, agent framework, dependencies, or repair loop was added. Further requests wait for the user's choice of higher Groq limits, another approved provider, or pausing. Future assessment uses launch, controls, progression, hazards, cooperative mechanisms, restart, and completion as pass/fail/not reached; check-ins occur after evidence preparation, generation, and gameplay assessment.
+
 ## Run
 
 Prerequisites: Node.js/npm and Python 3 (used by reference setup); GitHub CLI (`gh`) is needed only for the release-download command. From a fresh clone:

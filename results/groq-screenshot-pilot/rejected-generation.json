@@ -1,0 +1,13 @@
+{
+  "httpStatus": 413,
+  "startedAt": "2026-10-05T18:33:15.510Z",
+  "finishedAt": "2026-10-05T18:33:35.222Z",
+  "elapsedMs": 19712,
+  "error": {
+    "message": "Request too large for model `qwen/qwen3.8-27b` in organization `org_01m44k7pvhe3j8kextj1sr18fv` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Requested 7557, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+    "type": "tokens",
+    "code": "rate_limit_exceeded"
+  },
+  "requestCount": 1,
+  "assistantCodeRepairs": 0
+}

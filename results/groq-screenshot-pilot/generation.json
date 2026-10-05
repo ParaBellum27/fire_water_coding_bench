@@ -1,0 +1,15 @@
+{
+  "httpStatus": 429,
+  "startedAt": "2026-10-05T18:34:55.953Z",
+  "finishedAt": "2026-10-05T18:34:56.470Z",
+  "elapsedMs": 517,
+  "error": {
+    "message": "Request too large for model `qwen/qwen3.8-27b` in organization `org_01m44k7pvhe3j8kextj1sr18fv` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1291. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+    "type": "tokens",
+    "code": "rate_limit_exceeded"
+  },
+  "requestCount": 2,
+  "rejectedRequestsBeforeGeneration": 2,
+  "generatedSubmissions": 0,
+  "assistantCodeRepairs": 0
+}

@@ -1,0 +1,28 @@
+{
+  "purpose": "One unchanged Groq recreation submission; not an overall benchmark score",
+  "model": "qwen/qwen3.8-27b",
+  "temperature": 1,
+  "reasoning_effort": "default",
+  "max_completion_tokens": 16384,
+  "promptFile": "../../task-public/groq-screenshot-pilot/prompt.txt",
+  "promptSha256": "a8e46e2ef1e1dbb3fffe61ed9abf70caa69b57481f824e6afdfe8bbc6ed22380",
+  "timingText": "Frame timestamps in simulated milliseconds:\n1: 0, 2: 400, 3: 800, 4: 1200, 5: 1600, 6: 2300, 7: 3000, 8: 3900, 9: 4800, 10: 5600, 11: 6400, 12: 7200, 13: 8000, 14: 9000, 15: 10000, 16: 11000, 17: 12000, 18: 12800, 19: 13500, 20: 14300, 21: 15000, 22: 15800, 23: 16500, 24: 17300, 25: 18000, 26: 18500, 27: 19000, 28: 19400, 29: 19800, 30: 20100, 31: 20400, 32: 20700, 33: 21000, 34: 21300, 35: 21500, 36: 21800, 37: 22000, 38: 22400, 39: 22800, 40: 23200, 41: 23600, 42: 23800, 43: 24000, 44: 24300, 45: 24500, 46: 24800, 47: 25000, 48: 25300, 49: 25500, 50: 26000, 51: 26400, 52: 27100, 53: 27800, 54: 28400, 55: 29000, 56: 29800, 57: 30600, 58: 31700, 59: 32800, 60: 33400, 61: 34000, 62: 34500, 63: 35000, 64: 35800, 65: 36500, 66: 37300, 67: 38000, 68: 38500, 69: 39000, 70: 39500, 71: 40000, 72: 41000, 73: 42000, 74: 42800, 75: 43500, 76: 45000, 77: 46000, 78: 47000, 79: 47800, 80: 48500",
+  "imageFiles": [
+    {
+      "file": "../../task-public/groq-screenshot-pilot/contact-sheet-1.jpg",
+      "sha256": "b97812ddc23aff6d55de9ad4e9ed89b410dc743e82c28b9bed4efb115d79b560"
+    },
+    {
+      "file": "../../task-public/groq-screenshot-pilot/contact-sheet-2.jpg",
+      "sha256": "93faa262c0901e153e371a0599efe9464e119c14495d0f9b67d203b038434eb4"
+    },
+    {
+      "file": "../../task-public/groq-screenshot-pilot/contact-sheet-3.jpg",
+      "sha256": "119319b16ef29908992799d8556f351c57c5c56d54d40028aece619fe8bdf276"
+    }
+  ],
+  "transport": "Images sent as base64 JPEG data URLs in this order. No original source, private state, or input trace sent.",
+  "screenshotCount": 80,
+  "imageAttachments": 3,
+  "codeRepairs": 0
+}

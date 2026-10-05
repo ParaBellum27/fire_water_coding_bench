@@ -1,0 +1,72 @@
+{
+  "provider": "Groq",
+  "model": "qwen/qwen3.8-27b",
+  "branch": "experiment/screenshot-pilot-next",
+  "evidence": {
+    "screenshots": 80,
+    "contactSheets": 3,
+    "originalPngsCommitted": true
+  },
+  "keyCheck": {
+    "httpStatus": 200,
+    "reply": "OK",
+    "totalTokens": 19
+  },
+  "recreationRequests": 2,
+  "generatedSubmissions": 0,
+  "assistantCodeRepairs": 0,
+  "status": "BLOCKED_BY_ACCOUNT_LIMITS_NOT_A_MODEL_FAILURE",
+  "rejections": [
+    {
+      "request": 1,
+      "httpStatus": 413,
+      "inputTokensPerMinuteLimit": 7000,
+      "requestedInputTokens": 7557
+    },
+    {
+      "request": 2,
+      "httpStatus": 429,
+      "outputTokensPerMinuteLimit": 1000,
+      "expectedOutputTokens": 1291
+    }
+  ],
+  "checklist": [
+    {
+      "check": "Launch",
+      "result": "NOT RUN",
+      "reason": "Provider rejected both requests before returning game code."
+    },
+    {
+      "check": "Controls",
+      "result": "NOT RUN",
+      "reason": "Provider rejected both requests before returning game code."
+    },
+    {
+      "check": "Progression",
+      "result": "NOT RUN",
+      "reason": "Provider rejected both requests before returning game code."
+    },
+    {
+      "check": "Hazards",
+      "result": "NOT RUN",
+      "reason": "Provider rejected both requests before returning game code."
+    },
+    {
+      "check": "Cooperative mechanisms",
+      "result": "NOT RUN",
+      "reason": "Provider rejected both requests before returning game code."
+    },
+    {
+      "check": "Restart",
+      "result": "NOT RUN",
+      "reason": "Provider rejected both requests before returning game code."
+    },
+    {
+      "check": "Completion",
+      "result": "NOT RUN",
+      "reason": "Provider rejected both requests before returning game code."
+    }
+  ],
+  "overallPercentage": null,
+  "nextAction": "User chooses higher Groq account limits, another approved provider, or pause. No further requests without that decision."
+}
