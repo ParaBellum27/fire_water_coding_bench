@@ -6,7 +6,34 @@ The current experiment is **screenshot-first model recreation**: use captured ga
 
 The documents in `docs/` preserve earlier specification-driven behavioral-benchmark designs as historical background. They are not a claim that the current screenshot-first experiment has a finished grader or released candidate package.
 
-## Current branch: minimal screenshot pilot
+## Current branch: explicit-contract Ministral benchmark
+
+`experiment/ministral-8b-benchmark-v2` freezes an [explicit public correctness contract and 11-check protocol](task-public/ministral-benchmark-v2/) before generation. It retains the exact same three contact-sheet JPEGs, timestamps, `ministral-8b-latest` alias, temperature 1, and 16,384-token output cap as the earlier Ministral attempt. The model received no prior submission, failure report, execution tools, or feedback. This is a qualitative mechanics benchmark, not a pixel/physics calibration or validated automated grader.
+
+One request returned HTTP 200 in **134.298 seconds**, using 5,517 input tokens and 10,490 output tokens. [Browse the exact response, unchanged served HTML, generation settings, all checklist results, input observations, and screenshots](results/ministral-8b-benchmark-v2/). No assistant repairs or second submission were applied.
+
+| Frozen check | Observed result |
+|---|---|
+| Boot / output format | FAIL: counters and Restart load, but level/characters are invisible; response contains prose and Markdown |
+| Layout | FAIL: normal resize reveals an incorrect rectangular level with exits on opposite sides |
+| Controls | FAIL: initial right input does not move either character; later floor overlap jumps Watergirl to the far edge |
+| Physics | FAIL: both characters fall through the visible bottom floor and offscreen |
+| Reset | FAIL: R does nothing; button restores positions but blanks the level again |
+| No playback | PASS for the exercised fresh 60-second no-input interval: no traversal or victory |
+| Hazards, diamonds, pressure plates, hanging platforms, exits | NOT REACHED through normal play |
+
+Verdict: **FAIL**, no overall percentage. No JavaScript exceptions or external-network attempts were observed. Read-only state diagnostics supplement screenshots; no candidate state was changed or teleported to reach later mechanics. The neutral-input pass does not imply correct physics or exit completion. One stochastic attempt cannot isolate a causal effect of clearer instructions or establish model reliability.
+
+Inspect the unchanged response locally:
+
+```sh
+python3 -m http.server 18871 --bind 127.0.0.1 \
+  --directory results/ministral-8b-benchmark-v2/submission
+```
+
+Open <http://127.0.0.1:18871/>. The initial blank canvas is the actual submitted behavior; resizing can reveal the incorrect level, but does not repair its physics. No recorder, grader framework, dependencies, permanent tests, or repair loop were added.
+
+## Earlier branch: minimal screenshot pilot
 
 `experiment/screenshot-pilot-next` attempted Groq, checked Mistral Medium/Small access, then generated and exercised one Ministral 8B submission. Candidate providers in scope are Mistral, Gemini, and Groq, not OpenAI. Groq hosts the selected Alibaba model `qwen/qwen3.8-27b`.
 

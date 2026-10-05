@@ -1,0 +1,757 @@
+[
+  {
+    "session": "fresh-neutral",
+    "label": "Fresh start: no player input for 60 seconds",
+    "keys": [],
+    "durationMs": 60000,
+    "before": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 700.5,
+          "velocityY": 0.5,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 120,
+          "y": 700.5,
+          "velocityY": 0.5,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "after": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 3519138,
+          "velocityY": 1875.5,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 120,
+          "y": 3519138,
+          "velocityY": 1875.5,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "screenshot": "02-neutral-60-seconds.png"
+  },
+  {
+    "session": "fresh-controls",
+    "label": "Attempt simultaneous right movement with ArrowRight and lowercase d",
+    "keys": [
+      "ArrowRight",
+      "d"
+    ],
+    "durationMs": 200,
+    "before": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 700.5,
+          "velocityY": 0.5,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 120,
+          "y": 700.5,
+          "velocityY": 0.5,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "after": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 745.5,
+          "velocityY": 6.5,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 120,
+          "y": 745.5,
+          "velocityY": 6.5,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "screenshot": "03-simultaneous-controls.png"
+  },
+  {
+    "session": "fresh-controls",
+    "label": "Hold lowercase d alone after releasing Fireboy controls",
+    "keys": [
+      "d"
+    ],
+    "durationMs": 200,
+    "before": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 745.5,
+          "velocityY": 6.5,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 120,
+          "y": 745.5,
+          "velocityY": 6.5,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "after": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 875.5,
+          "velocityY": 13,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 1260,
+          "y": 875.5,
+          "velocityY": 13,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "screenshot": "04-independent-key-release.png"
+  },
+  {
+    "session": "fresh-controls",
+    "label": "Observe gravity and attempted landing",
+    "keys": [],
+    "durationMs": 1000,
+    "before": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 875.5,
+          "velocityY": 13,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 1260,
+          "y": 875.5,
+          "velocityY": 13,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "after": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 2658,
+          "velocityY": 44,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 1260,
+          "y": 2658,
+          "velocityY": 44,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "screenshot": "05-floor-landing.png"
+  },
+  {
+    "session": "fresh-controls",
+    "label": "Attempt ArrowUp/w jumps after failed ground contact; characters already below floor",
+    "keys": [
+      "ArrowUp",
+      "w"
+    ],
+    "durationMs": 100,
+    "before": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 2658,
+          "velocityY": 44,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 1260,
+          "y": 2658,
+          "velocityY": 44,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "after": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 2932.5,
+          "velocityY": 47,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 1260,
+          "y": 2932.5,
+          "velocityY": 47,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "screenshot": "06-jump-attempt.png"
+  },
+  {
+    "session": "fresh-controls",
+    "label": "Observe jump/landing after release",
+    "keys": [],
+    "durationMs": 500,
+    "before": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 2932.5,
+          "velocityY": 47,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 1260,
+          "y": 2932.5,
+          "velocityY": 47,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "after": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 4700.5,
+          "velocityY": 63,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 1260,
+          "y": 4700.5,
+          "velocityY": 63,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "screenshot": "07-after-jump-release.png"
+  },
+  {
+    "session": "fresh-controls",
+    "label": "Press R after the failed landing",
+    "event": "keypress",
+    "key": "r",
+    "before": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 4700.5,
+          "velocityY": 63,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 1260,
+          "y": 4700.5,
+          "velocityY": 63,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "after": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 4700.5,
+          "velocityY": 63,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 1260,
+          "y": 4700.5,
+          "velocityY": 63,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    }
+  },
+  {
+    "session": "fresh-controls",
+    "label": "Click Restart after the failed landing",
+    "event": "click",
+    "selector": "#restart-btn",
+    "after": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 700,
+          "velocityY": 0,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 120,
+          "y": 700,
+          "velocityY": 0,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    }
+  },
+  {
+    "session": "fresh-controls",
+    "label": "Normal window resize immediately after Restart",
+    "keys": [],
+    "durationMs": 16,
+    "before": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 700,
+          "velocityY": 0,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 120,
+          "y": 700,
+          "velocityY": 0,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "after": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 700.5,
+          "velocityY": 0.5,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 120,
+          "y": 700.5,
+          "velocityY": 0.5,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": 0.9375,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "screenshot": "10-window-resize-renders-level.png"
+  },
+  {
+    "session": "fresh-controls",
+    "label": "Observe attempted floor landing after normal resize",
+    "keys": [],
+    "durationMs": 500,
+    "before": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 700.5,
+          "velocityY": 0.5,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 120,
+          "y": 700.5,
+          "velocityY": 0.5,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": 0.9375,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "after": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 964,
+          "velocityY": 16,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 120,
+          "y": 964,
+          "velocityY": 16,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": 0.9375,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "screenshot": "11-resized-floor-fall-through.png"
+  },
+  {
+    "session": "fresh-controls",
+    "label": "Restart again at the resized viewport",
+    "keys": [],
+    "durationMs": 16,
+    "before": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 700,
+          "velocityY": 0,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 120,
+          "y": 700,
+          "velocityY": 0,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "after": {
+      "visibleCounters": {
+        "fireboy": "0",
+        "watergirl": "0"
+      },
+      "terminalOverlayVisible": false,
+      "winVisible": false,
+      "lossVisible": false,
+      "readOnlyDiagnostic": {
+        "fireboy": {
+          "x": 100,
+          "y": 700.5,
+          "velocityY": 0.5,
+          "onGround": false,
+          "alive": true
+        },
+        "watergirl": {
+          "x": 120,
+          "y": 700.5,
+          "velocityY": 0.5,
+          "onGround": false,
+          "alive": true
+        },
+        "gameOver": false,
+        "win": false,
+        "scale": null,
+        "remainingDiamonds": {
+          "fireboy": 8,
+          "watergirl": 8
+        }
+      }
+    },
+    "screenshot": "12-reset-removes-rendered-level.png"
+  }
+]
