@@ -6,16 +6,18 @@ The current experiment is **screenshot-first model recreation**: use captured ga
 
 The documents in `docs/` preserve earlier specification-driven behavioral-benchmark designs as historical background. They are not a claim that the current screenshot-first experiment has a finished grader or released candidate package.
 
-## Current branch: minimal Groq pilot
+## Current branch: minimal screenshot pilot
 
-`experiment/screenshot-pilot-next` uses only Groq for this attempted recreation; candidate providers in scope are Mistral, Gemini, and Groq, not OpenAI. Groq hosts the selected Alibaba model `qwen/qwen3.8-27b`.
+`experiment/screenshot-pilot-next` first attempted Groq, then checked Mistral access at the user's request. Candidate providers in scope are Mistral, Gemini, and Groq, not OpenAI. Groq hosts the selected Alibaba model `qwen/qwen3.8-27b`.
 
 - [Browse the 80 original screenshots](task-public/groq-screenshot-pilot/screenshots/) and [three contact sheets](task-public/groq-screenshot-pilot/). Sheets resize and label the frames; they are not equivalent to 80 separate image inputs. Groq's documented limit is three images per request.
 - One tiny key-check generation returned HTTP 200 and `OK` (19 tokens). The local key variable was named `GROQ_API_Key`; standard scripts expect `GROQ_API_KEY`. No key values are published.
 - Two recreation requests were rejected before any code was generated: first HTTP 413 (7,557 requested input tokens versus a 7,000 ITPM allowance), then HTTP 429 (1,291 expected output tokens versus a 1,000 OTPM allowance). The second request shortened wording and timestamp formatting without changing the images or game requirements.
 - [Request settings, responses, and short checklist](results/groq-screenshot-pilot/) are committed directly for inspection. Zero submissions, zero code repairs, no gameplay assessment or percentage score. This is an account-limit blocker, not evidence of the model's reconstruction ability.
 
-No new recorder, grader, agent framework, dependencies, or repair loop was added. Further requests wait for the user's choice of higher Groq limits, another approved provider, or pausing. Future assessment uses launch, controls, progression, hazards, cooperative mechanisms, restart, and completion as pass/fail/not reached; check-ins occur after evidence preparation, generation, and gameplay assessment.
+No new recorder, grader, agent framework, dependencies, or repair loop was added. Future assessment uses launch, controls, progression, hazards, cooperative mechanisms, restart, and completion as pass/fail/not reached; check-ins occur after evidence preparation, generation, and gameplay assessment.
+
+The quick [Mistral limits check](results/mistral-screenshot-pilot/limits-check.json) authenticated model discovery (HTTP 200). The same three contact sheets fit the documented eight-image, 10 MB per-image, and 10,000-pixel dimension limits. Tiny text-generation requests to `mistral-medium-latest` and `mistral-small-latest` both returned HTTP 429, code 1300, with `x-ratelimit-limit-req-minute: 0`. No recreation images were uploaded to Mistral and no game was generated. Check the project/account allowance at <https://console.mistral.ai/limits/> before another request. The exact account-side cause is not established by these responses.
 
 ## Run
 
