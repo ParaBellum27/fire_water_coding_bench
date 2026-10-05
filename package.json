@@ -7,6 +7,7 @@
     "setup:reference": "python3 reference-game/prepare_html5.py",
     "replay": "tsx runner/cli.ts replay",
     "verify": "tsx runner/cli.ts verify",
+    "pilot:gemini": "tsx runner/gemini-pilot.ts",
     "check": "tsc --noEmit"
   },
   "dependencies": {

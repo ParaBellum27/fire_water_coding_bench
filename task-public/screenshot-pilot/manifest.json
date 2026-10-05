@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "name": "Forest Temple Level 2 screenshot-first pilot",
+  "viewport": {
+    "width": 1280,
+    "height": 960
+  },
+  "timing": "Ordered screenshots from one complete playthrough. Timestamps are simulated gameplay time, not wall-clock capture time.",
+  "selection": "40 frames covering the entire playthrough, with denser samples around hanging-platform interactions. Images are unmodified. No reference source, private state, input trace or mechanic annotations are supplied.",
+  "images": [
+    {
+      "file": "screenshots/01-000000ms.png",
+      "atMs": 0,
+      "sha256": "58e6e7b2df1cafb2669d877795b71b76521955288dfaa82ce1ca94797aee5b33",
+      "bytes": 436427
+    },
+    {
+      "file": "screenshots/02-000800ms.png",
+      "atMs": 800,
+      "sha256": "e8408a0bbb4b8462d00c66871171c431ff8c51b3e686972d3d5b523b06ae4e71",
+      "bytes": 404646
+    },
+    {
+      "file": "screenshots/03-001600ms.png",
+      "atMs": 1600,
+      "sha256": "18b77d06a3f96bdba1c563f15e33a056a325f37a668dafe338419eb52912bdc2",
+      "bytes": 306377
+    },
+    {
+      "file": "screenshots/04-003000ms.png",
+      "atMs": 3000,
+      "sha256": "87e9ada1158cfdf88341ce8ca48da7c57f2bae0c19d731f07a691818684ff11a",
+      "bytes": 295724
+    },
+    {
+      "file": "screenshots/05-004800ms.png",
+      "atMs": 4800,
+      "sha256": "9983a71814a10ce792dff158ab573bad17ecf492dea7eab329a40af855677f5a",
+      "bytes": 275949
+    },
+    {
+      "file": "screenshots/06-006400ms.png",
+      "atMs": 6400,
+      "sha256": "29609653befc6c596772e9cfe8fc875f8268485860521553b7be5dc863c58288",
+      "bytes": 276137
+    },
+    {
+      "file": "screenshots/07-008000ms.png",
+      "atMs": 8000,
+      "sha256": "62fba76ba06b08c29e3989bb73e40a1983ae1af91f97f0d57daa1299b177573d",
+      "bytes": 275120
+    },
+    {
+      "file": "screenshots/08-010000ms.png",
+      "atMs": 10000,
+      "sha256": "f75d5f3f4112be723dc5312460ec664ed2b1ca9db4055f4f3c8c765663795afd",
+      "bytes": 272271
+    },
+    {
+      "file": "screenshots/09-012000ms.png",
+      "atMs": 12000,
+      "sha256": "7724857fc56786f3fe6e83aded5b3b1c0a6089c284dd4d8359cc914bda6e23fd",
+      "bytes": 262232
+    },
+    {
+      "file": "screenshots/10-013500ms.png",
+      "atMs": 13500,
+      "sha256": "607bed6474bf398738a712009b28d330697f941443cb30914908021dde4ad181",
+      "bytes": 262972
+    },
+    {
+      "file": "screenshots/11-015000ms.png",
+      "atMs": 15000,
+      "sha256": "06b1e7b47a9a83bedaac8c08b4bc0a319cc173aa6569182b1bc3b5841f1837ab",
+      "bytes": 266552
+    },
+    {
+      "file": "screenshots/12-016500ms.png",
+      "atMs": 16500,
+      "sha256": "73afbda33d32126104b71185fc6de4750a3022750adf9100f2ba892ce9cd229e",
+      "bytes": 259128
+    },
+    {
+      "file": "screenshots/13-018000ms.png",
+      "atMs": 18000,
+      "sha256": "42fc46ae743e1bcf8b3c4cdcca7416cb66791550cb36cf09f847903eef8d7796",
+      "bytes": 249337
+    },
+    {
+      "file": "screenshots/14-019000ms.png",
+      "atMs": 19000,
+      "sha256": "1a6b015e841bc767fe69096b3d23db22d45213223b0ae8ae7400e19204cb5d93",
+      "bytes": 253680
+    },
+    {
+      "file": "screenshots/15-019800ms.png",
+      "atMs": 19800,
+      "sha256": "d5322b19eb13dcec584e11e650ac031f3a24741c0299a0913838d10625f8e03a",
+      "bytes": 251907
+    },
+    {
+      "file": "screenshots/16-020400ms.png",
+      "atMs": 20400,
+      "sha256": "31b68a897f2105e004cffe8bf4c01ddef1a1ef3fb78b3d0b6e043af515605ef0",
+      "bytes": 251265
+    },
+    {
+      "file": "screenshots/17-021000ms.png",
+      "atMs": 21000,
+      "sha256": "1da70add8f89ac9098ec622c74e6bd193b296051b60c8f9ab3081132976f5510",
+      "bytes": 248915
+    },
+    {
+      "file": "screenshots/18-021500ms.png",
+      "atMs": 21500,
+      "sha256": "6fa1326b9680d80cc036ad6b5e87594fe421024955ec1997136eea3388946f66",
+      "bytes": 250926
+    },
+    {
+      "file": "screenshots/19-022000ms.png",
+      "atMs": 22000,
+      "sha256": "b2347fe20056fdfd64650d9e9c16e6e03c340ccdcf438c687de497e2d6d2d7b5",
+      "bytes": 255976
+    },
+    {
+      "file": "screenshots/20-022800ms.png",
+      "atMs": 22800,
+      "sha256": "73617f68fc1587f3e7b0cabaf9326bab9ab68ee176e2239166f765f689874ad5",
+      "bytes": 260521
+    },
+    {
+      "file": "screenshots/21-023600ms.png",
+      "atMs": 23600,
+      "sha256": "6a3e93398bb593bd1205665e29bc9ab346234217d804571c37a345251f96ca31",
+      "bytes": 250351
+    },
+    {
+      "file": "screenshots/22-024000ms.png",
+      "atMs": 24000,
+      "sha256": "4b75b2cefb6bdd050039f58bce777d3ff8c8efda80d1436aba3ef85021d7aa9c",
+      "bytes": 245364
+    },
+    {
+      "file": "screenshots/23-024500ms.png",
+      "atMs": 24500,
+      "sha256": "9c0c29829fa9bdf32c6e76ebbda8a1e1302d194ff45e54532c9878b2c4b85f15",
+      "bytes": 245305
+    },
+    {
+      "file": "screenshots/24-025000ms.png",
+      "atMs": 25000,
+      "sha256": "5f5dda6d391b420fa8256f3f229624316121215bb0aa9b1db98ffb4c55cf5c50",
+      "bytes": 245361
+    },
+    {
+      "file": "screenshots/25-025500ms.png",
+      "atMs": 25500,
+      "sha256": "7c102e4b415c41dd14b33b28b29158d0f5c36da5377d26d6212ff2b63d561d8b",
+      "bytes": 242954
+    },
+    {
+      "file": "screenshots/26-026400ms.png",
+      "atMs": 26400,
+      "sha256": "d1b3829a5f1d42523ad5c100937995d7d2b3a5b7f2bf28fadf1eb840ef583aa7",
+      "bytes": 247335
+    },
+    {
+      "file": "screenshots/27-027800ms.png",
+      "atMs": 27800,
+      "sha256": "3b9a4f71dc401a2156315d19a9e9ac859fc73f918cbfb0f80d075e8e9636b15c",
+      "bytes": 245045
+    },
+    {
+      "file": "screenshots/28-029000ms.png",
+      "atMs": 29000,
+      "sha256": "60131e72d99ab8a938923cb0f85e178d6c96eb2eca7dbc729bc96c81189ee49d",
+      "bytes": 247511
+    },
+    {
+      "file": "screenshots/29-030600ms.png",
+      "atMs": 30600,
+      "sha256": "8650183457734e130b086d3124e4d7e0af24f55a836507f25ed106866a2e9a45",
+      "bytes": 245076
+    },
+    {
+      "file": "screenshots/30-032800ms.png",
+      "atMs": 32800,
+      "sha256": "88356a60e71c535886e3d98bf993ee267a2068de7ca6a1e2bc0547a0b05b9333",
+      "bytes": 248607
+    },
+    {
+      "file": "screenshots/31-034000ms.png",
+      "atMs": 34000,
+      "sha256": "36a4a265d1aabef06d8c5a3c8c75026b88196a482b28b9a8b50ef13e28ee5694",
+      "bytes": 244584
+    },
+    {
+      "file": "screenshots/32-035000ms.png",
+      "atMs": 35000,
+      "sha256": "7015871a03acd3fa9ff7f11dd8317089fdaa921cb257e269f4731923c1dc4fc6",
+      "bytes": 248157
+    },
+    {
+      "file": "screenshots/33-036500ms.png",
+      "atMs": 36500,
+      "sha256": "d5c5e6aea8715dd2594a763bc992eb12218d454e1df6ec5eea0f4373b2523a3a",
+      "bytes": 251092
+    },
+    {
+      "file": "screenshots/34-038000ms.png",
+      "atMs": 38000,
+      "sha256": "bff13c8c4ec69f0bb3f3ff87cad2afd509f98aa41ae16c74904e5967b788a78c",
+      "bytes": 244579
+    },
+    {
+      "file": "screenshots/35-039000ms.png",
+      "atMs": 39000,
+      "sha256": "82b98c33faab87b409814666bd19c16d7e9e0a31362c254bc8df3b99724f1d66",
+      "bytes": 237394
+    },
+    {
+      "file": "screenshots/36-040000ms.png",
+      "atMs": 40000,
+      "sha256": "b30f06cd349c626022d42bae5d5876f87237dbe2901a500c25de4b709616fec4",
+      "bytes": 235377
+    },
+    {
+      "file": "screenshots/37-042000ms.png",
+      "atMs": 42000,
+      "sha256": "46417c6ec5b269a33515005a71bdad93c4769b43aac0377767e864adc9348da0",
+      "bytes": 217910
+    },
+    {
+      "file": "screenshots/38-045000ms.png",
+      "atMs": 45000,
+      "sha256": "b6d9930b26e6d04e4aa66beb369ec7f4f8fd44897f2315600d00c3d0b81f0863",
+      "bytes": 214577
+    },
+    {
+      "file": "screenshots/39-047000ms.png",
+      "atMs": 47000,
+      "sha256": "478504973e0466c55070c3d3309d4341b4d64625c33540e4f8dbd36ca0a5bdbb",
+      "bytes": 216659
+    },
+    {
+      "file": "screenshots/40-048500ms.png",
+      "atMs": 48500,
+      "sha256": "478504973e0466c55070c3d3309d4341b4d64625c33540e4f8dbd36ca0a5bdbb",
+      "bytes": 216659
+    }
+  ]
+}

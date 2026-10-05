@@ -1,0 +1,19 @@
+Build a standalone, playable browser recreation of the game level shown in the attached chronological gameplay screenshots.
+
+Evidence
+- There are 40 unmodified screenshots from one complete playthrough, including its starting arrangement and victory screen.
+- Each image is preceded by its sequence number and simulated gameplay timestamp. The full viewport is 1280 x 960, including the original game's thin toolbar.
+- Treat the images as the visual and behavioral reference. You are not given original game source, assets, internal state, or a replay controller. Do not retrieve or copy an existing implementation. Draw your own graphics using browser APIs.
+- A successful playthrough does not establish every possible rule. Infer a coherent interactive game from the visible transitions; do not claim certainty about behavior absent from the images.
+
+Implementation requirements
+- Return one complete index.html containing all HTML, CSS, and JavaScript. It must run when served by a basic static HTTP server in Chromium. No dependencies, external assets, network calls, imports, build tools, or backend.
+- Recreate this level only, with recognizable layout, characters, colored pools, gems, switches, barriers/bridges, hanging platforms, and matching exits as shown. Match the reference as closely as practical using original drawn graphics.
+- Fireboy uses ArrowLeft/ArrowRight to move and ArrowUp to jump. Watergirl uses A/D to move and W to jump. Support simultaneous held keys for both characters. Prevent these controls from scrolling the page.
+- Implement actual interactive movement, gravity, collision handling, and the effects of the visible objects. Moving/hanging platforms must participate in gameplay rather than merely decorate it. Players must be able to take routes other than the depicted one.
+- Implement the cooperative progression, collectibles, and level completion suggested by the images. Include a working restart button and R shortcut that restore the initial scene and progress.
+- Show clear visible loss/win feedback. Scale the game to fit the browser window without changing its logical layout.
+- Do not animate the supplied playthrough automatically, interpolate recorded character positions, use the screenshots as background images, or declare completion based only on elapsed time. Do not output a mockup, explanation, scaffold, or TODOs.
+
+Output contract
+Return a JSON object containing exactly one field, "html", whose string value is the complete self-contained index.html source. No Markdown fences or additional commentary. You have one submission; your code will be exercised unchanged, without an assistant repairing it.

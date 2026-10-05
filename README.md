@@ -2,7 +2,7 @@
 
 Canonical repository: <https://github.com/ParaBellum27/fire_water_coding_bench>. The canonical local checkout is `/Users/Pierre/Desktop/fire_water_coding_bench`; all commands below work from any clone's root without depending on that machine-specific path.
 
-The current experiment is **screenshot-first model recreation**: use captured gameplay images as evidence for a source-blind playable recreation. The existing TypeScript/Playwright runner captures the trusted reference; it is not a candidate implementation or grader. No Gemini test, model integration, or model trial has been implemented or completed, and no Gemini API key is currently available.
+The current experiment is **screenshot-first model recreation**: use captured gameplay images as evidence for a source-blind playable recreation. The existing TypeScript/Playwright runner captures the trusted reference; it is not a candidate implementation or grader. One Gemini 3.8 Flash recreation pilot has now been run and exercised unchanged: it renders and handles basic controls, but fails level progression. This is a pilot finding, not a validated benchmark score.
 
 The documents in `docs/` preserve earlier specification-driven behavioral-benchmark designs as historical background. They are not a claim that the current screenshot-first experiment has a finished grader or released candidate package.
 
@@ -23,18 +23,44 @@ npm run verify -- --trace traces/walkthrough.json --runs 5
 
 `setup:reference` prepares the pinned reference under `reference-game/html5`, validates the original/runtime bundle hashes and exact adapters/provenance, and leaves an already-valid installation untouched. A mismatched existing installation fails rather than being overwritten. An alternative destination is supported with `npm run setup:reference -- --target /absolute/path/to/reference-game/html5`. Upstream game source and assets have no established redistribution license and are **not included in the public repository or evidence release**; setup downloads the pinned upstream version instead. Keep this trusted reference out of a candidate's workspace: candidates must not inspect or copy its source/assets.
 
-For the later Gemini experiment, copy the blank template and set the key locally:
+For the Gemini experiment, create the key file only if it does not already exist, then set the key locally:
 
 ```sh
-cp .env.example .env
+test -f .env || cp .env.example .env
 # Edit .env locally and add: GEMINI_API_KEY=your-key
 ```
 
-`.env` and other `.env*` files are Git-ignored; only the blank `.env.example` is tracked. Never commit or publish the key. This is the intended local credential location, not an implemented Gemini invocation or a claim that the runner loads it.
+`.env` and other `.env*` files are Git-ignored; only the blank `.env.example` is tracked. Never commit or publish the key. `npm run pilot:gemini` loads this local file; the reference replay runner does not use the key.
 
 Verification requests five separate browser launches/contexts, stops at the first failure, and retains every attempted run. No existing evidence is overwritten. The default reference location is checkout-relative `reference-game/html5`; an identical relocated reference can be selected with `--reference-root /absolute/path/to/reference-game/html5`, and output with `--out artifacts/reference-runs`.
 
 The runner checks the original and runtime bundle hashes and reconstructs the runtime bundle from the exact declared patches in `local-provenance.json`. Each manifest also records a SHA-256 inventory of the full reference directory, startup adapter, entry HTML, trace, dependency versions, and Chromium version. The copied game is trusted preparation material; do not supply its source or private observations to coding-benchmark candidates.
+
+## Screenshot-based Gemini pilot
+
+`task-public/screenshot-pilot/` freezes 40 chronological, unmodified screenshots, their timestamps and hashes, and the exact recreation prompt. It contains no original game source, private reference state, input trace, or mechanic annotations.
+
+```sh
+npm run check
+npm run pilot:gemini
+```
+
+Each invocation makes one Gemini 3.8 Flash API request and can incur API charges. The configuration is recorded: temperature 1, maximum 24,000 output tokens, structured JSON containing a complete self-contained HTML game. The script verifies screenshot hashes, stores the exact request and response under a unique `artifacts/model-pilots/` directory, and extracts the generated HTML without repairing it. It does not automatically score the submission.
+
+The first pilot is `artifacts/model-pilots/2026-10-05T06-39-02-231Z-gemini-3.8-flash-oUx1ze/`. Its `submission/index.html` is the unchanged generated game; `assessment/report.json`, `assessment/keyboard-actions.json`, and PNG captures record the exercise. The request used 43,812 input tokens, 18,466 response tokens, and 2,957 thinking tokens; monetary cost was not measured.
+
+Observed result: the game launches, both characters move/jump, exercised gems are collected, and restart works. Fireboy is blocked beneath the first raised trough; jumping around it reaches the right side, but the staircase cannot reach the middle floor. Source diagnosis: a 52-pixel corridor contains a 56-pixel-tall character; the jump rises about 110 pixels while the next relevant ascent requires 148 pixels. Upper cooperative mechanisms and victory were not reached. No assistant code repairs or model feedback iterations were performed.
+
+To inspect the submission locally, serve only its submission directory:
+
+```sh
+python3 -m http.server 18869 --bind 127.0.0.1 \
+  --directory artifacts/model-pilots/2026-10-05T06-39-02-231Z-gemini-3.8-flash-oUx1ze/submission
+```
+
+Open <http://127.0.0.1:18869/>. A screenshot-first coding pilot is not a full comparative benchmark: there is no validated independent grader or model ranking.
+
+The full first-attempt request, response, unchanged HTML, assessment captures, and input package are also published in the [Gemini pilot release](https://github.com/ParaBellum27/fire_water_coding_bench/releases/tag/gemini-screenshot-pilot-2026-10-05). These results must not be supplied as context to later source-blind candidate attempts.
 
 ## What the walkthrough does
 

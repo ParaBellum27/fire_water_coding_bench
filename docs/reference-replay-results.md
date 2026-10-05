@@ -25,4 +25,4 @@ A separate full replay from the Desktop checkout's default reference completed s
 
 ## Experiment boundary
 
-The current user intent is screenshot-first model recreation. The earlier specification-driven benchmark plans remain historical background. No Gemini API key, Gemini test/model integration, candidate model trial, validated grader, or five-success replay gate is claimed.
+The current user intent is screenshot-first model recreation. The earlier specification-driven benchmark plans remain historical background. These reference results do not establish a validated grader or a five-success replay gate. The separate first Gemini screenshot-based recreation pilot and its progression failures are documented in [the README](../README.md#screenshot-based-gemini-pilot).
