@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>Fireboy & Watergirl — Level 2</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+  <style>
+    html,body {margin:0;height:100%;overflow:hidden;background:#000;color:#eee;font-family:system-ui,sans-serif}
+    #toolbar {position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 12px;background:#171b16;font-size:13px}
+    #toolbar button {color:#fff;background:#384932;border:1px solid #78946c;border-radius:5px;padding:5px 10px;cursor:pointer}
+    #status {margin-right:12px}
+    #diagnostics {position:fixed;bottom:0;left:0;right:0;z-index:101;white-space:pre-wrap;background:#151515;color:#f7b2a9;font-size:12px;padding:10px;display:none}
+    #diagnostics[data-error="true"] {display:block}
+  </style>
+</head>
+<body>
+  <div id="toolbar">
+    <div><span id="status" role="status">Loading Level 2…</span><span>Fireboy: ← ↑ → &nbsp; Watergirl: A W D</span></div>
+    <button id="restart" type="button">Restart Level 2</button>
+  </div>
+  <div id="root"><div id="container"></div><div id="hammer"></div><div id="debug-fps"></div></div>
+  <div id="diagnostics" role="alert"></div>
+  <script src="bower_components/requirejs/require.js"></script>
+  <script src="version.js"></script>
+  <script src="runtime.bundle.js"></script>
+  <script src="local-start.js"></script>
+</body>
+</html>

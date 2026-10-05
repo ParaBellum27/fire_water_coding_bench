@@ -1,0 +1,15 @@
+{
+  "source": "https://github.com/ahrdevelopers/fireboy-and-watergirl-1-forest-temple",
+  "commit": "a739ccac37516b047c14f38d4989cf1f55e838ed",
+  "original_bundle_sha256": "6a01b63961ba8c4b1f2513781b0e06713a9e1bdb362e125a5e81a1650a2135e8",
+  "runtime_bundle_sha256": "d48a17b109fb34ae6499910f18afd877c5e617de13b1f90871328ec30b98d28f",
+  "bundle_changes": {
+    "deps:[\"main\"]": "deps:[]",
+    "devSkipAds:!1": "devSkipAds:!0",
+    "simulateCordova:!1,log:!1": "simulateCordova:!1,log:!0",
+    "k=new g.Game(i),": "k=window.referenceGame=new g.Game(i),"
+  },
+  "entry": "level-two.html",
+  "adapter": "local-start.js",
+  "notes": "Local startup bypasses sponsor splash/menu and selects level id 2; physics and level assets are unchanged. Community mirror, not verified publisher-identical."
+}
