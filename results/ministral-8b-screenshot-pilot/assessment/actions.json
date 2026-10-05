@@ -1,0 +1,599 @@
+[
+  {
+    "label": "No input: observe whether characters fall",
+    "keys": [],
+    "durationMs": 1000,
+    "before": {
+      "ui": "Time: 0.0s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 100,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "after": {
+      "ui": "Time: 1.0s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 100,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "screenshot": "02-idle-no-gravity.png"
+  },
+  {
+    "label": "Standard simultaneous movement: ArrowRight and lowercase d",
+    "keys": [
+      "ArrowRight",
+      "d"
+    ],
+    "durationMs": 1000,
+    "before": {
+      "ui": "Time: 1.0s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 100,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "after": {
+      "ui": "Time: 2.0s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "screenshot": "03-lowercase-watergirl-control.png"
+  },
+  {
+    "label": "Uppercase D fallback",
+    "keys": [
+      "D"
+    ],
+    "durationMs": 1000,
+    "before": {
+      "ui": "Time: 2.0s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "after": {
+      "ui": "Time: 3.0s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 324,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "screenshot": "04-uppercase-watergirl-control.png"
+  },
+  {
+    "label": "Tap Fireboy jump",
+    "keys": [
+      "ArrowUp"
+    ],
+    "durationMs": 100,
+    "before": {
+      "ui": "Time: 3.0s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 324,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "after": {
+      "ui": "Time: 3.1s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": 282,
+          "jumping": true
+        },
+        "watergirl": {
+          "x": 324,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "screenshot": "05-jump-start.png"
+  },
+  {
+    "label": "Release jump and observe vertical motion",
+    "keys": [],
+    "durationMs": 500,
+    "before": {
+      "ui": "Time: 3.1s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": 282,
+          "jumping": true
+        },
+        "watergirl": {
+          "x": 324,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "after": {
+      "ui": "Time: 3.6s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": 186,
+          "jumping": true
+        },
+        "watergirl": {
+          "x": 324,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "screenshot": "06-jump-after-release.png"
+  },
+  {
+    "label": "Press lowercase r reset shortcut",
+    "event": {
+      "type": "press",
+      "key": "r"
+    },
+    "after": {
+      "ui": "Time: 3.6s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": 186,
+          "jumping": true
+        },
+        "watergirl": {
+          "x": 324,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    }
+  },
+  {
+    "label": "Observe settling after jump",
+    "keys": [],
+    "durationMs": 1000,
+    "before": {
+      "ui": "Time: 3.6s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": 186,
+          "jumping": true
+        },
+        "watergirl": {
+          "x": 324,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "after": {
+      "ui": "Time: 4.6s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": 0,
+          "jumping": true
+        },
+        "watergirl": {
+          "x": 324,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "screenshot": "08-continuing-ascent.png"
+  },
+  {
+    "label": "Press ArrowUp again during the existing ascent",
+    "keys": [
+      "ArrowUp"
+    ],
+    "durationMs": 100,
+    "before": {
+      "ui": "Time: 4.6s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": 0,
+          "jumping": true
+        },
+        "watergirl": {
+          "x": 324,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "after": {
+      "ui": "Time: 4.6s",
+      "feedback": "You Lost!",
+      "feedbackVisible": true,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": -3,
+          "jumping": true
+        },
+        "watergirl": {
+          "x": 324,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "screenshot": null
+  },
+  {
+    "label": "Observe loss after the existing ascent crosses the top boundary",
+    "keys": [],
+    "durationMs": 1000,
+    "before": {
+      "ui": "Time: 4.6s",
+      "feedback": "You Lost!",
+      "feedbackVisible": true,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": -3,
+          "jumping": true
+        },
+        "watergirl": {
+          "x": 324,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "after": {
+      "ui": "Time: 4.6s",
+      "feedback": "You Lost!",
+      "feedbackVisible": true,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 226,
+          "y": -3,
+          "jumping": true
+        },
+        "watergirl": {
+          "x": 324,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "screenshot": "09-jump-causes-top-boundary-loss.png"
+  },
+  {
+    "label": "Fresh reload for no-input completion check",
+    "event": {
+      "type": "reload"
+    },
+    "after": {
+      "ui": "Time: 5.7s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 100,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    }
+  },
+  {
+    "label": "Fresh start: no keyboard input for 50 seconds",
+    "keys": [],
+    "durationMs": 50000,
+    "before": {
+      "ui": "Time: 5.7s",
+      "feedback": "",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 100,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "after": {
+      "ui": "Time: 48.5s",
+      "feedback": "You Win!",
+      "feedbackVisible": true,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 100,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "screenshot": "10-win-without-playing.png"
+  },
+  {
+    "label": "R after automatic victory",
+    "event": {
+      "type": "press",
+      "key": "r"
+    },
+    "after": {
+      "ui": "Time: 48.5s",
+      "feedback": "You Win!",
+      "feedbackVisible": true,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 100,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    }
+  },
+  {
+    "label": "Restart button after automatic victory",
+    "event": {
+      "type": "click",
+      "selector": "#restart"
+    },
+    "after": {
+      "ui": "Time: 48.5s",
+      "feedback": "You Win!",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 100,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    }
+  },
+  {
+    "label": "Move Fireboy before testing button reset",
+    "keys": [
+      "ArrowRight"
+    ],
+    "durationMs": 200,
+    "before": {
+      "ui": "Time: 48.5s",
+      "feedback": "You Win!",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 100,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "after": {
+      "ui": "Time: 55.9s",
+      "feedback": "You Win!",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 124,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "screenshot": null
+  },
+  {
+    "label": "Restart button after movement",
+    "event": {
+      "type": "click",
+      "selector": "#restart"
+    },
+    "after": {
+      "ui": "Time: 55.9s",
+      "feedback": "You Win!",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 100,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    }
+  },
+  {
+    "label": "One frame after button reset",
+    "keys": [],
+    "durationMs": 16,
+    "before": {
+      "ui": "Time: 55.9s",
+      "feedback": "You Win!",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 100,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "after": {
+      "ui": "Time: 55.9s",
+      "feedback": "You Win!",
+      "feedbackVisible": false,
+      "diagnosticReadOnly": {
+        "fireboy": {
+          "x": 100,
+          "y": 300,
+          "jumping": false
+        },
+        "watergirl": {
+          "x": 200,
+          "y": 300,
+          "jumping": false
+        },
+        "gems": 5
+      }
+    },
+    "screenshot": "13-button-position-reset-timer-not-reset.png"
+  }
+]

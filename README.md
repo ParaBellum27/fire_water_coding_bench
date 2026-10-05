@@ -8,7 +8,7 @@ The documents in `docs/` preserve earlier specification-driven behavioral-benchm
 
 ## Current branch: minimal screenshot pilot
 
-`experiment/screenshot-pilot-next` first attempted Groq, then checked Mistral access at the user's request. Candidate providers in scope are Mistral, Gemini, and Groq, not OpenAI. Groq hosts the selected Alibaba model `qwen/qwen3.8-27b`.
+`experiment/screenshot-pilot-next` attempted Groq, checked Mistral Medium/Small access, then generated and exercised one Ministral 8B submission. Candidate providers in scope are Mistral, Gemini, and Groq, not OpenAI. Groq hosts the selected Alibaba model `qwen/qwen3.8-27b`.
 
 - [Browse the 80 original screenshots](task-public/groq-screenshot-pilot/screenshots/) and [three contact sheets](task-public/groq-screenshot-pilot/). Sheets resize and label the frames; they are not equivalent to 80 separate image inputs. Groq's documented limit is three images per request.
 - One tiny key-check generation returned HTTP 200 and `OK` (19 tokens). The local key variable was named `GROQ_API_Key`; standard scripts expect `GROQ_API_KEY`. No key values are published.
@@ -17,7 +17,24 @@ The documents in `docs/` preserve earlier specification-driven behavioral-benchm
 
 No new recorder, grader, agent framework, dependencies, or repair loop was added. Future assessment uses launch, controls, progression, hazards, cooperative mechanisms, restart, and completion as pass/fail/not reached; check-ins occur after evidence preparation, generation, and gameplay assessment.
 
-The quick [Mistral limits check](results/mistral-screenshot-pilot/limits-check.json) authenticated model discovery (HTTP 200). The same three contact sheets fit the documented eight-image, 10 MB per-image, and 10,000-pixel dimension limits. Tiny text-generation requests to `mistral-medium-latest` and `mistral-small-latest` both returned HTTP 429, code 1300, with `x-ratelimit-limit-req-minute: 0`. No recreation images were uploaded to Mistral and no game was generated. Check the project/account allowance at <https://console.mistral.ai/limits/> before another request. The exact account-side cause is not established by these responses.
+The quick [Mistral limits check](results/mistral-screenshot-pilot/limits-check.json) authenticated model discovery (HTTP 200). The same three contact sheets fit the documented eight-image, 10 MB per-image, and 10,000-pixel dimension limits. Tiny requests to `mistral-medium-latest` and `mistral-small-latest` returned HTTP 429, code 1300, with a zero request allowance; [the updated-key Medium check](results/mistral-screenshot-pilot/updated-key-check.json) had the same outcome. No recreation images were uploaded in those checks. The exact account-side cause is not established; the subsequent Ministral 8B request worked.
+
+### Exercised Ministral 8B attempt
+
+`ministral-8b-latest` passed a tiny generation check, then returned one submission from the existing three contact sheets in 102.769 seconds (4,599 input tokens, 6,925 output tokens). No assistant repairs or model feedback were applied. The response included prose and Markdown fences against the output contract; it was served exactly as returned.
+
+[Browse the response, unchanged HTML, short report, and assessment screenshots](results/ministral-8b-screenshot-pilot/). Actual Chromium exercises found: sparse incorrect layout; lowercase Watergirl controls ignored; absent idle gravity; a jump continuing upward until loss; R not restarting; button resetting positions but not the displayed timer. A fresh start with no input produced ["You Win!" at displayed 48.5 seconds](results/ministral-8b-screenshot-pilot/assessment/10-win-without-playing.png), with both characters unmoved and all five generated gems remaining. This is explicitly prohibited timed victory, not successful level completion.
+
+Verdict: **FAIL**, no valid overall percentage. Hazard encounters, pickups, and cooperative mechanisms were not reached through a normal route. The earlier Gemini run received separate images, whereas this run received lower-detail contact sheets, so these results are not a controlled provider ranking. No new recorder, grader, dependencies, or runner framework was added.
+
+To inspect the unchanged response locally from the repository root:
+
+```sh
+python3 -m http.server 18870 --bind 127.0.0.1 \
+  --directory results/ministral-8b-screenshot-pilot/submission
+```
+
+Open <http://127.0.0.1:18870/>.
 
 ## Run
 
