@@ -1,0 +1,98 @@
+{
+  "version": 2,
+  "condition": "Three unchanged contact sheets plus explicit public correctness contract",
+  "model": "ministral-8b-latest",
+  "branch": "experiment/ministral-8b-benchmark-v2",
+  "generation": {
+    "temperature": 1,
+    "max_tokens": 16384,
+    "timeoutMs": 180000,
+    "submissions": 1,
+    "repairs": 0,
+    "feedback": false,
+    "tools": false
+  },
+  "evidence": {
+    "frames": 80,
+    "attachments": [
+      {
+        "file": "../groq-screenshot-pilot/contact-sheet-1.jpg",
+        "sha256": "b97812ddc23aff6d55de9ad4e9ed89b410dc743e82c28b9bed4efb115d79b560",
+        "bytes": 2246887
+      },
+      {
+        "file": "../groq-screenshot-pilot/contact-sheet-2.jpg",
+        "sha256": "93faa262c0901e153e371a0599efe9464e119c14495d0f9b67d203b038434eb4",
+        "bytes": 2168445
+      },
+      {
+        "file": "../groq-screenshot-pilot/contact-sheet-3.jpg",
+        "sha256": "119319b16ef29908992799d8556f351c57c5c56d54d40028aece619fe8bdf276",
+        "bytes": 1897786
+      }
+    ],
+    "timestamps": "Frame times in simulated seconds, in frame order:\n0,0.4,0.8,1.2,1.6,2.3,3,3.9,4.8,5.6,6.4,7.2,8,9,10,11,12,12.8,13.5,14.3,15,15.8,16.5,17.3,18,18.5,19,19.4,19.8,20.1,20.4,20.7,21,21.3,21.5,21.8,22,22.4,22.8,23.2,23.6,23.8,24,24.3,24.5,24.8,25,25.3,25.5,26,26.4,27.1,27.8,28.4,29,29.8,30.6,31.7,32.8,33.4,34,34.5,35,35.8,36.5,37.3,38,38.5,39,39.5,40,41,42,42.8,43.5,45,46,47,47.8,48.5",
+    "contractFile": "prompt.txt",
+    "contractSha256": "c3dbce7c5856a1818b5427380160661f0fb85cde3d2c4acffe9020530f79c766",
+    "changedFromPreviousAttempt": "Only the written correctness contract; same image bytes, timestamps, model identifier, temperature, output cap, and no-feedback policy."
+  },
+  "evaluation": {
+    "environment": "Chromium; 1280x960; keyboard/click interaction; candidate origin only; controlled browser clock for action intervals",
+    "readOnlyDiagnostics": "Allowed to guide input and supplement screenshots, never sole authority for correctness. No candidate state writes, teleportation, patched physics, or forced completion.",
+    "grading": "PASS/FAIL/NOT REACHED per public requirement. Any observed core violation is overall FAIL; otherwise unreached requirements mean INCOMPLETE, not PASS. No overall percentage.",
+    "generationLatency": "Reported separately; player completion speed is not scored.",
+    "neutralIntervalMs": 60000,
+    "checks": [
+      {
+        "id": "BOOT",
+        "check": "Load exact response from a static server; confirm usable surface and HTML-only output."
+      },
+      {
+        "id": "LAYOUT",
+        "check": "Compare initial geometry and visible required objects with supplied images; demonstrate normal route where possible."
+      },
+      {
+        "id": "CONTROLS",
+        "check": "Move/jump each character separately and together; normal lowercase A/D/W; release one set independently."
+      },
+      {
+        "id": "PHYSICS",
+        "check": "Observe idle settling, jump arc and landing, floor/wall/ceiling contact where reachable."
+      },
+      {
+        "id": "HAZARDS",
+        "check": "Exercise safe and lethal elemental contacts and death/reset where reachable; do not infer unexercised cases."
+      },
+      {
+        "id": "DIAMONDS",
+        "check": "Observe matching pickup, wrong-character non-pickup, disappearance and once-only counter where reachable."
+      },
+      {
+        "id": "PRESSURE PLATES",
+        "check": "Activate linked mechanisms by contact; leave plates and observe return; occupancy OR behavior and traversal where reachable."
+      },
+      {
+        "id": "HANGING PLATFORMS",
+        "check": "Land, load different points, move and leave; observe contact-dependent tilt/support where reachable, with no exact-angle comparison."
+      },
+      {
+        "id": "EXITS",
+        "check": "One matching exit and wrong exit must not suffice; both matching living characters produce victory where reachable."
+      },
+      {
+        "id": "RESET",
+        "check": "R and button after progress, loss or victory; observe restored positions/progress/timer/mechanisms where exercised."
+      },
+      {
+        "id": "NO PLAYBACK",
+        "check": "From a fresh browser context, apply no player input for 60 simulated seconds; no route traversal or victory."
+      }
+    ]
+  },
+  "scopeLimits": [
+    "Qualitative mechanics benchmark, not pixel-perfect or quantitatively calibrated reference physics.",
+    "Manual behavior checklist, not a validated automated grader or a model reliability estimate.",
+    "Low-detail three-sheet evidence retained at user request.",
+    "Latest model alias does not pin provider weights across future runs."
+  ]
+}
