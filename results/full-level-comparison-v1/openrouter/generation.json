@@ -1,0 +1,62 @@
+{
+  "id": "openrouter",
+  "provider": "openrouter",
+  "modelRequested": "openai/gpt-oss-120b",
+  "modelReturned": "openai/gpt-oss-120b",
+  "servingProvider": "Mancer 2",
+  "servingProviderAttribution": "reported_metadata",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "settings": {
+    "temperature": 1,
+    "maxOutputTokens": 16384,
+    "timeoutMs": 600000
+  },
+  "payloadSha256": "7cc8b61abf62c4d70bfa5ebd934e374d1b927b52ed76dfe8cac5783f93540a26",
+  "requestSha256": "5aafc201ae073d38e198b8dcd604854bb1b04c19299322995b52914da99ef38b",
+  "manifestSha256": "e2c6653954697f223e29a9c33926d936f27d2d24a9c94a7949f26123fe03a931",
+  "protocolSha256": "ca9a316e741cb20fa15349f0aa4d364160f30a631fb714a91e983071d65fe9ad",
+  "publicFiles": [
+    "prompt.txt",
+    "reference-evidence.json",
+    "walkthrough.json",
+    "walkthrough-program.mjs",
+    "rubric.json"
+  ],
+  "requestCount": 1,
+  "usage": {
+    "prompt_tokens": 10021,
+    "completion_tokens": 7362,
+    "total_tokens": 17383,
+    "cost": 0.00229,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00229,
+      "upstream_inference_prompt_cost": 0.000450660631173779,
+      "upstream_inference_completions_cost": 0.001839339368826221
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 2136,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "reportedCost": 0.00229,
+  "httpStatus": 200,
+  "finishReason": "stop",
+  "durationMs": 221967.0185,
+  "status": "submitted",
+  "outputContract": {
+    "status": "VALID",
+    "reasons": []
+  },
+  "startedAt": "2026-10-06T06:55:18.084Z",
+  "reportedProvider": "Mancer 2",
+  "htmlSha256": "9acb855d2b11c87c46ec5073df880c63a9e369f4ba33b45196791401f9b47cf5",
+  "finishedAt": "2026-10-06T06:59:00.065Z"
+}

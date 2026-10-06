@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "scenario": {
+    "id": "red-safe-pickup-revisit",
+    "clock": "controlled",
+    "hostDeadlineMs": 240000,
+    "sampleEveryMs": 500,
+    "segments": [
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 2100,
+        "label": "fire-traverse-red"
+      },
+      {
+        "keys": [
+          "ArrowLeft"
+        ],
+        "durationMs": 1250,
+        "label": "fire-revisit-red"
+      },
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 1000,
+        "label": "fire-recollect-attempt"
+      },
+      {
+        "operation": "reset",
+        "method": "R",
+        "label": "R-after-pickups",
+        "durationMs": 700,
+        "sampleEveryMs": 175
+      },
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 2100,
+        "label": "fire-progress-again"
+      },
+      {
+        "operation": "reset",
+        "method": "button",
+        "label": "button-after-pickups",
+        "durationMs": 700,
+        "sampleEveryMs": 175
+      }
+    ]
+  },
+  "sourceSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "startedAt": "2026-10-06T07:01:23.462Z",
+  "observations": [],
+  "actions": [
+    {
+      "type": "navigation",
+      "before": {
+        "hostEpochMs": 1791270083595,
+        "hostMonotonicMs": 86038801.000625,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1000,
+        "browserEpochMs": 1791288001000
+      },
+      "after": {
+        "hostEpochMs": 1791270083605,
+        "hostMonotonicMs": 86038810.606458,
+        "requestedMs": 0,
+        "browserPerformanceMs": 0,
+        "browserEpochMs": 1791288001000
+      }
+    }
+  ],
+  "candidateEvents": [],
+  "evaluatorErrors": [
+    {
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58282/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    }
+  ],
+  "clock": "controlled",
+  "privateStateReads": 0,
+  "candidateMutations": 0,
+  "reference": false,
+  "deadlineExceeded": false,
+  "browserVersion": "153.0.8010.12",
+  "finishedAt": "2026-10-06T07:01:23.629Z",
+  "durationMs": 166.48120899498463,
+  "sourceAfterSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "sourceUnchanged": true
+}

@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "fireboy": "#fireboy",
+  "watergirl": "#watergirl",
+  "floor": "#floor",
+  "restart": "#restart",
+  "timer": "#timer"
+}

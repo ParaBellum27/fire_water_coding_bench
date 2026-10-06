@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "scenario": {
+    "id": "red-foreign-death",
+    "clock": "controlled",
+    "hostDeadlineMs": 240000,
+    "sampleEveryMs": 500,
+    "segments": [
+      {
+        "keys": [
+          "d"
+        ],
+        "durationMs": 2000,
+        "label": "water-contact-red"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d",
+          "ArrowUp",
+          "w"
+        ],
+        "durationMs": 1200,
+        "label": "terminal-input-probe"
+      },
+      {
+        "operation": "reset",
+        "method": "button",
+        "label": "button-after-death",
+        "durationMs": 700,
+        "sampleEveryMs": 175
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d"
+        ],
+        "durationMs": 120,
+        "label": "post-death-new-input"
+      },
+      {
+        "keys": [],
+        "durationMs": 400,
+        "label": "post-death-stable"
+      },
+      {
+        "keys": [
+          "d"
+        ],
+        "durationMs": 2000,
+        "label": "water-contact-red-again"
+      },
+      {
+        "operation": "reset",
+        "method": "R",
+        "label": "R-after-death",
+        "durationMs": 700,
+        "sampleEveryMs": 175
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d"
+        ],
+        "durationMs": 120,
+        "label": "R-post-death-new-input"
+      }
+    ]
+  },
+  "sourceSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "startedAt": "2026-10-06T07:01:23.630Z",
+  "observations": [],
+  "actions": [
+    {
+      "type": "navigation",
+      "before": {
+        "hostEpochMs": 1791270083735,
+        "hostMonotonicMs": 86038940.164125,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1000,
+        "browserEpochMs": 1791288001000
+      },
+      "after": {
+        "hostEpochMs": 1791270083745,
+        "hostMonotonicMs": 86038950.166583,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1,
+        "browserEpochMs": 1791288001000
+      }
+    }
+  ],
+  "candidateEvents": [],
+  "evaluatorErrors": [
+    {
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58291/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    }
+  ],
+  "clock": "controlled",
+  "privateStateReads": 0,
+  "candidateMutations": 0,
+  "reference": false,
+  "deadlineExceeded": false,
+  "browserVersion": "153.0.8010.12",
+  "finishedAt": "2026-10-06T07:01:23.778Z",
+  "durationMs": 147.88087499141693,
+  "sourceAfterSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "sourceUnchanged": true
+}

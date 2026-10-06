@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Forest Temple Level 2</title>
+<style>
+  body,html{margin:0;padding:0;overflow:hidden;background:#222;font-family:Arial,Helvetica,sans-serif;}
+  #ui{position:absolute;top:10px;left:10px;color:#fff;z-index:10;}
+  #ui button{margin-left:10px;}
+  canvas{background:#000;display:block;}
+</style>
+</head>
+<body>
+<div id="ui">
+  <span id="fireProgress">Fireboy: 0 / 8</span>
+  <span id="waterProgress" style="margin-left:20px;">Watergirl: 0 / 8</span>
+  <span id="timer" style="margin-left:20px;">Time: 0.0 s</span>
+  <button id="restartBtn">Restart (R)</button>
+  <div id="msg" style="margin-top:5px;color:#ff0;"></div>
+</div>
+<canvas id="c"></canvas>
+<script>
+(() => {
+  const canvas = document.getElementById('c');
+  const ctx = canvas.getContext('2d');
+  const UI = {
+    fire: document.getElementById('fireProgress'),
+    water: document.getElementById('waterProgress'),
+    timer: document.getElementById('timer'),
+    msg: document.getElementById('msg'),
+    restartBtn: document.getElementById('restartBtn')
+  };
+  const TILE = 32;
+  const MAP_ROWS = [
+    "111111111111111111111111111111111111111",
+    "100000000000000000000000000000000000001",
+    "100000000000000000000000000000000000001",
+    "100000000000000000000000000000000000001",
+    "100000000000000000000000000000000000001",
+    "111111111111111110000011111111300000001",
+    "100000000000000000000000000011130000001",
+    "100000000000000000000000000001111000001",
+    "100000000000000000000000000000000000001",
+    "100000000000000000000000000000000001111",
+    "100000000000000000000000000000000001111",
+    "100000000000000000000000000000000001111",
+    "100000000000000000000000000000000111111",
+    "100000000000000000000000000000000111111",
+    "100000000000000001111110000000000111111",
+    "100000118888888881111118888888111111111",
+    "100000000000000000000000000000000000001",
+    "111100000000000000000000000000000000001",
+    "111100000000000000000000000000000000001",
+    "111100000000000000000000000000000000001",
+    "111111111111111111111111111111111130001",
+    "100000000000000000000000000000000000001",
+    "100000000000000000000000000000000000001",
+    "100000000000000000000000000000000000001",
+    "100000000000000000000000000000000000211",
+    "100000666666666000000077777777700002111",
+    "100000000000000000000000000000000001111",
+    "100000000000000000000000000000000001111",
+    "111111777777777111111166666666611111111"
+  ];
+  const MAP_W = MAP_ROWS[0].length;
+  const MAP_H = MAP_ROWS.length;
+
+  const GIDS = {
+    "0": {type:"empty"},
+    "1": {type:"solid"},
+    "2": {type:"solid-slope-up-right"},
+    "3": {type:"solid-slope-down-right"},
+    "6": {type:"blue-water"},
+    "7": {type:"red-lava"},
+    "8": {type:"green-poison"}
+  };
+
+  const pools = [
+    {color:"blue",rect:[192,800,288,32]},
+    {color:"red",rect:[704,800,288,32]},
+    {color:"red",rect:[192,896,288,32]},
+    {color:"blue",rect:[704,896,288,32]},
+    {color:"green",rect:[416,480,288,32]},
+    {color:"green",rect:[896,480,224,32]}
+  ];
+
+  const diamonds = {
+    red:[ [920,592],[496,592],[592,120],[608,392],[272,864],[408,864],[776,768],[920,768] ],
+    blue:[ [656,120],[672,392],[336,592],[264,768],[408,768],[776,864],[920,864],[776,592] ]
+  };
+
+  const pressurePlates = [
+    {id:"lower-left",center:[192,640],group:0,rect:null},
+    {id:"lower-right",center:[1040,640],group:0,rect:null},
+    {id:"upper-left",center:[320,160],group:2,rect:null},
+    {id:"upper-right",center:[912,160],group:2,rect:null}
+  ];
+
+  const movingObjects = [
+    {id:"barrier",group:0,restRect:[624,512,32,128],pressedRect:[624,384,32,128],rect:null},
+    {id:"bridge",group:2,restRect:[704,160,160,32],pressedRect:[544,160,160,32],rect:null}
+  ];
+
+  const hangingBoards = [
+    {id:"first",anchor:[384,264],center:[384,408],ropeLength:144,width:102.4,thickness:7.68,angle:0},
+    {id:"second",anchor:[864,264],center:[864,424],ropeLength:160,width:102.4,thickness:7.68,angle:0}
+  ];
+
+  const exits = {
+    fireboy:{anchor:[96,160],width:64},
+    watergirl:{anchor:[208,160],width:64}
+  };
+
+  const spawns = {
+    fireboy:{center:[72,864]},
+    watergirl:{center:[152,864]}
+  };
+
+  // Canvas size
+  canvas.width = 1280;
+  canvas.height = 960;
+
+  // Game state
+  let state = {};
+  function initState(){
+    const fb = {x:spawns.fireboy.center[0], y:spawns.fireboy.center[1], w:20, h:48, vx:0, vy:0, onGround:false, dead:false, color:'#ff4444'};
+    const wg = {x:spawns.watergirl.center[0], y:spawns.watergirl.center[1], w:20, h:48, vx:0, vy:0, onGround:false, dead:false, color:'#44aaff'};
+    state = {
+      fireboy:fb,
+      watergirl:wg,
+      keys:{fire:{left:false,right:false,up:false}, water:{left:false,right:false,up:false}},
+      diamonds:{red:diamonds.red.map(p=>({x:p[0],y:p[1],collected:false})),
+                blue:diamonds.blue.map(p=>({x:p[0],y:p[1],collected:false}))},
+      fireCount:0,
+      waterCount:0,
+      timerStart:performance.now(),
+      elapsed:0,
+      msg:'',
+      lowerActive:false,
+      upperActive:false,
+      barrierPos:{x:movingObjects[0].restRect[0], y:movingObjects[0].restRect[1]},
+      bridgePos:{x:movingObjects[1].restRect[0], y:movingObjects[1].restRect[1]},
+      hanging:hangingBoards.map(b=>Object.assign({},b)),
+    };
+    // compute plate rects
+    pressurePlates.forEach(p=>{p.rect={x:p.center[0]-16,y:p.center[1]-8,w:32,h:16};});
+    movingObjects.forEach(m=>{m.rect={x:m.restRect[0],y:m.restRect[1],w:m.restRect[2],h:m.restRect[3]};});
+    UI.msg.textContent='';
+    UI.fire.textContent='Fireboy: 0 / 8';
+    UI.water.textContent='Watergirl: 0 / 8';
+    UI.timer.textContent='Time: 0.0 s';
+  }
+  initState();
+
+  // Input handling
+  const keyMap = {
+    ArrowLeft:'fireLeft', ArrowRight:'fireRight', ArrowUp:'fireUp',
+    a:'waterLeft', d:'waterRight', w:'waterUp'
+  };
+  window.addEventListener('keydown',e=>{
+    if(e.key==='r' || e.key==='R'){resetGame(); e.preventDefault(); return;}
+    const action = keyMap[e.key];
+    if(!action) return; // ignore other keys
+    const [player, dir] = action.split(/(?=[A-Z])/);
+    if(player==='fire') state.keys.fire[dir.toLowerCase()] = true; else state.keys.water[dir.toLowerCase()] = true;
+    e.preventDefault();
+  });
+  window.addEventListener('keyup',e=>{
+    const action = keyMap[e.key];
+    if(!action) return;
+    const [player, dir] = action.split(/(?=[A-Z])/);
+    if(player==='fire') state.keys.fire[dir.toLowerCase()] = false; else state.keys.water[dir.toLowerCase()] = false;
+    e.preventDefault();
+  });
+  UI.restartBtn.addEventListener('click',resetGame);
+  function resetGame(){initState();}
+
+  // Simple AABB collision
+  function getTile(x,y){
+    const cx = Math.floor(x/TILE);
+    const cy = Math.floor(y/TILE);
+    if(cx<0||cy<0||cx>=MAP_W||cy>=MAP_H) return null;
+    const gid = MAP_ROWS[cy][cx];
+    return GIDS[gid];
+  }
+
+  function rectCollides(ax,ay,aw,ah,bx,by,bw,bh){
+    return ax < bx+bw && ax+aw > bx && ay < by+bh && ay+ah > by;
+  }
+
+  function applyPhysics(p){
+    const GRAV = 0.6;
+    const MAXVX = 4;
+    const JUMP_V = -12;
+    // horizontal
+    if(p === state.fireboy){
+      if(state.keys.fire.left) p.vx = -MAXVX;
+      else if(state.keys.fire.right) p.vx = MAXVX; else p.vx = 0;
+    }else{
+      if(state.keys.water.left) p.vx = -MAXVX;
+      else if(state.keys.water.right) p.vx = MAXVX; else p.vx = 0;
+    }
+    // jump
+    if(p === state.fireboy){
+      if(state.keys.fire.up && p.onGround){ p.vy = JUMP_V; p.onGround = false; }
+    }else{
+      if(state.keys.water.up && p.onGround){ p.vy = JUMP_V; p.onGround = false; }
+    }
+    // gravity
+    p.vy += GRAV;
+    // move X
+    p.x += p.vx;
+    // horizontal collisions
+    resolveCollisions(p, true);
+    // move Y
+    p.y += p.vy;
+    // vertical collisions
+    resolveCollisions(p, false);
+  }
+
+  function resolveCollisions(p, horiz){
+    const left = Math.floor(p.x/ TILE);
+    const right = Math.floor((p.x + p.w)/ TILE);
+    const top = Math.floor(p.y/ TILE);
+    const bottom = Math.floor((p.y + p.h)/ TILE);
+    const tiles = [];
+    for(let i=left;i<=right;i++){
+      for(let j=top;j<=bottom;j++){
+        const gid = MAP_ROWS[j] && MAP_ROWS[j][i];
+        if(gid && (gid==='1' || gid==='2' || gid==='3')) tiles.push({i,j,gid});
+      }
+    }
+    tiles.forEach(t=>{
+      const tx = t.i * TILE; const ty = t.j * TILE;
+      if(t.gid==='1'){
+        // solid AABB
+        if(rectCollides(p.x,p.y,p.w,p.h,tx,ty,TILE,TILE)){
+          if(horiz){
+            if(p.vx>0) p.x = tx - p.w; else if(p.vx<0) p.x = tx + TILE;
+            p.vx = 0;
+          }else{
+            if(p.vy>0){ p.y = ty - p.h; p.onGround = true; }
+            else if(p.vy<0){ p.y = ty + TILE; }
+            p.vy = 0;
+          }
+        }
+      }else if(t.gid==='2'){
+        // slope up-right (right triangle, flat on left-bottom)
+        const relX = (p.x + p.w/2) - tx; // 0..32
+        const maxY = ty + TILE - relX; // line y = -x + 32
+        const footY = p.y + p.h;
+        if(footY > maxY && footY - p.vy <= maxY){ // landing on slope
+          p.y = maxY - p.h;
+          p.onGround = true;
+          p.vy = 0;
+        }
+      }else if(t.gid==='3'){
+        // slope down-right (right triangle, flat on left-top)
+        const relX = (p.x + p.w/2) - tx;
+        const minY = ty + relX; // line y = x
+        const footY = p.y + p.h;
+        if(footY > minY && footY - p.vy <= minY){
+          p.y = minY - p.h;
+          p.onGround = true;
+          p.vy = 0;
+        }
+      }
+    });
+    // moving barrier & bridge collisions
+    const barrier = state.barrierPos;
+    if(rectCollides(p.x,p.y,p.w,p.h, barrier.x, barrier.y, 32,128)){
+      if(!state.lowerActive){ // treat as solid when closed
+        if(horiz){ if(p.vx>0) p.x = barrier.x - p.w; else if(p.vx<0) p.x = barrier.x + 32; p.vx=0; }
+        else{ if(p.vy>0){ p.y = barrier.y - p.h; p.onGround=true; } else if(p.vy<0){ p.y = barrier.y + 128; } p.vy=0; }
+      }
+    }
+    const bridge = state.bridgePos;
+    if(rectCollides(p.x,p.y,p.w,p.h, bridge.x, bridge.y, 160,32)){
+      if(!state.upperActive){ // solid when retracted
+        if(horiz){ if(p.vx>0) p.x = bridge.x - p.w; else if(p.vx<0) p.x = bridge.x + 160; p.vx=0; }
+        else{ if(p.vy>0){ p.y = bridge.y - p.h; p.onGround=true; } else if(p.vy<0){ p.y = bridge.y + 32; } p.vy=0; }
+      }
+    }
+    // hanging boards collision (simple rotated support)
+    state.hanging.forEach(b=>{
+      const rad = b.angle*Math.PI/180;
+      const cx = b.anchor[0];
+      const cy = b.anchor[1] + b.ropeLength;
+      const hw = b.width/2;
+      // compute board line endpoints
+      const x1 = cx - Math.cos(rad)*hw;
+      const y1 = cy - Math.sin(rad)*hw;
+      const x2 = cx + Math.cos(rad)*hw;
+      const y2 = cy + Math.sin(rad)*hw;
+      // simple test: if player's bottom is near the line horizontally
+      const px = p.x + p.w/2;
+      const py = p.y + p.h;
+      const proj = ((px - x1)*(x2 - x1) + (py - y1)*(y2 - y1)) / ((x2 - x1)**2 + (y2 - y1)**2);
+      if(proj>0 && proj<1){
+        const closestX = x1 + proj*(x2 - x1);
+        const closestY = y1 + proj*(y2 - y1);
+        if(Math.abs(py - closestY) < 6 && py > closestY){
+          // stand on board
+          p.y = closestY - p.h;
+          p.onGround = true;
+          p.vy = 0;
+        }
+      }
+    });
+  }
+
+  function checkHazards(){
+    const p = state.fireboy;
+    if(!p.dead) checkHazardFor(p, false);
+    const w = state.watergirl;
+    if(!w.dead) checkHazardFor(w, true);
+  }
+  function checkHazardFor(p, isWater){
+    // check pools
+    for(const pool of pools){
+      const [x,y,w,h] = pool.rect;
+      if(rectCollides(p.x,p.y,p.w,p.h,x,y,w,h)){
+        if(pool.color==='green'){ die(p); return; }
+        if(pool.color==='red' && !isWater){ /* safe */ }
+        else if(pool.color==='blue' && isWater){ /* safe */ }
+        else { die(p); return; }
+      }
+    }
+    // check tile liquids (blue-water, red-lava, green-poison)
+    const left = Math.floor(p.x/ TILE);
+    const right = Math.floor((p.x + p.w)/ TILE);
+    const top = Math.floor(p.y/ TILE);
+    const bottom = Math.floor((p.y + p.h)/ TILE);
+    for(let i=left;i<=right;i++){
+      for(let j=top;j<=bottom;j++){
+        const gid = MAP_ROWS[j] && MAP_ROWS[j][i];
+        const tile = GIDS[gid];
+        if(!tile) continue;
+        if(tile.type==='blue-water'){
+          if(isWater) {/* safe */} else { die(p); return; }
+        } else if(tile.type==='red-lava'){
+          if(!isWater){/* safe */} else { die(p); return; }
+        } else if(tile.type==='green-poison'){
+          die(p); return;
+        }
+      }
+    }
+  }
+  function die(p){ p.dead = true; p.vx=0; p.vy=0; state.msg.textContent='A character died!'; }
+
+  function checkDiamonds(){
+    const fb = state.fireboy, wg = state.watergirl;
+    state.diamonds.red.forEach(d=>{ if(!d.collected && rectCollides(fb.x,fb.y,fb.w,fb.h,d.x-8,d.y-8,16,16)){
+        d.collected=true; state.fireCount++; UI.fire.textContent=`Fireboy: ${state.fireCount} / 8`;
+      }
+    });
+    state.diamonds.blue.forEach(d=>{ if(!d.collected && rectCollides(wg.x,wg.y,wg.w,wg.h,d.x-8,d.y-8,16,16)){
+        d.collected=true; state.waterCount++; UI.water.textContent=`Watergirl: ${state.waterCount} / 8`;
+      }
+    });
+  }
+
+  function checkPlates(){
+    // lower plates group 0 control barrier
+    let lowerAny = false;
+    const lower = pressurePlates.filter(p=>p.group===0);
+    lower.forEach(p=>{ if(rectCollides(state.fireboy.x,state.fireboy.y,state.fireboy.w,state.fireboy.h,p.rect.x,p.rect.y,p.rect.w,p.rect.h) ||
+                        rectCollides(state.watergirl.x,state.watergirl.y,state.watergirl.w,state.watergirl.h,p.rect.x,p.rect.y,p.rect.w,p.rect.h)) lowerAny=true; });
+    state.lowerActive = lowerAny;
+    // update barrier pos
+    const bar = movingObjects[0];
+    if(state.lowerActive){ state.barrierPos.x = bar.pressedRect[0]; state.barrierPos.y = bar.pressedRect[1]; }
+    else{ state.barrierPos.x = bar.restRect[0]; state.barrierPos.y = bar.restRect[1]; }
+    // upper plates group 2 control bridge
+    let upperAny = false;
+    const upper = pressurePlates.filter(p=>p.group===2);
+    upper.forEach(p=>{ if(rectCollides(state.fireboy.x,state.fireboy.y,state.fireboy.w,state.fireboy.h,p.rect.x,p.rect.y,p.rect.w,p.rect.h) ||
+                        rectCollides(state.watergirl.x,state.watergirl.y,state.watergirl.w,state.watergirl.h,p.rect.x,p.rect.y,p.rect.w,p.rect.h)) upperAny=true; });
+    state.upperActive = upperAny;
+    const br = movingObjects[1];
+    if(state.upperActive){ state.bridgePos.x = br.pressedRect[0]; state.bridgePos.y = br.pressedRect[1]; }
+    else{ state.bridgePos.x = br.restRect[0]; state.bridgePos.y = br.restRect[1]; }
+  }
+
+  function checkExits(){
+    if(state.fireboy.dead || state.watergirl.dead) return;
+    const fbExit = exits.fireboy;
+    const wgExit = exits.watergirl;
+    const fbIn = rectCollides(state.fireboy.x,state.fireboy.y,state.fireboy.w,state.fireboy.h,fbExit.anchor[0],fbExit.anchor[1],fbExit.width,64);
+    const wgIn = rectCollides(state.watergirl.x,state.watergirl.y,state.watergirl.w,state.watergirl.h,wgExit.anchor[0],wgExit.anchor[1],wgExit.width,64);
+    if(fbIn && wgIn){ state.msg.textContent='Victory!'; }
+  }
+
+  function updateHanging(){
+    // simple tilt based on where a character stands on the board
+    state.hanging.forEach(board=>{
+      // reset angle
+      board.angle = 0;
+      const side = board.id==="first"? state.fireboy : state.watergirl;
+      const other = board.id==="first"? state.watergirl : state.fireboy;
+      // check if side is on board
+      const rad = board.angle*Math.PI/180;
+      const cx = board.anchor[0];
+      const cy = board.anchor[1] + board.ropeLength;
+      const hw = board.width/2;
+      const x1 = cx - Math.cos(rad)*hw;
+      const y1 = cy - Math.sin(rad)*hw;
+      const x2 = cx + Math.cos(rad)*hw;
+      const y2 = cy + Math.sin(rad)*hw;
+      const test = (p)=>{
+        const px = p.x + p.w/2;
+        const py = p.y + p.h;
+        const proj = ((px - x1)*(x2 - x1) + (py - y1)*(y2 - y1)) / ((x2 - x1)**2 + (y2 - y1)**2);
+        if(proj>0 && proj<1){
+          const cxp = x1 + proj*(x2 - x1);
+          if(Math.abs(py - cxp) < 6) return true;
+        }
+        return false;
+      };
+      if(test(side)) board.angle = (side.x - cx) > 0 ? -5 : 5;
+      else if(test(other)) board.angle = (other.x - cx) > 0 ? -5 : 5;
+    });
+  }
+
+  function update(){
+    const now = performance.now();
+    state.elapsed = (now - state.timerStart)/1000;
+    UI.timer.textContent = 'Time: '+state.elapsed.toFixed(1)+' s';
+    if(state.fireboy.dead && state.watergirl.dead){ state.msg.textContent='Both dead.'; }
+    if(state.msg.textContent.startsWith('Victory')) return; // freeze after win
+    applyPhysics(state.fireboy);
+    applyPhysics(state.watergirl);
+    checkHazards();
+    checkDiamonds();
+    checkPlates();
+    updateHanging();
+    checkExits();
+    draw();
+    requestAnimationFrame(update);
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    // draw tiles
+    for(let y=0;y<MAP_H;y++){
+      for(let x=0;x<MAP_W;x++){
+        const gid = MAP_ROWS[y][x];
+        const tile = GIDS[gid];
+        if(!tile) continue;
+        const px = x*TILE, py = y*TILE;
+        if(tile.type==='solid'){
+          ctx.fillStyle='#555';
+          ctx.fillRect(px,py,TILE,TILE);
+        }else if(tile.type==='solid-slope-up-right'){
+          ctx.fillStyle='#666';
+          ctx.beginPath(); ctx.moveTo(px+TILE,py); ctx.lineTo(px+TILE,py+TILE); ctx.lineTo(px,py+TILE); ctx.closePath(); ctx.fill();
+        }else if(tile.type==='solid-slope-down-right'){
+          ctx.fillStyle='#777';
+          ctx.beginPath(); ctx.moveTo(px,py); ctx.lineTo(px+TILE,py+TILE); ctx.lineTo(px,py+TILE); ctx.closePath(); ctx.fill();
+        }else if(tile.type==='blue-water'){
+          ctx.fillStyle='rgba(0,0,255,0.4)';
+          ctx.fillRect(px,py+16,TILE,16);
+        }else if(tile.type==='red-lava'){
+          ctx.fillStyle='rgba(255,0,0,0.4)';
+          ctx.fillRect(px,py+16,TILE,16);
+        }else if(tile.type==='green-poison'){
+          ctx.fillStyle='rgba(0,255,0,0.4)';
+          ctx.fillRect(px,py+16,TILE,16);
+        }
+      }
+    }
+    // draw pools (extra safety layers)
+    pools.forEach(p=>{
+      const [x,y,w,h]=p.rect;
+      let col='rgba(255,255,255,0.2)';
+      if(p.color==='blue') col='rgba(0,0,255,0.2)';
+      if(p.color==='red') col='rgba(255,0,0,0.2)';
+      if(p.color==='green') col='rgba(0,255,0,0.2)';
+      ctx.fillStyle=col;
+      ctx.fillRect(x,y,w,h);
+    });
+    // draw diamonds
+    ctx.fillStyle='red';
+    state.diamonds.red.forEach(d=>{ if(!d.collected){ ctx.beginPath(); ctx.arc(d.x,d.y,8,0,Math.PI*2); ctx.fill(); } });
+    ctx.fillStyle='blue';
+    state.diamonds.blue.forEach(d=>{ if(!d.collected){ ctx.beginPath(); ctx.arc(d.x,d.y,8,0,Math.PI*2); ctx.fill(); } });
+    // draw plates
+    pressureK = pressurePlates;
+    pressurePlates.forEach(p=>{ ctx.fillStyle=p.group===0?'orange':'purple'; ctx.fillRect(p.rect.x,p.rect.y,p.rect.w,p.rect.h); });
+    // draw moving barrier and bridge
+    ctx.fillStyle='gray';
+    ctx.fillRect(state.barrierPos.x,state.barrierPos.y,32,128);
+    ctx.fillStyle='brown';
+    ctx.fillRect(state.bridgePos.x,state.bridgePos.y,160,32);
+    // draw hanging boards
+    state.hanging.forEach(b=>{
+      const rad = b.angle*Math.PI/180;
+      const cx = b.anchor[0];
+      const cy = b.anchor[1] + b.ropeLength;
+      const hw = b.width/2;
+      const x1 = cx - Math.cos(rad)*hw;
+      const y1 = cy - Math.sin(rad)*hw;
+      const x2 = cx + Math.cos(rad)*hw;
+      const y2 = cy + Math.sin(rad)*hw;
+      ctx.strokeStyle='brown'; ctx.lineWidth=b.thickness;
+      ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();
+      // rope
+      ctx.strokeStyle='black'; ctx.lineWidth=2;
+      ctx.beginPath(); ctx.moveTo(cx, b.anchor[1]); ctx.lineTo(cx, cy); ctx.stroke();
+    });
+    // draw exits
+    ctx.fillStyle='red'; ctx.fillRect(exits.fireboy.anchor[0],exits.fireboy.anchor[1],exits.fireboy.width,64);
+    ctx.fillStyle='blue'; ctx.fillRect(exits.watergirl.anchor[0],exits.watergirl.anchor[1],exits.watergirl.width,64);
+    // draw players
+    [state.fireboy, state.watergirl].forEach(p=>{
+      if(p.dead) return;
+      ctx.fillStyle=p.color;
+      ctx.fillRect(p.x,p.y,p.w,p.h);
+    });
+  }
+
+  // start loop
+  requestAnimationFrame(update);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "condition": "Same complete text-evidence Level2 package; no extra images or source for Gemini. New comparison, prior pilots excluded.",
+  "models": [
+    {
+      "id": "gemini",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash"
+    },
+    {
+      "id": "cerebras",
+      "provider": "cerebras",
+      "model": "gpt-oss-120b"
+    },
+    {
+      "id": "openrouter",
+      "provider": "openrouter",
+      "model": "openai/gpt-oss-120b"
+    }
+  ],
+  "generation": {
+    "temperature": 1,
+    "maxOutputTokens": 16384,
+    "timeoutMs": 600000,
+    "requestsPerConfiguration": 1,
+    "repairs": 0,
+    "retries": 0,
+    "stream": false
+  },
+  "publicFiles": [
+    "prompt.txt",
+    "reference-evidence.json",
+    "walkthrough.json",
+    "walkthrough-program.mjs",
+    "rubric.json"
+  ],
+  "outputContract": {
+    "type": "object",
+    "properties": {
+      "html": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "html"
+    ],
+    "additionalProperties": false
+  },
+  "assessment": {
+    "serial": true,
+    "order": [
+      "gemini",
+      "cerebras",
+      "openrouter"
+    ],
+    "viewport": {
+      "width": 1280,
+      "height": 960,
+      "deviceScaleFactor": 1
+    },
+    "freshContextEachScenario": true,
+    "startupSettlingMs": 1000,
+    "publicClock": "controlled",
+    "publicHostDeadlineMs": 300000,
+    "hiddenAssessmentSha256": "b8706b0c87a2d563cf2483822f1117eac356687fa5923eef6ce46038657a892b",
+    "hiddenScenarios": 19,
+    "neutralActualMs": 60000,
+    "reset": "Fresh navigation per scenario; in-attempt R or visible Restart only, with physically held controls retained in held-reset trials. No global/state mutations."
+  },
+  "settingsEquivalence": "Same user bytes, temperature and native max output-token cap. Provider-specific JSON schema transport preserved. Tokenization/reasoning defaults differ; cap is not identical effective code-token allocation. No unsupported thinking/effort setting injected.",
+  "cost": "Provider-reported cost recorded when available. Otherwise unavailable, not zero. No guessed prices.",
+  "interpretation": "Single attempt per configuration, not statistically reliable ranking. Cerebras and OpenRouter are two serving configurations of the same reported GPT-OSS model, not independent model families."
+}

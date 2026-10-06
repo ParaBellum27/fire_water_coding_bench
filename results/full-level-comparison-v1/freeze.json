@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "frozenAt": "2026-10-06T06:52:28.427Z",
+  "publicPackage": "/Users/Pierre/Desktop/fire_water_coding_bench/task-public/full-level-comparison-v1",
+  "publicManifestSha256": "e2c6653954697f223e29a9c33926d936f27d2d24a9c94a7949f26123fe03a931",
+  "hiddenAssessmentSha256": "b8706b0c87a2d563cf2483822f1117eac356687fa5923eef6ce46038657a892b",
+  "runnerFiles": [
+    {
+      "file": "runner/comparison-generate.ts",
+      "sha256": "5f07f8e9016d08b5e517d816fe76e700b891062326fc36159d3ab9469494b3aa"
+    },
+    {
+      "file": "runner/comparison-capture.mjs",
+      "sha256": "15d85c9a5e7c42fa4fb85c1abca3e44373c1211b39f94d3fbf64c3fb38e0a228"
+    }
+  ]
+}

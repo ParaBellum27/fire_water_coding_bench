@@ -1,0 +1,361 @@
+{
+  "scope": "External rendered PNG RGB measurements only, not candidate variables. Color thresholds distinguish actor rectangles from red/blue pools; raw images remain unchanged. Null means actor-colored pixels absent in viewport, NOT automatic death.",
+  "frames": [
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "label": "startup",
+      "file": "openrouter/assessment/red-safe-pickup-revisit/screenshots/0000-startup.png",
+      "text": "Time: 1.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "label": "fire-traverse-red-0",
+      "file": "openrouter/assessment/red-safe-pickup-revisit/screenshots/0001-fire-traverse-red-0.png",
+      "text": "Time: 1.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": {
+          "x": 150,
+          "y": 856,
+          "width": 2,
+          "height": 40,
+          "pixels": 80
+        },
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "label": "fire-traverse-red-1",
+      "file": "openrouter/assessment/red-safe-pickup-revisit/screenshots/0002-fire-traverse-red-1.png",
+      "text": "Time: 2.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": {
+          "x": 230,
+          "y": 924,
+          "width": 19,
+          "height": 36,
+          "pixels": 684
+        },
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "label": "fire-traverse-red-2",
+      "file": "openrouter/assessment/red-safe-pickup-revisit/screenshots/0003-fire-traverse-red-2.png",
+      "text": "Time: 2.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": null,
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "label": "fire-traverse-red-3",
+      "file": "openrouter/assessment/red-safe-pickup-revisit/screenshots/0004-fire-traverse-red-3.png",
+      "text": "Time: 3.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": null,
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "label": "fire-traverse-red-4",
+      "file": "openrouter/assessment/red-safe-pickup-revisit/screenshots/0005-fire-traverse-red-4.png",
+      "text": "Time: 3.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": null,
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "label": "fire-revisit-red-0",
+      "file": "openrouter/assessment/red-safe-pickup-revisit/screenshots/0006-fire-revisit-red-0.png",
+      "text": "Time: 3.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": null,
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "label": "fire-revisit-red-1",
+      "file": "openrouter/assessment/red-safe-pickup-revisit/screenshots/0007-fire-revisit-red-1.png",
+      "text": "Time: 4.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": null,
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "label": "fire-revisit-red-2",
+      "file": "openrouter/assessment/red-safe-pickup-revisit/screenshots/0008-fire-revisit-red-2.png",
+      "text": "Time: 4.3 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": null,
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "label": "fire-recollect-attempt-0",
+      "file": "openrouter/assessment/red-safe-pickup-revisit/screenshots/0009-fire-recollect-attempt-0.png",
+      "text": "Time: 4.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": null,
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "label": "fire-recollect-attempt-1",
+      "file": "openrouter/assessment/red-safe-pickup-revisit/screenshots/0010-fire-recollect-attempt-1.png",
+      "text": "Time: 5.3 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": null,
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "red-foreign-death",
+      "label": "startup",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0000-startup.png",
+      "text": "Time: 1.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "red-foreign-death",
+      "label": "water-contact-red-0",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0001-water-contact-red-0.png",
+      "text": "Time: 1.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      }
+    },
+    {
+      "scenario": "red-foreign-death",
+      "label": "water-contact-red-3",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0004-water-contact-red-3.png",
+      "text": "Time: 3.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      }
+    },
+    {
+      "scenario": "red-foreign-death",
+      "label": "terminal-input-probe-0",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0005-terminal-input-probe-0.png",
+      "text": "Time: 3.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      }
+    },
+    {
+      "scenario": "red-foreign-death",
+      "label": "terminal-input-probe-2",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0007-terminal-input-probe-2.png",
+      "text": "Time: 4.2 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      }
+    },
+    {
+      "scenario": "blue-upper-wrong-pickup",
+      "label": "startup",
+      "file": "openrouter/assessment/blue-upper-wrong-pickup/screenshots/0000-startup.png",
+      "text": "Time: 1.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "blue-upper-wrong-pickup",
+      "label": "approach-first-shelf-1",
+      "file": "openrouter/assessment/blue-upper-wrong-pickup/screenshots/0002-approach-first-shelf-1.png",
+      "text": "Time: 1.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+      "measurements": {
+        "fireboy": {
+          "x": 172,
+          "y": 856,
+          "width": 5,
+          "height": 40,
+          "pixels": 200
+        },
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "blue-upper-wrong-pickup",
+      "label": "fire-contact-upper-blue-gem-and-pool-0",
+      "file": "openrouter/assessment/blue-upper-wrong-pickup/screenshots/0003-fire-contact-upper-blue-gem-and-pool-0.png",
+      "text": "Time: 1.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+      "measurements": {
+        "fireboy": null,
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    },
+    {
+      "scenario": "blue-upper-wrong-pickup",
+      "label": "fire-contact-upper-blue-gem-and-pool-2",
+      "file": "openrouter/assessment/blue-upper-wrong-pickup/screenshots/0005-fire-contact-upper-blue-gem-and-pool-2.png",
+      "text": "Time: 1.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+      "measurements": {
+        "fireboy": null,
+        "watergirl": {
+          "x": 152,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        }
+      }
+    }
+  ]
+}

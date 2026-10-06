@@ -1,0 +1,2796 @@
+{
+  "id": "openrouter",
+  "provider": "openrouter",
+  "model": "openai/gpt-oss-120b",
+  "generation": {
+    "id": "openrouter",
+    "provider": "openrouter",
+    "modelRequested": "openai/gpt-oss-120b",
+    "modelReturned": "openai/gpt-oss-120b",
+    "servingProvider": "Mancer 2",
+    "servingProviderAttribution": "reported_metadata",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "settings": {
+      "temperature": 1,
+      "maxOutputTokens": 16384,
+      "timeoutMs": 600000
+    },
+    "payloadSha256": "7cc8b61abf62c4d70bfa5ebd934e374d1b927b52ed76dfe8cac5783f93540a26",
+    "requestSha256": "5aafc201ae073d38e198b8dcd604854bb1b04c19299322995b52914da99ef38b",
+    "manifestSha256": "e2c6653954697f223e29a9c33926d936f27d2d24a9c94a7949f26123fe03a931",
+    "protocolSha256": "ca9a316e741cb20fa15349f0aa4d364160f30a631fb714a91e983071d65fe9ad",
+    "publicFiles": [
+      "prompt.txt",
+      "reference-evidence.json",
+      "walkthrough.json",
+      "walkthrough-program.mjs",
+      "rubric.json"
+    ],
+    "requestCount": 1,
+    "usage": {
+      "prompt_tokens": 10021,
+      "completion_tokens": 7362,
+      "total_tokens": 17383,
+      "cost": 0.00229,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00229,
+        "upstream_inference_prompt_cost": 0.000450660631173779,
+        "upstream_inference_completions_cost": 0.001839339368826221
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 2136,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    "reportedCost": 0.00229,
+    "httpStatus": 200,
+    "finishReason": "stop",
+    "durationMs": 221967.0185,
+    "status": "submitted",
+    "outputContract": {
+      "status": "VALID",
+      "reasons": []
+    },
+    "startedAt": "2026-10-06T06:55:18.084Z",
+    "reportedProvider": "Mancer 2",
+    "htmlSha256": "9acb855d2b11c87c46ec5073df880c63a9e369f4ba33b45196791401f9b47cf5",
+    "finishedAt": "2026-10-06T06:59:00.065Z"
+  },
+  "verifiedScore": 30.22,
+  "weightedCoverage": 43.72,
+  "possibleScore": [
+    30.22,
+    86.5
+  ],
+  "fullSuccess": false,
+  "verdict": "FAIL",
+  "categories": [
+    {
+      "id": "BOOT",
+      "overallWeight": 6,
+      "verifiedScore": 57,
+      "coverage": 92,
+      "possibleScore": [
+        57,
+        65
+      ],
+      "criteria": [
+        {
+          "id": "standalone-output",
+          "weight": 20,
+          "rule": "Complete self-contained HTML in the JSON html field; no Markdown, imports or external dependencies.",
+          "group": "BOOT",
+          "status": "PASS",
+          "reason": "Valid exact single-field JSON and complete inline HTML loaded locally; all saved trials have no blocked external requests. Returned bytes stayed unchanged.",
+          "evidence": [
+            "openrouter/generation.json",
+            "openrouter/assessment/public-walkthrough/capture.json"
+          ],
+          "earnedPoints": 20
+        },
+        {
+          "id": "visible-playable-start",
+          "weight": 30,
+          "rule": "Level and both characters render and start through normal keyboard interaction.",
+          "group": "BOOT",
+          "status": "PASS",
+          "reason": "Full multi-tier map and distinct actor rectangles render; normal ArrowRight and d trials move the corresponding actor.",
+          "evidence": [
+            "openrouter/assessment/real-controls/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0000-startup.png"
+          ],
+          "earnedPoints": 30
+        },
+        {
+          "id": "viewport",
+          "weight": 15,
+          "rule": "Fits1280x960 and resizing preserves logical geometry.",
+          "group": "BOOT",
+          "status": "FAIL",
+          "reason": "At800×600 the actual canvas remains1280×960, clipping the bottom spawns and right side instead of adapting logical geometry. Rendered surface/scroll boxes and raw resized screenshot agree.",
+          "evidence": [
+            "openrouter/assessment/real-controls/capture.json",
+            "openrouter/assessment/real-controls/screenshots/0038-resize-800-600.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "visible-ui",
+          "weight": 20,
+          "rule": "Visible gem progress, elapsed timer, controls and Restart.",
+          "group": "BOOT",
+          "status": "FAIL",
+          "reason": "Timer, two gem counters and Restart appear, but required visible character-control instructions are absent from the rendered game and body text.",
+          "evidence": [
+            "openrouter/assessment/public-walkthrough/screenshots/0000-startup.png",
+            "openrouter/assessment/real-controls/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "loss-feedback",
+          "weight": 7,
+          "rule": "Visible loss feedback following observed lethal contact.",
+          "group": "BOOT",
+          "status": "PASS",
+          "reason": "Watergirl red contact produces visible Game Over and removes her actor; the button and counters remain visible.",
+          "evidence": [
+            "openrouter/assessment/red-foreign-death/capture.json",
+            "openrouter/assessment/red-foreign-death/screenshots/0001-water-contact-red-0.png"
+          ],
+          "earnedPoints": 7
+        },
+        {
+          "id": "victory-feedback",
+          "weight": 8,
+          "rule": "Visible victory feedback following both living matching exit occupants.",
+          "group": "BOOT",
+          "status": "NOT_REACHED",
+          "reason": "No matching-exit completion was reached; public route lost at displayed2.6s.",
+          "evidence": [
+            "openrouter/assessment/public-walkthrough/capture.json"
+          ],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "LAYOUT",
+      "overallWeight": 12,
+      "verifiedScore": 75,
+      "coverage": 75,
+      "possibleScore": [
+        75,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "terrain-and-spawns",
+          "weight": 25,
+          "rule": "Multi-tier recognizable temple and bottom-left spawns.",
+          "group": "LAYOUT",
+          "status": "PASS",
+          "reason": "Recognizable authored multi-tier terrain, stairs, corridor and bottom-left spawns are visible in the full startup map.",
+          "evidence": [
+            "openrouter/assessment/public-walkthrough/screenshots/0000-startup.png"
+          ],
+          "earnedPoints": 25
+        },
+        {
+          "id": "pools",
+          "weight": 15,
+          "rule": "Required elemental pools in the demonstrated regions.",
+          "group": "LAYOUT",
+          "status": "EVALUATOR_ERROR",
+          "reason": "Frozen reference is contradictory: canonical grid row15 places green pools atx256..544 and736..960, while duplicated pools metadata specifiesx416..704 and896..1120. Correctness of green placement is not scored; no candidate geometry penalty for either interpretation.",
+          "evidence": [
+            "openrouter/assessment/public-walkthrough/screenshots/0000-startup.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "cooperative-objects",
+          "weight": 20,
+          "rule": "Central barrier, four plates and upper bridge/platform.",
+          "group": "LAYOUT",
+          "status": "PASS",
+          "reason": "Four plate squares, the central vertical barrier and upper gap bridge object are visibly present at their authored regions. This is presence credit only, not functional-mechanism credit.",
+          "evidence": [
+            "openrouter/assessment/public-walkthrough/screenshots/0000-startup.png"
+          ],
+          "earnedPoints": 20
+        },
+        {
+          "id": "hanging-platforms",
+          "weight": 15,
+          "rule": "Both suspended platforms above green pools.",
+          "group": "LAYOUT",
+          "status": "PASS",
+          "reason": "Two suspended planks and vertical suspensions are visible near authored centers384,408 and864,424 over the canonical green chamber regions. Physical support/tilt was not established.",
+          "evidence": [
+            "openrouter/assessment/public-walkthrough/screenshots/0000-startup.png"
+          ],
+          "earnedPoints": 15
+        },
+        {
+          "id": "collectibles-and-exits",
+          "weight": 15,
+          "rule": "Eight red and eight blue diamonds and matching exits at upper left.",
+          "group": "LAYOUT",
+          "status": "PASS",
+          "reason": "Eight red and eight cyan pickup markers and two matching-color upper-left doors are visibly present at specified regions.",
+          "evidence": [
+            "openrouter/assessment/public-walkthrough/screenshots/0000-startup.png"
+          ],
+          "earnedPoints": 15
+        },
+        {
+          "id": "traversable-route",
+          "weight": 10,
+          "rule": "Normal input reaches bottom, middle and upper tiers without forbidden shortcuts or scripted progress.",
+          "group": "LAYOUT",
+          "status": "NOT_REACHED",
+          "reason": "Public route ends in early loss; no ordinary-input traversal through middle and upper tiers was observed. Timing divergence alone is not declared an impossible-route defect.",
+          "evidence": [
+            "openrouter/assessment/public-walkthrough/capture.json"
+          ],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "CONTROLS",
+      "overallWeight": 10,
+      "verifiedScore": 55,
+      "coverage": 55,
+      "possibleScore": [
+        55,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "fireboy",
+          "weight": 20,
+          "rule": "ArrowLeft/Right/Up act only on Fireboy.",
+          "group": "CONTROLS",
+          "status": "PASS",
+          "reason": "In native real-controls, ArrowRight moves the red actor from approximately x72 to x102 and ArrowLeft returns him while green Watergirl remains at x152. In real-jumps, ArrowUp raises only Fireboy while Watergirl remains supported. Thus all three assigned arrow controls act only on Fireboy in the observed live attempt.",
+          "evidence": [
+            "openrouter/assessment/real-controls/capture.json",
+            "openrouter/assessment/real-controls/screenshots/0000-startup.png",
+            "openrouter/assessment/real-controls/screenshots/0002-fire-right-1.png",
+            "openrouter/assessment/real-controls/screenshots/0004-fire-left-1.png",
+            "openrouter/assessment/real-jumps/screenshots/0001-fire-grounded-jump-0.png"
+          ],
+          "earnedPoints": 20
+        },
+        {
+          "id": "watergirl",
+          "weight": 20,
+          "rule": "Physical A/D/W and lowercase/Shift/Caps Lock act only on Watergirl.",
+          "group": "CONTROLS",
+          "status": "NOT_REACHED",
+          "reason": "Lowercase d/a move only the green actor and lowercase w jumps only that actor, establishing Watergirl identity without relying on the expected palette. The Shift+D and uppercase A segments occur after a real Game Over and an ineffective R restart: Watergirl is already absent and the surviving red actor is frozen. Those segments cannot distinguish uppercase binding behavior from the failed restart. Caps Lock and uppercase W are not established. Full lowercase/Shift/Caps Lock conjunction therefore remains unverified, not failed.",
+          "evidence": [
+            "openrouter/assessment/real-controls/capture.json",
+            "openrouter/assessment/real-controls/screenshots/0006-water-right-1.png",
+            "openrouter/assessment/real-controls/screenshots/0008-water-left-1.png",
+            "openrouter/assessment/real-jumps/screenshots/0024-water-grounded-jump-0.png",
+            "openrouter/assessment/real-controls/screenshots/0011-release-fire-retain-water-0.png",
+            "openrouter/assessment/real-controls/screenshots/0030-reset-before-uppercase-3.png",
+            "openrouter/assessment/real-controls/screenshots/0032-shift-D-water-right-1.png",
+            "openrouter/assessment/real-controls/screenshots/0034-uppercase-A-water-left-1.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "simultaneous",
+          "weight": 20,
+          "rule": "Both characters move and jump simultaneously.",
+          "group": "CONTROLS",
+          "status": "PASS",
+          "reason": "Before the control trial loses, ArrowRight+d displace both actors together. In the separate native jump trial, ArrowUp+w raises both actors simultaneously and both subsequently land. Both movement and jump conjuncts are observed in live states.",
+          "evidence": [
+            "openrouter/assessment/real-controls/screenshots/0008-water-left-1.png",
+            "openrouter/assessment/real-controls/screenshots/0010-both-right-1.png",
+            "openrouter/assessment/real-jumps/capture.json",
+            "openrouter/assessment/real-jumps/screenshots/0047-both-grounded-jump-0.png",
+            "openrouter/assessment/real-jumps/screenshots/0066-final.png"
+          ],
+          "earnedPoints": 20
+        },
+        {
+          "id": "independent-release",
+          "weight": 25,
+          "rule": "Both release directions stop only the released character.",
+          "group": "CONTROLS",
+          "status": "NOT_REACHED",
+          "reason": "The first release direction stops Fireboy while Watergirl proceeds into the nearby red hazard and disappears with Game Over by the first retained-d sample. R then removes the loss text but does not restore a playable pair: the reverse-release baseline and result show the same frozen red actor and absent Watergirl. Consequently both independent-release directions were not verified; the missing reverse encounter is not a new binding failure.",
+          "evidence": [
+            "openrouter/assessment/real-controls/capture.json",
+            "openrouter/assessment/real-controls/screenshots/0010-both-right-1.png",
+            "openrouter/assessment/real-controls/screenshots/0011-release-fire-retain-water-0.png",
+            "openrouter/assessment/real-controls/screenshots/0019-reset-before-reverse-3.png",
+            "openrouter/assessment/real-controls/screenshots/0021-both-right-reverse-1.png",
+            "openrouter/assessment/real-controls/screenshots/0023-release-water-retain-fire-1.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "no-page-scroll",
+          "weight": 15,
+          "rule": "Control keys do not scroll or lose game interaction.",
+          "group": "CONTROLS",
+          "status": "PASS",
+          "reason": "Every recorded native control and jump observation retains scroll x=0,y=0; the initial arrow and letter controls visibly move/jump actors without losing interaction. The resize observation also retains zero scroll, although its 800x600 viewport clips the fixed-size map; that is not evidence of control-key scrolling. No keys were exercised at the resized viewport, so this PASS does not assert resized-layout correctness.",
+          "evidence": [
+            "openrouter/assessment/real-controls/capture.json",
+            "openrouter/assessment/real-jumps/capture.json",
+            "openrouter/assessment/real-controls/screenshots/0002-fire-right-1.png",
+            "openrouter/assessment/real-jumps/screenshots/0047-both-grounded-jump-0.png",
+            "openrouter/assessment/real-controls/screenshots/0038-resize-800-600.png"
+          ],
+          "earnedPoints": 15
+        }
+      ]
+    },
+    {
+      "id": "PHYSICS",
+      "overallWeight": 12,
+      "verifiedScore": 25,
+      "coverage": 75,
+      "possibleScore": [
+        25,
+        50
+      ],
+      "criteria": [
+        {
+          "id": "gravity-and-jump",
+          "weight": 25,
+          "rule": "Grounded jump shows ascent/apex/descent and no flight or double-jump.",
+          "group": "PHYSICS",
+          "status": "PASS",
+          "reason": "Native real-jumps shows grounded ascent, an apex, descent, and supported landing for each actor separately and for both together. Fireboy rises from y856 to about y719, is descending after the airborne ArrowUp repress, and lands; Watergirl follows a comparable arc through the airborne w repress rather than receiving a second full jump. Subsequent idle landing samples remain grounded. This is qualitative observed jump behavior, not an exact-physics claim.",
+          "evidence": [
+            "openrouter/assessment/real-jumps/capture.json",
+            "openrouter/assessment/real-jumps/screenshots/0001-fire-grounded-jump-0.png",
+            "openrouter/assessment/real-jumps/screenshots/0004-fire-release-rise-2.png",
+            "openrouter/assessment/real-jumps/screenshots/0005-fire-airborne-repress-0.png",
+            "openrouter/assessment/real-jumps/screenshots/0006-fire-descend-land-0.png",
+            "openrouter/assessment/real-jumps/screenshots/0023-fire-descend-land-17.png",
+            "openrouter/assessment/real-jumps/screenshots/0024-water-grounded-jump-0.png",
+            "openrouter/assessment/real-jumps/screenshots/0027-water-release-rise-2.png",
+            "openrouter/assessment/real-jumps/screenshots/0028-water-airborne-repress-0.png",
+            "openrouter/assessment/real-jumps/screenshots/0030-water-descend-land-1.png",
+            "openrouter/assessment/real-jumps/screenshots/0046-water-descend-land-17.png",
+            "openrouter/assessment/real-jumps/screenshots/0066-final.png"
+          ],
+          "earnedPoints": 25
+        },
+        {
+          "id": "landing-and-support",
+          "weight": 25,
+          "rule": "Terrain landing and continued idle support.",
+          "group": "PHYSICS",
+          "status": "FAIL",
+          "reason": "Ordinary spawn-floor jump landings and the 60-second neutral support interval work, but the reachable matching red pool does not support Fireboy. In red-safe-pickup-revisit he enters the first red pool, appears at x230,y924 with his body extending below the visible floor/backing, and disappears below the viewport by the next sample without Game Over. The frozen reference explicitly requires solid lower-half pool backing and supported matching-character traversal. This is an observed support contradiction, not failure to follow the timed route or an assumed pickup precondition.",
+          "evidence": [
+            "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/red-safe-pickup-revisit/screenshots/0000-startup.png",
+            "openrouter/assessment/red-safe-pickup-revisit/screenshots/0002-fire-traverse-red-1.png",
+            "openrouter/assessment/red-safe-pickup-revisit/screenshots/0003-fire-traverse-red-2.png",
+            "openrouter/pixel-measurements.json",
+            "openrouter/hazards-pickups-lower-review.png",
+            "openrouter/assessment/neutral-real-60s/screenshots/0013-final.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "solid-boundaries",
+          "weight": 25,
+          "rule": "Floors/walls/ceiling actually block where reachable.",
+          "group": "PHYSICS",
+          "status": "FAIL",
+          "reason": "The first red pool is reachable without a jump and its mandated solid backing is crossed: Fireboy descends through the rendered floor to y924 and then entirely out of the viewport instead of being blocked by the pool lower half at y912..928. Thus the floor conjunct is contradicted even though upper walls and ceiling were not all reached. This finding concerns unambiguous bottom red backing, not the conflicting upper-green pool metadata.",
+          "evidence": [
+            "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/red-safe-pickup-revisit/screenshots/0002-fire-traverse-red-1.png",
+            "openrouter/assessment/red-safe-pickup-revisit/screenshots/0003-fire-traverse-red-2.png",
+            "openrouter/pixel-measurements.json",
+            "openrouter/hazards-pickups-lower-review.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "moving-surface-contact",
+          "weight": 25,
+          "rule": "Moving and tilted collision geometry agrees with rendered supporting surface.",
+          "group": "PHYSICS",
+          "status": "NOT_REACHED",
+          "reason": "The first- and second-hanging scenarios are already in Game Over with no actors on either board at their load/settle segments. Rendered boards and barrier movement alone do not establish actor contact with a moving or tilted supporting surface. No moving/tilted collision agreement verdict can be made from these missed encounters.",
+          "evidence": [
+            "openrouter/assessment/first-hanging-contact/capture.json",
+            "openrouter/assessment/first-hanging-contact/screenshots/0076-first-right-load-settle-4.png",
+            "openrouter/assessment/second-hanging-contact/capture.json",
+            "openrouter/assessment/second-hanging-contact/screenshots/0087-second-right-load-settle-4.png"
+          ],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "HAZARDS",
+      "overallWeight": 12,
+      "verifiedScore": 45,
+      "coverage": 60,
+      "possibleScore": [
+        45,
+        85
+      ],
+      "criteria": [
+        {
+          "id": "fireboy-red-safe",
+          "weight": 10,
+          "rule": "Fireboy traverses red pool alive.",
+          "group": "HAZARDS",
+          "status": "FAIL",
+          "reason": "On walking into his matching red pool, Fireboy falls below its required solid backing and out of the viewport instead of traversing it supported. At1000ms requested, actor pixels are atx230,y924; by1500ms they are absent while no loss feedback appears. This is unsupported matching-pool traversal, not an inferred lethal-red rule.",
+          "evidence": [
+            "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/red-safe-pickup-revisit/screenshots/0002-fire-traverse-red-1.png",
+            "openrouter/assessment/red-safe-pickup-revisit/screenshots/0003-fire-traverse-red-2.png",
+            "openrouter/pixel-measurements.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "watergirl-blue-safe",
+          "weight": 10,
+          "rule": "Watergirl traverses blue pool alive.",
+          "group": "HAZARDS",
+          "status": "NOT_REACHED",
+          "reason": "The reference path loses before a supported complete Watergirl blue-pool traversal can be observed.",
+          "evidence": [
+            "openrouter/assessment/blue-safe-pickup-revisit/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "fireboy-blue-fatal",
+          "weight": 15,
+          "rule": "Blue contact kills Fireboy visibly.",
+          "group": "HAZARDS",
+          "status": "PASS",
+          "reason": "Normal approach and jump into the first blue upper shelf removes Fireboy and produces Game Over, while Watergirl remains visible. The initial/pre-jump and first loss frames establish this local foreign-element encounter.",
+          "evidence": [
+            "openrouter/assessment/blue-upper-wrong-pickup/capture.json",
+            "openrouter/assessment/blue-upper-wrong-pickup/screenshots/0002-approach-first-shelf-1.png",
+            "openrouter/assessment/blue-upper-wrong-pickup/screenshots/0003-fire-contact-upper-blue-gem-and-pool-0.png"
+          ],
+          "earnedPoints": 15
+        },
+        {
+          "id": "watergirl-red-fatal",
+          "weight": 15,
+          "rule": "Red contact kills Watergirl visibly.",
+          "group": "HAZARDS",
+          "status": "PASS",
+          "reason": "Fresh d-only movement from the lower-left spawn into the first red pool produces Game Over and removes Watergirl; Fireboy remains at spawn.",
+          "evidence": [
+            "openrouter/assessment/red-foreign-death/capture.json",
+            "openrouter/assessment/red-foreign-death/screenshots/0001-water-contact-red-0.png"
+          ],
+          "earnedPoints": 15
+        },
+        {
+          "id": "fireboy-green-fatal",
+          "weight": 15,
+          "rule": "Green contact kills Fireboy visibly.",
+          "group": "HAZARDS",
+          "status": "NOT_REACHED",
+          "reason": "Both green-contact scenarios are already in Game Over before the intended chamber encounter; green contact was not reached. Duplicated green-position evidence is also ambiguous.",
+          "evidence": [
+            "openrouter/assessment/green-fire-contact/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "watergirl-green-fatal",
+          "weight": 15,
+          "rule": "Green contact kills Watergirl visibly.",
+          "group": "HAZARDS",
+          "status": "NOT_REACHED",
+          "reason": "Both green-contact scenarios are already in Game Over before the intended chamber encounter; green contact was not reached. Duplicated green-position evidence is also ambiguous.",
+          "evidence": [
+            "openrouter/assessment/green-water-contact/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "death-terminal",
+          "weight": 15,
+          "rule": "Either death stops onward play and cannot satisfy victory.",
+          "group": "HAZARDS",
+          "status": "PASS",
+          "reason": "After actual red/blue loss the dead actor stays absent and onward movement/jump probes leave the surviving actor fixed with Game Over; the continued public-route inputs do not produce victory. This is bounded terminal-play evidence; dead-at-exit exclusion remains separately unassessed.",
+          "evidence": [
+            "openrouter/assessment/red-foreign-death/capture.json",
+            "openrouter/assessment/red-foreign-death/screenshots/0007-terminal-input-probe-2.png",
+            "openrouter/assessment/public-walkthrough/capture.json"
+          ],
+          "earnedPoints": 15
+        },
+        {
+          "id": "restart-after-death",
+          "weight": 5,
+          "rule": "Visible Restart remains usable after death.",
+          "group": "HAZARDS",
+          "status": "FAIL",
+          "reason": "Restart is clickable after loss and clears Game Over, but does not restore the dead Watergirl to a playable attempt. She remains absent after Restart and R, including released-old-key then fresh d input.",
+          "evidence": [
+            "openrouter/assessment/red-foreign-death/capture.json",
+            "openrouter/assessment/red-foreign-death/screenshots/0011-button-after-death-3.png",
+            "openrouter/assessment/red-foreign-death/screenshots/0021-R-after-death-3.png",
+            "openrouter/post-death-pixels.json"
+          ],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "DIAMONDS",
+      "overallWeight": 8,
+      "verifiedScore": 20,
+      "coverage": 20,
+      "possibleScore": [
+        20,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "inventory",
+          "weight": 20,
+          "rule": "Eight red and eight blue diamonds at specified map positions.",
+          "group": "DIAMONDS",
+          "status": "PASS",
+          "reason": "Full startup shows eight red and eight cyan circular pickup markers at the frozen sensor positions, with8-target counters for both. Own artwork is permitted.",
+          "evidence": [
+            "openrouter/assessment/public-walkthrough/screenshots/0000-startup.png"
+          ],
+          "earnedPoints": 20
+        },
+        {
+          "id": "red-matching-pickup",
+          "weight": 12,
+          "rule": "Fireboy collects an encountered red diamond.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+          "evidence": [
+            "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "blue-matching-pickup",
+          "weight": 13,
+          "rule": "Watergirl collects an encountered blue diamond.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+          "evidence": [
+            "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "red-wrong-retained",
+          "weight": 10,
+          "rule": "Watergirl contacts red diamond without collecting it.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+          "evidence": [
+            "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "blue-wrong-retained",
+          "weight": 10,
+          "rule": "Fireboy contacts blue diamond without collecting it.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+          "evidence": [
+            "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "red-disappears-counts-once",
+          "weight": 12,
+          "rule": "Red pickup disappears; progress increments once and does not increment on revisit.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+          "evidence": [
+            "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "blue-disappears-counts-once",
+          "weight": 13,
+          "rule": "Blue pickup disappears; progress increments once and does not increment on revisit.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+          "evidence": [
+            "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "optional-for-exits",
+          "weight": 10,
+          "rule": "Both matching exits complete with at least one diamond left.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+          "evidence": [
+            "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+          ],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "PRESSURE PLATES",
+      "overallWeight": 12,
+      "verifiedScore": 0,
+      "coverage": 10,
+      "possibleScore": [
+        0,
+        90
+      ],
+      "criteria": [
+        {
+          "id": "lower-left-fire",
+          "weight": 5,
+          "rule": "Fireboy contact with lower left plate opens barrier.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Fireboy contact with the lower-left plate was reached; barrier activation cannot be judged.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "lower-left-water",
+          "weight": 5,
+          "rule": "Watergirl contact with lower left plate opens barrier.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Watergirl contact with the lower-left plate was reached; barrier activation cannot be judged.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "lower-right-fire",
+          "weight": 5,
+          "rule": "Fireboy contact with lower right plate opens barrier.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Fireboy contact with the lower-right plate was reached; barrier activation cannot be judged.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "lower-right-water",
+          "weight": 5,
+          "rule": "Watergirl contact with lower right plate opens barrier.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Watergirl contact with the lower-right plate was reached; barrier activation cannot be judged.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "barrier-closed-blocking",
+          "weight": 8,
+          "rule": "Inactive lower barrier physically blocks normal crossing.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No actor reached the closed barrier to attempt crossing. The blocked-or-crossed snapshot is a lost attempt with no visible actor at the barrier, not a blocking test.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "barrier-open-crossing",
+          "weight": 9,
+          "rule": "Active lower barrier permits normal traversal.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living plate contact followed by an actor traversing the opened barrier was reached.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "barrier-restored-blocking",
+          "weight": 8,
+          "rule": "After all lower contacts release, barrier returns and physically blocks crossing.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. Neither a genuine opening/contact-release sequence nor subsequent physical crossing probe was reached; the lower release labels continue after loss.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "upper-left-fire",
+          "weight": 5,
+          "rule": "Fireboy contact with upper left plate extends bridge.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Fireboy contact with the upper-left plate was reached; bridge activation cannot be judged.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "upper-left-water",
+          "weight": 5,
+          "rule": "Watergirl contact with upper left plate extends bridge.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Watergirl contact with the upper-left plate was reached; bridge activation cannot be judged.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "upper-right-fire",
+          "weight": 5,
+          "rule": "Fireboy contact with upper right plate extends bridge.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Fireboy contact with the upper-right plate was reached; bridge activation cannot be judged.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "upper-right-water",
+          "weight": 5,
+          "rule": "Watergirl contact with upper right plate extends bridge.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Watergirl contact with the upper-right plate was reached; bridge activation cannot be judged.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "bridge-support",
+          "weight": 12,
+          "rule": "Extended bridge actually supports a traversing actor across gap.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living actor reached the bridge or traversed its extended supporting surface.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "bridge-return",
+          "weight": 13,
+          "rule": "Bridge returns toward rest after all upper plate contacts end.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No genuine upper plate occupancy and subsequent release was reached. The bridge-return image at displayed 37.0s remains Game Over without actors at the mechanism.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/lower-release-blocking/capture.json",
+            "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+            "openrouter/assessment/upper-release-return/capture.json",
+            "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "not-scripted",
+          "weight": 10,
+          "rule": "Matched contact/no-contact trials show held contact, not elapsed time or a latch, controls mechanisms.",
+          "group": "PRESSURE PLATES",
+          "status": "FAIL",
+          "reason": "Observed no-contact activation contradicts the held-contact requirement: in public startup the lower barrier spans y512..640, but after only bottom-tier ArrowRight movement it visibly rises by displayed 1.5s and reaches its raised y384..512 position by 1.8s. Both actors remain in the bottom tier near y856..900, far below both lower plates at y640; no plate was physically touched. This is already visible before Game Over at 2.6s, so it is not inferred from later scenario labels. Native neutral startup and the 61.4s endpoint retain the closed barrier with actors at spawn, corroborating a no-input baseline. The visual false activation is established; its implementation cause is unknown and no x-only collision or timer mechanism is inferred. Real plate activations and physical crossing remain untested.",
+          "evidence": [
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0000-startup.png",
+            "openrouter/assessment/public-walkthrough/screenshots/0001-segment-00-0.png",
+            "openrouter/assessment/public-walkthrough/screenshots/0002-segment-00-1.png",
+            "openrouter/assessment/public-walkthrough/screenshots/0003-segment-01-0.png",
+            "openrouter/neutral-mechanisms-review.png",
+            "openrouter/neutral-mechanisms-review.json",
+            "openrouter/assessment/neutral-real-60s/screenshots/0000-startup.png",
+            "openrouter/assessment/neutral-real-60s/screenshots/0013-final.png"
+          ],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "HANGING PLATFORMS",
+      "overallWeight": 12,
+      "verifiedScore": 0,
+      "coverage": 0,
+      "possibleScore": [
+        0,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "first-load-position-response",
+          "weight": 20,
+          "rule": "First platform tilt depends on where a character stands.",
+          "group": "HANGING PLATFORMS",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. The stand-on-first-platform capture at displayed 22.8s is already Game Over, with no actor on the board. No positional loading precondition was reached.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/first-hanging-contact/capture.json",
+            "openrouter/assessment/first-hanging-contact/screenshots/0058-Stand-on-the-first-hanging-platform-0.png",
+            "openrouter/assessment/second-hanging-contact/capture.json",
+            "openrouter/assessment/second-hanging-contact/screenshots/0069-Land-on-the-second-hanging-platform-0.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "second-load-position-response",
+          "weight": 20,
+          "rule": "Second platform tilt depends on where a character stands.",
+          "group": "HANGING PLATFORMS",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. The land-on-second-platform capture at displayed 26.2s is already Game Over, with no actor on the board. No positional loading precondition was reached.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/first-hanging-contact/capture.json",
+            "openrouter/assessment/first-hanging-contact/screenshots/0058-Stand-on-the-first-hanging-platform-0.png",
+            "openrouter/assessment/second-hanging-contact/capture.json",
+            "openrouter/assessment/second-hanging-contact/screenshots/0069-Land-on-the-second-hanging-platform-0.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "tilted-support",
+          "weight": 25,
+          "rule": "Character feet follow the tilted rendered surface; no invisible flat floor.",
+          "group": "HANGING PLATFORMS",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No actor was observed supported on either tilted board; agreement between feet, rendered tilt and physical support cannot be evaluated.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/first-hanging-contact/capture.json",
+            "openrouter/assessment/first-hanging-contact/screenshots/0058-Stand-on-the-first-hanging-platform-0.png",
+            "openrouter/assessment/second-hanging-contact/capture.json",
+            "openrouter/assessment/second-hanging-contact/screenshots/0069-Land-on-the-second-hanging-platform-0.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "land-walk-jump",
+          "weight": 25,
+          "rule": "Both platforms accept landing, walking and jumping off through normal controls.",
+          "group": "HANGING PLATFORMS",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. Neither board was physically reached by a living actor. The full landing, walking and jump-off sequence on both boards was not observed.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/first-hanging-contact/capture.json",
+            "openrouter/assessment/first-hanging-contact/screenshots/0058-Stand-on-the-first-hanging-platform-0.png",
+            "openrouter/assessment/second-hanging-contact/capture.json",
+            "openrouter/assessment/second-hanging-contact/screenshots/0069-Land-on-the-second-hanging-platform-0.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "contact-versus-autonomous",
+          "weight": 10,
+          "rule": "Load/unload observations distinguish physical contact response from canned animation; no prescribed leveling time.",
+          "group": "HANGING PLATFORMS",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. Neither genuine loaded-board nor subsequent unload transitions were reached. Unoccupied stationary boards cannot establish contact-responsive behavior or a defect.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/first-hanging-contact/capture.json",
+            "openrouter/assessment/first-hanging-contact/screenshots/0058-Stand-on-the-first-hanging-platform-0.png",
+            "openrouter/assessment/second-hanging-contact/capture.json",
+            "openrouter/assessment/second-hanging-contact/screenshots/0069-Land-on-the-second-hanging-platform-0.png"
+          ],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "EXITS",
+      "overallWeight": 8,
+      "verifiedScore": 0,
+      "coverage": 0,
+      "possibleScore": [
+        0,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "single-insufficient",
+          "weight": 15,
+          "rule": "A single matching exit does not produce team victory.",
+          "group": "EXITS",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No single living matching exit occupant was reached. The single-exit wait at displayed 42.1s has Game Over and no actors at either exit; absence of victory here is not a valid single-occupant trial.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/single-and-wrong-exits/capture.json",
+            "openrouter/assessment/single-and-wrong-exits/screenshots/0109-single-exit-wait-1.png",
+            "openrouter/assessment/single-and-wrong-exits/screenshots/0116-wrong-exit-wait-2.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "wrong-insufficient",
+          "weight": 15,
+          "rule": "Wrong-character exit contact does not count.",
+          "group": "EXITS",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No wrong-character exit contact was reached. The wrong-exit wait at displayed 45.6s remains Game Over with empty exits, so lack of victory does not prove rejection of wrong occupants.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/single-and-wrong-exits/capture.json",
+            "openrouter/assessment/single-and-wrong-exits/screenshots/0109-single-exit-wait-1.png",
+            "openrouter/assessment/single-and-wrong-exits/screenshots/0116-wrong-exit-wait-2.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "both-matching-success",
+          "weight": 30,
+          "rule": "Both living characters in corresponding exits visibly win.",
+          "group": "EXITS",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. Neither public route nor dedicated exit trial reached both living matching exit occupants. Public route endpoint at displayed 49.5s remains Game Over with both counters 0/8.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/single-and-wrong-exits/capture.json",
+            "openrouter/assessment/single-and-wrong-exits/screenshots/0109-single-exit-wait-1.png",
+            "openrouter/assessment/single-and-wrong-exits/screenshots/0116-wrong-exit-wait-2.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "dead-cannot-win",
+          "weight": 20,
+          "rule": "A dead actor or lost attempt cannot satisfy completion.",
+          "group": "EXITS",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. Although loss and continued absence of victory are visible, no actor reached an exit or a completion-triggering configuration after death. Post-loss directional input labels do not exercise dead-actor completion handling, so no physical-function PASS is awarded.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/single-and-wrong-exits/capture.json",
+            "openrouter/assessment/single-and-wrong-exits/screenshots/0109-single-exit-wait-1.png",
+            "openrouter/assessment/single-and-wrong-exits/screenshots/0116-wrong-exit-wait-2.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "gems-optional",
+          "weight": 20,
+          "rule": "Completion works with diamonds remaining.",
+          "group": "EXITS",
+          "status": "NOT_REACHED",
+          "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. Diamonds remain at 0/8 for each character, but both matching exit occupants were never reached. Missing gems alone do not exercise or contradict optional-gem completion.",
+          "evidence": [
+            "openrouter/public-review-0.png",
+            "openrouter/public-review-1.png",
+            "openrouter/public-review-2.png",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-0.json",
+            "openrouter/public-review-3.json",
+            "openrouter/assessment/public-walkthrough/capture.json",
+            "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+            "openrouter/assessment/single-and-wrong-exits/capture.json",
+            "openrouter/assessment/single-and-wrong-exits/screenshots/0109-single-exit-wait-1.png",
+            "openrouter/assessment/single-and-wrong-exits/screenshots/0116-wrong-exit-wait-2.png"
+          ],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "RESET",
+      "overallWeight": 6,
+      "verifiedScore": 5,
+      "coverage": 45,
+      "possibleScore": [
+        5,
+        60
+      ],
+      "criteria": [
+        {
+          "id": "R-spawns",
+          "weight": 5,
+          "rule": "R restores both spawns after actual displacement.",
+          "group": "RESET",
+          "status": "FAIL",
+          "reason": "After actual displacement and Watergirl death in real-controls, R restarts the timer and removes Game Over but leaves Fireboy at the displaced x97 position and Watergirl absent rather than restoring both startup positions. The full-route R reset independently ends with both actors absent. Resetting HUD text is not restoration of both spawns.",
+          "evidence": [
+            "openrouter/assessment/real-controls/capture.json",
+            "openrouter/assessment/real-controls/screenshots/0000-startup.png",
+            "openrouter/assessment/real-controls/screenshots/0011-release-fire-retain-water-0.png",
+            "openrouter/assessment/real-controls/screenshots/0019-reset-before-reverse-3.png",
+            "openrouter/assessment/reset-after-route-R/capture.json",
+            "openrouter/assessment/reset-after-route-R/screenshots/0132-final.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "button-spawns",
+          "weight": 5,
+          "rule": "Visible Restart restores both spawns.",
+          "group": "RESET",
+          "status": "FAIL",
+          "reason": "The visible Restart button is actually clicked after Game Over in real-reset-held. It restarts the timer and removes loss text, but Fireboy remains at the old x129 location and Watergirl stays absent through button-held and subsequent released-key samples. The final full-route button reset also leaves both actors absent, not at their startup spawns.",
+          "evidence": [
+            "openrouter/assessment/real-reset-held/capture.json",
+            "openrouter/assessment/real-reset-held/screenshots/0012-both-displaced-again-1.png",
+            "openrouter/assessment/real-reset-held/screenshots/0013-button-held-0.png",
+            "openrouter/assessment/real-reset-held/screenshots/0016-button-held-3.png",
+            "openrouter/assessment/reset-after-route-button/capture.json",
+            "openrouter/assessment/reset-after-route-button/screenshots/0132-final.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "diamonds-counters",
+          "weight": 10,
+          "rule": "Collected diamonds and progress counters restore.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "The pickup/revisit and terminal-route captures retain 0/8 for both actors before reset. No collected diamond or changed progress counter is established, so an unchanged zero counter after reset cannot prove collectible restoration.",
+          "evidence": [
+            "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+            "openrouter/assessment/reset-after-route-R/capture.json",
+            "openrouter/assessment/reset-after-route-button/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "timer",
+          "weight": 5,
+          "rule": "Elapsed timer restarts.",
+          "group": "RESET",
+          "status": "PASS",
+          "reason": "The elapsed HUD timer visibly drops from a positive value to approximately 0.1 seconds after both R and button resets and advances again afterward. This independently verifies timer restart even though actor restoration fails.",
+          "evidence": [
+            "openrouter/assessment/real-reset-held/capture.json",
+            "openrouter/assessment/real-reset-held/screenshots/0002-both-displaced-1.png",
+            "openrouter/assessment/real-reset-held/screenshots/0003-R-held-0.png",
+            "openrouter/assessment/real-reset-held/screenshots/0006-R-held-3.png",
+            "openrouter/assessment/real-reset-held/screenshots/0012-both-displaced-again-1.png",
+            "openrouter/assessment/real-reset-held/screenshots/0013-button-held-0.png",
+            "openrouter/assessment/real-reset-held/screenshots/0016-button-held-3.png"
+          ],
+          "earnedPoints": 5
+        },
+        {
+          "id": "plates-barrier-bridge",
+          "weight": 10,
+          "rule": "Occupied plates and displaced barrier/bridge restore resting state.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Although the barrier drawing changes during lower-floor movement, actual occupation of the authored upper plates and displacement of the bridge were not established before reset. The full-route attempts are in Game Over before those encounters. The occupied-plates plus barrier/bridge reset conjunction cannot be credited from a reset of an unoccupied drawing.",
+          "evidence": [
+            "openrouter/assessment/real-controls/screenshots/0006-water-right-1.png",
+            "openrouter/assessment/reset-after-route-R/capture.json",
+            "openrouter/assessment/reset-after-route-button/capture.json",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-3.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "hanging-state",
+          "weight": 10,
+          "rule": "Both loaded/tilted platforms restore initial arrangement and motion.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Neither hanging board was actually loaded or tilted by an actor in the saved encounters. The scheduled first/second-board reset segments occur after earlier Game Over with no supporting contact. Returning unchanged unloaded drawings cannot verify restoration of both loaded platforms or their motion.",
+          "evidence": [
+            "openrouter/assessment/first-hanging-contact/capture.json",
+            "openrouter/assessment/first-hanging-contact/screenshots/0076-first-right-load-settle-4.png",
+            "openrouter/assessment/second-hanging-contact/capture.json",
+            "openrouter/assessment/second-hanging-contact/screenshots/0087-second-right-load-settle-4.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "motion-state",
+          "weight": 5,
+          "rule": "Actor velocity/grounding does not leak from previous attempt.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "The native airborne-before-R segment occurs after the failed post-death button restart and does not actually produce an airborne actor; the following reset therefore has no observed vertical-velocity/grounding precondition. Earlier horizontal movement during held R is directly scored as stale held-input leakage, but does not independently isolate saved velocity from still-active controls. Full motion-state restoration remains unverified.",
+          "evidence": [
+            "openrouter/assessment/real-reset-held/capture.json",
+            "openrouter/assessment/real-reset-held/screenshots/0022-airborne-before-R-1.png",
+            "openrouter/assessment/real-reset-held/screenshots/0026-R-airborne-3.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "after-death",
+          "weight": 10,
+          "rule": "Fresh playable attempt after loss.",
+          "group": "RESET",
+          "status": "FAIL",
+          "reason": "Actual Game Over is seen in the native control and reset-held trials. Both reset methods clear its text and restart the timer, but do not restore a playable pair: Watergirl remains absent, Fireboy stays frozen, and subsequent new right/d or jump inputs do not move him. The full-route reset captures likewise end without actors. A fresh playable attempt after loss is therefore contradicted.",
+          "evidence": [
+            "openrouter/assessment/real-controls/screenshots/0011-release-fire-retain-water-0.png",
+            "openrouter/assessment/real-controls/screenshots/0019-reset-before-reverse-3.png",
+            "openrouter/assessment/real-controls/screenshots/0023-release-water-retain-fire-1.png",
+            "openrouter/assessment/real-reset-held/capture.json",
+            "openrouter/assessment/real-reset-held/screenshots/0006-R-held-3.png",
+            "openrouter/assessment/real-reset-held/screenshots/0016-button-held-3.png",
+            "openrouter/assessment/real-reset-held/screenshots/0040-new-input-after-reset-1.png",
+            "openrouter/assessment/real-reset-held/screenshots/0045-final.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "after-win",
+          "weight": 10,
+          "rule": "Fresh playable attempt after victory.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "No victory is observed. The terminal route scenarios show Game Over and both counters 0/8 before the named terminal reset, not a win. Their reset results cannot establish or refute fresh play after victory.",
+          "evidence": [
+            "openrouter/assessment/reset-after-route-R/capture.json",
+            "openrouter/assessment/reset-after-route-button/capture.json",
+            "openrouter/public-review-3.png",
+            "openrouter/public-review-3.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "held-input",
+          "weight": 10,
+          "rule": "Both reset methods clear stale physically held controls.",
+          "group": "RESET",
+          "status": "FAIL",
+          "reason": "Native real-reset-held records ArrowRight and d physically held across R with no intervening release or new directional keydown. After the timer restarts, both actors continue moving right between R-held-0 and R-held-1, then Watergirl disappears with Game Over during the same hold. R thus fails to clear stale held controls. The later button-held phase occurs after loss and is not independently diagnostic, but the mandatory both-methods conjunction already fails on R.",
+          "evidence": [
+            "openrouter/assessment/real-reset-held/capture.json",
+            "openrouter/assessment/real-reset-held/screenshots/0003-R-held-0.png",
+            "openrouter/assessment/real-reset-held/screenshots/0004-R-held-1.png",
+            "openrouter/assessment/real-reset-held/screenshots/0006-R-held-3.png"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "callback-isolation",
+          "weight": 10,
+          "rule": "No previous-attempt callback mutates the reset attempt during the observed pending-callback window.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "No actual pending death/win/platform transition callback window is established by the visible evidence. The nominal terminal route ends in an old Game Over rather than newly triggered victory; airborne and board-loading preconditions also are not reached. An unchanged already-broken reset view cannot prove callback isolation, and no specific previous-attempt callback mutation is inferred.",
+          "evidence": [
+            "openrouter/assessment/real-reset-held/capture.json",
+            "openrouter/assessment/reset-after-route-R/capture.json",
+            "openrouter/assessment/reset-after-route-button/capture.json",
+            "openrouter/assessment/first-hanging-contact/capture.json",
+            "openrouter/assessment/second-hanging-contact/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "repeated-reset",
+          "weight": 10,
+          "rule": "Rapid repeated resets leave a stable fresh level.",
+          "group": "RESET",
+          "status": "FAIL",
+          "reason": "The native rapid-R-1 then rapid-button-2 sequence executes, with fresh timer values, but its end state is not a fresh playable level: Fireboy remains at the displaced x129 location, Watergirl remains absent, and the new-input-after-reset segment does not move Fireboy. Subsequent idle samples retain the same broken state. This contradicts the required stable fresh level, without claiming a new callback or acceleration defect.",
+          "evidence": [
+            "openrouter/assessment/real-reset-held/capture.json",
+            "openrouter/assessment/real-reset-held/screenshots/0034-rapid-R-1-3.png",
+            "openrouter/assessment/real-reset-held/screenshots/0038-rapid-button-2-3.png",
+            "openrouter/assessment/real-reset-held/screenshots/0040-new-input-after-reset-1.png",
+            "openrouter/assessment/real-reset-held/screenshots/0045-final.png"
+          ],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "NO PLAYBACK",
+      "overallWeight": 2,
+      "verifiedScore": 100,
+      "coverage": 100,
+      "possibleScore": [
+        100,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "no-auto-traversal",
+          "weight": 50,
+          "rule": "Fresh context with no input for at least60 actual seconds does not traverse route.",
+          "group": "NO PLAYBACK",
+          "status": "PASS",
+          "reason": "The fresh native neutral-real-60s capture records no input for 60000 requested real-time milliseconds, with host timestamps spanning about 60.4 seconds between startup and the end of the neutral interval. Both actors remain supported at the same spawn-floor locations in startup, intermediate, and final screenshots, and counters remain 0/8. No route traversal occurs in the observed interval.",
+          "evidence": [
+            "openrouter/assessment/neutral-real-60s/capture.json",
+            "openrouter/assessment/neutral-real-60s/screenshots/0000-startup.png",
+            "openrouter/assessment/neutral-real-60s/screenshots/0006-neutral-no-input-5.png",
+            "openrouter/assessment/neutral-real-60s/screenshots/0010-neutral-no-input-9.png",
+            "openrouter/assessment/neutral-real-60s/screenshots/0013-final.png"
+          ],
+          "earnedPoints": 50
+        },
+        {
+          "id": "no-auto-victory",
+          "weight": 50,
+          "rule": "Same neutral interval does not produce victory.",
+          "group": "NO PLAYBACK",
+          "status": "PASS",
+          "reason": "The same fresh native no-input interval lasts at least 60 actual seconds. Its recorded HUD states and inspected screenshots show only the advancing timer, both counters at 0/8, and both actors on the spawn floor; no victory presentation occurs.",
+          "evidence": [
+            "openrouter/assessment/neutral-real-60s/capture.json",
+            "openrouter/assessment/neutral-real-60s/screenshots/0000-startup.png",
+            "openrouter/assessment/neutral-real-60s/screenshots/0006-neutral-no-input-5.png",
+            "openrouter/assessment/neutral-real-60s/screenshots/0010-neutral-no-input-9.png",
+            "openrouter/assessment/neutral-real-60s/screenshots/0013-final.png"
+          ],
+          "earnedPoints": 50
+        }
+      ]
+    }
+  ],
+  "confirmedDefects": [
+    {
+      "category": "BOOT",
+      "id": "viewport",
+      "weight": 15,
+      "rule": "Fits1280x960 and resizing preserves logical geometry.",
+      "group": "BOOT",
+      "status": "FAIL",
+      "reason": "At800×600 the actual canvas remains1280×960, clipping the bottom spawns and right side instead of adapting logical geometry. Rendered surface/scroll boxes and raw resized screenshot agree.",
+      "evidence": [
+        "openrouter/assessment/real-controls/capture.json",
+        "openrouter/assessment/real-controls/screenshots/0038-resize-800-600.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "BOOT",
+      "id": "visible-ui",
+      "weight": 20,
+      "rule": "Visible gem progress, elapsed timer, controls and Restart.",
+      "group": "BOOT",
+      "status": "FAIL",
+      "reason": "Timer, two gem counters and Restart appear, but required visible character-control instructions are absent from the rendered game and body text.",
+      "evidence": [
+        "openrouter/assessment/public-walkthrough/screenshots/0000-startup.png",
+        "openrouter/assessment/real-controls/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PHYSICS",
+      "id": "landing-and-support",
+      "weight": 25,
+      "rule": "Terrain landing and continued idle support.",
+      "group": "PHYSICS",
+      "status": "FAIL",
+      "reason": "Ordinary spawn-floor jump landings and the 60-second neutral support interval work, but the reachable matching red pool does not support Fireboy. In red-safe-pickup-revisit he enters the first red pool, appears at x230,y924 with his body extending below the visible floor/backing, and disappears below the viewport by the next sample without Game Over. The frozen reference explicitly requires solid lower-half pool backing and supported matching-character traversal. This is an observed support contradiction, not failure to follow the timed route or an assumed pickup precondition.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/red-safe-pickup-revisit/screenshots/0000-startup.png",
+        "openrouter/assessment/red-safe-pickup-revisit/screenshots/0002-fire-traverse-red-1.png",
+        "openrouter/assessment/red-safe-pickup-revisit/screenshots/0003-fire-traverse-red-2.png",
+        "openrouter/pixel-measurements.json",
+        "openrouter/hazards-pickups-lower-review.png",
+        "openrouter/assessment/neutral-real-60s/screenshots/0013-final.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PHYSICS",
+      "id": "solid-boundaries",
+      "weight": 25,
+      "rule": "Floors/walls/ceiling actually block where reachable.",
+      "group": "PHYSICS",
+      "status": "FAIL",
+      "reason": "The first red pool is reachable without a jump and its mandated solid backing is crossed: Fireboy descends through the rendered floor to y924 and then entirely out of the viewport instead of being blocked by the pool lower half at y912..928. Thus the floor conjunct is contradicted even though upper walls and ceiling were not all reached. This finding concerns unambiguous bottom red backing, not the conflicting upper-green pool metadata.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/red-safe-pickup-revisit/screenshots/0002-fire-traverse-red-1.png",
+        "openrouter/assessment/red-safe-pickup-revisit/screenshots/0003-fire-traverse-red-2.png",
+        "openrouter/pixel-measurements.json",
+        "openrouter/hazards-pickups-lower-review.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "fireboy-red-safe",
+      "weight": 10,
+      "rule": "Fireboy traverses red pool alive.",
+      "group": "HAZARDS",
+      "status": "FAIL",
+      "reason": "On walking into his matching red pool, Fireboy falls below its required solid backing and out of the viewport instead of traversing it supported. At1000ms requested, actor pixels are atx230,y924; by1500ms they are absent while no loss feedback appears. This is unsupported matching-pool traversal, not an inferred lethal-red rule.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/red-safe-pickup-revisit/screenshots/0002-fire-traverse-red-1.png",
+        "openrouter/assessment/red-safe-pickup-revisit/screenshots/0003-fire-traverse-red-2.png",
+        "openrouter/pixel-measurements.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "restart-after-death",
+      "weight": 5,
+      "rule": "Visible Restart remains usable after death.",
+      "group": "HAZARDS",
+      "status": "FAIL",
+      "reason": "Restart is clickable after loss and clears Game Over, but does not restore the dead Watergirl to a playable attempt. She remains absent after Restart and R, including released-old-key then fresh d input.",
+      "evidence": [
+        "openrouter/assessment/red-foreign-death/capture.json",
+        "openrouter/assessment/red-foreign-death/screenshots/0011-button-after-death-3.png",
+        "openrouter/assessment/red-foreign-death/screenshots/0021-R-after-death-3.png",
+        "openrouter/post-death-pixels.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "not-scripted",
+      "weight": 10,
+      "rule": "Matched contact/no-contact trials show held contact, not elapsed time or a latch, controls mechanisms.",
+      "group": "PRESSURE PLATES",
+      "status": "FAIL",
+      "reason": "Observed no-contact activation contradicts the held-contact requirement: in public startup the lower barrier spans y512..640, but after only bottom-tier ArrowRight movement it visibly rises by displayed 1.5s and reaches its raised y384..512 position by 1.8s. Both actors remain in the bottom tier near y856..900, far below both lower plates at y640; no plate was physically touched. This is already visible before Game Over at 2.6s, so it is not inferred from later scenario labels. Native neutral startup and the 61.4s endpoint retain the closed barrier with actors at spawn, corroborating a no-input baseline. The visual false activation is established; its implementation cause is unknown and no x-only collision or timer mechanism is inferred. Real plate activations and physical crossing remain untested.",
+      "evidence": [
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0000-startup.png",
+        "openrouter/assessment/public-walkthrough/screenshots/0001-segment-00-0.png",
+        "openrouter/assessment/public-walkthrough/screenshots/0002-segment-00-1.png",
+        "openrouter/assessment/public-walkthrough/screenshots/0003-segment-01-0.png",
+        "openrouter/neutral-mechanisms-review.png",
+        "openrouter/neutral-mechanisms-review.json",
+        "openrouter/assessment/neutral-real-60s/screenshots/0000-startup.png",
+        "openrouter/assessment/neutral-real-60s/screenshots/0013-final.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "R-spawns",
+      "weight": 5,
+      "rule": "R restores both spawns after actual displacement.",
+      "group": "RESET",
+      "status": "FAIL",
+      "reason": "After actual displacement and Watergirl death in real-controls, R restarts the timer and removes Game Over but leaves Fireboy at the displaced x97 position and Watergirl absent rather than restoring both startup positions. The full-route R reset independently ends with both actors absent. Resetting HUD text is not restoration of both spawns.",
+      "evidence": [
+        "openrouter/assessment/real-controls/capture.json",
+        "openrouter/assessment/real-controls/screenshots/0000-startup.png",
+        "openrouter/assessment/real-controls/screenshots/0011-release-fire-retain-water-0.png",
+        "openrouter/assessment/real-controls/screenshots/0019-reset-before-reverse-3.png",
+        "openrouter/assessment/reset-after-route-R/capture.json",
+        "openrouter/assessment/reset-after-route-R/screenshots/0132-final.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "button-spawns",
+      "weight": 5,
+      "rule": "Visible Restart restores both spawns.",
+      "group": "RESET",
+      "status": "FAIL",
+      "reason": "The visible Restart button is actually clicked after Game Over in real-reset-held. It restarts the timer and removes loss text, but Fireboy remains at the old x129 location and Watergirl stays absent through button-held and subsequent released-key samples. The final full-route button reset also leaves both actors absent, not at their startup spawns.",
+      "evidence": [
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/real-reset-held/screenshots/0012-both-displaced-again-1.png",
+        "openrouter/assessment/real-reset-held/screenshots/0013-button-held-0.png",
+        "openrouter/assessment/real-reset-held/screenshots/0016-button-held-3.png",
+        "openrouter/assessment/reset-after-route-button/capture.json",
+        "openrouter/assessment/reset-after-route-button/screenshots/0132-final.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "after-death",
+      "weight": 10,
+      "rule": "Fresh playable attempt after loss.",
+      "group": "RESET",
+      "status": "FAIL",
+      "reason": "Actual Game Over is seen in the native control and reset-held trials. Both reset methods clear its text and restart the timer, but do not restore a playable pair: Watergirl remains absent, Fireboy stays frozen, and subsequent new right/d or jump inputs do not move him. The full-route reset captures likewise end without actors. A fresh playable attempt after loss is therefore contradicted.",
+      "evidence": [
+        "openrouter/assessment/real-controls/screenshots/0011-release-fire-retain-water-0.png",
+        "openrouter/assessment/real-controls/screenshots/0019-reset-before-reverse-3.png",
+        "openrouter/assessment/real-controls/screenshots/0023-release-water-retain-fire-1.png",
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/real-reset-held/screenshots/0006-R-held-3.png",
+        "openrouter/assessment/real-reset-held/screenshots/0016-button-held-3.png",
+        "openrouter/assessment/real-reset-held/screenshots/0040-new-input-after-reset-1.png",
+        "openrouter/assessment/real-reset-held/screenshots/0045-final.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "held-input",
+      "weight": 10,
+      "rule": "Both reset methods clear stale physically held controls.",
+      "group": "RESET",
+      "status": "FAIL",
+      "reason": "Native real-reset-held records ArrowRight and d physically held across R with no intervening release or new directional keydown. After the timer restarts, both actors continue moving right between R-held-0 and R-held-1, then Watergirl disappears with Game Over during the same hold. R thus fails to clear stale held controls. The later button-held phase occurs after loss and is not independently diagnostic, but the mandatory both-methods conjunction already fails on R.",
+      "evidence": [
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/real-reset-held/screenshots/0003-R-held-0.png",
+        "openrouter/assessment/real-reset-held/screenshots/0004-R-held-1.png",
+        "openrouter/assessment/real-reset-held/screenshots/0006-R-held-3.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "repeated-reset",
+      "weight": 10,
+      "rule": "Rapid repeated resets leave a stable fresh level.",
+      "group": "RESET",
+      "status": "FAIL",
+      "reason": "The native rapid-R-1 then rapid-button-2 sequence executes, with fresh timer values, but its end state is not a fresh playable level: Fireboy remains at the displaced x129 location, Watergirl remains absent, and the new-input-after-reset segment does not move Fireboy. Subsequent idle samples retain the same broken state. This contradicts the required stable fresh level, without claiming a new callback or acceleration defect.",
+      "evidence": [
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/real-reset-held/screenshots/0034-rapid-R-1-3.png",
+        "openrouter/assessment/real-reset-held/screenshots/0038-rapid-button-2-3.png",
+        "openrouter/assessment/real-reset-held/screenshots/0040-new-input-after-reset-1.png",
+        "openrouter/assessment/real-reset-held/screenshots/0045-final.png"
+      ],
+      "earnedPoints": 0
+    }
+  ],
+  "unknowns": [
+    {
+      "category": "BOOT",
+      "id": "victory-feedback",
+      "weight": 8,
+      "rule": "Visible victory feedback following both living matching exit occupants.",
+      "group": "BOOT",
+      "status": "NOT_REACHED",
+      "reason": "No matching-exit completion was reached; public route lost at displayed2.6s.",
+      "evidence": [
+        "openrouter/assessment/public-walkthrough/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "LAYOUT",
+      "id": "pools",
+      "weight": 15,
+      "rule": "Required elemental pools in the demonstrated regions.",
+      "group": "LAYOUT",
+      "status": "EVALUATOR_ERROR",
+      "reason": "Frozen reference is contradictory: canonical grid row15 places green pools atx256..544 and736..960, while duplicated pools metadata specifiesx416..704 and896..1120. Correctness of green placement is not scored; no candidate geometry penalty for either interpretation.",
+      "evidence": [
+        "openrouter/assessment/public-walkthrough/screenshots/0000-startup.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "LAYOUT",
+      "id": "traversable-route",
+      "weight": 10,
+      "rule": "Normal input reaches bottom, middle and upper tiers without forbidden shortcuts or scripted progress.",
+      "group": "LAYOUT",
+      "status": "NOT_REACHED",
+      "reason": "Public route ends in early loss; no ordinary-input traversal through middle and upper tiers was observed. Timing divergence alone is not declared an impossible-route defect.",
+      "evidence": [
+        "openrouter/assessment/public-walkthrough/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "CONTROLS",
+      "id": "watergirl",
+      "weight": 20,
+      "rule": "Physical A/D/W and lowercase/Shift/Caps Lock act only on Watergirl.",
+      "group": "CONTROLS",
+      "status": "NOT_REACHED",
+      "reason": "Lowercase d/a move only the green actor and lowercase w jumps only that actor, establishing Watergirl identity without relying on the expected palette. The Shift+D and uppercase A segments occur after a real Game Over and an ineffective R restart: Watergirl is already absent and the surviving red actor is frozen. Those segments cannot distinguish uppercase binding behavior from the failed restart. Caps Lock and uppercase W are not established. Full lowercase/Shift/Caps Lock conjunction therefore remains unverified, not failed.",
+      "evidence": [
+        "openrouter/assessment/real-controls/capture.json",
+        "openrouter/assessment/real-controls/screenshots/0006-water-right-1.png",
+        "openrouter/assessment/real-controls/screenshots/0008-water-left-1.png",
+        "openrouter/assessment/real-jumps/screenshots/0024-water-grounded-jump-0.png",
+        "openrouter/assessment/real-controls/screenshots/0011-release-fire-retain-water-0.png",
+        "openrouter/assessment/real-controls/screenshots/0030-reset-before-uppercase-3.png",
+        "openrouter/assessment/real-controls/screenshots/0032-shift-D-water-right-1.png",
+        "openrouter/assessment/real-controls/screenshots/0034-uppercase-A-water-left-1.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "CONTROLS",
+      "id": "independent-release",
+      "weight": 25,
+      "rule": "Both release directions stop only the released character.",
+      "group": "CONTROLS",
+      "status": "NOT_REACHED",
+      "reason": "The first release direction stops Fireboy while Watergirl proceeds into the nearby red hazard and disappears with Game Over by the first retained-d sample. R then removes the loss text but does not restore a playable pair: the reverse-release baseline and result show the same frozen red actor and absent Watergirl. Consequently both independent-release directions were not verified; the missing reverse encounter is not a new binding failure.",
+      "evidence": [
+        "openrouter/assessment/real-controls/capture.json",
+        "openrouter/assessment/real-controls/screenshots/0010-both-right-1.png",
+        "openrouter/assessment/real-controls/screenshots/0011-release-fire-retain-water-0.png",
+        "openrouter/assessment/real-controls/screenshots/0019-reset-before-reverse-3.png",
+        "openrouter/assessment/real-controls/screenshots/0021-both-right-reverse-1.png",
+        "openrouter/assessment/real-controls/screenshots/0023-release-water-retain-fire-1.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PHYSICS",
+      "id": "moving-surface-contact",
+      "weight": 25,
+      "rule": "Moving and tilted collision geometry agrees with rendered supporting surface.",
+      "group": "PHYSICS",
+      "status": "NOT_REACHED",
+      "reason": "The first- and second-hanging scenarios are already in Game Over with no actors on either board at their load/settle segments. Rendered boards and barrier movement alone do not establish actor contact with a moving or tilted supporting surface. No moving/tilted collision agreement verdict can be made from these missed encounters.",
+      "evidence": [
+        "openrouter/assessment/first-hanging-contact/capture.json",
+        "openrouter/assessment/first-hanging-contact/screenshots/0076-first-right-load-settle-4.png",
+        "openrouter/assessment/second-hanging-contact/capture.json",
+        "openrouter/assessment/second-hanging-contact/screenshots/0087-second-right-load-settle-4.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "watergirl-blue-safe",
+      "weight": 10,
+      "rule": "Watergirl traverses blue pool alive.",
+      "group": "HAZARDS",
+      "status": "NOT_REACHED",
+      "reason": "The reference path loses before a supported complete Watergirl blue-pool traversal can be observed.",
+      "evidence": [
+        "openrouter/assessment/blue-safe-pickup-revisit/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "fireboy-green-fatal",
+      "weight": 15,
+      "rule": "Green contact kills Fireboy visibly.",
+      "group": "HAZARDS",
+      "status": "NOT_REACHED",
+      "reason": "Both green-contact scenarios are already in Game Over before the intended chamber encounter; green contact was not reached. Duplicated green-position evidence is also ambiguous.",
+      "evidence": [
+        "openrouter/assessment/green-fire-contact/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "watergirl-green-fatal",
+      "weight": 15,
+      "rule": "Green contact kills Watergirl visibly.",
+      "group": "HAZARDS",
+      "status": "NOT_REACHED",
+      "reason": "Both green-contact scenarios are already in Game Over before the intended chamber encounter; green contact was not reached. Duplicated green-position evidence is also ambiguous.",
+      "evidence": [
+        "openrouter/assessment/green-water-contact/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "red-matching-pickup",
+      "weight": 12,
+      "rule": "Fireboy collects an encountered red diamond.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "blue-matching-pickup",
+      "weight": 13,
+      "rule": "Watergirl collects an encountered blue diamond.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "red-wrong-retained",
+      "weight": 10,
+      "rule": "Watergirl contacts red diamond without collecting it.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "blue-wrong-retained",
+      "weight": 10,
+      "rule": "Fireboy contacts blue diamond without collecting it.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "red-disappears-counts-once",
+      "weight": 12,
+      "rule": "Red pickup disappears; progress increments once and does not increment on revisit.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "blue-disappears-counts-once",
+      "weight": 13,
+      "rule": "Blue pickup disappears; progress increments once and does not increment on revisit.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "optional-for-exits",
+      "weight": 10,
+      "rule": "Both matching exits complete with at least one diamond left.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "No actual matching or wrong-color diamond contact/pickup precondition was captured before early loss or matching-red support failure. Both counters remain0/8; scenario names do not establish pickup/revisit or exit conditions.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-upper-wrong-pickup/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "lower-left-fire",
+      "weight": 5,
+      "rule": "Fireboy contact with lower left plate opens barrier.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Fireboy contact with the lower-left plate was reached; barrier activation cannot be judged.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "lower-left-water",
+      "weight": 5,
+      "rule": "Watergirl contact with lower left plate opens barrier.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Watergirl contact with the lower-left plate was reached; barrier activation cannot be judged.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "lower-right-fire",
+      "weight": 5,
+      "rule": "Fireboy contact with lower right plate opens barrier.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Fireboy contact with the lower-right plate was reached; barrier activation cannot be judged.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "lower-right-water",
+      "weight": 5,
+      "rule": "Watergirl contact with lower right plate opens barrier.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Watergirl contact with the lower-right plate was reached; barrier activation cannot be judged.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "barrier-closed-blocking",
+      "weight": 8,
+      "rule": "Inactive lower barrier physically blocks normal crossing.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No actor reached the closed barrier to attempt crossing. The blocked-or-crossed snapshot is a lost attempt with no visible actor at the barrier, not a blocking test.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "barrier-open-crossing",
+      "weight": 9,
+      "rule": "Active lower barrier permits normal traversal.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living plate contact followed by an actor traversing the opened barrier was reached.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "barrier-restored-blocking",
+      "weight": 8,
+      "rule": "After all lower contacts release, barrier returns and physically blocks crossing.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. Neither a genuine opening/contact-release sequence nor subsequent physical crossing probe was reached; the lower release labels continue after loss.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "upper-left-fire",
+      "weight": 5,
+      "rule": "Fireboy contact with upper left plate extends bridge.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Fireboy contact with the upper-left plate was reached; bridge activation cannot be judged.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "upper-left-water",
+      "weight": 5,
+      "rule": "Watergirl contact with upper left plate extends bridge.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Watergirl contact with the upper-left plate was reached; bridge activation cannot be judged.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "upper-right-fire",
+      "weight": 5,
+      "rule": "Fireboy contact with upper right plate extends bridge.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Fireboy contact with the upper-right plate was reached; bridge activation cannot be judged.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "upper-right-water",
+      "weight": 5,
+      "rule": "Watergirl contact with upper right plate extends bridge.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living Watergirl contact with the upper-right plate was reached; bridge activation cannot be judged.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "bridge-support",
+      "weight": 12,
+      "rule": "Extended bridge actually supports a traversing actor across gap.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No living actor reached the bridge or traversed its extended supporting surface.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "bridge-return",
+      "weight": 13,
+      "rule": "Bridge returns toward rest after all upper plate contacts end.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No genuine upper plate occupancy and subsequent release was reached. The bridge-return image at displayed 37.0s remains Game Over without actors at the mechanism.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/lower-release-blocking/capture.json",
+        "openrouter/assessment/lower-release-blocking/screenshots/0039-blocked-or-crossed-0.png",
+        "openrouter/assessment/upper-release-return/capture.json",
+        "openrouter/assessment/upper-release-return/screenshots/0097-bridge-return-5.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HANGING PLATFORMS",
+      "id": "first-load-position-response",
+      "weight": 20,
+      "rule": "First platform tilt depends on where a character stands.",
+      "group": "HANGING PLATFORMS",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. The stand-on-first-platform capture at displayed 22.8s is already Game Over, with no actor on the board. No positional loading precondition was reached.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/first-hanging-contact/capture.json",
+        "openrouter/assessment/first-hanging-contact/screenshots/0058-Stand-on-the-first-hanging-platform-0.png",
+        "openrouter/assessment/second-hanging-contact/capture.json",
+        "openrouter/assessment/second-hanging-contact/screenshots/0069-Land-on-the-second-hanging-platform-0.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HANGING PLATFORMS",
+      "id": "second-load-position-response",
+      "weight": 20,
+      "rule": "Second platform tilt depends on where a character stands.",
+      "group": "HANGING PLATFORMS",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. The land-on-second-platform capture at displayed 26.2s is already Game Over, with no actor on the board. No positional loading precondition was reached.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/first-hanging-contact/capture.json",
+        "openrouter/assessment/first-hanging-contact/screenshots/0058-Stand-on-the-first-hanging-platform-0.png",
+        "openrouter/assessment/second-hanging-contact/capture.json",
+        "openrouter/assessment/second-hanging-contact/screenshots/0069-Land-on-the-second-hanging-platform-0.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HANGING PLATFORMS",
+      "id": "tilted-support",
+      "weight": 25,
+      "rule": "Character feet follow the tilted rendered surface; no invisible flat floor.",
+      "group": "HANGING PLATFORMS",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No actor was observed supported on either tilted board; agreement between feet, rendered tilt and physical support cannot be evaluated.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/first-hanging-contact/capture.json",
+        "openrouter/assessment/first-hanging-contact/screenshots/0058-Stand-on-the-first-hanging-platform-0.png",
+        "openrouter/assessment/second-hanging-contact/capture.json",
+        "openrouter/assessment/second-hanging-contact/screenshots/0069-Land-on-the-second-hanging-platform-0.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HANGING PLATFORMS",
+      "id": "land-walk-jump",
+      "weight": 25,
+      "rule": "Both platforms accept landing, walking and jumping off through normal controls.",
+      "group": "HANGING PLATFORMS",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. Neither board was physically reached by a living actor. The full landing, walking and jump-off sequence on both boards was not observed.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/first-hanging-contact/capture.json",
+        "openrouter/assessment/first-hanging-contact/screenshots/0058-Stand-on-the-first-hanging-platform-0.png",
+        "openrouter/assessment/second-hanging-contact/capture.json",
+        "openrouter/assessment/second-hanging-contact/screenshots/0069-Land-on-the-second-hanging-platform-0.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HANGING PLATFORMS",
+      "id": "contact-versus-autonomous",
+      "weight": 10,
+      "rule": "Load/unload observations distinguish physical contact response from canned animation; no prescribed leveling time.",
+      "group": "HANGING PLATFORMS",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. Neither genuine loaded-board nor subsequent unload transitions were reached. Unoccupied stationary boards cannot establish contact-responsive behavior or a defect.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/first-hanging-contact/capture.json",
+        "openrouter/assessment/first-hanging-contact/screenshots/0058-Stand-on-the-first-hanging-platform-0.png",
+        "openrouter/assessment/second-hanging-contact/capture.json",
+        "openrouter/assessment/second-hanging-contact/screenshots/0069-Land-on-the-second-hanging-platform-0.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "EXITS",
+      "id": "single-insufficient",
+      "weight": 15,
+      "rule": "A single matching exit does not produce team victory.",
+      "group": "EXITS",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No single living matching exit occupant was reached. The single-exit wait at displayed 42.1s has Game Over and no actors at either exit; absence of victory here is not a valid single-occupant trial.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/single-and-wrong-exits/capture.json",
+        "openrouter/assessment/single-and-wrong-exits/screenshots/0109-single-exit-wait-1.png",
+        "openrouter/assessment/single-and-wrong-exits/screenshots/0116-wrong-exit-wait-2.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "EXITS",
+      "id": "wrong-insufficient",
+      "weight": 15,
+      "rule": "Wrong-character exit contact does not count.",
+      "group": "EXITS",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. No wrong-character exit contact was reached. The wrong-exit wait at displayed 45.6s remains Game Over with empty exits, so lack of victory does not prove rejection of wrong occupants.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/single-and-wrong-exits/capture.json",
+        "openrouter/assessment/single-and-wrong-exits/screenshots/0109-single-exit-wait-1.png",
+        "openrouter/assessment/single-and-wrong-exits/screenshots/0116-wrong-exit-wait-2.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "EXITS",
+      "id": "both-matching-success",
+      "weight": 30,
+      "rule": "Both living characters in corresponding exits visibly win.",
+      "group": "EXITS",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. Neither public route nor dedicated exit trial reached both living matching exit occupants. Public route endpoint at displayed 49.5s remains Game Over with both counters 0/8.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/single-and-wrong-exits/capture.json",
+        "openrouter/assessment/single-and-wrong-exits/screenshots/0109-single-exit-wait-1.png",
+        "openrouter/assessment/single-and-wrong-exits/screenshots/0116-wrong-exit-wait-2.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "EXITS",
+      "id": "dead-cannot-win",
+      "weight": 20,
+      "rule": "A dead actor or lost attempt cannot satisfy completion.",
+      "group": "EXITS",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. Although loss and continued absence of victory are visible, no actor reached an exit or a completion-triggering configuration after death. Post-loss directional input labels do not exercise dead-actor completion handling, so no physical-function PASS is awarded.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/single-and-wrong-exits/capture.json",
+        "openrouter/assessment/single-and-wrong-exits/screenshots/0109-single-exit-wait-1.png",
+        "openrouter/assessment/single-and-wrong-exits/screenshots/0116-wrong-exit-wait-2.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "EXITS",
+      "id": "gems-optional",
+      "weight": 20,
+      "rule": "Completion works with diamonds remaining.",
+      "group": "EXITS",
+      "status": "NOT_REACHED",
+      "reason": "The route loses before the target encounter; the public route shows Game Over by displayed 2.6s with both counters 0/8, and later labels do not establish physical contact. Diamonds remain at 0/8 for each character, but both matching exit occupants were never reached. Missing gems alone do not exercise or contradict optional-gem completion.",
+      "evidence": [
+        "openrouter/public-review-0.png",
+        "openrouter/public-review-1.png",
+        "openrouter/public-review-2.png",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-0.json",
+        "openrouter/public-review-3.json",
+        "openrouter/assessment/public-walkthrough/capture.json",
+        "openrouter/assessment/public-walkthrough/screenshots/0004-segment-01-1.png",
+        "openrouter/assessment/single-and-wrong-exits/capture.json",
+        "openrouter/assessment/single-and-wrong-exits/screenshots/0109-single-exit-wait-1.png",
+        "openrouter/assessment/single-and-wrong-exits/screenshots/0116-wrong-exit-wait-2.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "diamonds-counters",
+      "weight": 10,
+      "rule": "Collected diamonds and progress counters restore.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "The pickup/revisit and terminal-route captures retain 0/8 for both actors before reset. No collected diamond or changed progress counter is established, so an unchanged zero counter after reset cannot prove collectible restoration.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/reset-after-route-R/capture.json",
+        "openrouter/assessment/reset-after-route-button/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "plates-barrier-bridge",
+      "weight": 10,
+      "rule": "Occupied plates and displaced barrier/bridge restore resting state.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Although the barrier drawing changes during lower-floor movement, actual occupation of the authored upper plates and displacement of the bridge were not established before reset. The full-route attempts are in Game Over before those encounters. The occupied-plates plus barrier/bridge reset conjunction cannot be credited from a reset of an unoccupied drawing.",
+      "evidence": [
+        "openrouter/assessment/real-controls/screenshots/0006-water-right-1.png",
+        "openrouter/assessment/reset-after-route-R/capture.json",
+        "openrouter/assessment/reset-after-route-button/capture.json",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-3.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "hanging-state",
+      "weight": 10,
+      "rule": "Both loaded/tilted platforms restore initial arrangement and motion.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Neither hanging board was actually loaded or tilted by an actor in the saved encounters. The scheduled first/second-board reset segments occur after earlier Game Over with no supporting contact. Returning unchanged unloaded drawings cannot verify restoration of both loaded platforms or their motion.",
+      "evidence": [
+        "openrouter/assessment/first-hanging-contact/capture.json",
+        "openrouter/assessment/first-hanging-contact/screenshots/0076-first-right-load-settle-4.png",
+        "openrouter/assessment/second-hanging-contact/capture.json",
+        "openrouter/assessment/second-hanging-contact/screenshots/0087-second-right-load-settle-4.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "motion-state",
+      "weight": 5,
+      "rule": "Actor velocity/grounding does not leak from previous attempt.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "The native airborne-before-R segment occurs after the failed post-death button restart and does not actually produce an airborne actor; the following reset therefore has no observed vertical-velocity/grounding precondition. Earlier horizontal movement during held R is directly scored as stale held-input leakage, but does not independently isolate saved velocity from still-active controls. Full motion-state restoration remains unverified.",
+      "evidence": [
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/real-reset-held/screenshots/0022-airborne-before-R-1.png",
+        "openrouter/assessment/real-reset-held/screenshots/0026-R-airborne-3.png"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "after-win",
+      "weight": 10,
+      "rule": "Fresh playable attempt after victory.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "No victory is observed. The terminal route scenarios show Game Over and both counters 0/8 before the named terminal reset, not a win. Their reset results cannot establish or refute fresh play after victory.",
+      "evidence": [
+        "openrouter/assessment/reset-after-route-R/capture.json",
+        "openrouter/assessment/reset-after-route-button/capture.json",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-3.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "callback-isolation",
+      "weight": 10,
+      "rule": "No previous-attempt callback mutates the reset attempt during the observed pending-callback window.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "No actual pending death/win/platform transition callback window is established by the visible evidence. The nominal terminal route ends in an old Game Over rather than newly triggered victory; airborne and board-loading preconditions also are not reached. An unchanged already-broken reset view cannot prove callback isolation, and no specific previous-attempt callback mutation is inferred.",
+      "evidence": [
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/reset-after-route-R/capture.json",
+        "openrouter/assessment/reset-after-route-button/capture.json",
+        "openrouter/assessment/first-hanging-contact/capture.json",
+        "openrouter/assessment/second-hanging-contact/capture.json"
+      ],
+      "earnedPoints": 0
+    }
+  ],
+  "evaluatorErrors": [],
+  "evaluatorIssues": [
+    {
+      "id": "GREEN_POOL_METADATA_CONTRADICTION",
+      "origin": "evaluator-task-authoring",
+      "affectedCriterion": "LAYOUT/pools",
+      "appliesTo": [
+        "gemini",
+        "cerebras",
+        "openrouter"
+      ],
+      "frozenPackageUnchanged": true,
+      "canonicalGrid": [
+        {
+          "x": 256,
+          "y": 480,
+          "width": 288
+        },
+        {
+          "x": 736,
+          "y": 480,
+          "width": 224
+        }
+      ],
+      "duplicateMetadata": [
+        {
+          "x": 416,
+          "y": 480,
+          "width": 288
+        },
+        {
+          "x": 896,
+          "y": 480,
+          "width": 224
+        }
+      ],
+      "reason": "Identical frozen textual evidence supplied to every configuration contains inconsistent duplicate green-pool locations. No post-generation repair or candidate penalty for choosing either representation. Pool placement criterion left unassessed; independently observed bottom-pool and reset failures are unaffected."
+    }
+  ],
+  "candidateRuntimeFailures": [],
+  "rawCaptureExceptions": [],
+  "suite": {
+    "results": [
+      {
+        "id": "public-walkthrough",
+        "capture": "public-walkthrough/capture.json",
+        "screenshots": 127,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "real-controls",
+        "capture": "real-controls/capture.json",
+        "screenshots": 41,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "real-jumps",
+        "capture": "real-jumps/capture.json",
+        "screenshots": 67,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "real-reset-held",
+        "capture": "real-reset-held/capture.json",
+        "screenshots": 46,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "neutral-real-60s",
+        "capture": "neutral-real-60s/capture.json",
+        "screenshots": 14,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "red-safe-pickup-revisit",
+        "capture": "red-safe-pickup-revisit/capture.json",
+        "screenshots": 25,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "red-foreign-death",
+        "capture": "red-foreign-death/capture.json",
+        "screenshots": 24,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "blue-foreign-death",
+        "capture": "blue-foreign-death/capture.json",
+        "screenshots": 19,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "blue-upper-wrong-pickup",
+        "capture": "blue-upper-wrong-pickup/capture.json",
+        "screenshots": 13,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "blue-safe-pickup-revisit",
+        "capture": "blue-safe-pickup-revisit/capture.json",
+        "screenshots": 25,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "lower-release-blocking",
+        "capture": "lower-release-blocking/capture.json",
+        "screenshots": 41,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "green-fire-contact",
+        "capture": "green-fire-contact/capture.json",
+        "screenshots": 67,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "green-water-contact",
+        "capture": "green-water-contact/capture.json",
+        "screenshots": 67,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "first-hanging-contact",
+        "capture": "first-hanging-contact/capture.json",
+        "screenshots": 93,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "second-hanging-contact",
+        "capture": "second-hanging-contact/capture.json",
+        "screenshots": 104,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "upper-release-return",
+        "capture": "upper-release-return/capture.json",
+        "screenshots": 107,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "single-and-wrong-exits",
+        "capture": "single-and-wrong-exits/capture.json",
+        "screenshots": 118,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "reset-after-route-R",
+        "capture": "reset-after-route-R/capture.json",
+        "screenshots": 133,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "reset-after-route-button",
+        "capture": "reset-after-route-button/capture.json",
+        "screenshots": 133,
+        "evaluatorErrors": [],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      }
+    ]
+  },
+  "evidence": {
+    "generation": "openrouter/generation.json",
+    "response": "openrouter/response.json",
+    "request": "openrouter/request.json",
+    "review": "openrouter/review.json",
+    "suite": "openrouter/assessment/suite.json",
+    "galleries": "openrouter/review-gallery.html"
+  }
+}

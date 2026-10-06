@@ -1,0 +1,474 @@
+{
+  "version": 2,
+  "scope": "Fresh three-configuration text-evidence full Forest Temple Level 2 single-attempt pilot; separate from earlier smoke/development pilots.",
+  "freeze": "Frozen before generation and candidate observation.",
+  "groups": [
+    {
+      "id": "BOOT",
+      "maxPoints": 100,
+      "criteria": [
+        {
+          "id": "standalone-output",
+          "weight": 20,
+          "rule": "Complete self-contained HTML in the JSON html field; no Markdown, imports or external dependencies."
+        },
+        {
+          "id": "visible-playable-start",
+          "weight": 30,
+          "rule": "Level and both characters render and start through normal keyboard interaction."
+        },
+        {
+          "id": "viewport",
+          "weight": 15,
+          "rule": "Fits1280x960 and resizing preserves logical geometry."
+        },
+        {
+          "id": "visible-ui",
+          "weight": 20,
+          "rule": "Visible gem progress, elapsed timer, controls and Restart."
+        },
+        {
+          "id": "loss-feedback",
+          "weight": 7,
+          "rule": "Visible loss feedback following observed lethal contact."
+        },
+        {
+          "id": "victory-feedback",
+          "weight": 8,
+          "rule": "Visible victory feedback following both living matching exit occupants."
+        }
+      ],
+      "overallWeight": 6
+    },
+    {
+      "id": "LAYOUT",
+      "maxPoints": 100,
+      "criteria": [
+        {
+          "id": "terrain-and-spawns",
+          "weight": 25,
+          "rule": "Multi-tier recognizable temple and bottom-left spawns."
+        },
+        {
+          "id": "pools",
+          "weight": 15,
+          "rule": "Required elemental pools in the demonstrated regions."
+        },
+        {
+          "id": "cooperative-objects",
+          "weight": 20,
+          "rule": "Central barrier, four plates and upper bridge/platform."
+        },
+        {
+          "id": "hanging-platforms",
+          "weight": 15,
+          "rule": "Both suspended platforms above green pools."
+        },
+        {
+          "id": "collectibles-and-exits",
+          "weight": 15,
+          "rule": "Eight red and eight blue diamonds and matching exits at upper left."
+        },
+        {
+          "id": "traversable-route",
+          "weight": 10,
+          "rule": "Normal input reaches bottom, middle and upper tiers without forbidden shortcuts or scripted progress."
+        }
+      ],
+      "overallWeight": 12
+    },
+    {
+      "id": "CONTROLS",
+      "maxPoints": 100,
+      "criteria": [
+        {
+          "id": "fireboy",
+          "weight": 20,
+          "rule": "ArrowLeft/Right/Up act only on Fireboy."
+        },
+        {
+          "id": "watergirl",
+          "weight": 20,
+          "rule": "Physical A/D/W and lowercase/Shift/Caps Lock act only on Watergirl."
+        },
+        {
+          "id": "simultaneous",
+          "weight": 20,
+          "rule": "Both characters move and jump simultaneously."
+        },
+        {
+          "id": "independent-release",
+          "weight": 25,
+          "rule": "Both release directions stop only the released character."
+        },
+        {
+          "id": "no-page-scroll",
+          "weight": 15,
+          "rule": "Control keys do not scroll or lose game interaction."
+        }
+      ],
+      "overallWeight": 10
+    },
+    {
+      "id": "PHYSICS",
+      "maxPoints": 100,
+      "criteria": [
+        {
+          "id": "gravity-and-jump",
+          "weight": 25,
+          "rule": "Grounded jump shows ascent/apex/descent and no flight or double-jump."
+        },
+        {
+          "id": "landing-and-support",
+          "weight": 25,
+          "rule": "Terrain landing and continued idle support."
+        },
+        {
+          "id": "solid-boundaries",
+          "weight": 25,
+          "rule": "Floors/walls/ceiling actually block where reachable."
+        },
+        {
+          "id": "moving-surface-contact",
+          "weight": 25,
+          "rule": "Moving and tilted collision geometry agrees with rendered supporting surface."
+        }
+      ],
+      "overallWeight": 12
+    },
+    {
+      "id": "HAZARDS",
+      "maxPoints": 100,
+      "criteria": [
+        {
+          "id": "fireboy-red-safe",
+          "weight": 10,
+          "rule": "Fireboy traverses red pool alive."
+        },
+        {
+          "id": "watergirl-blue-safe",
+          "weight": 10,
+          "rule": "Watergirl traverses blue pool alive."
+        },
+        {
+          "id": "fireboy-blue-fatal",
+          "weight": 15,
+          "rule": "Blue contact kills Fireboy visibly."
+        },
+        {
+          "id": "watergirl-red-fatal",
+          "weight": 15,
+          "rule": "Red contact kills Watergirl visibly."
+        },
+        {
+          "id": "fireboy-green-fatal",
+          "weight": 15,
+          "rule": "Green contact kills Fireboy visibly."
+        },
+        {
+          "id": "watergirl-green-fatal",
+          "weight": 15,
+          "rule": "Green contact kills Watergirl visibly."
+        },
+        {
+          "id": "death-terminal",
+          "weight": 15,
+          "rule": "Either death stops onward play and cannot satisfy victory."
+        },
+        {
+          "id": "restart-after-death",
+          "weight": 5,
+          "rule": "Visible Restart remains usable after death."
+        }
+      ],
+      "overallWeight": 12
+    },
+    {
+      "id": "DIAMONDS",
+      "maxPoints": 100,
+      "criteria": [
+        {
+          "id": "inventory",
+          "weight": 20,
+          "rule": "Eight red and eight blue diamonds at specified map positions."
+        },
+        {
+          "id": "red-matching-pickup",
+          "weight": 12,
+          "rule": "Fireboy collects an encountered red diamond."
+        },
+        {
+          "id": "blue-matching-pickup",
+          "weight": 13,
+          "rule": "Watergirl collects an encountered blue diamond."
+        },
+        {
+          "id": "red-wrong-retained",
+          "weight": 10,
+          "rule": "Watergirl contacts red diamond without collecting it."
+        },
+        {
+          "id": "blue-wrong-retained",
+          "weight": 10,
+          "rule": "Fireboy contacts blue diamond without collecting it."
+        },
+        {
+          "id": "red-disappears-counts-once",
+          "weight": 12,
+          "rule": "Red pickup disappears; progress increments once and does not increment on revisit."
+        },
+        {
+          "id": "blue-disappears-counts-once",
+          "weight": 13,
+          "rule": "Blue pickup disappears; progress increments once and does not increment on revisit."
+        },
+        {
+          "id": "optional-for-exits",
+          "weight": 10,
+          "rule": "Both matching exits complete with at least one diamond left."
+        }
+      ],
+      "overallWeight": 8
+    },
+    {
+      "id": "PRESSURE PLATES",
+      "maxPoints": 100,
+      "criteria": [
+        {
+          "id": "lower-left-fire",
+          "weight": 5,
+          "rule": "Fireboy contact with lower left plate opens barrier."
+        },
+        {
+          "id": "lower-left-water",
+          "weight": 5,
+          "rule": "Watergirl contact with lower left plate opens barrier."
+        },
+        {
+          "id": "lower-right-fire",
+          "weight": 5,
+          "rule": "Fireboy contact with lower right plate opens barrier."
+        },
+        {
+          "id": "lower-right-water",
+          "weight": 5,
+          "rule": "Watergirl contact with lower right plate opens barrier."
+        },
+        {
+          "id": "barrier-closed-blocking",
+          "weight": 8,
+          "rule": "Inactive lower barrier physically blocks normal crossing."
+        },
+        {
+          "id": "barrier-open-crossing",
+          "weight": 9,
+          "rule": "Active lower barrier permits normal traversal."
+        },
+        {
+          "id": "barrier-restored-blocking",
+          "weight": 8,
+          "rule": "After all lower contacts release, barrier returns and physically blocks crossing."
+        },
+        {
+          "id": "upper-left-fire",
+          "weight": 5,
+          "rule": "Fireboy contact with upper left plate extends bridge."
+        },
+        {
+          "id": "upper-left-water",
+          "weight": 5,
+          "rule": "Watergirl contact with upper left plate extends bridge."
+        },
+        {
+          "id": "upper-right-fire",
+          "weight": 5,
+          "rule": "Fireboy contact with upper right plate extends bridge."
+        },
+        {
+          "id": "upper-right-water",
+          "weight": 5,
+          "rule": "Watergirl contact with upper right plate extends bridge."
+        },
+        {
+          "id": "bridge-support",
+          "weight": 12,
+          "rule": "Extended bridge actually supports a traversing actor across gap."
+        },
+        {
+          "id": "bridge-return",
+          "weight": 13,
+          "rule": "Bridge returns toward rest after all upper plate contacts end."
+        },
+        {
+          "id": "not-scripted",
+          "weight": 10,
+          "rule": "Matched contact/no-contact trials show held contact, not elapsed time or a latch, controls mechanisms."
+        }
+      ],
+      "overallWeight": 12
+    },
+    {
+      "id": "HANGING PLATFORMS",
+      "maxPoints": 100,
+      "criteria": [
+        {
+          "id": "first-load-position-response",
+          "weight": 20,
+          "rule": "First platform tilt depends on where a character stands."
+        },
+        {
+          "id": "second-load-position-response",
+          "weight": 20,
+          "rule": "Second platform tilt depends on where a character stands."
+        },
+        {
+          "id": "tilted-support",
+          "weight": 25,
+          "rule": "Character feet follow the tilted rendered surface; no invisible flat floor."
+        },
+        {
+          "id": "land-walk-jump",
+          "weight": 25,
+          "rule": "Both platforms accept landing, walking and jumping off through normal controls."
+        },
+        {
+          "id": "contact-versus-autonomous",
+          "weight": 10,
+          "rule": "Load/unload observations distinguish physical contact response from canned animation; no prescribed leveling time."
+        }
+      ],
+      "overallWeight": 12
+    },
+    {
+      "id": "EXITS",
+      "maxPoints": 100,
+      "criteria": [
+        {
+          "id": "single-insufficient",
+          "weight": 15,
+          "rule": "A single matching exit does not produce team victory."
+        },
+        {
+          "id": "wrong-insufficient",
+          "weight": 15,
+          "rule": "Wrong-character exit contact does not count."
+        },
+        {
+          "id": "both-matching-success",
+          "weight": 30,
+          "rule": "Both living characters in corresponding exits visibly win."
+        },
+        {
+          "id": "dead-cannot-win",
+          "weight": 20,
+          "rule": "A dead actor or lost attempt cannot satisfy completion."
+        },
+        {
+          "id": "gems-optional",
+          "weight": 20,
+          "rule": "Completion works with diamonds remaining."
+        }
+      ],
+      "overallWeight": 8
+    },
+    {
+      "id": "RESET",
+      "maxPoints": 100,
+      "criteria": [
+        {
+          "id": "R-spawns",
+          "weight": 5,
+          "rule": "R restores both spawns after actual displacement."
+        },
+        {
+          "id": "button-spawns",
+          "weight": 5,
+          "rule": "Visible Restart restores both spawns."
+        },
+        {
+          "id": "diamonds-counters",
+          "weight": 10,
+          "rule": "Collected diamonds and progress counters restore."
+        },
+        {
+          "id": "timer",
+          "weight": 5,
+          "rule": "Elapsed timer restarts."
+        },
+        {
+          "id": "plates-barrier-bridge",
+          "weight": 10,
+          "rule": "Occupied plates and displaced barrier/bridge restore resting state."
+        },
+        {
+          "id": "hanging-state",
+          "weight": 10,
+          "rule": "Both loaded/tilted platforms restore initial arrangement and motion."
+        },
+        {
+          "id": "motion-state",
+          "weight": 5,
+          "rule": "Actor velocity/grounding does not leak from previous attempt."
+        },
+        {
+          "id": "after-death",
+          "weight": 10,
+          "rule": "Fresh playable attempt after loss."
+        },
+        {
+          "id": "after-win",
+          "weight": 10,
+          "rule": "Fresh playable attempt after victory."
+        },
+        {
+          "id": "held-input",
+          "weight": 10,
+          "rule": "Both reset methods clear stale physically held controls."
+        },
+        {
+          "id": "callback-isolation",
+          "weight": 10,
+          "rule": "No previous-attempt callback mutates the reset attempt during the observed pending-callback window."
+        },
+        {
+          "id": "repeated-reset",
+          "weight": 10,
+          "rule": "Rapid repeated resets leave a stable fresh level."
+        }
+      ],
+      "overallWeight": 6
+    },
+    {
+      "id": "NO PLAYBACK",
+      "maxPoints": 100,
+      "criteria": [
+        {
+          "id": "no-auto-traversal",
+          "weight": 50,
+          "rule": "Fresh context with no input for at least60 actual seconds does not traverse route."
+        },
+        {
+          "id": "no-auto-victory",
+          "weight": 50,
+          "rule": "Same neutral interval does not produce victory."
+        }
+      ],
+      "overallWeight": 2
+    }
+  ],
+  "scoring": {
+    "PASS": "Earn full criterion weight only with observed evidence.",
+    "FAIL": "Earn0 for an observed contradiction.",
+    "NOT_REACHED": "Earn0 verified points; retain weight as unverified, not proven incorrect.",
+    "AWAITING_REVIEW": "Earn0 until evidence reviewed; retain unverified weight.",
+    "EVALUATOR_ERROR": "No behavioral verdict; affected grade is incomplete and point weight remains unverified.",
+    "formula": "Category verified score = sum local weights of PASS (0..100). Category coverage = sum local weights of PASS or FAIL (0..100). Overall verified score = sum(category score * overallWeight/100). Weighted assessment coverage = sum(category coverage * overallWeight/100). Unassessed, pending review, and evaluator-error weights earn zero verified points, NOT false failure. Possible score interval [verified, verified + 100 - coverage].",
+    "overall": "FULL_SUCCESS only when all criteria PASS, overall score100 and weighted coverage100. Any observed candidate requirement contradiction yields FAIL with unknowns reported. Otherwise INCOMPLETE. Generation/API failure is recorded separately; no gameplay verdict inferred."
+  },
+  "evidence": {
+    "candidate": "Exact unchanged generated HTML; Chromium1280x960/deviceScaleFactor1; normal keyboard/click only. Public walkthrough and route-prefix hidden scenarios use validated controlled browser clock in <=500ms sample intervals; real-time controls/jumps/reset parity and 60s neutral interval use real time/video. No candidate globals, source-based behavioral grading, teleports or state writes.",
+    "calibration": "Known-working and targeted broken fixtures are evaluator material, never supplied to the model. Fresh query scenarios initialize fixtures only; all transitions/preconditions are reached through actual play.",
+    "identity": "Record rubric/prompt/image/submission hashes, timestamped inputs, raw screenshots and continuous video for transition-sensitive checks.",
+    "limitations": "Finite encounter-based qualitative mechanics, not exact physics matching or statistical ranking. Timed route failing to reach a later encounter is NOT_REACHED unless a visible requirement contradiction is independently observed. Controlled time is an evaluator condition, not a real-time performance claim. Full-reference walkthrough and compact defect calibration evidence are distinct."
+  }
+}

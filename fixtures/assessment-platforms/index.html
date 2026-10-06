@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hanging platform calibration arena</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+    body { background: #142338; color: #eff5ff; font: 17px/1.45 system-ui, sans-serif; }
+    canvas { position: fixed; inset: 0; width: 100%; height: 100%; }
+    header { position: absolute; top: 20px; left: 28px; right: 28px; }
+    h1 { margin: 0 0 6px; font-size: 26px; }
+    p { margin: 3px 0; }
+    .notice { color: #c1d7e8; }
+    .fire { color: #ff9288; }
+    .water { color: #8bcfff; }
+    button { margin-top: 10px; padding: 8px 16px; border: 2px solid #d5e6f5; border-radius: 6px; background: #284963; color: #fff; font: inherit; cursor: pointer; }
+    button:focus-visible { outline: 3px solid #ffe288; outline-offset: 4px; }
+    .clock { position: absolute; right: 0; top: 0; padding: 6px 12px; background: #122638; font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+<body>
+  <canvas id="scene" width="1280" height="960" aria-label="Two suspended load-responsive platforms with canvas characters"></canvas>
+  <header>
+    <h1>Hanging platform calibration</h1>
+    <p class="notice">1280 × 960 arena · two suspended planks · floor at 760 · no hazards.</p>
+    <p class="fire">Fireboy: Arrow Left / Right / Up.</p>
+    <p class="water">Watergirl: physical A / D / W (either letter case also accepted).</p>
+    <p>Jump inward from the floor, release movement near L or R, then walk through C to the other end.</p>
+    <p>Jump outward to unload. Upright actors touch the slope with their uphill bottom corner.</p>
+    <p>R or Restart resets spawns, both planks, angular velocity, controls and elapsed time.</p>
+    <p id="setup" class="notice"></p>
+    <button id="restart" type="button">Restart</button>
+    <div class="clock">Elapsed: <span id="timer">0.00 s</span></div>
+  </header>
+  <script>
+    (() => {
+      'use strict';
+
+      // Queries select only a fresh starting setup, never mid-run state changes.
+      // ?platform=1|2&approach=left|right&fault=working|fixed-tilt|flat-support|
+      // no-support|autonomous-tilt|fixed-second. The mode alias is accepted too.
+      // fixed-tilt: both angles held at +0.14, regardless of load.
+      // flat-support: real load-dependent drawing, but collision stays at y=650.
+      // no-support: both planks are visible, but characters pass through them.
+      // autonomous-tilt: both angles follow a clock sine wave, ignoring load.
+      // fixed-second: P1 works; P2 is held at +0.14 regardless of load.
+      // Normal planks use a damped torsion spring plus supported body-weight torque.
+      const WIDTH = 1280;
+      const HEIGHT = 960;
+      const FLOOR = 760;
+      const BODY_WIDTH = 26;
+      const BODY_HEIGHT = 36;
+      const SPEED = 160;
+      const JUMP = 500;
+      const GRAVITY = 800;
+      const STEP = 1 / 120;
+      const MAX_ANGLE = 0.26;
+      const query = new URLSearchParams(location.search);
+      const faults = new Set(['working', 'fixed-tilt', 'flat-support', 'no-support', 'autonomous-tilt', 'fixed-second']);
+      const requestedFault = query.get('fault') || query.get('mode') || 'working';
+      const fault = faults.has(requestedFault) ? requestedFault : 'working';
+      const startPlatform = query.get('platform') === '2' ? 2 : 1;
+      const approach = query.get('approach') === 'right' ? 'right' : 'left';
+      const canvas = document.getElementById('scene');
+      const context = canvas.getContext('2d');
+      const timer = document.getElementById('timer');
+      const held = new Set();
+      const pendingJumps = new Set();
+      const platforms = [
+        { name: 'P1', x: 350, y: 650, half: 160, angle: 0, previousAngle: 0, omega: 0 },
+        { name: 'P2', x: 930, y: 650, half: 160, angle: 0, previousAngle: 0, omega: 0 },
+      ];
+      const bodies = [
+        { name: 'Fireboy', color: '#ed433a', left: 'ArrowLeft', right: 'ArrowRight', jump: 'ArrowUp', x: 0, y: 0, vx: 0, vy: 0, support: null, grounded: true },
+        { name: 'Watergirl', color: '#278ee3', left: 'KeyA', right: 'KeyD', jump: 'KeyW', x: 0, y: 0, vx: 0, vy: 0, support: null, grounded: true },
+      ];
+      let elapsed = 0;
+      let accumulator = 0;
+      let lastFrame = performance.now();
+      document.getElementById('setup').textContent = `Setup: ${fault} · P${startPlatform} · ${approach} approach. Query: platform=1|2, approach=left|right, fault=mode.`;
+
+      function isFixed(index) {
+        return fault === 'fixed-tilt' || (fault === 'fixed-second' && index === 1);
+      }
+
+      function reset() {
+        held.clear();
+        pendingJumps.clear();
+        elapsed = 0;
+        accumulator = 0;
+        lastFrame = performance.now();
+        platforms.forEach((platform, index) => {
+          platform.angle = isFixed(index) ? 0.14 : 0;
+          platform.previousAngle = platform.angle;
+          platform.omega = 0;
+        });
+        const platform = platforms[startPlatform - 1];
+        const side = approach === 'left' ? -1 : 1;
+        bodies.forEach((body, index) => {
+          body.x = platform.x + side * (platform.half + 12 + index * 44) - BODY_WIDTH / 2;
+          body.y = FLOOR - BODY_HEIGHT;
+          body.vx = 0;
+          body.vy = 0;
+          body.support = null;
+          body.grounded = true;
+        });
+        render();
+      }
+
+      // The uphill bottom corner is the exact contact point of an upright box.
+      // Returning that same surface for load, collision, and rendering avoids a
+      // horizontal invisible collider beneath a tilted picture in working mode.
+      function contact(platform, x, previous = false) {
+        if (fault === 'no-support') return null;
+        const angle = fault === 'flat-support' ? 0 : (previous ? platform.previousAngle : platform.angle);
+        const reach = platform.half * Math.cos(angle);
+        const left = Math.max(x, platform.x - reach);
+        const right = Math.min(x + BODY_WIDTH, platform.x + reach);
+        if (left > right) return null;
+        const footX = angle >= 0 ? left : right;
+        return { x: footX, y: platform.y + Math.tan(angle) * (footX - platform.x) };
+      }
+
+      function stepPlatform(platform, index) {
+        platform.previousAngle = platform.angle;
+        if (isFixed(index)) {
+          platform.angle = 0.14;
+          platform.omega = 0;
+          return;
+        }
+        if (fault === 'autonomous-tilt') {
+          platform.angle = 0.22 * Math.sin(elapsed * 1.8);
+          platform.omega = 0.22 * 1.8 * Math.cos(elapsed * 1.8);
+          return;
+        }
+        let torque = 0;
+        for (const body of bodies) {
+          if (body.support !== platform) continue;
+          if (contact(platform, body.x)) {
+            // Gravity acts through the body's center of mass. Contact gates
+            // this load, so a centered actor does not alternate corner torques.
+            torque += 0.04 * (body.x + BODY_WIDTH / 2 - platform.x);
+          }
+        }
+        platform.omega += (torque - 16 * platform.angle - 7 * platform.omega) * STEP;
+        platform.angle += platform.omega * STEP;
+        if (Math.abs(platform.angle) > MAX_ANGLE) {
+          platform.angle = Math.sign(platform.angle) * MAX_ANGLE;
+          if (platform.angle * platform.omega > 0) platform.omega = 0;
+        }
+      }
+
+      function stepBody(body) {
+        const oldX = body.x;
+        const oldBottom = body.y + BODY_HEIGHT;
+        body.vx = (Number(held.has(body.right)) - Number(held.has(body.left))) * SPEED;
+        const jumping = pendingJumps.has(body.jump) && body.grounded;
+        if (jumping) {
+          body.vy = -JUMP;
+          body.grounded = false;
+          body.support = null;
+        }
+        body.x = Math.max(8, Math.min(WIDTH - BODY_WIDTH - 8, body.x + body.vx * STEP));
+        if (body.support) {
+          const foot = contact(body.support, body.x);
+          if (foot) {
+            body.y = foot.y - BODY_HEIGHT;
+            body.vy = 0;
+            body.grounded = true;
+            return;
+          }
+          body.support = null;
+          body.grounded = false;
+        }
+        body.vy += GRAVITY * STEP;
+        body.y += body.vy * STEP;
+        body.grounded = false;
+        if (body.vy >= 0) {
+          let landing = null;
+          for (const platform of platforms) {
+            const foot = contact(platform, body.x);
+            if (!foot) continue;
+            const oldFoot = contact(platform, oldX, true);
+            const oldSurface = oldFoot ? oldFoot.y : foot.y;
+            if (oldBottom <= oldSurface + 1 && body.y + BODY_HEIGHT >= foot.y && (!landing || foot.y < landing.foot.y)) {
+              landing = { platform, foot };
+            }
+          }
+          if (landing) {
+            body.y = landing.foot.y - BODY_HEIGHT;
+            body.vy = 0;
+            body.support = landing.platform;
+            body.grounded = true;
+          }
+        }
+        if (body.y + BODY_HEIGHT >= FLOOR) {
+          body.y = FLOOR - BODY_HEIGHT;
+          body.vy = 0;
+          body.support = null;
+          body.grounded = true;
+        }
+      }
+
+      function drawPlatform(platform) {
+        const cosine = Math.cos(platform.angle);
+        const sine = Math.sin(platform.angle);
+        context.strokeStyle = '#a6c2d4';
+        context.lineWidth = 4;
+        for (const sign of [-1, 1]) {
+          context.beginPath();
+          context.moveTo(platform.x + sign * 130, 505);
+          context.lineTo(platform.x + sign * platform.half * cosine, platform.y + sign * platform.half * sine);
+          context.stroke();
+        }
+        context.fillStyle = '#66879e';
+        context.fillRect(platform.x - 142, 498, 284, 10);
+        context.fillStyle = '#eff5ff';
+        context.textAlign = 'center';
+        context.font = 'bold 23px system-ui';
+        context.fillText(`${platform.name} · hanging platform`, platform.x, 474);
+        context.save();
+        context.translate(platform.x, platform.y);
+        context.rotate(platform.angle);
+        context.fillStyle = '#ad8051';
+        context.fillRect(-platform.half, 0, platform.half * 2, 14);
+        context.fillStyle = '#ffe2a9';
+        context.fillRect(-platform.half, 0, platform.half * 2, 3);
+        context.font = 'bold 17px system-ui';
+        for (const [x, label] of [[-110, 'L'], [0, 'C'], [110, 'R']]) {
+          context.fillStyle = '#ffe288';
+          context.fillRect(x - 2, 0, 4, 14);
+          context.fillText(label, x, 36);
+        }
+        for (const x of [-platform.half, platform.half]) {
+          context.beginPath();
+          context.arc(x, 0, 5, 0, Math.PI * 2);
+          context.fillStyle = '#ffffff';
+          context.fill();
+        }
+        context.restore();
+      }
+
+      function render() {
+        context.fillStyle = '#142338';
+        context.fillRect(0, 0, WIDTH, HEIGHT);
+        context.fillStyle = '#45654b';
+        context.fillRect(0, FLOOR, WIDTH, HEIGHT - FLOOR);
+        context.fillStyle = '#89ad72';
+        context.fillRect(0, FLOOR, WIDTH, 5);
+        platforms.forEach(drawPlatform);
+        for (const body of bodies) {
+          context.fillStyle = body.color;
+          context.fillRect(body.x, body.y, BODY_WIDTH, BODY_HEIGHT);
+          context.fillStyle = '#ffffff';
+          context.fillRect(body.x + 5, body.y + 10, 4, 5);
+          context.fillRect(body.x + 17, body.y + 10, 4, 5);
+          context.fillStyle = '#182032';
+          context.fillRect(body.x + 9, body.y + 22, 8, 3);
+        }
+        context.textAlign = 'left';
+        context.fillStyle = '#e1f1d7';
+        context.font = '19px system-ui';
+        context.fillText('Solid floor · jump height 156 px · plank rest height 650', 30, 815);
+        context.fillStyle = '#c1d7e8';
+        context.fillText('L / C / R are fixed plank marks. Check changing slope, loaded feet, and return toward level when unloaded.', 30, 855);
+        timer.textContent = `${elapsed.toFixed(2)} s`;
+      }
+
+      function controlCode(event) {
+        if (['KeyA', 'KeyD', 'KeyW', 'KeyR'].includes(event.code)) return event.code;
+        if (['ArrowLeft', 'ArrowRight', 'ArrowUp'].includes(event.key)) return event.key;
+        const letter = event.key.toLowerCase();
+        return ['a', 'd', 'w', 'r'].includes(letter) ? `Key${letter.toUpperCase()}` : null;
+      }
+      window.addEventListener('keydown', event => {
+        const code = controlCode(event);
+        if (!code) return;
+        event.preventDefault();
+        if (event.repeat) return;
+        if (code === 'KeyR') {
+          reset();
+          return;
+        }
+        if (!held.has(code) && (code === 'ArrowUp' || code === 'KeyW')) pendingJumps.add(code);
+        held.add(code);
+      });
+      window.addEventListener('keyup', event => {
+        const code = controlCode(event);
+        if (!code) return;
+        event.preventDefault();
+        held.delete(code);
+      });
+      window.addEventListener('blur', () => {
+        held.clear();
+        pendingJumps.clear();
+      });
+      document.getElementById('restart').addEventListener('click', reset);
+
+      function animate(now) {
+        accumulator += Math.max(0, Math.min(0.05, (now - lastFrame) / 1000));
+        lastFrame = now;
+        while (accumulator >= STEP) {
+          elapsed += STEP;
+          // Apply jump removal before the torque calculation, so unloading is
+          // a direct result of input/contact, not a scripted response.
+          for (const body of bodies) {
+            if (pendingJumps.has(body.jump) && body.grounded) body.support = null;
+          }
+          platforms.forEach(stepPlatform);
+          bodies.forEach(stepBody);
+          pendingJumps.clear();
+          accumulator -= STEP;
+        }
+        render();
+        requestAnimationFrame(animate);
+      }
+      reset();
+      requestAnimationFrame(animate);
+    })();
+  </script>
+</body>
+</html>

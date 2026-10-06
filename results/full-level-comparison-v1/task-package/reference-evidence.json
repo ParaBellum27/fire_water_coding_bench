@@ -1,0 +1,407 @@
+{
+  "version": 1,
+  "condition": "Identical text-only reference evidence; exact authored map data and schema facts, not original game implementation. No screenshot attachments supplied to any configuration.",
+  "source": {
+    "repository": "https://github.com/ahrdevelopers/fireboy-and-watergirl-1-forest-temple",
+    "level": "forest_02.json",
+    "mapSha256": "6842996e0277a3eb3f5e20c42725e251da22bd9278b01c7840065fd75ea1bdad"
+  },
+  "coordinates": {
+    "width": 1248,
+    "height": 928,
+    "tileSize": 32,
+    "origin": "top-left",
+    "axes": "+x right, +y down",
+    "viewport": {
+      "width": 1280,
+      "height": 960
+    },
+    "presentation": "Fit the entire logical map into viewport; preserve terrain/world coordinates, and place HUD without clipping gameplay."
+  },
+  "ground": {
+    "rows": [
+      "111111111111111111111111111111111111111",
+      "100000000000000000000000000000000000001",
+      "100000000000000000000000000000000000001",
+      "100000000000000000000000000000000000001",
+      "100000000000000000000000000000000000001",
+      "111111111111111110000011111111300000001",
+      "100000000000000000000000000011130000001",
+      "100000000000000000000000000001111000001",
+      "100000000000000000000000000000000000001",
+      "100000000000000000000000000000000001111",
+      "100000000000000000000000000000000001111",
+      "100000000000000000000000000000000001111",
+      "100000000000000000000000000000000111111",
+      "100000000000000000000000000000000111111",
+      "100000000000000001111110000000000111111",
+      "100000118888888881111118888888111111111",
+      "100000000000000000000000000000000000001",
+      "111100000000000000000000000000000000001",
+      "111100000000000000000000000000000000001",
+      "111100000000000000000000000000000000001",
+      "111111111111111111111111111111111130001",
+      "100000000000000000000000000000000000001",
+      "100000000000000000000000000000000000001",
+      "100000000000000000000000000000000000001",
+      "100000000000000000000000000000000000211",
+      "100000666666666000000077777777700002111",
+      "100000000000000000000000000000000001111",
+      "100000000000000000000000000000000001111",
+      "111111777777777111111166666666611111111"
+    ],
+    "encoding": "Each character is a gid; row-major 39 columns ×29 rows.",
+    "gids": {
+      "0": {
+        "type": "empty"
+      },
+      "1": {
+        "type": "solid",
+        "polygon": [
+          [
+            0,
+            0
+          ],
+          [
+            32,
+            0
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            0,
+            32
+          ]
+        ]
+      },
+      "2": {
+        "type": "solid-slope-up-right",
+        "polygon": [
+          [
+            32,
+            0
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            0,
+            32
+          ]
+        ]
+      },
+      "3": {
+        "type": "solid-slope-down-right",
+        "polygon": [
+          [
+            0,
+            0
+          ],
+          [
+            32,
+            32
+          ],
+          [
+            0,
+            32
+          ]
+        ]
+      },
+      "6": {
+        "type": "blue-water",
+        "solidBacking": {
+          "y": 16,
+          "height": 16
+        },
+        "liquid": "upper half of tile; matching character traverses supported, foreign character dies"
+      },
+      "7": {
+        "type": "red-lava",
+        "solidBacking": {
+          "y": 16,
+          "height": 16
+        },
+        "liquid": "upper half of tile; matching character traverses supported, foreign character dies"
+      },
+      "8": {
+        "type": "green-poison",
+        "solidBacking": {
+          "y": 16,
+          "height": 16
+        },
+        "liquid": "upper half; fatal to either character"
+      }
+    }
+  },
+  "spawns": {
+    "fireboy": {
+      "center": [
+        72,
+        864
+      ]
+    },
+    "watergirl": {
+      "center": [
+        152,
+        864
+      ]
+    },
+    "note": "Editor objects64×64 are anchors, NOT mandated character collision dimensions. Use approximately32×60 supported bodies suitable for128px stairs and shelf separation. Initial gravity settling is allowed."
+  },
+  "exits": {
+    "fireboy": {
+      "floorAnchor": [
+        96,
+        160
+      ],
+      "width": 64
+    },
+    "watergirl": {
+      "floorAnchor": [
+        208,
+        160
+      ],
+      "width": 64
+    }
+  },
+  "diamonds": {
+    "red": [
+      [
+        920,
+        592
+      ],
+      [
+        496,
+        592
+      ],
+      [
+        592,
+        120
+      ],
+      [
+        608,
+        392
+      ],
+      [
+        272,
+        864
+      ],
+      [
+        408,
+        864
+      ],
+      [
+        776,
+        768
+      ],
+      [
+        920,
+        768
+      ]
+    ],
+    "blue": [
+      [
+        656,
+        120
+      ],
+      [
+        672,
+        392
+      ],
+      [
+        336,
+        592
+      ],
+      [
+        264,
+        768
+      ],
+      [
+        408,
+        768
+      ],
+      [
+        776,
+        864
+      ],
+      [
+        920,
+        864
+      ],
+      [
+        776,
+        592
+      ]
+    ],
+    "coordinates": "Fixed pickup sensor centers; small decorative bobbing is allowed."
+  },
+  "pools": [
+    {
+      "color": "blue",
+      "rect": [
+        192,
+        800,
+        288,
+        32
+      ]
+    },
+    {
+      "color": "red",
+      "rect": [
+        704,
+        800,
+        288,
+        32
+      ]
+    },
+    {
+      "color": "red",
+      "rect": [
+        192,
+        896,
+        288,
+        32
+      ]
+    },
+    {
+      "color": "blue",
+      "rect": [
+        704,
+        896,
+        288,
+        32
+      ]
+    },
+    {
+      "color": "green",
+      "rect": [
+        416,
+        480,
+        288,
+        32
+      ]
+    },
+    {
+      "color": "green",
+      "rect": [
+        896,
+        480,
+        224,
+        32
+      ]
+    }
+  ],
+  "pressurePlates": [
+    {
+      "id": "lower-left",
+      "center": [
+        192,
+        640
+      ],
+      "group": 0
+    },
+    {
+      "id": "lower-right",
+      "center": [
+        1040,
+        640
+      ],
+      "group": 0
+    },
+    {
+      "id": "upper-left",
+      "center": [
+        320,
+        160
+      ],
+      "group": 2
+    },
+    {
+      "id": "upper-right",
+      "center": [
+        912,
+        160
+      ],
+      "group": 2
+    }
+  ],
+  "movingObjects": [
+    {
+      "id": "barrier",
+      "group": 0,
+      "restRect": [
+        624,
+        512,
+        32,
+        128
+      ],
+      "pressedRect": [
+        624,
+        384,
+        32,
+        128
+      ]
+    },
+    {
+      "id": "bridge",
+      "group": 2,
+      "restRect": [
+        704,
+        160,
+        160,
+        32
+      ],
+      "pressedRect": [
+        544,
+        160,
+        160,
+        32
+      ]
+    }
+  ],
+  "hangingBoards": [
+    {
+      "id": "first",
+      "anchor": [
+        384,
+        264
+      ],
+      "initialCenter": [
+        384,
+        408
+      ],
+      "ropeLength": 144,
+      "width": 102.4,
+      "thickness": 7.68
+    },
+    {
+      "id": "second",
+      "anchor": [
+        864,
+        264
+      ],
+      "initialCenter": [
+        864,
+        424
+      ],
+      "ropeLength": 160,
+      "width": 102.4,
+      "thickness": 7.68
+    }
+  ],
+  "hangingRules": "Suspended/load-responsive rotating planks. Contact torque depends on character weight position; rendered supporting geometry must track physical rotation. Normal landing/walking/jump-off must work on both. No invisible horizontal floors, prescribed angle or exact damping requirement.",
+  "route": [
+    "Watergirl uses first BLUE upper shelf while Fireboy uses first RED lower pool.",
+    "Fireboy jumps to second RED upper shelf; Watergirl uses second BLUE lower pool.",
+    "Climb right stairs to main corridor y640.",
+    "Watergirl holds lower-right plate; Fireboy crosses raised barrier to lower-left plate and holds while Watergirl crosses.",
+    "Both climb left staircase toward green chamber and jump safe ledge → first hanging board → central island.",
+    "Cross second hanging board to right staircase, climb to upper floor.",
+    "Watergirl holds upper-right plate while Fireboy crosses extended bridge and holds upper-left plate; Watergirl crosses.",
+    "Reach matching upper-left exits; team victory requires both living occupants. Diamonds optional."
+  ],
+  "evidenceStatus": "Authored geometry/configured anchors; motion endpoints and hanging defaults schema-derived. Canonical walkthrough independently calibrated before generation; no original engine, assets or private state supplied."
+}

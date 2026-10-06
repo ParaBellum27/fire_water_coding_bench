@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "scenario": {
+    "id": "blue-upper-wrong-pickup",
+    "clock": "controlled",
+    "hostDeadlineMs": 240000,
+    "sampleEveryMs": 500,
+    "segments": [
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 550,
+        "label": "approach-first-shelf"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp"
+        ],
+        "durationMs": 650,
+        "label": "fire-contact-upper-blue-gem-and-pool",
+        "sampleEveryMs": 100
+      },
+      {
+        "keys": [],
+        "durationMs": 800,
+        "label": "settle-upper-blue"
+      }
+    ]
+  },
+  "observations": [],
+  "actions": [],
+  "candidateEvents": [
+    {
+      "type": "output-contract-failure",
+      "reasons": [
+        "Submission is not JSON (no fences or other repairs are permitted).",
+        "Submission must be exactly one JSON field, html, containing a string.",
+        "Provider reported output truncation."
+      ]
+    }
+  ],
+  "evaluatorErrors": [],
+  "status": "NOT_REACHED",
+  "reason": "No parseable single-field HTML submission. Preserved invalid output; no extraction, repair or replacement page created.",
+  "privateStateReads": 0,
+  "candidateMutations": 0,
+  "sourceUnchanged": null
+}

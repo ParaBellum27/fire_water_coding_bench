@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "scenario": {
+    "id": "real-jumps",
+    "clock": "real",
+    "hostDeadlineMs": 60000,
+    "sampleEveryMs": 100,
+    "segments": [
+      {
+        "keys": [
+          "ArrowUp"
+        ],
+        "durationMs": 80,
+        "label": "fire-grounded-jump",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 150,
+        "label": "fire-release-rise",
+        "sampleEveryMs": 50
+      },
+      {
+        "keys": [
+          "ArrowUp"
+        ],
+        "durationMs": 80,
+        "label": "fire-airborne-repress",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 1800,
+        "label": "fire-descend-land",
+        "sampleEveryMs": 100
+      },
+      {
+        "keys": [
+          "w"
+        ],
+        "durationMs": 80,
+        "label": "water-grounded-jump",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 150,
+        "label": "water-release-rise",
+        "sampleEveryMs": 50
+      },
+      {
+        "keys": [
+          "w"
+        ],
+        "durationMs": 80,
+        "label": "water-airborne-repress",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 1800,
+        "label": "water-descend-land",
+        "sampleEveryMs": 100
+      },
+      {
+        "keys": [
+          "ArrowUp",
+          "w"
+        ],
+        "durationMs": 80,
+        "label": "both-grounded-jump",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 1800,
+        "label": "both-land",
+        "sampleEveryMs": 100
+      }
+    ]
+  },
+  "observations": [],
+  "actions": [],
+  "candidateEvents": [
+    {
+      "type": "output-contract-failure",
+      "reasons": [
+        "Submission is not JSON (no fences or other repairs are permitted).",
+        "Submission must be exactly one JSON field, html, containing a string.",
+        "Provider reported output truncation."
+      ]
+    }
+  ],
+  "evaluatorErrors": [],
+  "status": "NOT_REACHED",
+  "reason": "No parseable single-field HTML submission. Preserved invalid output; no extraction, repair or replacement page created.",
+  "privateStateReads": 0,
+  "candidateMutations": 0,
+  "sourceUnchanged": null
+}

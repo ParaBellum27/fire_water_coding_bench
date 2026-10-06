@@ -1,0 +1,63 @@
+{
+  "image": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/public-review-3.png",
+  "columns": 3,
+  "width": 640,
+  "height": 480,
+  "crop": null,
+  "sourceOrder": [
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0097-Fireboy-holds-the-left-bridge-plate-0.png",
+      "label": "Fireboy holds the left bridge plate-0",
+      "requestedMs": 35860,
+      "text": "Time: 36.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0102-Watergirl-crosses-the-bridge-and-collects-the-last-blue-diamond-4.png",
+      "label": "Watergirl crosses the bridge and collects the last blue diamond-4",
+      "requestedMs": 38160,
+      "text": "Time: 39.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0103-Settle-on-the-upper-left-side-0.png",
+      "label": "Settle on the upper left side-0",
+      "requestedMs": 38460,
+      "text": "Time: 39.4 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0105-Approach-the-matching-exits-1.png",
+      "label": "Approach the matching exits-1",
+      "requestedMs": 39160,
+      "text": "Time: 40.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0106-Stop-Watergirl-near-her-exit-0.png",
+      "label": "Stop Watergirl near her exit-0",
+      "requestedMs": 39410,
+      "text": "Time: 40.4 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0107-Move-Watergirl-into-her-blue-exit-0.png",
+      "label": "Move Watergirl into her blue exit-0",
+      "requestedMs": 39680,
+      "text": "Time: 40.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0108-Move-Fireboy-into-his-red-exit-0.png",
+      "label": "Move Fireboy into his red exit-0",
+      "requestedMs": 40040,
+      "text": "Time: 41.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0125-Allow-both-door-animations--victory-transition--and-reward-presentation-to-finish-16.png",
+      "label": "Allow both door animations, victory transition, and reward presentation to finish-16",
+      "requestedMs": 48540,
+      "text": "Time: 49.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0126-final.png",
+      "label": "final",
+      "requestedMs": 48540,
+      "text": "Time: 49.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    }
+  ]
+}

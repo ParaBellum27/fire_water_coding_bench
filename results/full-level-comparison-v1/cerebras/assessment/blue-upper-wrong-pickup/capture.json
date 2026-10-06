@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "scenario": {
+    "id": "blue-upper-wrong-pickup",
+    "clock": "controlled",
+    "hostDeadlineMs": 240000,
+    "sampleEveryMs": 500,
+    "segments": [
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 550,
+        "label": "approach-first-shelf"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp"
+        ],
+        "durationMs": 650,
+        "label": "fire-contact-upper-blue-gem-and-pool",
+        "sampleEveryMs": 100
+      },
+      {
+        "keys": [],
+        "durationMs": 800,
+        "label": "settle-upper-blue"
+      }
+    ]
+  },
+  "sourceSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "startedAt": "2026-10-06T07:01:23.913Z",
+  "observations": [],
+  "actions": [
+    {
+      "type": "navigation",
+      "before": {
+        "hostEpochMs": 1791270084019,
+        "hostMonotonicMs": 86039224.443667,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1000,
+        "browserEpochMs": 1791288001000
+      },
+      "after": {
+        "hostEpochMs": 1791270084029,
+        "hostMonotonicMs": 86039234.736292,
+        "requestedMs": 0,
+        "browserPerformanceMs": 0,
+        "browserEpochMs": 1791288001000
+      }
+    }
+  ],
+  "candidateEvents": [],
+  "evaluatorErrors": [
+    {
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58310/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    }
+  ],
+  "clock": "controlled",
+  "privateStateReads": 0,
+  "candidateMutations": 0,
+  "reference": false,
+  "deadlineExceeded": false,
+  "browserVersion": "153.0.8010.12",
+  "finishedAt": "2026-10-06T07:01:24.061Z",
+  "durationMs": 147.9092499911785,
+  "sourceAfterSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "sourceUnchanged": true
+}

@@ -1,0 +1,170 @@
+{
+  "policy": "Raw captures are immutable. Controlled Clock.runFor wraps the same candidate callback error independently observed as a native real-time pageerror, so those propagated throws are candidate startup failures, not evaluator infrastructure faults.",
+  "attributions": [
+    {
+      "scenario": "public-walkthrough",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/public-walkthrough/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/red-safe-pickup-revisit/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "red-foreign-death",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/red-foreign-death/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "blue-foreign-death",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/blue-foreign-death/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "blue-upper-wrong-pickup",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/blue-upper-wrong-pickup/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "blue-safe-pickup-revisit",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/blue-safe-pickup-revisit/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "lower-release-blocking",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/lower-release-blocking/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "green-fire-contact",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/green-fire-contact/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "green-water-contact",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/green-water-contact/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "first-hanging-contact",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/first-hanging-contact/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "second-hanging-contact",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/second-hanging-contact/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "upper-release-return",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/upper-release-return/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "single-and-wrong-exits",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/single-and-wrong-exits/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "reset-after-route-R",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/reset-after-route-R/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    },
+    {
+      "scenario": "reset-after-route-button",
+      "index": 0,
+      "origin": "candidate",
+      "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+      "evidence": [
+        "cerebras/assessment/reset-after-route-button/capture.json",
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+      ]
+    }
+  ]
+}

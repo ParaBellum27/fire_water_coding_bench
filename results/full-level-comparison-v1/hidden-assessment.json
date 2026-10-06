@@ -1,0 +1,4064 @@
+{
+  "version": 1,
+  "frozenBeforeGeneration": true,
+  "policy": "Same ordered scenarios for every configuration. Fresh browser context per scenario, navigation +1s settling; never inject state or adjust paths based on candidate play. Same blocked network, clock modes, viewport and host deadlines. Timed path failures alone are not candidate defects; missed encounters remain NOT_REACHED. Candidate reset button unavailable/covered recorded as candidate evidence, capture/runtime infrastructure problems as EVALUATOR_ERROR.",
+  "scenarios": [
+    {
+      "id": "public-walkthrough",
+      "clock": "controlled",
+      "hostDeadlineMs": 300000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "w"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 950
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy from the center floor onto the red shelf"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 800,
+          "label": "Cross the second pair of pools"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 1300,
+          "label": "Climb the right-hand stairs"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 800,
+          "label": "Reach the first pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 120,
+          "label": "Release both jump keys"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 120,
+          "label": "Fireboy approaches right pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Watergirl joins upper floor"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the pressure plate floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 180,
+          "label": "Watergirl steps onto the right plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1500,
+          "label": "Watergirl holds the gate open while Fireboy crosses"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 350,
+          "label": "Watergirl centers on the pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 450,
+          "label": "Observe gate opening"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 2300,
+          "label": "Fireboy crosses the opened barrier"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy travels to the left plate"
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 320,
+          "label": "Fireboy returns to the left pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Hold the opposite plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 3600,
+          "label": "Watergirl traverses while Fireboy holds the left plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 750,
+          "label": "Both players jump onto the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the left ledge"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump close to the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 200,
+          "label": "Settle before crossing poison chamber"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 350,
+          "label": "Approach the left ledge edge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 500,
+          "label": "Jump to the safe ledge beside the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land before the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the narrow safe ledge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 520,
+          "label": "Jump onto the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Stand on the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 100,
+          "label": "Wait for first platform contact"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 850,
+          "label": "Jump to the central island before the loaded platform rotates"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Land on the central island"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 430,
+          "label": "Collect the central blue diamond and approach second pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Stop before the second green pool"
+        },
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 250,
+          "label": "Watergirl collects the central blue diamond before jumping"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle both characters before the second platform jump"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 680,
+          "label": "Jump toward the second hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 320,
+          "label": "Land on the second hanging platform"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 900,
+          "label": "Jump from the second platform onto the right staircase"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the staircase"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump up the right chamber stairs"
+        },
+        {
+          "keys": [],
+          "durationMs": 150,
+          "label": "Release jump on the next step"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump toward the top staircase"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land on the high right step"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump left onto the top ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 850,
+          "label": "Climb toward the upper pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 120,
+          "label": "Center both players over the right bridge plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 2800,
+          "label": "Hold the right plate for full bridge extension"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1750,
+          "label": "Fireboy crosses to the upper left side"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the upper left floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy reaches the opposite bridge plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 350,
+          "label": "Fireboy holds the left bridge plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 2300,
+          "label": "Watergirl crosses the bridge and collects the last blue diamond"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the upper left side"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 700,
+          "label": "Approach the matching exits"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Stop Watergirl near her exit"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 270,
+          "label": "Move Watergirl into her blue exit"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 360,
+          "label": "Move Fireboy into his red exit"
+        },
+        {
+          "keys": [],
+          "durationMs": 8500,
+          "label": "Allow both door animations, victory transition, and reward presentation to finish"
+        }
+      ]
+    },
+    {
+      "id": "real-controls",
+      "clock": "real",
+      "hostDeadlineMs": 60000,
+      "sampleEveryMs": 100,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 160,
+          "label": "fire-right",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 160,
+          "label": "fire-left",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 160,
+          "label": "water-right",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 160,
+          "label": "water-left",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 120,
+          "label": "both-right",
+          "sampleEveryMs": 60
+        },
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 160,
+          "label": "release-fire-retain-water",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "release-both"
+        },
+        {
+          "operation": "reset",
+          "method": "R",
+          "label": "reset-before-reverse",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 120,
+          "label": "both-right-reverse",
+          "sampleEveryMs": 60
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 160,
+          "label": "release-water-retain-fire",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "idle"
+        },
+        {
+          "operation": "reset",
+          "method": "R",
+          "label": "reset-before-uppercase",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        },
+        {
+          "keys": [
+            "Shift",
+            "D"
+          ],
+          "durationMs": 160,
+          "label": "shift-D-water-right",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [
+            "A"
+          ],
+          "durationMs": 160,
+          "label": "uppercase-A-water-left",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "release-uppercase"
+        },
+        {
+          "operation": "resize",
+          "viewport": {
+            "width": 800,
+            "height": 600
+          },
+          "label": "resize-800-600"
+        },
+        {
+          "operation": "resize",
+          "viewport": {
+            "width": 1280,
+            "height": 960
+          },
+          "label": "restore-viewport"
+        }
+      ]
+    },
+    {
+      "id": "real-jumps",
+      "clock": "real",
+      "hostDeadlineMs": 60000,
+      "sampleEveryMs": 100,
+      "segments": [
+        {
+          "keys": [
+            "ArrowUp"
+          ],
+          "durationMs": 80,
+          "label": "fire-grounded-jump",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [],
+          "durationMs": 150,
+          "label": "fire-release-rise",
+          "sampleEveryMs": 50
+        },
+        {
+          "keys": [
+            "ArrowUp"
+          ],
+          "durationMs": 80,
+          "label": "fire-airborne-repress",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [],
+          "durationMs": 1800,
+          "label": "fire-descend-land",
+          "sampleEveryMs": 100
+        },
+        {
+          "keys": [
+            "w"
+          ],
+          "durationMs": 80,
+          "label": "water-grounded-jump",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [],
+          "durationMs": 150,
+          "label": "water-release-rise",
+          "sampleEveryMs": 50
+        },
+        {
+          "keys": [
+            "w"
+          ],
+          "durationMs": 80,
+          "label": "water-airborne-repress",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [],
+          "durationMs": 1800,
+          "label": "water-descend-land",
+          "sampleEveryMs": 100
+        },
+        {
+          "keys": [
+            "ArrowUp",
+            "w"
+          ],
+          "durationMs": 80,
+          "label": "both-grounded-jump",
+          "sampleEveryMs": 80
+        },
+        {
+          "keys": [],
+          "durationMs": 1800,
+          "label": "both-land",
+          "sampleEveryMs": 100
+        }
+      ]
+    },
+    {
+      "id": "real-reset-held",
+      "clock": "real",
+      "hostDeadlineMs": 60000,
+      "sampleEveryMs": 100,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 140,
+          "label": "both-displaced",
+          "sampleEveryMs": 70
+        },
+        {
+          "operation": "reset",
+          "method": "R",
+          "label": "R-held",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        },
+        {
+          "keys": [],
+          "durationMs": 400,
+          "label": "release-old-keys"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 140,
+          "label": "both-displaced-again",
+          "sampleEveryMs": 70
+        },
+        {
+          "operation": "reset",
+          "method": "button",
+          "label": "button-held",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        },
+        {
+          "keys": [],
+          "durationMs": 400,
+          "label": "release-old-keys-again"
+        },
+        {
+          "keys": [
+            "ArrowUp",
+            "w"
+          ],
+          "durationMs": 100,
+          "label": "airborne-before-R",
+          "sampleEveryMs": 50
+        },
+        {
+          "operation": "reset",
+          "method": "R",
+          "label": "R-airborne",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        },
+        {
+          "keys": [],
+          "durationMs": 400,
+          "label": "airborne-old-keys-release"
+        },
+        {
+          "operation": "reset",
+          "method": "R",
+          "label": "rapid-R-1",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        },
+        {
+          "operation": "reset",
+          "method": "button",
+          "label": "rapid-button-2",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 100,
+          "label": "new-input-after-reset",
+          "sampleEveryMs": 50
+        },
+        {
+          "keys": [],
+          "durationMs": 400,
+          "label": "stable-after-new-input"
+        }
+      ]
+    },
+    {
+      "id": "neutral-real-60s",
+      "clock": "real",
+      "hostDeadlineMs": 90000,
+      "sampleEveryMs": 5000,
+      "segments": [
+        {
+          "keys": [],
+          "durationMs": 60000,
+          "label": "neutral-no-input",
+          "sampleEveryMs": 5000
+        }
+      ]
+    },
+    {
+      "id": "red-safe-pickup-revisit",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 2100,
+          "label": "fire-traverse-red"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1250,
+          "label": "fire-revisit-red"
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 1000,
+          "label": "fire-recollect-attempt"
+        },
+        {
+          "operation": "reset",
+          "method": "R",
+          "label": "R-after-pickups",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 2100,
+          "label": "fire-progress-again"
+        },
+        {
+          "operation": "reset",
+          "method": "button",
+          "label": "button-after-pickups",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        }
+      ]
+    },
+    {
+      "id": "red-foreign-death",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 2000,
+          "label": "water-contact-red"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "ArrowUp",
+            "w"
+          ],
+          "durationMs": 1200,
+          "label": "terminal-input-probe"
+        },
+        {
+          "operation": "reset",
+          "method": "button",
+          "label": "button-after-death",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 120,
+          "label": "post-death-new-input"
+        },
+        {
+          "keys": [],
+          "durationMs": 400,
+          "label": "post-death-stable"
+        },
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 2000,
+          "label": "water-contact-red-again"
+        },
+        {
+          "operation": "reset",
+          "method": "R",
+          "label": "R-after-death",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 120,
+          "label": "R-post-death-new-input"
+        }
+      ]
+    },
+    {
+      "id": "blue-foreign-death",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "w"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 950
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 2500,
+          "label": "fire-bottom-blue-contact"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 1000,
+          "label": "terminal-freeze"
+        },
+        {
+          "operation": "reset",
+          "method": "R",
+          "label": "R-after-blue-death",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        }
+      ]
+    },
+    {
+      "id": "blue-upper-wrong-pickup",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 550,
+          "label": "approach-first-shelf"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp"
+          ],
+          "durationMs": 650,
+          "label": "fire-contact-upper-blue-gem-and-pool",
+          "sampleEveryMs": 100
+        },
+        {
+          "keys": [],
+          "durationMs": 800,
+          "label": "settle-upper-blue"
+        }
+      ]
+    },
+    {
+      "id": "blue-safe-pickup-revisit",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "w"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 950
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy from the center floor onto the red shelf"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 800,
+          "label": "Cross the second pair of pools"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 1300,
+          "label": "Climb the right-hand stairs"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 1100,
+          "label": "water-revisit-blue-bottom"
+        },
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 1100,
+          "label": "water-recollect-attempt"
+        },
+        {
+          "operation": "reset",
+          "method": "button",
+          "label": "button-after-blue-progress",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        }
+      ]
+    },
+    {
+      "id": "lower-release-blocking",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "w"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 950
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy from the center floor onto the red shelf"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 800,
+          "label": "Cross the second pair of pools"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 1300,
+          "label": "Climb the right-hand stairs"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 800,
+          "label": "Reach the first pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 120,
+          "label": "Release both jump keys"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 120,
+          "label": "Fireboy approaches right pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Watergirl joins upper floor"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the pressure plate floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 180,
+          "label": "Watergirl steps onto the right plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1500,
+          "label": "Watergirl holds the gate open while Fireboy crosses"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 350,
+          "label": "Watergirl centers on the pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 450,
+          "label": "Observe gate opening"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 800,
+          "label": "water-leave-right-plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 1800,
+          "label": "barrier-return-no-contact"
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 1600,
+          "label": "fire-return-blocking-probe"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "blocked-or-crossed"
+        }
+      ]
+    },
+    {
+      "id": "green-fire-contact",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "w"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 950
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy from the center floor onto the red shelf"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 800,
+          "label": "Cross the second pair of pools"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 1300,
+          "label": "Climb the right-hand stairs"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 800,
+          "label": "Reach the first pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 120,
+          "label": "Release both jump keys"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 120,
+          "label": "Fireboy approaches right pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Watergirl joins upper floor"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the pressure plate floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 180,
+          "label": "Watergirl steps onto the right plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1500,
+          "label": "Watergirl holds the gate open while Fireboy crosses"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 350,
+          "label": "Watergirl centers on the pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 450,
+          "label": "Observe gate opening"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 2300,
+          "label": "Fireboy crosses the opened barrier"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy travels to the left plate"
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 320,
+          "label": "Fireboy returns to the left pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Hold the opposite plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 3600,
+          "label": "Watergirl traverses while Fireboy holds the left plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 750,
+          "label": "Both players jump onto the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the left ledge"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump close to the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 200,
+          "label": "Settle before crossing poison chamber"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 350,
+          "label": "Approach the left ledge edge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 500,
+          "label": "Jump to the safe ledge beside the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land before the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the narrow safe ledge"
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 1600,
+          "label": "fire-walk-into-first-green"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 700,
+          "label": "green-terminal-probe"
+        },
+        {
+          "operation": "reset",
+          "method": "R",
+          "label": "R-after-green",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        }
+      ]
+    },
+    {
+      "id": "green-water-contact",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "w"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 950
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy from the center floor onto the red shelf"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 800,
+          "label": "Cross the second pair of pools"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 1300,
+          "label": "Climb the right-hand stairs"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 800,
+          "label": "Reach the first pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 120,
+          "label": "Release both jump keys"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 120,
+          "label": "Fireboy approaches right pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Watergirl joins upper floor"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the pressure plate floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 180,
+          "label": "Watergirl steps onto the right plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1500,
+          "label": "Watergirl holds the gate open while Fireboy crosses"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 350,
+          "label": "Watergirl centers on the pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 450,
+          "label": "Observe gate opening"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 2300,
+          "label": "Fireboy crosses the opened barrier"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy travels to the left plate"
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 320,
+          "label": "Fireboy returns to the left pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Hold the opposite plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 3600,
+          "label": "Watergirl traverses while Fireboy holds the left plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 750,
+          "label": "Both players jump onto the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the left ledge"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump close to the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 200,
+          "label": "Settle before crossing poison chamber"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 350,
+          "label": "Approach the left ledge edge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 500,
+          "label": "Jump to the safe ledge beside the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land before the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the narrow safe ledge"
+        },
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 1600,
+          "label": "water-walk-into-first-green"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 700,
+          "label": "green-terminal-probe"
+        },
+        {
+          "operation": "reset",
+          "method": "button",
+          "label": "button-after-green",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        }
+      ]
+    },
+    {
+      "id": "first-hanging-contact",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "w"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 950
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy from the center floor onto the red shelf"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 800,
+          "label": "Cross the second pair of pools"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 1300,
+          "label": "Climb the right-hand stairs"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 800,
+          "label": "Reach the first pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 120,
+          "label": "Release both jump keys"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 120,
+          "label": "Fireboy approaches right pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Watergirl joins upper floor"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the pressure plate floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 180,
+          "label": "Watergirl steps onto the right plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1500,
+          "label": "Watergirl holds the gate open while Fireboy crosses"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 350,
+          "label": "Watergirl centers on the pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 450,
+          "label": "Observe gate opening"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 2300,
+          "label": "Fireboy crosses the opened barrier"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy travels to the left plate"
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 320,
+          "label": "Fireboy returns to the left pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Hold the opposite plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 3600,
+          "label": "Watergirl traverses while Fireboy holds the left plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 750,
+          "label": "Both players jump onto the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the left ledge"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump close to the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 200,
+          "label": "Settle before crossing poison chamber"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 350,
+          "label": "Approach the left ledge edge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 500,
+          "label": "Jump to the safe ledge beside the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land before the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the narrow safe ledge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 520,
+          "label": "Jump onto the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Stand on the first hanging platform"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 180,
+          "label": "fire-first-board-left-load",
+          "sampleEveryMs": 60
+        },
+        {
+          "keys": [],
+          "durationMs": 500,
+          "label": "first-left-load-settle",
+          "sampleEveryMs": 100
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 300,
+          "label": "fire-first-board-right-load",
+          "sampleEveryMs": 60
+        },
+        {
+          "keys": [],
+          "durationMs": 500,
+          "label": "first-right-load-settle",
+          "sampleEveryMs": 100
+        },
+        {
+          "keys": [
+            "ArrowUp"
+          ],
+          "durationMs": 100,
+          "label": "first-board-jump-off",
+          "sampleEveryMs": 50
+        },
+        {
+          "keys": [],
+          "durationMs": 900,
+          "label": "first-unload",
+          "sampleEveryMs": 100
+        },
+        {
+          "operation": "reset",
+          "method": "R",
+          "label": "R-after-first-board",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        }
+      ]
+    },
+    {
+      "id": "second-hanging-contact",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "w"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 950
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy from the center floor onto the red shelf"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 800,
+          "label": "Cross the second pair of pools"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 1300,
+          "label": "Climb the right-hand stairs"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 800,
+          "label": "Reach the first pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 120,
+          "label": "Release both jump keys"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 120,
+          "label": "Fireboy approaches right pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Watergirl joins upper floor"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the pressure plate floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 180,
+          "label": "Watergirl steps onto the right plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1500,
+          "label": "Watergirl holds the gate open while Fireboy crosses"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 350,
+          "label": "Watergirl centers on the pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 450,
+          "label": "Observe gate opening"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 2300,
+          "label": "Fireboy crosses the opened barrier"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy travels to the left plate"
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 320,
+          "label": "Fireboy returns to the left pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Hold the opposite plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 3600,
+          "label": "Watergirl traverses while Fireboy holds the left plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 750,
+          "label": "Both players jump onto the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the left ledge"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump close to the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 200,
+          "label": "Settle before crossing poison chamber"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 350,
+          "label": "Approach the left ledge edge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 500,
+          "label": "Jump to the safe ledge beside the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land before the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the narrow safe ledge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 520,
+          "label": "Jump onto the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Stand on the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 100,
+          "label": "Wait for first platform contact"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 850,
+          "label": "Jump to the central island before the loaded platform rotates"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Land on the central island"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 430,
+          "label": "Collect the central blue diamond and approach second pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Stop before the second green pool"
+        },
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 250,
+          "label": "Watergirl collects the central blue diamond before jumping"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle both characters before the second platform jump"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 680,
+          "label": "Jump toward the second hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 320,
+          "label": "Land on the second hanging platform"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 180,
+          "label": "water-second-board-left-load",
+          "sampleEveryMs": 60
+        },
+        {
+          "keys": [],
+          "durationMs": 500,
+          "label": "second-left-load-settle",
+          "sampleEveryMs": 100
+        },
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 300,
+          "label": "water-second-board-right-load",
+          "sampleEveryMs": 60
+        },
+        {
+          "keys": [],
+          "durationMs": 500,
+          "label": "second-right-load-settle",
+          "sampleEveryMs": 100
+        },
+        {
+          "keys": [
+            "w"
+          ],
+          "durationMs": 100,
+          "label": "second-board-jump-off",
+          "sampleEveryMs": 50
+        },
+        {
+          "keys": [],
+          "durationMs": 900,
+          "label": "second-unload",
+          "sampleEveryMs": 100
+        },
+        {
+          "operation": "reset",
+          "method": "button",
+          "label": "button-after-second-board",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        }
+      ]
+    },
+    {
+      "id": "upper-release-return",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "w"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 950
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy from the center floor onto the red shelf"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 800,
+          "label": "Cross the second pair of pools"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 1300,
+          "label": "Climb the right-hand stairs"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 800,
+          "label": "Reach the first pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 120,
+          "label": "Release both jump keys"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 120,
+          "label": "Fireboy approaches right pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Watergirl joins upper floor"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the pressure plate floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 180,
+          "label": "Watergirl steps onto the right plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1500,
+          "label": "Watergirl holds the gate open while Fireboy crosses"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 350,
+          "label": "Watergirl centers on the pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 450,
+          "label": "Observe gate opening"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 2300,
+          "label": "Fireboy crosses the opened barrier"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy travels to the left plate"
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 320,
+          "label": "Fireboy returns to the left pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Hold the opposite plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 3600,
+          "label": "Watergirl traverses while Fireboy holds the left plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 750,
+          "label": "Both players jump onto the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the left ledge"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump close to the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 200,
+          "label": "Settle before crossing poison chamber"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 350,
+          "label": "Approach the left ledge edge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 500,
+          "label": "Jump to the safe ledge beside the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land before the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the narrow safe ledge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 520,
+          "label": "Jump onto the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Stand on the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 100,
+          "label": "Wait for first platform contact"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 850,
+          "label": "Jump to the central island before the loaded platform rotates"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Land on the central island"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 430,
+          "label": "Collect the central blue diamond and approach second pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Stop before the second green pool"
+        },
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 250,
+          "label": "Watergirl collects the central blue diamond before jumping"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle both characters before the second platform jump"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 680,
+          "label": "Jump toward the second hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 320,
+          "label": "Land on the second hanging platform"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 900,
+          "label": "Jump from the second platform onto the right staircase"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the staircase"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump up the right chamber stairs"
+        },
+        {
+          "keys": [],
+          "durationMs": 150,
+          "label": "Release jump on the next step"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump toward the top staircase"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land on the high right step"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump left onto the top ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 850,
+          "label": "Climb toward the upper pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 120,
+          "label": "Center both players over the right bridge plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 2800,
+          "label": "Hold the right plate for full bridge extension"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 700,
+          "label": "both-leave-upper-right-plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 2800,
+          "label": "bridge-return"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1600,
+          "label": "unsupported-gap-probe"
+        },
+        {
+          "operation": "reset",
+          "method": "R",
+          "label": "R-after-upper-mechanisms",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        }
+      ]
+    },
+    {
+      "id": "single-and-wrong-exits",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "w"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 950
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy from the center floor onto the red shelf"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 800,
+          "label": "Cross the second pair of pools"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 1300,
+          "label": "Climb the right-hand stairs"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 800,
+          "label": "Reach the first pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 120,
+          "label": "Release both jump keys"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 120,
+          "label": "Fireboy approaches right pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Watergirl joins upper floor"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the pressure plate floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 180,
+          "label": "Watergirl steps onto the right plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1500,
+          "label": "Watergirl holds the gate open while Fireboy crosses"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 350,
+          "label": "Watergirl centers on the pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 450,
+          "label": "Observe gate opening"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 2300,
+          "label": "Fireboy crosses the opened barrier"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy travels to the left plate"
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 320,
+          "label": "Fireboy returns to the left pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Hold the opposite plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 3600,
+          "label": "Watergirl traverses while Fireboy holds the left plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 750,
+          "label": "Both players jump onto the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the left ledge"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump close to the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 200,
+          "label": "Settle before crossing poison chamber"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 350,
+          "label": "Approach the left ledge edge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 500,
+          "label": "Jump to the safe ledge beside the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land before the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the narrow safe ledge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 520,
+          "label": "Jump onto the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Stand on the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 100,
+          "label": "Wait for first platform contact"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 850,
+          "label": "Jump to the central island before the loaded platform rotates"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Land on the central island"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 430,
+          "label": "Collect the central blue diamond and approach second pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Stop before the second green pool"
+        },
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 250,
+          "label": "Watergirl collects the central blue diamond before jumping"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle both characters before the second platform jump"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 680,
+          "label": "Jump toward the second hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 320,
+          "label": "Land on the second hanging platform"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 900,
+          "label": "Jump from the second platform onto the right staircase"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the staircase"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump up the right chamber stairs"
+        },
+        {
+          "keys": [],
+          "durationMs": 150,
+          "label": "Release jump on the next step"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump toward the top staircase"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land on the high right step"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump left onto the top ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 850,
+          "label": "Climb toward the upper pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 120,
+          "label": "Center both players over the right bridge plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 2800,
+          "label": "Hold the right plate for full bridge extension"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1750,
+          "label": "Fireboy crosses to the upper left side"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the upper left floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy reaches the opposite bridge plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 350,
+          "label": "Fireboy holds the left bridge plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 2300,
+          "label": "Watergirl crosses the bridge and collects the last blue diamond"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the upper left side"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1700,
+          "label": "fire-single-red-exit"
+        },
+        {
+          "keys": [],
+          "durationMs": 1000,
+          "label": "single-exit-wait"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 2000,
+          "label": "water-wrong-red-exit"
+        },
+        {
+          "keys": [],
+          "durationMs": 1500,
+          "label": "wrong-exit-wait"
+        }
+      ]
+    },
+    {
+      "id": "reset-after-route-R",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "w"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 950
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy from the center floor onto the red shelf"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 800,
+          "label": "Cross the second pair of pools"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 1300,
+          "label": "Climb the right-hand stairs"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 800,
+          "label": "Reach the first pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 120,
+          "label": "Release both jump keys"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 120,
+          "label": "Fireboy approaches right pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Watergirl joins upper floor"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the pressure plate floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 180,
+          "label": "Watergirl steps onto the right plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1500,
+          "label": "Watergirl holds the gate open while Fireboy crosses"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 350,
+          "label": "Watergirl centers on the pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 450,
+          "label": "Observe gate opening"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 2300,
+          "label": "Fireboy crosses the opened barrier"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy travels to the left plate"
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 320,
+          "label": "Fireboy returns to the left pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Hold the opposite plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 3600,
+          "label": "Watergirl traverses while Fireboy holds the left plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 750,
+          "label": "Both players jump onto the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the left ledge"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump close to the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 200,
+          "label": "Settle before crossing poison chamber"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 350,
+          "label": "Approach the left ledge edge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 500,
+          "label": "Jump to the safe ledge beside the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land before the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the narrow safe ledge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 520,
+          "label": "Jump onto the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Stand on the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 100,
+          "label": "Wait for first platform contact"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 850,
+          "label": "Jump to the central island before the loaded platform rotates"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Land on the central island"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 430,
+          "label": "Collect the central blue diamond and approach second pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Stop before the second green pool"
+        },
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 250,
+          "label": "Watergirl collects the central blue diamond before jumping"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle both characters before the second platform jump"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 680,
+          "label": "Jump toward the second hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 320,
+          "label": "Land on the second hanging platform"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 900,
+          "label": "Jump from the second platform onto the right staircase"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the staircase"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump up the right chamber stairs"
+        },
+        {
+          "keys": [],
+          "durationMs": 150,
+          "label": "Release jump on the next step"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump toward the top staircase"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land on the high right step"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump left onto the top ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 850,
+          "label": "Climb toward the upper pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 120,
+          "label": "Center both players over the right bridge plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 2800,
+          "label": "Hold the right plate for full bridge extension"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1750,
+          "label": "Fireboy crosses to the upper left side"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the upper left floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy reaches the opposite bridge plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 350,
+          "label": "Fireboy holds the left bridge plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 2300,
+          "label": "Watergirl crosses the bridge and collects the last blue diamond"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the upper left side"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 700,
+          "label": "Approach the matching exits"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Stop Watergirl near her exit"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 270,
+          "label": "Move Watergirl into her blue exit"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 360,
+          "label": "Move Fireboy into his red exit"
+        },
+        {
+          "keys": [],
+          "durationMs": 8500,
+          "label": "Allow both door animations, victory transition, and reward presentation to finish"
+        },
+        {
+          "operation": "reset",
+          "method": "R",
+          "label": "R-after-route-terminal",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 120,
+          "label": "R-resumed-play"
+        },
+        {
+          "keys": [],
+          "durationMs": 500,
+          "label": "R-resumed-stable"
+        }
+      ]
+    },
+    {
+      "id": "reset-after-route-button",
+      "clock": "controlled",
+      "hostDeadlineMs": 240000,
+      "sampleEveryMs": 500,
+      "segments": [
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d",
+            "w"
+          ],
+          "durationMs": 800
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 950
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy from the center floor onto the red shelf"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 800,
+          "label": "Cross the second pair of pools"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 1300,
+          "label": "Climb the right-hand stairs"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 800,
+          "label": "Reach the first pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 120,
+          "label": "Release both jump keys"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 120,
+          "label": "Fireboy approaches right pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Watergirl joins upper floor"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the pressure plate floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 180,
+          "label": "Watergirl steps onto the right plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1500,
+          "label": "Watergirl holds the gate open while Fireboy crosses"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 350,
+          "label": "Watergirl centers on the pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 450,
+          "label": "Observe gate opening"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 2300,
+          "label": "Fireboy crosses the opened barrier"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy travels to the left plate"
+        },
+        {
+          "keys": [
+            "ArrowRight"
+          ],
+          "durationMs": 320,
+          "label": "Fireboy returns to the left pressure plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Hold the opposite plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 3600,
+          "label": "Watergirl traverses while Fireboy holds the left plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 750,
+          "label": "Both players jump onto the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the left ledge"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump close to the left ledge"
+        },
+        {
+          "keys": [],
+          "durationMs": 200,
+          "label": "Settle before crossing poison chamber"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 350,
+          "label": "Approach the left ledge edge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 500,
+          "label": "Jump to the safe ledge beside the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land before the green pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the narrow safe ledge"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 520,
+          "label": "Jump onto the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Stand on the first hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 100,
+          "label": "Wait for first platform contact"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 850,
+          "label": "Jump to the central island before the loaded platform rotates"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Land on the central island"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 430,
+          "label": "Collect the central blue diamond and approach second pool"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Stop before the second green pool"
+        },
+        {
+          "keys": [
+            "d"
+          ],
+          "durationMs": 250,
+          "label": "Watergirl collects the central blue diamond before jumping"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle both characters before the second platform jump"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 680,
+          "label": "Jump toward the second hanging platform"
+        },
+        {
+          "keys": [],
+          "durationMs": 320,
+          "label": "Land on the second hanging platform"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 900,
+          "label": "Jump from the second platform onto the right staircase"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Settle on the staircase"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump up the right chamber stairs"
+        },
+        {
+          "keys": [],
+          "durationMs": 150,
+          "label": "Release jump on the next step"
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "ArrowUp",
+            "d",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump toward the top staircase"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Land on the high right step"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "ArrowUp",
+            "a",
+            "w"
+          ],
+          "durationMs": 650,
+          "label": "Jump left onto the top ramp"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 850,
+          "label": "Climb toward the upper pressure plate"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 120,
+          "label": "Center both players over the right bridge plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 2800,
+          "label": "Hold the right plate for full bridge extension"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 1750,
+          "label": "Fireboy crosses to the upper left side"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the upper left floor"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 900,
+          "label": "Fireboy reaches the opposite bridge plate"
+        },
+        {
+          "keys": [],
+          "durationMs": 350,
+          "label": "Fireboy holds the left bridge plate"
+        },
+        {
+          "keys": [
+            "a"
+          ],
+          "durationMs": 2300,
+          "label": "Watergirl crosses the bridge and collects the last blue diamond"
+        },
+        {
+          "keys": [],
+          "durationMs": 300,
+          "label": "Settle on the upper left side"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 700,
+          "label": "Approach the matching exits"
+        },
+        {
+          "keys": [],
+          "durationMs": 250,
+          "label": "Stop Watergirl near her exit"
+        },
+        {
+          "keys": [
+            "ArrowLeft",
+            "a"
+          ],
+          "durationMs": 270,
+          "label": "Move Watergirl into her blue exit"
+        },
+        {
+          "keys": [
+            "ArrowLeft"
+          ],
+          "durationMs": 360,
+          "label": "Move Fireboy into his red exit"
+        },
+        {
+          "keys": [],
+          "durationMs": 8500,
+          "label": "Allow both door animations, victory transition, and reward presentation to finish"
+        },
+        {
+          "operation": "reset",
+          "method": "button",
+          "label": "button-after-route-terminal",
+          "durationMs": 700,
+          "sampleEveryMs": 175
+        },
+        {
+          "keys": [
+            "ArrowRight",
+            "d"
+          ],
+          "durationMs": 120,
+          "label": "button-resumed-play"
+        },
+        {
+          "keys": [],
+          "durationMs": 500,
+          "label": "button-resumed-stable"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3596 @@
+{
+  "version": 1,
+  "scenario": {
+    "id": "real-controls",
+    "clock": "real",
+    "hostDeadlineMs": 60000,
+    "sampleEveryMs": 100,
+    "segments": [
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 160,
+        "label": "fire-right",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [
+          "ArrowLeft"
+        ],
+        "durationMs": 160,
+        "label": "fire-left",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [
+          "d"
+        ],
+        "durationMs": 160,
+        "label": "water-right",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [
+          "a"
+        ],
+        "durationMs": 160,
+        "label": "water-left",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d"
+        ],
+        "durationMs": 120,
+        "label": "both-right",
+        "sampleEveryMs": 60
+      },
+      {
+        "keys": [
+          "d"
+        ],
+        "durationMs": 160,
+        "label": "release-fire-retain-water",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 300,
+        "label": "release-both"
+      },
+      {
+        "operation": "reset",
+        "method": "R",
+        "label": "reset-before-reverse",
+        "durationMs": 700,
+        "sampleEveryMs": 175
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d"
+        ],
+        "durationMs": 120,
+        "label": "both-right-reverse",
+        "sampleEveryMs": 60
+      },
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 160,
+        "label": "release-water-retain-fire",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 300,
+        "label": "idle"
+      },
+      {
+        "operation": "reset",
+        "method": "R",
+        "label": "reset-before-uppercase",
+        "durationMs": 700,
+        "sampleEveryMs": 175
+      },
+      {
+        "keys": [
+          "Shift",
+          "D"
+        ],
+        "durationMs": 160,
+        "label": "shift-D-water-right",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [
+          "A"
+        ],
+        "durationMs": 160,
+        "label": "uppercase-A-water-left",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 300,
+        "label": "release-uppercase"
+      },
+      {
+        "operation": "resize",
+        "viewport": {
+          "width": 800,
+          "height": 600
+        },
+        "label": "resize-800-600"
+      },
+      {
+        "operation": "resize",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "label": "restore-viewport"
+      }
+    ]
+  },
+  "sourceSha256": "9acb855d2b11c87c46ec5073df880c63a9e369f4ba33b45196791401f9b47cf5",
+  "startedAt": "2026-10-06T07:01:29.997Z",
+  "observations": [
+    {
+      "label": "startup",
+      "file": "screenshots/0000-startup.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270091147,
+        "hostMonotonicMs": 86046352.18175,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1015.3000000119209,
+        "browserEpochMs": 1791270091147
+      },
+      "after": {
+        "hostEpochMs": 1791270091169,
+        "hostMonotonicMs": 86046374.4485,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1037.4000000059605,
+        "browserEpochMs": 1791270091169
+      },
+      "visible": {
+        "text": "Time: 1.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-right-0",
+      "file": "screenshots/0001-fire-right-0.png",
+      "held": [
+        "ArrowRight"
+      ],
+      "before": {
+        "hostEpochMs": 1791270091252,
+        "hostMonotonicMs": 86046457.364333,
+        "requestedMs": 80,
+        "browserPerformanceMs": 1120.199999988079,
+        "browserEpochMs": 1791270091252
+      },
+      "after": {
+        "hostEpochMs": 1791270091269,
+        "hostMonotonicMs": 86046474.211708,
+        "requestedMs": 80,
+        "browserPerformanceMs": 1137,
+        "browserEpochMs": 1791270091269
+      },
+      "visible": {
+        "text": "Time: 1.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-right-1",
+      "file": "screenshots/0002-fire-right-1.png",
+      "held": [
+        "ArrowRight"
+      ],
+      "before": {
+        "hostEpochMs": 1791270091351,
+        "hostMonotonicMs": 86046556.062,
+        "requestedMs": 160,
+        "browserPerformanceMs": 1219,
+        "browserEpochMs": 1791270091351
+      },
+      "after": {
+        "hostEpochMs": 1791270091368,
+        "hostMonotonicMs": 86046573.843458,
+        "requestedMs": 160,
+        "browserPerformanceMs": 1236.800000011921,
+        "browserEpochMs": 1791270091369
+      },
+      "visible": {
+        "text": "Time: 1.2 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-left-0",
+      "file": "screenshots/0003-fire-left-0.png",
+      "held": [
+        "ArrowLeft"
+      ],
+      "before": {
+        "hostEpochMs": 1791270091452,
+        "hostMonotonicMs": 86046657.09725,
+        "requestedMs": 240,
+        "browserPerformanceMs": 1319.9000000059605,
+        "browserEpochMs": 1791270091452
+      },
+      "after": {
+        "hostEpochMs": 1791270091468,
+        "hostMonotonicMs": 86046673.869292,
+        "requestedMs": 240,
+        "browserPerformanceMs": 1336.699999988079,
+        "browserEpochMs": 1791270091469
+      },
+      "visible": {
+        "text": "Time: 1.3 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-left-1",
+      "file": "screenshots/0004-fire-left-1.png",
+      "held": [
+        "ArrowLeft"
+      ],
+      "before": {
+        "hostEpochMs": 1791270091550,
+        "hostMonotonicMs": 86046755.7465,
+        "requestedMs": 320,
+        "browserPerformanceMs": 1418.5999999940395,
+        "browserEpochMs": 1791270091550
+      },
+      "after": {
+        "hostEpochMs": 1791270091569,
+        "hostMonotonicMs": 86046774.188125,
+        "requestedMs": 320,
+        "browserPerformanceMs": 1437,
+        "browserEpochMs": 1791270091569
+      },
+      "visible": {
+        "text": "Time: 1.4 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-right-0",
+      "file": "screenshots/0005-water-right-0.png",
+      "held": [
+        "d"
+      ],
+      "before": {
+        "hostEpochMs": 1791270091652,
+        "hostMonotonicMs": 86046857.082125,
+        "requestedMs": 400,
+        "browserPerformanceMs": 1519.9000000059605,
+        "browserEpochMs": 1791270091652
+      },
+      "after": {
+        "hostEpochMs": 1791270091668,
+        "hostMonotonicMs": 86046873.109042,
+        "requestedMs": 400,
+        "browserPerformanceMs": 1536,
+        "browserEpochMs": 1791270091668
+      },
+      "visible": {
+        "text": "Time: 1.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-right-1",
+      "file": "screenshots/0006-water-right-1.png",
+      "held": [
+        "d"
+      ],
+      "before": {
+        "hostEpochMs": 1791270091749,
+        "hostMonotonicMs": 86046954.899583,
+        "requestedMs": 480,
+        "browserPerformanceMs": 1617.9000000059605,
+        "browserEpochMs": 1791270091750
+      },
+      "after": {
+        "hostEpochMs": 1791270091769,
+        "hostMonotonicMs": 86046974.166625,
+        "requestedMs": 480,
+        "browserPerformanceMs": 1637.0999999940395,
+        "browserEpochMs": 1791270091769
+      },
+      "visible": {
+        "text": "Time: 1.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-left-0",
+      "file": "screenshots/0007-water-left-0.png",
+      "held": [
+        "a"
+      ],
+      "before": {
+        "hostEpochMs": 1791270091852,
+        "hostMonotonicMs": 86047057.971792,
+        "requestedMs": 560,
+        "browserPerformanceMs": 1720.800000011921,
+        "browserEpochMs": 1791270091853
+      },
+      "after": {
+        "hostEpochMs": 1791270091867,
+        "hostMonotonicMs": 86047072.462,
+        "requestedMs": 560,
+        "browserPerformanceMs": 1735.4000000059605,
+        "browserEpochMs": 1791270091867
+      },
+      "visible": {
+        "text": "Time: 1.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-left-1",
+      "file": "screenshots/0008-water-left-1.png",
+      "held": [
+        "a"
+      ],
+      "before": {
+        "hostEpochMs": 1791270091948,
+        "hostMonotonicMs": 86047153.980083,
+        "requestedMs": 640,
+        "browserPerformanceMs": 1816.699999988079,
+        "browserEpochMs": 1791270091949
+      },
+      "after": {
+        "hostEpochMs": 1791270091968,
+        "hostMonotonicMs": 86047173.910417,
+        "requestedMs": 640,
+        "browserPerformanceMs": 1836.9000000059605,
+        "browserEpochMs": 1791270091969
+      },
+      "visible": {
+        "text": "Time: 1.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-right-0",
+      "file": "screenshots/0009-both-right-0.png",
+      "held": [
+        "ArrowRight",
+        "d"
+      ],
+      "before": {
+        "hostEpochMs": 1791270092032,
+        "hostMonotonicMs": 86047237.130292,
+        "requestedMs": 700,
+        "browserPerformanceMs": 1899.9000000059605,
+        "browserEpochMs": 1791270092032
+      },
+      "after": {
+        "hostEpochMs": 1791270092051,
+        "hostMonotonicMs": 86047256.602875,
+        "requestedMs": 700,
+        "browserPerformanceMs": 1919.5,
+        "browserEpochMs": 1791270092051
+      },
+      "visible": {
+        "text": "Time: 1.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-right-1",
+      "file": "screenshots/0010-both-right-1.png",
+      "held": [
+        "ArrowRight",
+        "d"
+      ],
+      "before": {
+        "hostEpochMs": 1791270092113,
+        "hostMonotonicMs": 86047318.721667,
+        "requestedMs": 760,
+        "browserPerformanceMs": 1981.5999999940395,
+        "browserEpochMs": 1791270092113
+      },
+      "after": {
+        "hostEpochMs": 1791270092134,
+        "hostMonotonicMs": 86047339.69725,
+        "requestedMs": 760,
+        "browserPerformanceMs": 2002.5999999940395,
+        "browserEpochMs": 1791270092134
+      },
+      "visible": {
+        "text": "Time: 1.9 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "release-fire-retain-water-0",
+      "file": "screenshots/0011-release-fire-retain-water-0.png",
+      "held": [
+        "d"
+      ],
+      "before": {
+        "hostEpochMs": 1791270092217,
+        "hostMonotonicMs": 86047422.610792,
+        "requestedMs": 840,
+        "browserPerformanceMs": 2085.5,
+        "browserEpochMs": 1791270092217
+      },
+      "after": {
+        "hostEpochMs": 1791270092236,
+        "hostMonotonicMs": 86047441.075958,
+        "requestedMs": 840,
+        "browserPerformanceMs": 2103.9000000059605,
+        "browserEpochMs": 1791270092236
+      },
+      "visible": {
+        "text": "Time: 2.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "release-fire-retain-water-1",
+      "file": "screenshots/0012-release-fire-retain-water-1.png",
+      "held": [
+        "d"
+      ],
+      "before": {
+        "hostEpochMs": 1791270092319,
+        "hostMonotonicMs": 86047524.249125,
+        "requestedMs": 920,
+        "browserPerformanceMs": 2187,
+        "browserEpochMs": 1791270092319
+      },
+      "after": {
+        "hostEpochMs": 1791270092356,
+        "hostMonotonicMs": 86047561.17575,
+        "requestedMs": 920,
+        "browserPerformanceMs": 2224.0999999940395,
+        "browserEpochMs": 1791270092356
+      },
+      "visible": {
+        "text": "Time: 2.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "release-both-0",
+      "file": "screenshots/0013-release-both-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270092458,
+        "hostMonotonicMs": 86047663.463125,
+        "requestedMs": 1020,
+        "browserPerformanceMs": 2326.300000011921,
+        "browserEpochMs": 1791270092458
+      },
+      "after": {
+        "hostEpochMs": 1791270092504,
+        "hostMonotonicMs": 86047709.60475,
+        "requestedMs": 1020,
+        "browserPerformanceMs": 2372.5,
+        "browserEpochMs": 1791270092504
+      },
+      "visible": {
+        "text": "Time: 2.3 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "release-both-1",
+      "file": "screenshots/0014-release-both-1.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270092607,
+        "hostMonotonicMs": 86047812.03575,
+        "requestedMs": 1120,
+        "browserPerformanceMs": 2474.9000000059605,
+        "browserEpochMs": 1791270092607
+      },
+      "after": {
+        "hostEpochMs": 1791270092630,
+        "hostMonotonicMs": 86047835.883667,
+        "requestedMs": 1120,
+        "browserPerformanceMs": 2498.800000011921,
+        "browserEpochMs": 1791270092631
+      },
+      "visible": {
+        "text": "Time: 2.4 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "release-both-2",
+      "file": "screenshots/0015-release-both-2.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270092734,
+        "hostMonotonicMs": 86047939.262833,
+        "requestedMs": 1220,
+        "browserPerformanceMs": 2602.0999999940395,
+        "browserEpochMs": 1791270092734
+      },
+      "after": {
+        "hostEpochMs": 1791270092752,
+        "hostMonotonicMs": 86047957.383667,
+        "requestedMs": 1220,
+        "browserPerformanceMs": 2620.199999988079,
+        "browserEpochMs": 1791270092752
+      },
+      "visible": {
+        "text": "Time: 2.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "reset-before-reverse-0",
+      "file": "screenshots/0016-reset-before-reverse-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270092935,
+        "hostMonotonicMs": 86048140.242375,
+        "requestedMs": 1395,
+        "browserPerformanceMs": 2803.300000011921,
+        "browserEpochMs": 1791270092935
+      },
+      "after": {
+        "hostEpochMs": 1791270092959,
+        "hostMonotonicMs": 86048164.520125,
+        "requestedMs": 1395,
+        "browserPerformanceMs": 2827.4000000059605,
+        "browserEpochMs": 1791270092959
+      },
+      "visible": {
+        "text": "Time: 0.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "reset-before-reverse-1",
+      "file": "screenshots/0017-reset-before-reverse-1.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270093138,
+        "hostMonotonicMs": 86048343.434,
+        "requestedMs": 1570,
+        "browserPerformanceMs": 3006.5,
+        "browserEpochMs": 1791270093138
+      },
+      "after": {
+        "hostEpochMs": 1791270093165,
+        "hostMonotonicMs": 86048370.304542,
+        "requestedMs": 1570,
+        "browserPerformanceMs": 3033.199999988079,
+        "browserEpochMs": 1791270093165
+      },
+      "visible": {
+        "text": "Time: 0.3 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "reset-before-reverse-2",
+      "file": "screenshots/0018-reset-before-reverse-2.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270093344,
+        "hostMonotonicMs": 86048549.172,
+        "requestedMs": 1745,
+        "browserPerformanceMs": 3212,
+        "browserEpochMs": 1791270093344
+      },
+      "after": {
+        "hostEpochMs": 1791270093366,
+        "hostMonotonicMs": 86048571.951583,
+        "requestedMs": 1745,
+        "browserPerformanceMs": 3235.0999999940395,
+        "browserEpochMs": 1791270093367
+      },
+      "visible": {
+        "text": "Time: 0.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "reset-before-reverse-3",
+      "file": "screenshots/0019-reset-before-reverse-3.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270093546,
+        "hostMonotonicMs": 86048751.090125,
+        "requestedMs": 1920,
+        "browserPerformanceMs": 3414,
+        "browserEpochMs": 1791270093546
+      },
+      "after": {
+        "hostEpochMs": 1791270093580,
+        "hostMonotonicMs": 86048785.333375,
+        "requestedMs": 1920,
+        "browserPerformanceMs": 3448.300000011921,
+        "browserEpochMs": 1791270093580
+      },
+      "visible": {
+        "text": "Time: 0.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-right-reverse-0",
+      "file": "screenshots/0020-both-right-reverse-0.png",
+      "held": [
+        "ArrowRight",
+        "d"
+      ],
+      "before": {
+        "hostEpochMs": 1791270093645,
+        "hostMonotonicMs": 86048850.3315,
+        "requestedMs": 1980,
+        "browserPerformanceMs": 3513.199999988079,
+        "browserEpochMs": 1791270093645
+      },
+      "after": {
+        "hostEpochMs": 1791270093663,
+        "hostMonotonicMs": 86048868.140583,
+        "requestedMs": 1980,
+        "browserPerformanceMs": 3531.0999999940395,
+        "browserEpochMs": 1791270093663
+      },
+      "visible": {
+        "text": "Time: 0.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-right-reverse-1",
+      "file": "screenshots/0021-both-right-reverse-1.png",
+      "held": [
+        "ArrowRight",
+        "d"
+      ],
+      "before": {
+        "hostEpochMs": 1791270093726,
+        "hostMonotonicMs": 86048931.328042,
+        "requestedMs": 2040,
+        "browserPerformanceMs": 3594.0999999940395,
+        "browserEpochMs": 1791270093726
+      },
+      "after": {
+        "hostEpochMs": 1791270093744,
+        "hostMonotonicMs": 86048949.040542,
+        "requestedMs": 2040,
+        "browserPerformanceMs": 3612,
+        "browserEpochMs": 1791270093744
+      },
+      "visible": {
+        "text": "Time: 0.9 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "release-water-retain-fire-0",
+      "file": "screenshots/0022-release-water-retain-fire-0.png",
+      "held": [
+        "ArrowRight"
+      ],
+      "before": {
+        "hostEpochMs": 1791270093829,
+        "hostMonotonicMs": 86049034.983375,
+        "requestedMs": 2120,
+        "browserPerformanceMs": 3697.800000011921,
+        "browserEpochMs": 1791270093830
+      },
+      "after": {
+        "hostEpochMs": 1791270093855,
+        "hostMonotonicMs": 86049060.105583,
+        "requestedMs": 2120,
+        "browserPerformanceMs": 3723,
+        "browserEpochMs": 1791270093855
+      },
+      "visible": {
+        "text": "Time: 1.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "release-water-retain-fire-1",
+      "file": "screenshots/0023-release-water-retain-fire-1.png",
+      "held": [
+        "ArrowRight"
+      ],
+      "before": {
+        "hostEpochMs": 1791270093938,
+        "hostMonotonicMs": 86049143.266958,
+        "requestedMs": 2200,
+        "browserPerformanceMs": 3806.0999999940395,
+        "browserEpochMs": 1791270093938
+      },
+      "after": {
+        "hostEpochMs": 1791270093957,
+        "hostMonotonicMs": 86049162.531875,
+        "requestedMs": 2200,
+        "browserPerformanceMs": 3825.4000000059605,
+        "browserEpochMs": 1791270093957
+      },
+      "visible": {
+        "text": "Time: 1.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "idle-0",
+      "file": "screenshots/0024-idle-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270094060,
+        "hostMonotonicMs": 86049265.918417,
+        "requestedMs": 2300,
+        "browserPerformanceMs": 3928.9000000059605,
+        "browserEpochMs": 1791270094061
+      },
+      "after": {
+        "hostEpochMs": 1791270094089,
+        "hostMonotonicMs": 86049294.567458,
+        "requestedMs": 2300,
+        "browserPerformanceMs": 3957.4000000059605,
+        "browserEpochMs": 1791270094089
+      },
+      "visible": {
+        "text": "Time: 1.3 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "idle-1",
+      "file": "screenshots/0025-idle-1.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270094191,
+        "hostMonotonicMs": 86049396.868625,
+        "requestedMs": 2400,
+        "browserPerformanceMs": 4059.699999988079,
+        "browserEpochMs": 1791270094192
+      },
+      "after": {
+        "hostEpochMs": 1791270094221,
+        "hostMonotonicMs": 86049426.860083,
+        "requestedMs": 2400,
+        "browserPerformanceMs": 4089.800000011921,
+        "browserEpochMs": 1791270094222
+      },
+      "visible": {
+        "text": "Time: 1.4 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "idle-2",
+      "file": "screenshots/0026-idle-2.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270094324,
+        "hostMonotonicMs": 86049529.462792,
+        "requestedMs": 2500,
+        "browserPerformanceMs": 4192.300000011921,
+        "browserEpochMs": 1791270094324
+      },
+      "after": {
+        "hostEpochMs": 1791270094342,
+        "hostMonotonicMs": 86049547.8045,
+        "requestedMs": 2500,
+        "browserPerformanceMs": 4210.699999988079,
+        "browserEpochMs": 1791270094343
+      },
+      "visible": {
+        "text": "Time: 1.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "reset-before-uppercase-0",
+      "file": "screenshots/0027-reset-before-uppercase-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270094522,
+        "hostMonotonicMs": 86049727.414958,
+        "requestedMs": 2675,
+        "browserPerformanceMs": 4390.199999988079,
+        "browserEpochMs": 1791270094522
+      },
+      "after": {
+        "hostEpochMs": 1791270094541,
+        "hostMonotonicMs": 86049746.869,
+        "requestedMs": 2675,
+        "browserPerformanceMs": 4409.800000011921,
+        "browserEpochMs": 1791270094542
+      },
+      "visible": {
+        "text": "Time: 0.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "reset-before-uppercase-1",
+      "file": "screenshots/0028-reset-before-uppercase-1.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270094720,
+        "hostMonotonicMs": 86049925.302917,
+        "requestedMs": 2850,
+        "browserPerformanceMs": 4588.199999988079,
+        "browserEpochMs": 1791270094720
+      },
+      "after": {
+        "hostEpochMs": 1791270094740,
+        "hostMonotonicMs": 86049945.873625,
+        "requestedMs": 2850,
+        "browserPerformanceMs": 4608.800000011921,
+        "browserEpochMs": 1791270094741
+      },
+      "visible": {
+        "text": "Time: 0.3 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "reset-before-uppercase-2",
+      "file": "screenshots/0029-reset-before-uppercase-2.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270094918,
+        "hostMonotonicMs": 86050123.885375,
+        "requestedMs": 3025,
+        "browserPerformanceMs": 4786.699999988079,
+        "browserEpochMs": 1791270094919
+      },
+      "after": {
+        "hostEpochMs": 1791270094935,
+        "hostMonotonicMs": 86050140.20825,
+        "requestedMs": 3025,
+        "browserPerformanceMs": 4803.0999999940395,
+        "browserEpochMs": 1791270094935
+      },
+      "visible": {
+        "text": "Time: 0.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "reset-before-uppercase-3",
+      "file": "screenshots/0030-reset-before-uppercase-3.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270095113,
+        "hostMonotonicMs": 86050318.555542,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 4981.4000000059605,
+        "browserEpochMs": 1791270095113
+      },
+      "after": {
+        "hostEpochMs": 1791270095138,
+        "hostMonotonicMs": 86050343.154583,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 5006.0999999940395,
+        "browserEpochMs": 1791270095138
+      },
+      "visible": {
+        "text": "Time: 0.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "shift-D-water-right-0",
+      "file": "screenshots/0031-shift-D-water-right-0.png",
+      "held": [
+        "Shift",
+        "D"
+      ],
+      "before": {
+        "hostEpochMs": 1791270095222,
+        "hostMonotonicMs": 86050427.512917,
+        "requestedMs": 3280,
+        "browserPerformanceMs": 5090.4000000059605,
+        "browserEpochMs": 1791270095222
+      },
+      "after": {
+        "hostEpochMs": 1791270095239,
+        "hostMonotonicMs": 86050444.930833,
+        "requestedMs": 3280,
+        "browserPerformanceMs": 5107.800000011921,
+        "browserEpochMs": 1791270095240
+      },
+      "visible": {
+        "text": "Time: 0.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "shift-D-water-right-1",
+      "file": "screenshots/0032-shift-D-water-right-1.png",
+      "held": [
+        "Shift",
+        "D"
+      ],
+      "before": {
+        "hostEpochMs": 1791270095323,
+        "hostMonotonicMs": 86050528.110167,
+        "requestedMs": 3360,
+        "browserPerformanceMs": 5190.9000000059605,
+        "browserEpochMs": 1791270095323
+      },
+      "after": {
+        "hostEpochMs": 1791270095340,
+        "hostMonotonicMs": 86050545.400417,
+        "requestedMs": 3360,
+        "browserPerformanceMs": 5208.300000011921,
+        "browserEpochMs": 1791270095340
+      },
+      "visible": {
+        "text": "Time: 0.9 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "uppercase-A-water-left-0",
+      "file": "screenshots/0033-uppercase-A-water-left-0.png",
+      "held": [
+        "A"
+      ],
+      "before": {
+        "hostEpochMs": 1791270095425,
+        "hostMonotonicMs": 86050630.364625,
+        "requestedMs": 3440,
+        "browserPerformanceMs": 5293.0999999940395,
+        "browserEpochMs": 1791270095425
+      },
+      "after": {
+        "hostEpochMs": 1791270095439,
+        "hostMonotonicMs": 86050644.118417,
+        "requestedMs": 3440,
+        "browserPerformanceMs": 5307,
+        "browserEpochMs": 1791270095439
+      },
+      "visible": {
+        "text": "Time: 1.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "uppercase-A-water-left-1",
+      "file": "screenshots/0034-uppercase-A-water-left-1.png",
+      "held": [
+        "A"
+      ],
+      "before": {
+        "hostEpochMs": 1791270095520,
+        "hostMonotonicMs": 86050725.486167,
+        "requestedMs": 3520,
+        "browserPerformanceMs": 5388.300000011921,
+        "browserEpochMs": 1791270095520
+      },
+      "after": {
+        "hostEpochMs": 1791270095535,
+        "hostMonotonicMs": 86050740.627458,
+        "requestedMs": 3520,
+        "browserPerformanceMs": 5403.5,
+        "browserEpochMs": 1791270095535
+      },
+      "visible": {
+        "text": "Time: 1.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "release-uppercase-0",
+      "file": "screenshots/0035-release-uppercase-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270095637,
+        "hostMonotonicMs": 86050842.946875,
+        "requestedMs": 3620,
+        "browserPerformanceMs": 5505.800000011921,
+        "browserEpochMs": 1791270095638
+      },
+      "after": {
+        "hostEpochMs": 1791270095654,
+        "hostMonotonicMs": 86050859.591417,
+        "requestedMs": 3620,
+        "browserPerformanceMs": 5522.4000000059605,
+        "browserEpochMs": 1791270095654
+      },
+      "visible": {
+        "text": "Time: 1.2 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "release-uppercase-1",
+      "file": "screenshots/0036-release-uppercase-1.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270095756,
+        "hostMonotonicMs": 86050961.495333,
+        "requestedMs": 3720,
+        "browserPerformanceMs": 5624.300000011921,
+        "browserEpochMs": 1791270095756
+      },
+      "after": {
+        "hostEpochMs": 1791270095801,
+        "hostMonotonicMs": 86051006.02025,
+        "requestedMs": 3720,
+        "browserPerformanceMs": 5669,
+        "browserEpochMs": 1791270095801
+      },
+      "visible": {
+        "text": "Time: 1.4 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "release-uppercase-2",
+      "file": "screenshots/0037-release-uppercase-2.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270095903,
+        "hostMonotonicMs": 86051108.323917,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5771.199999988079,
+        "browserEpochMs": 1791270095903
+      },
+      "after": {
+        "hostEpochMs": 1791270095920,
+        "hostMonotonicMs": 86051125.777,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5788.5999999940395,
+        "browserEpochMs": 1791270095920
+      },
+      "visible": {
+        "text": "Time: 1.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "resize-800-600",
+      "file": "screenshots/0038-resize-800-600.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270095922,
+        "hostMonotonicMs": 86051127.035958,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5789.9000000059605,
+        "browserEpochMs": 1791270095922
+      },
+      "after": {
+        "hostEpochMs": 1791270095961,
+        "hostMonotonicMs": 86051166.343042,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5829.199999988079,
+        "browserEpochMs": 1791270095961
+      },
+      "visible": {
+        "text": "Time: 1.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 800,
+          "height": 600
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 800,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 709.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "restore-viewport",
+      "file": "screenshots/0039-restore-viewport.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270095962,
+        "hostMonotonicMs": 86051167.186083,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5830,
+        "browserEpochMs": 1791270095962
+      },
+      "after": {
+        "hostEpochMs": 1791270096017,
+        "hostMonotonicMs": 86051222.271625,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5885.199999988079,
+        "browserEpochMs": 1791270096017
+      },
+      "visible": {
+        "text": "Time: 1.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "final",
+      "file": "screenshots/0040-final.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270096017,
+        "hostMonotonicMs": 86051222.733042,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5885.5,
+        "browserEpochMs": 1791270096017
+      },
+      "after": {
+        "hostEpochMs": 1791270096050,
+        "hostMonotonicMs": 86051255.37625,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5918.5,
+        "browserEpochMs": 1791270096050
+      },
+      "visible": {
+        "text": "Time: 1.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "navigation",
+      "before": {
+        "hostEpochMs": 1791270090129,
+        "hostMonotonicMs": 86045334.976958,
+        "requestedMs": 0,
+        "browserPerformanceMs": 46.70000001788139,
+        "browserEpochMs": 1791270090131
+      },
+      "after": {
+        "hostEpochMs": 1791270090139,
+        "hostMonotonicMs": 86045344.989333,
+        "requestedMs": 0,
+        "browserPerformanceMs": 14,
+        "browserEpochMs": 1791270090146
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowRight",
+      "label": "fire-right",
+      "before": {
+        "hostEpochMs": 1791270091169,
+        "hostMonotonicMs": 86046374.861375,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1037.699999988079,
+        "browserEpochMs": 1791270091169
+      },
+      "after": {
+        "hostEpochMs": 1791270091170,
+        "hostMonotonicMs": 86046375.554917,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1038.4000000059605,
+        "browserEpochMs": 1791270091170
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-right",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270091170,
+        "hostMonotonicMs": 86046375.7555,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1038.5,
+        "browserEpochMs": 1791270091170
+      },
+      "after": {
+        "hostEpochMs": 1791270091251,
+        "hostMonotonicMs": 86046456.818708,
+        "requestedMs": 80,
+        "browserPerformanceMs": 1119.800000011921,
+        "browserEpochMs": 1791270091252
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-right",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270091269,
+        "hostMonotonicMs": 86046474.571167,
+        "requestedMs": 80,
+        "browserPerformanceMs": 1137.300000011921,
+        "browserEpochMs": 1791270091269
+      },
+      "after": {
+        "hostEpochMs": 1791270091350,
+        "hostMonotonicMs": 86046555.523583,
+        "requestedMs": 160,
+        "browserPerformanceMs": 1218.5,
+        "browserEpochMs": 1791270091350
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowRight",
+      "label": "fire-left",
+      "before": {
+        "hostEpochMs": 1791270091369,
+        "hostMonotonicMs": 86046574.244625,
+        "requestedMs": 160,
+        "browserPerformanceMs": 1237,
+        "browserEpochMs": 1791270091369
+      },
+      "after": {
+        "hostEpochMs": 1791270091369,
+        "hostMonotonicMs": 86046574.778292,
+        "requestedMs": 160,
+        "browserPerformanceMs": 1237.5,
+        "browserEpochMs": 1791270091369
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowLeft",
+      "label": "fire-left",
+      "before": {
+        "hostEpochMs": 1791270091369,
+        "hostMonotonicMs": 86046574.94225,
+        "requestedMs": 160,
+        "browserPerformanceMs": 1237.699999988079,
+        "browserEpochMs": 1791270091369
+      },
+      "after": {
+        "hostEpochMs": 1791270091370,
+        "hostMonotonicMs": 86046575.266583,
+        "requestedMs": 160,
+        "browserPerformanceMs": 1238.0999999940395,
+        "browserEpochMs": 1791270091370
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-left",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270091370,
+        "hostMonotonicMs": 86046575.45,
+        "requestedMs": 160,
+        "browserPerformanceMs": 1238.199999988079,
+        "browserEpochMs": 1791270091370
+      },
+      "after": {
+        "hostEpochMs": 1791270091451,
+        "hostMonotonicMs": 86046656.608542,
+        "requestedMs": 240,
+        "browserPerformanceMs": 1319.5999999940395,
+        "browserEpochMs": 1791270091451
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-left",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270091469,
+        "hostMonotonicMs": 86046674.281708,
+        "requestedMs": 240,
+        "browserPerformanceMs": 1337.0999999940395,
+        "browserEpochMs": 1791270091469
+      },
+      "after": {
+        "hostEpochMs": 1791270091550,
+        "hostMonotonicMs": 86046755.164792,
+        "requestedMs": 320,
+        "browserPerformanceMs": 1418.199999988079,
+        "browserEpochMs": 1791270091550
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowLeft",
+      "label": "water-right",
+      "before": {
+        "hostEpochMs": 1791270091569,
+        "hostMonotonicMs": 86046774.592917,
+        "requestedMs": 320,
+        "browserPerformanceMs": 1437.4000000059605,
+        "browserEpochMs": 1791270091569
+      },
+      "after": {
+        "hostEpochMs": 1791270091570,
+        "hostMonotonicMs": 86046775.034125,
+        "requestedMs": 320,
+        "browserPerformanceMs": 1437.800000011921,
+        "browserEpochMs": 1791270091570
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "d",
+      "label": "water-right",
+      "before": {
+        "hostEpochMs": 1791270091570,
+        "hostMonotonicMs": 86046775.202333,
+        "requestedMs": 320,
+        "browserPerformanceMs": 1437.9000000059605,
+        "browserEpochMs": 1791270091570
+      },
+      "after": {
+        "hostEpochMs": 1791270091570,
+        "hostMonotonicMs": 86046775.505958,
+        "requestedMs": 320,
+        "browserPerformanceMs": 1438.199999988079,
+        "browserEpochMs": 1791270091570
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-right",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270091570,
+        "hostMonotonicMs": 86046775.6555,
+        "requestedMs": 320,
+        "browserPerformanceMs": 1438.4000000059605,
+        "browserEpochMs": 1791270091570
+      },
+      "after": {
+        "hostEpochMs": 1791270091651,
+        "hostMonotonicMs": 86046856.6365,
+        "requestedMs": 400,
+        "browserPerformanceMs": 1519.5999999940395,
+        "browserEpochMs": 1791270091651
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-right",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270091668,
+        "hostMonotonicMs": 86046873.492458,
+        "requestedMs": 400,
+        "browserPerformanceMs": 1536.300000011921,
+        "browserEpochMs": 1791270091668
+      },
+      "after": {
+        "hostEpochMs": 1791270091749,
+        "hostMonotonicMs": 86046954.300625,
+        "requestedMs": 480,
+        "browserPerformanceMs": 1617.300000011921,
+        "browserEpochMs": 1791270091749
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "d",
+      "label": "water-left",
+      "before": {
+        "hostEpochMs": 1791270091769,
+        "hostMonotonicMs": 86046974.590458,
+        "requestedMs": 480,
+        "browserPerformanceMs": 1637.4000000059605,
+        "browserEpochMs": 1791270091769
+      },
+      "after": {
+        "hostEpochMs": 1791270091770,
+        "hostMonotonicMs": 86046975.07825,
+        "requestedMs": 480,
+        "browserPerformanceMs": 1637.800000011921,
+        "browserEpochMs": 1791270091770
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "a",
+      "label": "water-left",
+      "before": {
+        "hostEpochMs": 1791270091770,
+        "hostMonotonicMs": 86046975.270083,
+        "requestedMs": 480,
+        "browserPerformanceMs": 1638.0999999940395,
+        "browserEpochMs": 1791270091770
+      },
+      "after": {
+        "hostEpochMs": 1791270091770,
+        "hostMonotonicMs": 86046975.703833,
+        "requestedMs": 480,
+        "browserPerformanceMs": 1638.5,
+        "browserEpochMs": 1791270091770
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-left",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270091770,
+        "hostMonotonicMs": 86046975.922792,
+        "requestedMs": 480,
+        "browserPerformanceMs": 1638.699999988079,
+        "browserEpochMs": 1791270091771
+      },
+      "after": {
+        "hostEpochMs": 1791270091852,
+        "hostMonotonicMs": 86047057.491583,
+        "requestedMs": 560,
+        "browserPerformanceMs": 1720.5,
+        "browserEpochMs": 1791270091852
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-left",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270091867,
+        "hostMonotonicMs": 86047072.881708,
+        "requestedMs": 560,
+        "browserPerformanceMs": 1735.699999988079,
+        "browserEpochMs": 1791270091868
+      },
+      "after": {
+        "hostEpochMs": 1791270091948,
+        "hostMonotonicMs": 86047153.525208,
+        "requestedMs": 640,
+        "browserPerformanceMs": 1816.5,
+        "browserEpochMs": 1791270091948
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "a",
+      "label": "both-right",
+      "before": {
+        "hostEpochMs": 1791270091969,
+        "hostMonotonicMs": 86047174.319875,
+        "requestedMs": 640,
+        "browserPerformanceMs": 1837.0999999940395,
+        "browserEpochMs": 1791270091969
+      },
+      "after": {
+        "hostEpochMs": 1791270091969,
+        "hostMonotonicMs": 86047174.800208,
+        "requestedMs": 640,
+        "browserPerformanceMs": 1837.5999999940395,
+        "browserEpochMs": 1791270091969
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowRight",
+      "label": "both-right",
+      "before": {
+        "hostEpochMs": 1791270091969,
+        "hostMonotonicMs": 86047175.024208,
+        "requestedMs": 640,
+        "browserPerformanceMs": 1837.800000011921,
+        "browserEpochMs": 1791270091970
+      },
+      "after": {
+        "hostEpochMs": 1791270091970,
+        "hostMonotonicMs": 86047175.426917,
+        "requestedMs": 640,
+        "browserPerformanceMs": 1838.199999988079,
+        "browserEpochMs": 1791270091970
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "d",
+      "label": "both-right",
+      "before": {
+        "hostEpochMs": 1791270091970,
+        "hostMonotonicMs": 86047175.640417,
+        "requestedMs": 640,
+        "browserPerformanceMs": 1838.4000000059605,
+        "browserEpochMs": 1791270091970
+      },
+      "after": {
+        "hostEpochMs": 1791270091970,
+        "hostMonotonicMs": 86047175.984667,
+        "requestedMs": 640,
+        "browserPerformanceMs": 1838.699999988079,
+        "browserEpochMs": 1791270091971
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-right",
+      "durationMs": 60,
+      "before": {
+        "hostEpochMs": 1791270091971,
+        "hostMonotonicMs": 86047176.193208,
+        "requestedMs": 640,
+        "browserPerformanceMs": 1838.9000000059605,
+        "browserEpochMs": 1791270091971
+      },
+      "after": {
+        "hostEpochMs": 1791270092031,
+        "hostMonotonicMs": 86047236.716292,
+        "requestedMs": 700,
+        "browserPerformanceMs": 1899.699999988079,
+        "browserEpochMs": 1791270092031
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-right",
+      "durationMs": 60,
+      "before": {
+        "hostEpochMs": 1791270092051,
+        "hostMonotonicMs": 86047256.97675,
+        "requestedMs": 700,
+        "browserPerformanceMs": 1919.800000011921,
+        "browserEpochMs": 1791270092052
+      },
+      "after": {
+        "hostEpochMs": 1791270092113,
+        "hostMonotonicMs": 86047318.225667,
+        "requestedMs": 760,
+        "browserPerformanceMs": 1981.199999988079,
+        "browserEpochMs": 1791270092113
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowRight",
+      "label": "release-fire-retain-water",
+      "before": {
+        "hostEpochMs": 1791270092135,
+        "hostMonotonicMs": 86047340.129667,
+        "requestedMs": 760,
+        "browserPerformanceMs": 2002.9000000059605,
+        "browserEpochMs": 1791270092135
+      },
+      "after": {
+        "hostEpochMs": 1791270092135,
+        "hostMonotonicMs": 86047340.584167,
+        "requestedMs": 760,
+        "browserPerformanceMs": 2003.4000000059605,
+        "browserEpochMs": 1791270092135
+      }
+    },
+    {
+      "type": "advance",
+      "label": "release-fire-retain-water",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270092135,
+        "hostMonotonicMs": 86047340.824125,
+        "requestedMs": 760,
+        "browserPerformanceMs": 2003.5999999940395,
+        "browserEpochMs": 1791270092135
+      },
+      "after": {
+        "hostEpochMs": 1791270092216,
+        "hostMonotonicMs": 86047421.951708,
+        "requestedMs": 840,
+        "browserPerformanceMs": 2085.0999999940395,
+        "browserEpochMs": 1791270092217
+      }
+    },
+    {
+      "type": "advance",
+      "label": "release-fire-retain-water",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270092236,
+        "hostMonotonicMs": 86047441.428,
+        "requestedMs": 840,
+        "browserPerformanceMs": 2104.199999988079,
+        "browserEpochMs": 1791270092236
+      },
+      "after": {
+        "hostEpochMs": 1791270092318,
+        "hostMonotonicMs": 86047523.744583,
+        "requestedMs": 920,
+        "browserPerformanceMs": 2186.699999988079,
+        "browserEpochMs": 1791270092319
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "d",
+      "label": "release-both",
+      "before": {
+        "hostEpochMs": 1791270092356,
+        "hostMonotonicMs": 86047561.627208,
+        "requestedMs": 920,
+        "browserPerformanceMs": 2224.5,
+        "browserEpochMs": 1791270092356
+      },
+      "after": {
+        "hostEpochMs": 1791270092357,
+        "hostMonotonicMs": 86047562.109292,
+        "requestedMs": 920,
+        "browserPerformanceMs": 2224.9000000059605,
+        "browserEpochMs": 1791270092357
+      }
+    },
+    {
+      "type": "advance",
+      "label": "release-both",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270092357,
+        "hostMonotonicMs": 86047562.347083,
+        "requestedMs": 920,
+        "browserPerformanceMs": 2225.0999999940395,
+        "browserEpochMs": 1791270092357
+      },
+      "after": {
+        "hostEpochMs": 1791270092457,
+        "hostMonotonicMs": 86047662.862708,
+        "requestedMs": 1020,
+        "browserPerformanceMs": 2325.9000000059605,
+        "browserEpochMs": 1791270092458
+      }
+    },
+    {
+      "type": "advance",
+      "label": "release-both",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270092504,
+        "hostMonotonicMs": 86047710.014292,
+        "requestedMs": 1020,
+        "browserPerformanceMs": 2372.9000000059605,
+        "browserEpochMs": 1791270092505
+      },
+      "after": {
+        "hostEpochMs": 1791270092606,
+        "hostMonotonicMs": 86047811.327125,
+        "requestedMs": 1120,
+        "browserPerformanceMs": 2474.5,
+        "browserEpochMs": 1791270092606
+      }
+    },
+    {
+      "type": "advance",
+      "label": "release-both",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270092631,
+        "hostMonotonicMs": 86047836.289458,
+        "requestedMs": 1120,
+        "browserPerformanceMs": 2499.199999988079,
+        "browserEpochMs": 1791270092631
+      },
+      "after": {
+        "hostEpochMs": 1791270092733,
+        "hostMonotonicMs": 86047938.639,
+        "requestedMs": 1220,
+        "browserPerformanceMs": 2601.699999988079,
+        "browserEpochMs": 1791270092734
+      }
+    },
+    {
+      "type": "reset",
+      "method": "R",
+      "label": "reset-before-reverse",
+      "before": {
+        "hostEpochMs": 1791270092752,
+        "hostMonotonicMs": 86047957.744917,
+        "requestedMs": 1220,
+        "browserPerformanceMs": 2620.5,
+        "browserEpochMs": 1791270092752
+      },
+      "after": {
+        "hostEpochMs": 1791270092753,
+        "hostMonotonicMs": 86047958.493875,
+        "requestedMs": 1220,
+        "browserPerformanceMs": 2621.300000011921,
+        "browserEpochMs": 1791270092753
+      },
+      "held": []
+    },
+    {
+      "type": "advance",
+      "label": "reset-before-reverse",
+      "durationMs": 175,
+      "before": {
+        "hostEpochMs": 1791270092753,
+        "hostMonotonicMs": 86047958.693625,
+        "requestedMs": 1220,
+        "browserPerformanceMs": 2621.5,
+        "browserEpochMs": 1791270092753
+      },
+      "after": {
+        "hostEpochMs": 1791270092933,
+        "hostMonotonicMs": 86048138.731292,
+        "requestedMs": 1395,
+        "browserPerformanceMs": 2802.5,
+        "browserEpochMs": 1791270092934
+      }
+    },
+    {
+      "type": "advance",
+      "label": "reset-before-reverse",
+      "durationMs": 175,
+      "before": {
+        "hostEpochMs": 1791270092959,
+        "hostMonotonicMs": 86048164.959792,
+        "requestedMs": 1395,
+        "browserPerformanceMs": 2827.800000011921,
+        "browserEpochMs": 1791270092960
+      },
+      "after": {
+        "hostEpochMs": 1791270093137,
+        "hostMonotonicMs": 86048342.318875,
+        "requestedMs": 1570,
+        "browserPerformanceMs": 3005.699999988079,
+        "browserEpochMs": 1791270093137
+      }
+    },
+    {
+      "type": "advance",
+      "label": "reset-before-reverse",
+      "durationMs": 175,
+      "before": {
+        "hostEpochMs": 1791270093165,
+        "hostMonotonicMs": 86048370.7595,
+        "requestedMs": 1570,
+        "browserPerformanceMs": 3033.699999988079,
+        "browserEpochMs": 1791270093165
+      },
+      "after": {
+        "hostEpochMs": 1791270093343,
+        "hostMonotonicMs": 86048548.349792,
+        "requestedMs": 1745,
+        "browserPerformanceMs": 3211.5,
+        "browserEpochMs": 1791270093343
+      }
+    },
+    {
+      "type": "advance",
+      "label": "reset-before-reverse",
+      "durationMs": 175,
+      "before": {
+        "hostEpochMs": 1791270093367,
+        "hostMonotonicMs": 86048572.708292,
+        "requestedMs": 1745,
+        "browserPerformanceMs": 3235.5999999940395,
+        "browserEpochMs": 1791270093367
+      },
+      "after": {
+        "hostEpochMs": 1791270093545,
+        "hostMonotonicMs": 86048750.116875,
+        "requestedMs": 1920,
+        "browserPerformanceMs": 3413.4000000059605,
+        "browserEpochMs": 1791270093545
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowRight",
+      "label": "both-right-reverse",
+      "before": {
+        "hostEpochMs": 1791270093580,
+        "hostMonotonicMs": 86048785.811333,
+        "requestedMs": 1920,
+        "browserPerformanceMs": 3448.5999999940395,
+        "browserEpochMs": 1791270093580
+      },
+      "after": {
+        "hostEpochMs": 1791270093581,
+        "hostMonotonicMs": 86048786.404292,
+        "requestedMs": 1920,
+        "browserPerformanceMs": 3449.199999988079,
+        "browserEpochMs": 1791270093581
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "d",
+      "label": "both-right-reverse",
+      "before": {
+        "hostEpochMs": 1791270093581,
+        "hostMonotonicMs": 86048786.656875,
+        "requestedMs": 1920,
+        "browserPerformanceMs": 3449.5,
+        "browserEpochMs": 1791270093581
+      },
+      "after": {
+        "hostEpochMs": 1791270093582,
+        "hostMonotonicMs": 86048787.110708,
+        "requestedMs": 1920,
+        "browserPerformanceMs": 3449.9000000059605,
+        "browserEpochMs": 1791270093582
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-right-reverse",
+      "durationMs": 60,
+      "before": {
+        "hostEpochMs": 1791270093582,
+        "hostMonotonicMs": 86048787.352542,
+        "requestedMs": 1920,
+        "browserPerformanceMs": 3450.199999988079,
+        "browserEpochMs": 1791270093582
+      },
+      "after": {
+        "hostEpochMs": 1791270093644,
+        "hostMonotonicMs": 86048849.751542,
+        "requestedMs": 1980,
+        "browserPerformanceMs": 3512.800000011921,
+        "browserEpochMs": 1791270093645
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-right-reverse",
+      "durationMs": 60,
+      "before": {
+        "hostEpochMs": 1791270093663,
+        "hostMonotonicMs": 86048868.55575,
+        "requestedMs": 1980,
+        "browserPerformanceMs": 3531.300000011921,
+        "browserEpochMs": 1791270093663
+      },
+      "after": {
+        "hostEpochMs": 1791270093725,
+        "hostMonotonicMs": 86048930.854333,
+        "requestedMs": 2040,
+        "browserPerformanceMs": 3593.9000000059605,
+        "browserEpochMs": 1791270093726
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "d",
+      "label": "release-water-retain-fire",
+      "before": {
+        "hostEpochMs": 1791270093744,
+        "hostMonotonicMs": 86048949.438667,
+        "requestedMs": 2040,
+        "browserPerformanceMs": 3612.199999988079,
+        "browserEpochMs": 1791270093744
+      },
+      "after": {
+        "hostEpochMs": 1791270093744,
+        "hostMonotonicMs": 86048949.956875,
+        "requestedMs": 2040,
+        "browserPerformanceMs": 3612.800000011921,
+        "browserEpochMs": 1791270093745
+      }
+    },
+    {
+      "type": "advance",
+      "label": "release-water-retain-fire",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270093745,
+        "hostMonotonicMs": 86048950.207125,
+        "requestedMs": 2040,
+        "browserPerformanceMs": 3613,
+        "browserEpochMs": 1791270093745
+      },
+      "after": {
+        "hostEpochMs": 1791270093829,
+        "hostMonotonicMs": 86049034.12725,
+        "requestedMs": 2120,
+        "browserPerformanceMs": 3697.4000000059605,
+        "browserEpochMs": 1791270093829
+      }
+    },
+    {
+      "type": "advance",
+      "label": "release-water-retain-fire",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270093855,
+        "hostMonotonicMs": 86049060.483083,
+        "requestedMs": 2120,
+        "browserPerformanceMs": 3723.300000011921,
+        "browserEpochMs": 1791270093855
+      },
+      "after": {
+        "hostEpochMs": 1791270093937,
+        "hostMonotonicMs": 86049142.645042,
+        "requestedMs": 2200,
+        "browserPerformanceMs": 3805.699999988079,
+        "browserEpochMs": 1791270093938
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowRight",
+      "label": "idle",
+      "before": {
+        "hostEpochMs": 1791270093957,
+        "hostMonotonicMs": 86049162.966042,
+        "requestedMs": 2200,
+        "browserPerformanceMs": 3825.800000011921,
+        "browserEpochMs": 1791270093958
+      },
+      "after": {
+        "hostEpochMs": 1791270093958,
+        "hostMonotonicMs": 86049163.502208,
+        "requestedMs": 2200,
+        "browserPerformanceMs": 3826.300000011921,
+        "browserEpochMs": 1791270093958
+      }
+    },
+    {
+      "type": "advance",
+      "label": "idle",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270093958,
+        "hostMonotonicMs": 86049163.747792,
+        "requestedMs": 2200,
+        "browserPerformanceMs": 3826.5999999940395,
+        "browserEpochMs": 1791270093958
+      },
+      "after": {
+        "hostEpochMs": 1791270094060,
+        "hostMonotonicMs": 86049265.067,
+        "requestedMs": 2300,
+        "browserPerformanceMs": 3928.199999988079,
+        "browserEpochMs": 1791270094060
+      }
+    },
+    {
+      "type": "advance",
+      "label": "idle",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270094089,
+        "hostMonotonicMs": 86049294.968542,
+        "requestedMs": 2300,
+        "browserPerformanceMs": 3957.800000011921,
+        "browserEpochMs": 1791270094090
+      },
+      "after": {
+        "hostEpochMs": 1791270094191,
+        "hostMonotonicMs": 86049396.310417,
+        "requestedMs": 2400,
+        "browserPerformanceMs": 4059.300000011921,
+        "browserEpochMs": 1791270094191
+      }
+    },
+    {
+      "type": "advance",
+      "label": "idle",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270094222,
+        "hostMonotonicMs": 86049427.248458,
+        "requestedMs": 2400,
+        "browserPerformanceMs": 4090.0999999940395,
+        "browserEpochMs": 1791270094222
+      },
+      "after": {
+        "hostEpochMs": 1791270094323,
+        "hostMonotonicMs": 86049528.873708,
+        "requestedMs": 2500,
+        "browserPerformanceMs": 4191.9000000059605,
+        "browserEpochMs": 1791270094324
+      }
+    },
+    {
+      "type": "reset",
+      "method": "R",
+      "label": "reset-before-uppercase",
+      "before": {
+        "hostEpochMs": 1791270094343,
+        "hostMonotonicMs": 86049548.161792,
+        "requestedMs": 2500,
+        "browserPerformanceMs": 4211,
+        "browserEpochMs": 1791270094343
+      },
+      "after": {
+        "hostEpochMs": 1791270094344,
+        "hostMonotonicMs": 86049549.240292,
+        "requestedMs": 2500,
+        "browserPerformanceMs": 4212,
+        "browserEpochMs": 1791270094344
+      },
+      "held": []
+    },
+    {
+      "type": "advance",
+      "label": "reset-before-uppercase",
+      "durationMs": 175,
+      "before": {
+        "hostEpochMs": 1791270094344,
+        "hostMonotonicMs": 86049549.495958,
+        "requestedMs": 2500,
+        "browserPerformanceMs": 4212.199999988079,
+        "browserEpochMs": 1791270094344
+      },
+      "after": {
+        "hostEpochMs": 1791270094521,
+        "hostMonotonicMs": 86049726.760792,
+        "requestedMs": 2675,
+        "browserPerformanceMs": 4389.9000000059605,
+        "browserEpochMs": 1791270094522
+      }
+    },
+    {
+      "type": "advance",
+      "label": "reset-before-uppercase",
+      "durationMs": 175,
+      "before": {
+        "hostEpochMs": 1791270094542,
+        "hostMonotonicMs": 86049747.263917,
+        "requestedMs": 2675,
+        "browserPerformanceMs": 4410,
+        "browserEpochMs": 1791270094542
+      },
+      "after": {
+        "hostEpochMs": 1791270094719,
+        "hostMonotonicMs": 86049924.546042,
+        "requestedMs": 2850,
+        "browserPerformanceMs": 4587.699999988079,
+        "browserEpochMs": 1791270094720
+      }
+    },
+    {
+      "type": "advance",
+      "label": "reset-before-uppercase",
+      "durationMs": 175,
+      "before": {
+        "hostEpochMs": 1791270094741,
+        "hostMonotonicMs": 86049946.27125,
+        "requestedMs": 2850,
+        "browserPerformanceMs": 4609,
+        "browserEpochMs": 1791270094741
+      },
+      "after": {
+        "hostEpochMs": 1791270094918,
+        "hostMonotonicMs": 86050123.220667,
+        "requestedMs": 3025,
+        "browserPerformanceMs": 4786.300000011921,
+        "browserEpochMs": 1791270094918
+      }
+    },
+    {
+      "type": "advance",
+      "label": "reset-before-uppercase",
+      "durationMs": 175,
+      "before": {
+        "hostEpochMs": 1791270094935,
+        "hostMonotonicMs": 86050140.601708,
+        "requestedMs": 3025,
+        "browserPerformanceMs": 4803.4000000059605,
+        "browserEpochMs": 1791270094935
+      },
+      "after": {
+        "hostEpochMs": 1791270095112,
+        "hostMonotonicMs": 86050317.909708,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 4981,
+        "browserEpochMs": 1791270095113
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "Shift",
+      "label": "shift-D-water-right",
+      "before": {
+        "hostEpochMs": 1791270095138,
+        "hostMonotonicMs": 86050343.6155,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 5006.5,
+        "browserEpochMs": 1791270095138
+      },
+      "after": {
+        "hostEpochMs": 1791270095139,
+        "hostMonotonicMs": 86050344.207417,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 5007,
+        "browserEpochMs": 1791270095139
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "D",
+      "label": "shift-D-water-right",
+      "before": {
+        "hostEpochMs": 1791270095139,
+        "hostMonotonicMs": 86050344.452,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 5007.199999988079,
+        "browserEpochMs": 1791270095139
+      },
+      "after": {
+        "hostEpochMs": 1791270095139,
+        "hostMonotonicMs": 86050344.942333,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 5007.800000011921,
+        "browserEpochMs": 1791270095140
+      }
+    },
+    {
+      "type": "advance",
+      "label": "shift-D-water-right",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270095140,
+        "hostMonotonicMs": 86050345.17025,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 5008,
+        "browserEpochMs": 1791270095140
+      },
+      "after": {
+        "hostEpochMs": 1791270095221,
+        "hostMonotonicMs": 86050426.941292,
+        "requestedMs": 3280,
+        "browserPerformanceMs": 5089.9000000059605,
+        "browserEpochMs": 1791270095222
+      }
+    },
+    {
+      "type": "advance",
+      "label": "shift-D-water-right",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270095240,
+        "hostMonotonicMs": 86050445.28875,
+        "requestedMs": 3280,
+        "browserPerformanceMs": 5108.0999999940395,
+        "browserEpochMs": 1791270095240
+      },
+      "after": {
+        "hostEpochMs": 1791270095322,
+        "hostMonotonicMs": 86050527.582208,
+        "requestedMs": 3360,
+        "browserPerformanceMs": 5190.5,
+        "browserEpochMs": 1791270095322
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "Shift",
+      "label": "uppercase-A-water-left",
+      "before": {
+        "hostEpochMs": 1791270095340,
+        "hostMonotonicMs": 86050545.773417,
+        "requestedMs": 3360,
+        "browserPerformanceMs": 5208.5999999940395,
+        "browserEpochMs": 1791270095340
+      },
+      "after": {
+        "hostEpochMs": 1791270095341,
+        "hostMonotonicMs": 86050546.244292,
+        "requestedMs": 3360,
+        "browserPerformanceMs": 5209.0999999940395,
+        "browserEpochMs": 1791270095341
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "D",
+      "label": "uppercase-A-water-left",
+      "before": {
+        "hostEpochMs": 1791270095341,
+        "hostMonotonicMs": 86050546.461083,
+        "requestedMs": 3360,
+        "browserPerformanceMs": 5209.199999988079,
+        "browserEpochMs": 1791270095341
+      },
+      "after": {
+        "hostEpochMs": 1791270095341,
+        "hostMonotonicMs": 86050546.848417,
+        "requestedMs": 3360,
+        "browserPerformanceMs": 5209.5999999940395,
+        "browserEpochMs": 1791270095341
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "A",
+      "label": "uppercase-A-water-left",
+      "before": {
+        "hostEpochMs": 1791270095342,
+        "hostMonotonicMs": 86050547.046375,
+        "requestedMs": 3360,
+        "browserPerformanceMs": 5209.800000011921,
+        "browserEpochMs": 1791270095342
+      },
+      "after": {
+        "hostEpochMs": 1791270095342,
+        "hostMonotonicMs": 86050547.419917,
+        "requestedMs": 3360,
+        "browserPerformanceMs": 5210.199999988079,
+        "browserEpochMs": 1791270095342
+      }
+    },
+    {
+      "type": "advance",
+      "label": "uppercase-A-water-left",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270095342,
+        "hostMonotonicMs": 86050547.621667,
+        "requestedMs": 3360,
+        "browserPerformanceMs": 5210.4000000059605,
+        "browserEpochMs": 1791270095342
+      },
+      "after": {
+        "hostEpochMs": 1791270095424,
+        "hostMonotonicMs": 86050629.878167,
+        "requestedMs": 3440,
+        "browserPerformanceMs": 5292.9000000059605,
+        "browserEpochMs": 1791270095425
+      }
+    },
+    {
+      "type": "advance",
+      "label": "uppercase-A-water-left",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270095439,
+        "hostMonotonicMs": 86050644.398917,
+        "requestedMs": 3440,
+        "browserPerformanceMs": 5307.199999988079,
+        "browserEpochMs": 1791270095439
+      },
+      "after": {
+        "hostEpochMs": 1791270095519,
+        "hostMonotonicMs": 86050724.956708,
+        "requestedMs": 3520,
+        "browserPerformanceMs": 5388,
+        "browserEpochMs": 1791270095520
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "A",
+      "label": "release-uppercase",
+      "before": {
+        "hostEpochMs": 1791270095536,
+        "hostMonotonicMs": 86050741.011875,
+        "requestedMs": 3520,
+        "browserPerformanceMs": 5403.800000011921,
+        "browserEpochMs": 1791270095536
+      },
+      "after": {
+        "hostEpochMs": 1791270095536,
+        "hostMonotonicMs": 86050741.43525,
+        "requestedMs": 3520,
+        "browserPerformanceMs": 5404.300000011921,
+        "browserEpochMs": 1791270095536
+      }
+    },
+    {
+      "type": "advance",
+      "label": "release-uppercase",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270095536,
+        "hostMonotonicMs": 86050741.629083,
+        "requestedMs": 3520,
+        "browserPerformanceMs": 5404.4000000059605,
+        "browserEpochMs": 1791270095536
+      },
+      "after": {
+        "hostEpochMs": 1791270095637,
+        "hostMonotonicMs": 86050842.382875,
+        "requestedMs": 3620,
+        "browserPerformanceMs": 5505.4000000059605,
+        "browserEpochMs": 1791270095637
+      }
+    },
+    {
+      "type": "advance",
+      "label": "release-uppercase",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270095654,
+        "hostMonotonicMs": 86050859.928875,
+        "requestedMs": 3620,
+        "browserPerformanceMs": 5523.0999999940395,
+        "browserEpochMs": 1791270095655
+      },
+      "after": {
+        "hostEpochMs": 1791270095756,
+        "hostMonotonicMs": 86050961.031292,
+        "requestedMs": 3720,
+        "browserPerformanceMs": 5624,
+        "browserEpochMs": 1791270095756
+      }
+    },
+    {
+      "type": "advance",
+      "label": "release-uppercase",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270095801,
+        "hostMonotonicMs": 86051006.498292,
+        "requestedMs": 3720,
+        "browserPerformanceMs": 5669.300000011921,
+        "browserEpochMs": 1791270095801
+      },
+      "after": {
+        "hostEpochMs": 1791270095902,
+        "hostMonotonicMs": 86051107.751625,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5770.699999988079,
+        "browserEpochMs": 1791270095903
+      }
+    }
+  ],
+  "candidateEvents": [],
+  "evaluatorErrors": [],
+  "clock": "real",
+  "privateStateReads": 0,
+  "candidateMutations": 0,
+  "reference": false,
+  "deadlineExceeded": false,
+  "browserVersion": "153.0.8010.12",
+  "video": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/real-controls/videos/page@cc7280e21b423abfe41d16c1651deda3.webm",
+  "finishedAt": "2026-10-06T07:01:36.190Z",
+  "durationMs": 6192.558375000954,
+  "sourceAfterSha256": "9acb855d2b11c87c46ec5073df880c63a9e369f4ba33b45196791401f9b47cf5",
+  "sourceUnchanged": true
+}

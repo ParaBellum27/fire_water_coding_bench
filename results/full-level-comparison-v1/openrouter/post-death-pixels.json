@@ -1,0 +1,207 @@
+{
+  "scope": "PNG-only actor-color measurements. No candidate state/source reads.",
+  "frames": [
+    {
+      "label": "button-after-death-0",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0008-button-after-death-0.png",
+      "held": [
+        "d",
+        "ArrowRight",
+        "ArrowUp",
+        "w"
+      ],
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      },
+      "text": "Time: 0.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)"
+    },
+    {
+      "label": "button-after-death-3",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0011-button-after-death-3.png",
+      "held": [
+        "d",
+        "ArrowRight",
+        "ArrowUp",
+        "w"
+      ],
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      },
+      "text": "Time: 0.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)"
+    },
+    {
+      "label": "post-death-new-input-0",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0012-post-death-new-input-0.png",
+      "held": [
+        "d",
+        "ArrowRight"
+      ],
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      },
+      "text": "Time: 0.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)"
+    },
+    {
+      "label": "post-death-stable-0",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0013-post-death-stable-0.png",
+      "held": [],
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      },
+      "text": "Time: 1.2 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)"
+    },
+    {
+      "label": "water-contact-red-again-0",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0014-water-contact-red-again-0.png",
+      "held": [
+        "d"
+      ],
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      },
+      "text": "Time: 1.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)"
+    },
+    {
+      "label": "water-contact-red-again-1",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0015-water-contact-red-again-1.png",
+      "held": [
+        "d"
+      ],
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      },
+      "text": "Time: 2.2 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)"
+    },
+    {
+      "label": "water-contact-red-again-2",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0016-water-contact-red-again-2.png",
+      "held": [
+        "d"
+      ],
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      },
+      "text": "Time: 2.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)"
+    },
+    {
+      "label": "water-contact-red-again-3",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0017-water-contact-red-again-3.png",
+      "held": [
+        "d"
+      ],
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      },
+      "text": "Time: 3.2 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)"
+    },
+    {
+      "label": "R-after-death-3",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0021-R-after-death-3.png",
+      "held": [
+        "d"
+      ],
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      },
+      "text": "Time: 0.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)"
+    },
+    {
+      "label": "R-post-death-new-input-0",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0022-R-post-death-new-input-0.png",
+      "held": [
+        "d",
+        "ArrowRight"
+      ],
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      },
+      "text": "Time: 0.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)"
+    },
+    {
+      "label": "final",
+      "file": "openrouter/assessment/red-foreign-death/screenshots/0023-final.png",
+      "held": [],
+      "measurements": {
+        "fireboy": {
+          "x": 72,
+          "y": 856,
+          "width": 20,
+          "height": 40,
+          "pixels": 800
+        },
+        "watergirl": null
+      },
+      "text": "Time: 0.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)"
+    }
+  ]
+}

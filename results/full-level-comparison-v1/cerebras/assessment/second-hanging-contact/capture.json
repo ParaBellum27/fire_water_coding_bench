@@ -1,0 +1,386 @@
+{
+  "version": 1,
+  "scenario": {
+    "id": "second-hanging-contact",
+    "clock": "controlled",
+    "hostDeadlineMs": 240000,
+    "sampleEveryMs": 500,
+    "segments": [
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 800
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d",
+          "w"
+        ],
+        "durationMs": 800
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d"
+        ],
+        "durationMs": 950
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d"
+        ],
+        "durationMs": 650,
+        "label": "Jump Fireboy from the center floor onto the red shelf"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d"
+        ],
+        "durationMs": 800,
+        "label": "Cross the second pair of pools"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 1300,
+        "label": "Climb the right-hand stairs"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 800,
+        "label": "Reach the first pressure plate"
+      },
+      {
+        "keys": [],
+        "durationMs": 120,
+        "label": "Release both jump keys"
+      },
+      {
+        "keys": [
+          "ArrowLeft",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 650,
+        "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+      },
+      {
+        "keys": [
+          "ArrowLeft"
+        ],
+        "durationMs": 120,
+        "label": "Fireboy approaches right pressure plate"
+      },
+      {
+        "keys": [
+          "ArrowLeft",
+          "a",
+          "w"
+        ],
+        "durationMs": 650,
+        "label": "Watergirl joins upper floor"
+      },
+      {
+        "keys": [],
+        "durationMs": 300,
+        "label": "Settle on the pressure plate floor"
+      },
+      {
+        "keys": [
+          "ArrowLeft",
+          "a"
+        ],
+        "durationMs": 180,
+        "label": "Watergirl steps onto the right plate"
+      },
+      {
+        "keys": [
+          "ArrowLeft"
+        ],
+        "durationMs": 1500,
+        "label": "Watergirl holds the gate open while Fireboy crosses"
+      },
+      {
+        "keys": [
+          "a"
+        ],
+        "durationMs": 350,
+        "label": "Watergirl centers on the pressure plate"
+      },
+      {
+        "keys": [],
+        "durationMs": 450,
+        "label": "Observe gate opening"
+      },
+      {
+        "keys": [
+          "ArrowLeft"
+        ],
+        "durationMs": 2300,
+        "label": "Fireboy crosses the opened barrier"
+      },
+      {
+        "keys": [
+          "ArrowLeft"
+        ],
+        "durationMs": 900,
+        "label": "Fireboy travels to the left plate"
+      },
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 320,
+        "label": "Fireboy returns to the left pressure plate"
+      },
+      {
+        "keys": [],
+        "durationMs": 250,
+        "label": "Hold the opposite plate"
+      },
+      {
+        "keys": [
+          "a"
+        ],
+        "durationMs": 3600,
+        "label": "Watergirl traverses while Fireboy holds the left plate"
+      },
+      {
+        "keys": [
+          "ArrowLeft",
+          "ArrowUp",
+          "a",
+          "w"
+        ],
+        "durationMs": 750,
+        "label": "Both players jump onto the left ledge"
+      },
+      {
+        "keys": [],
+        "durationMs": 250,
+        "label": "Settle on the left ledge"
+      },
+      {
+        "keys": [
+          "ArrowLeft",
+          "ArrowUp",
+          "a",
+          "w"
+        ],
+        "durationMs": 650,
+        "label": "Jump close to the left ledge"
+      },
+      {
+        "keys": [],
+        "durationMs": 200,
+        "label": "Settle before crossing poison chamber"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d"
+        ],
+        "durationMs": 350,
+        "label": "Approach the left ledge edge"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 500,
+        "label": "Jump to the safe ledge beside the green pool"
+      },
+      {
+        "keys": [],
+        "durationMs": 250,
+        "label": "Land before the green pool"
+      },
+      {
+        "keys": [],
+        "durationMs": 300,
+        "label": "Settle on the narrow safe ledge"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 520,
+        "label": "Jump onto the first hanging platform"
+      },
+      {
+        "keys": [],
+        "durationMs": 300,
+        "label": "Stand on the first hanging platform"
+      },
+      {
+        "keys": [],
+        "durationMs": 100,
+        "label": "Wait for first platform contact"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 850,
+        "label": "Jump to the central island before the loaded platform rotates"
+      },
+      {
+        "keys": [],
+        "durationMs": 300,
+        "label": "Land on the central island"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d"
+        ],
+        "durationMs": 430,
+        "label": "Collect the central blue diamond and approach second pool"
+      },
+      {
+        "keys": [],
+        "durationMs": 250,
+        "label": "Stop before the second green pool"
+      },
+      {
+        "keys": [
+          "d"
+        ],
+        "durationMs": 250,
+        "label": "Watergirl collects the central blue diamond before jumping"
+      },
+      {
+        "keys": [],
+        "durationMs": 250,
+        "label": "Settle both characters before the second platform jump"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 680,
+        "label": "Jump toward the second hanging platform"
+      },
+      {
+        "keys": [],
+        "durationMs": 320,
+        "label": "Land on the second hanging platform"
+      },
+      {
+        "keys": [
+          "a"
+        ],
+        "durationMs": 180,
+        "label": "water-second-board-left-load",
+        "sampleEveryMs": 60
+      },
+      {
+        "keys": [],
+        "durationMs": 500,
+        "label": "second-left-load-settle",
+        "sampleEveryMs": 100
+      },
+      {
+        "keys": [
+          "d"
+        ],
+        "durationMs": 300,
+        "label": "water-second-board-right-load",
+        "sampleEveryMs": 60
+      },
+      {
+        "keys": [],
+        "durationMs": 500,
+        "label": "second-right-load-settle",
+        "sampleEveryMs": 100
+      },
+      {
+        "keys": [
+          "w"
+        ],
+        "durationMs": 100,
+        "label": "second-board-jump-off",
+        "sampleEveryMs": 50
+      },
+      {
+        "keys": [],
+        "durationMs": 900,
+        "label": "second-unload",
+        "sampleEveryMs": 100
+      },
+      {
+        "operation": "reset",
+        "method": "button",
+        "label": "button-after-second-board",
+        "durationMs": 700,
+        "sampleEveryMs": 175
+      }
+    ]
+  },
+  "sourceSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "startedAt": "2026-10-06T07:01:24.811Z",
+  "observations": [],
+  "actions": [
+    {
+      "type": "navigation",
+      "before": {
+        "hostEpochMs": 1791270084915,
+        "hostMonotonicMs": 86040120.188917,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1000,
+        "browserEpochMs": 1791288001000
+      },
+      "after": {
+        "hostEpochMs": 1791270084926,
+        "hostMonotonicMs": 86040131.146667,
+        "requestedMs": 0,
+        "browserPerformanceMs": 0,
+        "browserEpochMs": 1791288001000
+      }
+    }
+  ],
+  "candidateEvents": [],
+  "evaluatorErrors": [
+    {
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58359/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    }
+  ],
+  "clock": "controlled",
+  "privateStateReads": 0,
+  "candidateMutations": 0,
+  "reference": false,
+  "deadlineExceeded": false,
+  "browserVersion": "153.0.8010.12",
+  "finishedAt": "2026-10-06T07:01:24.962Z",
+  "durationMs": 151.0005410015583,
+  "sourceAfterSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "sourceUnchanged": true
+}

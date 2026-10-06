@@ -1,0 +1,26 @@
+{
+  "report": "report.html",
+  "preview": "report-preview.png",
+  "linkedEvidencePreview": "evidence-preview.png",
+  "links": {
+    "checked": 122,
+    "failures": []
+  },
+  "playback": {
+    "imageLoaded": true,
+    "imageWidth": 1280,
+    "imageHeight": 960,
+    "videoDuration": 6.88,
+    "videoTime": 1.186116,
+    "videoPlaying": true,
+    "videoError": null
+  },
+  "browserDiagnostics": {
+    "abortedMediaRequests": 4,
+    "message": "Four video requests logged net::ERR_ABORTED; the exercised real-controls video nevertheless loaded and played with no video.error. These are report-view observations, not candidate-score failures."
+  },
+  "typecheck": {
+    "command": "npm run check",
+    "result": "passed"
+  }
+}

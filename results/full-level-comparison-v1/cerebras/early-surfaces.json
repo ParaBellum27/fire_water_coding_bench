@@ -1,0 +1,33 @@
+{
+  "image": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/cerebras/early-surfaces.png",
+  "columns": 2,
+  "width": 640,
+  "height": 480,
+  "crop": null,
+  "sourceOrder": [
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/cerebras/assessment/real-controls/screenshots/0000-startup.png",
+      "label": "real-controls/startup"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/cerebras/assessment/real-controls/screenshots/0040-final.png",
+      "label": "real-controls/final"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/cerebras/assessment/real-jumps/screenshots/0000-startup.png",
+      "label": "real-jumps/startup"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/cerebras/assessment/real-jumps/screenshots/0066-final.png",
+      "label": "real-jumps/final"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/cerebras/assessment/real-reset-held/screenshots/0000-startup.png",
+      "label": "real-reset-held/startup"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/cerebras/assessment/real-reset-held/screenshots/0045-final.png",
+      "label": "real-reset-held/final"
+    }
+  ]
+}
