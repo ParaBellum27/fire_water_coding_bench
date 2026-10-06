@@ -64,7 +64,7 @@ Input consists of ordinary key-down/key-up events and visible Restart clicks. Ca
 
 Invalid JSON prevents a lawful runnable submission under the no-repair policy. Gemini's scheduled gameplay encounters therefore remain blocked, rather than being exercised on an extracted or completed replacement. The absence of that gameplay evidence is not 19 independently demonstrated gameplay defects.
 
-Behavioral scoring uses manual review of observable evidence. This is not a validated autonomous grader, and the pilot does not report an inter-rater reliability study or a formal review-blinding experiment.
+Behavioral scoring used assistant-led visual adjudication, including delegated reviewer agents and case-specific pixel corroboration. The records' term “manual review” denotes evidence-by-evidence adjudication, not independent human expert annotation. This paper was also drafted with AI assistance. Neither process is a validated autonomous grader, and the pilot does not report an inter-rater reliability study or a formal review-blinding experiment.
 
 ### 3.3 Calibration and its limits
 
@@ -191,7 +191,7 @@ These displays would support conclusions about functional fidelity, evaluator va
 
 **Execution validity.** Fixed route timing can disadvantage a correct game with different admissible motion. Native observations reduce some risks but do not prove equivalence of all controlled-clock interactions. A future benchmark must publish acceptable behavior envelopes and validate its controller against more than the original runtime.
 
-**Observer validity.** Manual visual judgments and case-specific pixel analyses may be wrong or style-sensitive. Rendered counters and success messages are corroborating UI, not independent proof of a state transition. Independent review and detector calibration are required before claiming autonomous grading accuracy.
+**Observer validity.** Assistant-led visual judgments and case-specific pixel analyses may be wrong or style-sensitive; shared model biases can affect both drafting and adjudication. Rendered counters and success messages are corroborating UI, not independent proof of a state transition. Independent human/expert review and detector calibration are required before claiming reliable grading accuracy.
 
 **Contract and legal validity.** The pool contradiction is a measured authoring failure. Upstream game source/assets have no established redistribution license in this project; local reference setup is distinct from permission to distribute the game. Publication excludes the upstream runtime/assets and credentials, preserves provenance, and does not claim new rights over the original game or blanket reuse rights for reference screenshots.
 
