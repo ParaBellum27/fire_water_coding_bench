@@ -1,0 +1,2441 @@
+{
+  "id": "cerebras",
+  "provider": "cerebras",
+  "model": "gpt-oss-120b",
+  "generation": {
+    "id": "cerebras",
+    "provider": "cerebras",
+    "modelRequested": "gpt-oss-120b",
+    "modelReturned": "gpt-oss-120b",
+    "servingProvider": "Cerebras",
+    "servingProviderAttribution": "direct_endpoint",
+    "endpoint": "https://api.cerebras.ai/v1/chat/completions",
+    "settings": {
+      "temperature": 1,
+      "maxOutputTokens": 16384,
+      "timeoutMs": 600000
+    },
+    "payloadSha256": "7cc8b61abf62c4d70bfa5ebd934e374d1b927b52ed76dfe8cac5783f93540a26",
+    "requestSha256": "d7491a1a45f09f733b932b41820a88d5b0f26efaf01643b4020932d47bb2b5dc",
+    "manifestSha256": "e2c6653954697f223e29a9c33926d936f27d2d24a9c94a7949f26123fe03a931",
+    "protocolSha256": "ca9a316e741cb20fa15349f0aa4d364160f30a631fb714a91e983071d65fe9ad",
+    "publicFiles": [
+      "prompt.txt",
+      "reference-evidence.json",
+      "walkthrough.json",
+      "walkthrough-program.mjs",
+      "rubric.json"
+    ],
+    "requestCount": 1,
+    "usage": {
+      "total_tokens": 18165,
+      "completion_tokens": 8025,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0,
+        "reasoning_tokens": 985
+      },
+      "prompt_tokens": 10140,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "reportedCost": null,
+    "httpStatus": 200,
+    "finishReason": "stop",
+    "durationMs": 4057.6566250000033,
+    "status": "submitted",
+    "outputContract": {
+      "status": "VALID",
+      "reasons": []
+    },
+    "startedAt": "2026-10-06T06:55:14.020Z",
+    "reportedProvider": null,
+    "htmlSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+    "finishedAt": "2026-10-06T06:55:18.083Z"
+  },
+  "verifiedScore": 1.2,
+  "weightedCoverage": 4.2,
+  "possibleScore": [
+    1.2,
+    97
+  ],
+  "fullSuccess": false,
+  "verdict": "FAIL",
+  "categories": [
+    {
+      "id": "BOOT",
+      "overallWeight": 6,
+      "verifiedScore": 20,
+      "coverage": 70,
+      "possibleScore": [
+        20,
+        50
+      ],
+      "criteria": [
+        {
+          "id": "standalone-output",
+          "weight": 20,
+          "rule": "Complete self-contained HTML in the JSON html field; no Markdown, imports or external dependencies.",
+          "group": "BOOT",
+          "status": "PASS",
+          "reason": "Valid exact JSON HTML envelope; unchanged complete inline submission loaded locally. Observed no blocked external requests in real-time startup/control trials.",
+          "evidence": [
+            "cerebras/generation.json",
+            "cerebras/assessment/real-controls/capture.json"
+          ],
+          "earnedPoints": 20
+        },
+        {
+          "id": "visible-playable-start",
+          "weight": 30,
+          "rule": "Level and both characters render and start through normal keyboard interaction.",
+          "group": "BOOT",
+          "status": "FAIL",
+          "reason": "Native real-time startup emits Cannot read properties of undefined (reading startsWith). Only a HUD renders over a blank black surface; characters and level remain absent through movement/jump/reset probes.",
+          "evidence": [
+            "cerebras/assessment/real-controls/capture.json",
+            "cerebras/assessment/real-controls/screenshots/0000-startup.png",
+            "cerebras/assessment/real-controls/screenshots/0040-final.png",
+            "cerebras/assessment/real-jumps/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "viewport",
+          "weight": 15,
+          "rule": "Fits1280x960 and resizing preserves logical geometry.",
+          "group": "BOOT",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "visible-ui",
+          "weight": 20,
+          "rule": "Visible gem progress, elapsed timer, controls and Restart.",
+          "group": "BOOT",
+          "status": "FAIL",
+          "reason": "Gem counters, Time0.0 and Restart render, but the required visible character control instructions are absent from the actual blank startup/interaction surface.",
+          "evidence": [
+            "cerebras/assessment/real-controls/screenshots/0000-startup.png",
+            "cerebras/assessment/real-controls/capture.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "loss-feedback",
+          "weight": 7,
+          "rule": "Visible loss feedback following observed lethal contact.",
+          "group": "BOOT",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "victory-feedback",
+          "weight": 8,
+          "rule": "Visible victory feedback following both living matching exit occupants.",
+          "group": "BOOT",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "LAYOUT",
+      "overallWeight": 12,
+      "verifiedScore": 0,
+      "coverage": 0,
+      "possibleScore": [
+        0,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "terrain-and-spawns",
+          "weight": 25,
+          "rule": "Multi-tier recognizable temple and bottom-left spawns.",
+          "group": "LAYOUT",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "pools",
+          "weight": 15,
+          "rule": "Required elemental pools in the demonstrated regions.",
+          "group": "LAYOUT",
+          "status": "EVALUATOR_ERROR",
+          "reason": "Common frozen-reference authoring ambiguity: grid row15 and duplicated green-pool metadata differ by160px. No candidate pool-placement verdict is possible; independent output/startup failures still block gameplay.",
+          "evidence": [
+            "cerebras/generation.json"
+          ],
+          "earnedPoints": 0
+        },
+        {
+          "id": "cooperative-objects",
+          "weight": 20,
+          "rule": "Central barrier, four plates and upper bridge/platform.",
+          "group": "LAYOUT",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "hanging-platforms",
+          "weight": 15,
+          "rule": "Both suspended platforms above green pools.",
+          "group": "LAYOUT",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "collectibles-and-exits",
+          "weight": 15,
+          "rule": "Eight red and eight blue diamonds and matching exits at upper left.",
+          "group": "LAYOUT",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "traversable-route",
+          "weight": 10,
+          "rule": "Normal input reaches bottom, middle and upper tiers without forbidden shortcuts or scripted progress.",
+          "group": "LAYOUT",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "CONTROLS",
+      "overallWeight": 10,
+      "verifiedScore": 0,
+      "coverage": 0,
+      "possibleScore": [
+        0,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "fireboy",
+          "weight": 20,
+          "rule": "ArrowLeft/Right/Up act only on Fireboy.",
+          "group": "CONTROLS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "watergirl",
+          "weight": 20,
+          "rule": "Physical A/D/W and lowercase/Shift/Caps Lock act only on Watergirl.",
+          "group": "CONTROLS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "simultaneous",
+          "weight": 20,
+          "rule": "Both characters move and jump simultaneously.",
+          "group": "CONTROLS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "independent-release",
+          "weight": 25,
+          "rule": "Both release directions stop only the released character.",
+          "group": "CONTROLS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "no-page-scroll",
+          "weight": 15,
+          "rule": "Control keys do not scroll or lose game interaction.",
+          "group": "CONTROLS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "PHYSICS",
+      "overallWeight": 12,
+      "verifiedScore": 0,
+      "coverage": 0,
+      "possibleScore": [
+        0,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "gravity-and-jump",
+          "weight": 25,
+          "rule": "Grounded jump shows ascent/apex/descent and no flight or double-jump.",
+          "group": "PHYSICS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "landing-and-support",
+          "weight": 25,
+          "rule": "Terrain landing and continued idle support.",
+          "group": "PHYSICS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "solid-boundaries",
+          "weight": 25,
+          "rule": "Floors/walls/ceiling actually block where reachable.",
+          "group": "PHYSICS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "moving-surface-contact",
+          "weight": 25,
+          "rule": "Moving and tilted collision geometry agrees with rendered supporting surface.",
+          "group": "PHYSICS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "HAZARDS",
+      "overallWeight": 12,
+      "verifiedScore": 0,
+      "coverage": 0,
+      "possibleScore": [
+        0,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "fireboy-red-safe",
+          "weight": 10,
+          "rule": "Fireboy traverses red pool alive.",
+          "group": "HAZARDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "watergirl-blue-safe",
+          "weight": 10,
+          "rule": "Watergirl traverses blue pool alive.",
+          "group": "HAZARDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "fireboy-blue-fatal",
+          "weight": 15,
+          "rule": "Blue contact kills Fireboy visibly.",
+          "group": "HAZARDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "watergirl-red-fatal",
+          "weight": 15,
+          "rule": "Red contact kills Watergirl visibly.",
+          "group": "HAZARDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "fireboy-green-fatal",
+          "weight": 15,
+          "rule": "Green contact kills Fireboy visibly.",
+          "group": "HAZARDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "watergirl-green-fatal",
+          "weight": 15,
+          "rule": "Green contact kills Watergirl visibly.",
+          "group": "HAZARDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "death-terminal",
+          "weight": 15,
+          "rule": "Either death stops onward play and cannot satisfy victory.",
+          "group": "HAZARDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "restart-after-death",
+          "weight": 5,
+          "rule": "Visible Restart remains usable after death.",
+          "group": "HAZARDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "DIAMONDS",
+      "overallWeight": 8,
+      "verifiedScore": 0,
+      "coverage": 0,
+      "possibleScore": [
+        0,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "inventory",
+          "weight": 20,
+          "rule": "Eight red and eight blue diamonds at specified map positions.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "red-matching-pickup",
+          "weight": 12,
+          "rule": "Fireboy collects an encountered red diamond.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "blue-matching-pickup",
+          "weight": 13,
+          "rule": "Watergirl collects an encountered blue diamond.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "red-wrong-retained",
+          "weight": 10,
+          "rule": "Watergirl contacts red diamond without collecting it.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "blue-wrong-retained",
+          "weight": 10,
+          "rule": "Fireboy contacts blue diamond without collecting it.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "red-disappears-counts-once",
+          "weight": 12,
+          "rule": "Red pickup disappears; progress increments once and does not increment on revisit.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "blue-disappears-counts-once",
+          "weight": 13,
+          "rule": "Blue pickup disappears; progress increments once and does not increment on revisit.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "optional-for-exits",
+          "weight": 10,
+          "rule": "Both matching exits complete with at least one diamond left.",
+          "group": "DIAMONDS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "PRESSURE PLATES",
+      "overallWeight": 12,
+      "verifiedScore": 0,
+      "coverage": 0,
+      "possibleScore": [
+        0,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "lower-left-fire",
+          "weight": 5,
+          "rule": "Fireboy contact with lower left plate opens barrier.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "lower-left-water",
+          "weight": 5,
+          "rule": "Watergirl contact with lower left plate opens barrier.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "lower-right-fire",
+          "weight": 5,
+          "rule": "Fireboy contact with lower right plate opens barrier.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "lower-right-water",
+          "weight": 5,
+          "rule": "Watergirl contact with lower right plate opens barrier.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "barrier-closed-blocking",
+          "weight": 8,
+          "rule": "Inactive lower barrier physically blocks normal crossing.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "barrier-open-crossing",
+          "weight": 9,
+          "rule": "Active lower barrier permits normal traversal.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "barrier-restored-blocking",
+          "weight": 8,
+          "rule": "After all lower contacts release, barrier returns and physically blocks crossing.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "upper-left-fire",
+          "weight": 5,
+          "rule": "Fireboy contact with upper left plate extends bridge.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "upper-left-water",
+          "weight": 5,
+          "rule": "Watergirl contact with upper left plate extends bridge.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "upper-right-fire",
+          "weight": 5,
+          "rule": "Fireboy contact with upper right plate extends bridge.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "upper-right-water",
+          "weight": 5,
+          "rule": "Watergirl contact with upper right plate extends bridge.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "bridge-support",
+          "weight": 12,
+          "rule": "Extended bridge actually supports a traversing actor across gap.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "bridge-return",
+          "weight": 13,
+          "rule": "Bridge returns toward rest after all upper plate contacts end.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "not-scripted",
+          "weight": 10,
+          "rule": "Matched contact/no-contact trials show held contact, not elapsed time or a latch, controls mechanisms.",
+          "group": "PRESSURE PLATES",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "HANGING PLATFORMS",
+      "overallWeight": 12,
+      "verifiedScore": 0,
+      "coverage": 0,
+      "possibleScore": [
+        0,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "first-load-position-response",
+          "weight": 20,
+          "rule": "First platform tilt depends on where a character stands.",
+          "group": "HANGING PLATFORMS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "second-load-position-response",
+          "weight": 20,
+          "rule": "Second platform tilt depends on where a character stands.",
+          "group": "HANGING PLATFORMS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "tilted-support",
+          "weight": 25,
+          "rule": "Character feet follow the tilted rendered surface; no invisible flat floor.",
+          "group": "HANGING PLATFORMS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "land-walk-jump",
+          "weight": 25,
+          "rule": "Both platforms accept landing, walking and jumping off through normal controls.",
+          "group": "HANGING PLATFORMS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "contact-versus-autonomous",
+          "weight": 10,
+          "rule": "Load/unload observations distinguish physical contact response from canned animation; no prescribed leveling time.",
+          "group": "HANGING PLATFORMS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "EXITS",
+      "overallWeight": 8,
+      "verifiedScore": 0,
+      "coverage": 0,
+      "possibleScore": [
+        0,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "single-insufficient",
+          "weight": 15,
+          "rule": "A single matching exit does not produce team victory.",
+          "group": "EXITS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "wrong-insufficient",
+          "weight": 15,
+          "rule": "Wrong-character exit contact does not count.",
+          "group": "EXITS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "both-matching-success",
+          "weight": 30,
+          "rule": "Both living characters in corresponding exits visibly win.",
+          "group": "EXITS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "dead-cannot-win",
+          "weight": 20,
+          "rule": "A dead actor or lost attempt cannot satisfy completion.",
+          "group": "EXITS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "gems-optional",
+          "weight": 20,
+          "rule": "Completion works with diamonds remaining.",
+          "group": "EXITS",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "RESET",
+      "overallWeight": 6,
+      "verifiedScore": 0,
+      "coverage": 0,
+      "possibleScore": [
+        0,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "R-spawns",
+          "weight": 5,
+          "rule": "R restores both spawns after actual displacement.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "button-spawns",
+          "weight": 5,
+          "rule": "Visible Restart restores both spawns.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "diamonds-counters",
+          "weight": 10,
+          "rule": "Collected diamonds and progress counters restore.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "timer",
+          "weight": 5,
+          "rule": "Elapsed timer restarts.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "plates-barrier-bridge",
+          "weight": 10,
+          "rule": "Occupied plates and displaced barrier/bridge restore resting state.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "hanging-state",
+          "weight": 10,
+          "rule": "Both loaded/tilted platforms restore initial arrangement and motion.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "motion-state",
+          "weight": 5,
+          "rule": "Actor velocity/grounding does not leak from previous attempt.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "after-death",
+          "weight": 10,
+          "rule": "Fresh playable attempt after loss.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "after-win",
+          "weight": 10,
+          "rule": "Fresh playable attempt after victory.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "held-input",
+          "weight": 10,
+          "rule": "Both reset methods clear stale physically held controls.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "callback-isolation",
+          "weight": 10,
+          "rule": "No previous-attempt callback mutates the reset attempt during the observed pending-callback window.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "repeated-reset",
+          "weight": 10,
+          "rule": "Rapid repeated resets leave a stable fresh level.",
+          "group": "RESET",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        }
+      ]
+    },
+    {
+      "id": "NO PLAYBACK",
+      "overallWeight": 2,
+      "verifiedScore": 0,
+      "coverage": 0,
+      "possibleScore": [
+        0,
+        100
+      ],
+      "criteria": [
+        {
+          "id": "no-auto-traversal",
+          "weight": 50,
+          "rule": "Fresh context with no input for at least60 actual seconds does not traverse route.",
+          "group": "NO PLAYBACK",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        },
+        {
+          "id": "no-auto-victory",
+          "weight": 50,
+          "rule": "Same neutral interval does not produce victory.",
+          "group": "NO PLAYBACK",
+          "status": "NOT_REACHED",
+          "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+          "evidence": [],
+          "earnedPoints": 0
+        }
+      ]
+    }
+  ],
+  "confirmedDefects": [
+    {
+      "category": "BOOT",
+      "id": "visible-playable-start",
+      "weight": 30,
+      "rule": "Level and both characters render and start through normal keyboard interaction.",
+      "group": "BOOT",
+      "status": "FAIL",
+      "reason": "Native real-time startup emits Cannot read properties of undefined (reading startsWith). Only a HUD renders over a blank black surface; characters and level remain absent through movement/jump/reset probes.",
+      "evidence": [
+        "cerebras/assessment/real-controls/capture.json",
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png",
+        "cerebras/assessment/real-controls/screenshots/0040-final.png",
+        "cerebras/assessment/real-jumps/capture.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "BOOT",
+      "id": "visible-ui",
+      "weight": 20,
+      "rule": "Visible gem progress, elapsed timer, controls and Restart.",
+      "group": "BOOT",
+      "status": "FAIL",
+      "reason": "Gem counters, Time0.0 and Restart render, but the required visible character control instructions are absent from the actual blank startup/interaction surface.",
+      "evidence": [
+        "cerebras/assessment/real-controls/screenshots/0000-startup.png",
+        "cerebras/assessment/real-controls/capture.json"
+      ],
+      "earnedPoints": 0
+    }
+  ],
+  "unknowns": [
+    {
+      "category": "BOOT",
+      "id": "viewport",
+      "weight": 15,
+      "rule": "Fits1280x960 and resizing preserves logical geometry.",
+      "group": "BOOT",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "BOOT",
+      "id": "loss-feedback",
+      "weight": 7,
+      "rule": "Visible loss feedback following observed lethal contact.",
+      "group": "BOOT",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "BOOT",
+      "id": "victory-feedback",
+      "weight": 8,
+      "rule": "Visible victory feedback following both living matching exit occupants.",
+      "group": "BOOT",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "LAYOUT",
+      "id": "terrain-and-spawns",
+      "weight": 25,
+      "rule": "Multi-tier recognizable temple and bottom-left spawns.",
+      "group": "LAYOUT",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "LAYOUT",
+      "id": "pools",
+      "weight": 15,
+      "rule": "Required elemental pools in the demonstrated regions.",
+      "group": "LAYOUT",
+      "status": "EVALUATOR_ERROR",
+      "reason": "Common frozen-reference authoring ambiguity: grid row15 and duplicated green-pool metadata differ by160px. No candidate pool-placement verdict is possible; independent output/startup failures still block gameplay.",
+      "evidence": [
+        "cerebras/generation.json"
+      ],
+      "earnedPoints": 0
+    },
+    {
+      "category": "LAYOUT",
+      "id": "cooperative-objects",
+      "weight": 20,
+      "rule": "Central barrier, four plates and upper bridge/platform.",
+      "group": "LAYOUT",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "LAYOUT",
+      "id": "hanging-platforms",
+      "weight": 15,
+      "rule": "Both suspended platforms above green pools.",
+      "group": "LAYOUT",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "LAYOUT",
+      "id": "collectibles-and-exits",
+      "weight": 15,
+      "rule": "Eight red and eight blue diamonds and matching exits at upper left.",
+      "group": "LAYOUT",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "LAYOUT",
+      "id": "traversable-route",
+      "weight": 10,
+      "rule": "Normal input reaches bottom, middle and upper tiers without forbidden shortcuts or scripted progress.",
+      "group": "LAYOUT",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "CONTROLS",
+      "id": "fireboy",
+      "weight": 20,
+      "rule": "ArrowLeft/Right/Up act only on Fireboy.",
+      "group": "CONTROLS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "CONTROLS",
+      "id": "watergirl",
+      "weight": 20,
+      "rule": "Physical A/D/W and lowercase/Shift/Caps Lock act only on Watergirl.",
+      "group": "CONTROLS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "CONTROLS",
+      "id": "simultaneous",
+      "weight": 20,
+      "rule": "Both characters move and jump simultaneously.",
+      "group": "CONTROLS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "CONTROLS",
+      "id": "independent-release",
+      "weight": 25,
+      "rule": "Both release directions stop only the released character.",
+      "group": "CONTROLS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "CONTROLS",
+      "id": "no-page-scroll",
+      "weight": 15,
+      "rule": "Control keys do not scroll or lose game interaction.",
+      "group": "CONTROLS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PHYSICS",
+      "id": "gravity-and-jump",
+      "weight": 25,
+      "rule": "Grounded jump shows ascent/apex/descent and no flight or double-jump.",
+      "group": "PHYSICS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PHYSICS",
+      "id": "landing-and-support",
+      "weight": 25,
+      "rule": "Terrain landing and continued idle support.",
+      "group": "PHYSICS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PHYSICS",
+      "id": "solid-boundaries",
+      "weight": 25,
+      "rule": "Floors/walls/ceiling actually block where reachable.",
+      "group": "PHYSICS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PHYSICS",
+      "id": "moving-surface-contact",
+      "weight": 25,
+      "rule": "Moving and tilted collision geometry agrees with rendered supporting surface.",
+      "group": "PHYSICS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "fireboy-red-safe",
+      "weight": 10,
+      "rule": "Fireboy traverses red pool alive.",
+      "group": "HAZARDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "watergirl-blue-safe",
+      "weight": 10,
+      "rule": "Watergirl traverses blue pool alive.",
+      "group": "HAZARDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "fireboy-blue-fatal",
+      "weight": 15,
+      "rule": "Blue contact kills Fireboy visibly.",
+      "group": "HAZARDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "watergirl-red-fatal",
+      "weight": 15,
+      "rule": "Red contact kills Watergirl visibly.",
+      "group": "HAZARDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "fireboy-green-fatal",
+      "weight": 15,
+      "rule": "Green contact kills Fireboy visibly.",
+      "group": "HAZARDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "watergirl-green-fatal",
+      "weight": 15,
+      "rule": "Green contact kills Watergirl visibly.",
+      "group": "HAZARDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "death-terminal",
+      "weight": 15,
+      "rule": "Either death stops onward play and cannot satisfy victory.",
+      "group": "HAZARDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HAZARDS",
+      "id": "restart-after-death",
+      "weight": 5,
+      "rule": "Visible Restart remains usable after death.",
+      "group": "HAZARDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "inventory",
+      "weight": 20,
+      "rule": "Eight red and eight blue diamonds at specified map positions.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "red-matching-pickup",
+      "weight": 12,
+      "rule": "Fireboy collects an encountered red diamond.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "blue-matching-pickup",
+      "weight": 13,
+      "rule": "Watergirl collects an encountered blue diamond.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "red-wrong-retained",
+      "weight": 10,
+      "rule": "Watergirl contacts red diamond without collecting it.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "blue-wrong-retained",
+      "weight": 10,
+      "rule": "Fireboy contacts blue diamond without collecting it.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "red-disappears-counts-once",
+      "weight": 12,
+      "rule": "Red pickup disappears; progress increments once and does not increment on revisit.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "blue-disappears-counts-once",
+      "weight": 13,
+      "rule": "Blue pickup disappears; progress increments once and does not increment on revisit.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "DIAMONDS",
+      "id": "optional-for-exits",
+      "weight": 10,
+      "rule": "Both matching exits complete with at least one diamond left.",
+      "group": "DIAMONDS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "lower-left-fire",
+      "weight": 5,
+      "rule": "Fireboy contact with lower left plate opens barrier.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "lower-left-water",
+      "weight": 5,
+      "rule": "Watergirl contact with lower left plate opens barrier.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "lower-right-fire",
+      "weight": 5,
+      "rule": "Fireboy contact with lower right plate opens barrier.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "lower-right-water",
+      "weight": 5,
+      "rule": "Watergirl contact with lower right plate opens barrier.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "barrier-closed-blocking",
+      "weight": 8,
+      "rule": "Inactive lower barrier physically blocks normal crossing.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "barrier-open-crossing",
+      "weight": 9,
+      "rule": "Active lower barrier permits normal traversal.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "barrier-restored-blocking",
+      "weight": 8,
+      "rule": "After all lower contacts release, barrier returns and physically blocks crossing.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "upper-left-fire",
+      "weight": 5,
+      "rule": "Fireboy contact with upper left plate extends bridge.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "upper-left-water",
+      "weight": 5,
+      "rule": "Watergirl contact with upper left plate extends bridge.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "upper-right-fire",
+      "weight": 5,
+      "rule": "Fireboy contact with upper right plate extends bridge.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "upper-right-water",
+      "weight": 5,
+      "rule": "Watergirl contact with upper right plate extends bridge.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "bridge-support",
+      "weight": 12,
+      "rule": "Extended bridge actually supports a traversing actor across gap.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "bridge-return",
+      "weight": 13,
+      "rule": "Bridge returns toward rest after all upper plate contacts end.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "PRESSURE PLATES",
+      "id": "not-scripted",
+      "weight": 10,
+      "rule": "Matched contact/no-contact trials show held contact, not elapsed time or a latch, controls mechanisms.",
+      "group": "PRESSURE PLATES",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HANGING PLATFORMS",
+      "id": "first-load-position-response",
+      "weight": 20,
+      "rule": "First platform tilt depends on where a character stands.",
+      "group": "HANGING PLATFORMS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HANGING PLATFORMS",
+      "id": "second-load-position-response",
+      "weight": 20,
+      "rule": "Second platform tilt depends on where a character stands.",
+      "group": "HANGING PLATFORMS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HANGING PLATFORMS",
+      "id": "tilted-support",
+      "weight": 25,
+      "rule": "Character feet follow the tilted rendered surface; no invisible flat floor.",
+      "group": "HANGING PLATFORMS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HANGING PLATFORMS",
+      "id": "land-walk-jump",
+      "weight": 25,
+      "rule": "Both platforms accept landing, walking and jumping off through normal controls.",
+      "group": "HANGING PLATFORMS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "HANGING PLATFORMS",
+      "id": "contact-versus-autonomous",
+      "weight": 10,
+      "rule": "Load/unload observations distinguish physical contact response from canned animation; no prescribed leveling time.",
+      "group": "HANGING PLATFORMS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "EXITS",
+      "id": "single-insufficient",
+      "weight": 15,
+      "rule": "A single matching exit does not produce team victory.",
+      "group": "EXITS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "EXITS",
+      "id": "wrong-insufficient",
+      "weight": 15,
+      "rule": "Wrong-character exit contact does not count.",
+      "group": "EXITS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "EXITS",
+      "id": "both-matching-success",
+      "weight": 30,
+      "rule": "Both living characters in corresponding exits visibly win.",
+      "group": "EXITS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "EXITS",
+      "id": "dead-cannot-win",
+      "weight": 20,
+      "rule": "A dead actor or lost attempt cannot satisfy completion.",
+      "group": "EXITS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "EXITS",
+      "id": "gems-optional",
+      "weight": 20,
+      "rule": "Completion works with diamonds remaining.",
+      "group": "EXITS",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "R-spawns",
+      "weight": 5,
+      "rule": "R restores both spawns after actual displacement.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "button-spawns",
+      "weight": 5,
+      "rule": "Visible Restart restores both spawns.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "diamonds-counters",
+      "weight": 10,
+      "rule": "Collected diamonds and progress counters restore.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "timer",
+      "weight": 5,
+      "rule": "Elapsed timer restarts.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "plates-barrier-bridge",
+      "weight": 10,
+      "rule": "Occupied plates and displaced barrier/bridge restore resting state.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "hanging-state",
+      "weight": 10,
+      "rule": "Both loaded/tilted platforms restore initial arrangement and motion.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "motion-state",
+      "weight": 5,
+      "rule": "Actor velocity/grounding does not leak from previous attempt.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "after-death",
+      "weight": 10,
+      "rule": "Fresh playable attempt after loss.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "after-win",
+      "weight": 10,
+      "rule": "Fresh playable attempt after victory.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "held-input",
+      "weight": 10,
+      "rule": "Both reset methods clear stale physically held controls.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "callback-isolation",
+      "weight": 10,
+      "rule": "No previous-attempt callback mutates the reset attempt during the observed pending-callback window.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "RESET",
+      "id": "repeated-reset",
+      "weight": 10,
+      "rule": "Rapid repeated resets leave a stable fresh level.",
+      "group": "RESET",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "NO PLAYBACK",
+      "id": "no-auto-traversal",
+      "weight": 50,
+      "rule": "Fresh context with no input for at least60 actual seconds does not traverse route.",
+      "group": "NO PLAYBACK",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    },
+    {
+      "category": "NO PLAYBACK",
+      "id": "no-auto-victory",
+      "weight": 50,
+      "rule": "Same neutral interval does not produce victory.",
+      "group": "NO PLAYBACK",
+      "status": "NOT_REACHED",
+      "reason": "Gameplay encounter unavailable: the native real-time app crashes on startup with an undefined.startsWith exception; characters and level never render. Missing behavior is not independently declared defective.",
+      "evidence": [],
+      "earnedPoints": 0
+    }
+  ],
+  "evaluatorErrors": [],
+  "evaluatorIssues": [
+    {
+      "id": "GREEN_POOL_METADATA_CONTRADICTION",
+      "origin": "evaluator-task-authoring",
+      "affectedCriterion": "LAYOUT/pools",
+      "appliesTo": [
+        "gemini",
+        "cerebras",
+        "openrouter"
+      ],
+      "frozenPackageUnchanged": true,
+      "canonicalGrid": [
+        {
+          "x": 256,
+          "y": 480,
+          "width": 288
+        },
+        {
+          "x": 736,
+          "y": 480,
+          "width": 224
+        }
+      ],
+      "duplicateMetadata": [
+        {
+          "x": 416,
+          "y": 480,
+          "width": 288
+        },
+        {
+          "x": 896,
+          "y": 480,
+          "width": 224
+        }
+      ],
+      "reason": "Identical frozen textual evidence supplied to every configuration contains inconsistent duplicate green-pool locations. No post-generation repair or candidate penalty for choosing either representation. Pool placement criterion left unassessed; independently observed bottom-pool and reset failures are unaffected."
+    }
+  ],
+  "candidateRuntimeFailures": [
+    {
+      "scenario": "public-walkthrough",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:55365/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "public-walkthrough",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/public-walkthrough/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58282/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "red-safe-pickup-revisit",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/red-safe-pickup-revisit/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "red-foreign-death",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58291/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "red-foreign-death",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/red-foreign-death/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "blue-foreign-death",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58302/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "blue-foreign-death",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/blue-foreign-death/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "blue-upper-wrong-pickup",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58310/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "blue-upper-wrong-pickup",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/blue-upper-wrong-pickup/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "blue-safe-pickup-revisit",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58314/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "blue-safe-pickup-revisit",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/blue-safe-pickup-revisit/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "lower-release-blocking",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58329/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "lower-release-blocking",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/lower-release-blocking/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "green-fire-contact",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58338/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "green-fire-contact",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/green-fire-contact/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "green-water-contact",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58341/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "green-water-contact",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/green-water-contact/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "first-hanging-contact",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58352/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "first-hanging-contact",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/first-hanging-contact/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "second-hanging-contact",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58359/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "second-hanging-contact",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/second-hanging-contact/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "upper-release-return",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58361/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "upper-release-return",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/upper-release-return/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "single-and-wrong-exits",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58368/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "single-and-wrong-exits",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/single-and-wrong-exits/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "reset-after-route-R",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58374/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "reset-after-route-R",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/reset-after-route-R/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    },
+    {
+      "scenario": "reset-after-route-button",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58382/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0,
+      "attribution": {
+        "scenario": "reset-after-route-button",
+        "index": 0,
+        "origin": "candidate",
+        "reason": "Candidate callback stack index.html:430:30 matches the identical exception captured natively without clock emulation; actual real-time viewport remains blank.",
+        "evidence": [
+          "cerebras/assessment/reset-after-route-button/capture.json",
+          "cerebras/assessment/real-controls/capture.json",
+          "cerebras/assessment/real-controls/screenshots/0000-startup.png"
+        ]
+      }
+    }
+  ],
+  "rawCaptureExceptions": [
+    {
+      "scenario": "public-walkthrough",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:55365/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "red-safe-pickup-revisit",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58282/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "red-foreign-death",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58291/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "blue-foreign-death",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58302/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "blue-upper-wrong-pickup",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58310/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "blue-safe-pickup-revisit",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58314/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "lower-release-blocking",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58329/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "green-fire-contact",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58338/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "green-water-contact",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58341/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "first-hanging-contact",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58352/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "second-hanging-contact",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58359/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "upper-release-return",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58361/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "single-and-wrong-exits",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58368/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "reset-after-route-R",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58374/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    },
+    {
+      "scenario": "reset-after-route-button",
+      "index": 0,
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58382/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    }
+  ],
+  "suite": {
+    "results": [
+      {
+        "id": "public-walkthrough",
+        "capture": "public-walkthrough/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:55365/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "real-controls",
+        "capture": "real-controls/capture.json",
+        "screenshots": 41,
+        "evaluatorErrors": [],
+        "candidateEvents": [
+          {
+            "type": "pageerror",
+            "message": "Cannot read properties of undefined (reading 'startsWith')",
+            "requestedMs": 0
+          }
+        ],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "real-jumps",
+        "capture": "real-jumps/capture.json",
+        "screenshots": 67,
+        "evaluatorErrors": [],
+        "candidateEvents": [
+          {
+            "type": "pageerror",
+            "message": "Cannot read properties of undefined (reading 'startsWith')",
+            "requestedMs": 0
+          }
+        ],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "real-reset-held",
+        "capture": "real-reset-held/capture.json",
+        "screenshots": 46,
+        "evaluatorErrors": [],
+        "candidateEvents": [
+          {
+            "type": "pageerror",
+            "message": "Cannot read properties of undefined (reading 'startsWith')",
+            "requestedMs": 0
+          }
+        ],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "neutral-real-60s",
+        "capture": "neutral-real-60s/capture.json",
+        "screenshots": 14,
+        "evaluatorErrors": [],
+        "candidateEvents": [
+          {
+            "type": "pageerror",
+            "message": "Cannot read properties of undefined (reading 'startsWith')",
+            "requestedMs": 0
+          }
+        ],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "red-safe-pickup-revisit",
+        "capture": "red-safe-pickup-revisit/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58282/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "red-foreign-death",
+        "capture": "red-foreign-death/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58291/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "blue-foreign-death",
+        "capture": "blue-foreign-death/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58302/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "blue-upper-wrong-pickup",
+        "capture": "blue-upper-wrong-pickup/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58310/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "blue-safe-pickup-revisit",
+        "capture": "blue-safe-pickup-revisit/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58314/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "lower-release-blocking",
+        "capture": "lower-release-blocking/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58329/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "green-fire-contact",
+        "capture": "green-fire-contact/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58338/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "green-water-contact",
+        "capture": "green-water-contact/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58341/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "first-hanging-contact",
+        "capture": "first-hanging-contact/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58352/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "second-hanging-contact",
+        "capture": "second-hanging-contact/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58359/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "upper-release-return",
+        "capture": "upper-release-return/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58361/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "single-and-wrong-exits",
+        "capture": "single-and-wrong-exits/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58368/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "reset-after-route-R",
+        "capture": "reset-after-route-R/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58374/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      },
+      {
+        "id": "reset-after-route-button",
+        "capture": "reset-after-route-button/capture.json",
+        "screenshots": 0,
+        "evaluatorErrors": [
+          {
+            "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58382/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+            "requestedMs": 0
+          }
+        ],
+        "candidateEvents": [],
+        "sourceUnchanged": true
+      }
+    ]
+  },
+  "evidence": {
+    "generation": "cerebras/generation.json",
+    "response": "cerebras/response.json",
+    "request": "cerebras/request.json",
+    "review": "cerebras/review.json",
+    "suite": "cerebras/assessment/suite.json",
+    "galleries": "cerebras/review-gallery.html"
+  }
+}

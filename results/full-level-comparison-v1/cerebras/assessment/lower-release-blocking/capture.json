@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "scenario": {
+    "id": "lower-release-blocking",
+    "clock": "controlled",
+    "hostDeadlineMs": 240000,
+    "sampleEveryMs": 500,
+    "segments": [
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 800
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d",
+          "w"
+        ],
+        "durationMs": 800
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d"
+        ],
+        "durationMs": 950
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d"
+        ],
+        "durationMs": 650,
+        "label": "Jump Fireboy from the center floor onto the red shelf"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d"
+        ],
+        "durationMs": 800,
+        "label": "Cross the second pair of pools"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 1300,
+        "label": "Climb the right-hand stairs"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 800,
+        "label": "Reach the first pressure plate"
+      },
+      {
+        "keys": [],
+        "durationMs": 120,
+        "label": "Release both jump keys"
+      },
+      {
+        "keys": [
+          "ArrowLeft",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 650,
+        "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+      },
+      {
+        "keys": [
+          "ArrowLeft"
+        ],
+        "durationMs": 120,
+        "label": "Fireboy approaches right pressure plate"
+      },
+      {
+        "keys": [
+          "ArrowLeft",
+          "a",
+          "w"
+        ],
+        "durationMs": 650,
+        "label": "Watergirl joins upper floor"
+      },
+      {
+        "keys": [],
+        "durationMs": 300,
+        "label": "Settle on the pressure plate floor"
+      },
+      {
+        "keys": [
+          "ArrowLeft",
+          "a"
+        ],
+        "durationMs": 180,
+        "label": "Watergirl steps onto the right plate"
+      },
+      {
+        "keys": [
+          "ArrowLeft"
+        ],
+        "durationMs": 1500,
+        "label": "Watergirl holds the gate open while Fireboy crosses"
+      },
+      {
+        "keys": [
+          "a"
+        ],
+        "durationMs": 350,
+        "label": "Watergirl centers on the pressure plate"
+      },
+      {
+        "keys": [],
+        "durationMs": 450,
+        "label": "Observe gate opening"
+      },
+      {
+        "keys": [
+          "a"
+        ],
+        "durationMs": 800,
+        "label": "water-leave-right-plate"
+      },
+      {
+        "keys": [],
+        "durationMs": 1800,
+        "label": "barrier-return-no-contact"
+      },
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 1600,
+        "label": "fire-return-blocking-probe"
+      },
+      {
+        "keys": [],
+        "durationMs": 300,
+        "label": "blocked-or-crossed"
+      }
+    ]
+  },
+  "sourceSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "startedAt": "2026-10-06T07:01:24.213Z",
+  "observations": [],
+  "actions": [
+    {
+      "type": "navigation",
+      "before": {
+        "hostEpochMs": 1791270084317,
+        "hostMonotonicMs": 86039522.938458,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1000,
+        "browserEpochMs": 1791288001000
+      },
+      "after": {
+        "hostEpochMs": 1791270084327,
+        "hostMonotonicMs": 86039532.773875,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1,
+        "browserEpochMs": 1791288001000
+      }
+    }
+  ],
+  "candidateEvents": [],
+  "evaluatorErrors": [
+    {
+      "message": "Error: runFor: TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at update (http://127.0.0.1:58329/index.html:430:30)\n    at ClockController._callFirstTimer (<anonymous>:285:20)\n    at ClockController._runTo (<anonymous>:120:33)\n    at <anonymous>:111:18\n    at ClockController._runWithDisabledRealTimeSync (<anonymous>:184:13)\n    at ClockController.runFor (<anonymous>:110:16)\n    at eval (eval at evaluate (:311:30), <anonymous>:1:33)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:311:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+      "requestedMs": 0
+    }
+  ],
+  "clock": "controlled",
+  "privateStateReads": 0,
+  "candidateMutations": 0,
+  "reference": false,
+  "deadlineExceeded": false,
+  "browserVersion": "153.0.8010.12",
+  "finishedAt": "2026-10-06T07:01:24.361Z",
+  "durationMs": 147.91862501204014,
+  "sourceAfterSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "sourceUnchanged": true
+}

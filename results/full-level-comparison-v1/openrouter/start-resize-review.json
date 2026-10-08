@@ -1,0 +1,21 @@
+{
+  "image": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/start-resize-review.png",
+  "columns": 3,
+  "width": 640,
+  "height": 480,
+  "crop": null,
+  "sourceOrder": [
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0000-startup.png",
+      "label": "startup"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/real-controls/screenshots/0038-resize-800-600.png",
+      "label": "resize-800-600"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/real-controls/screenshots/0039-restore-viewport.png",
+      "label": "restore-viewport"
+    }
+  ]
+}

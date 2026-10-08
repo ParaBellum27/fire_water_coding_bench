@@ -1,0 +1,18 @@
+{
+  "typecheck": "npm run check passed",
+  "dryRun": "all three request schemas exercised without API calls",
+  "payloadSha256": "7cc8b61abf62c4d70bfa5ebd934e374d1b927b52ed76dfe8cac5783f93540a26",
+  "identicalPayload": true,
+  "publicProgramSteps": 61,
+  "referenceRoute": "PASS with actual reward presentation",
+  "hiddenScenarios": 19,
+  "settings": {
+    "temperature": 1,
+    "maxOutputTokens": 16384,
+    "timeoutMs": 600000,
+    "requestsPerConfiguration": 1,
+    "repairs": 0,
+    "retries": 0,
+    "stream": false
+  }
+}

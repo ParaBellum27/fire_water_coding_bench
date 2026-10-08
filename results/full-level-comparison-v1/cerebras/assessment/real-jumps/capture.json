@@ -1,0 +1,5216 @@
+{
+  "version": 1,
+  "scenario": {
+    "id": "real-jumps",
+    "clock": "real",
+    "hostDeadlineMs": 60000,
+    "sampleEveryMs": 100,
+    "segments": [
+      {
+        "keys": [
+          "ArrowUp"
+        ],
+        "durationMs": 80,
+        "label": "fire-grounded-jump",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 150,
+        "label": "fire-release-rise",
+        "sampleEveryMs": 50
+      },
+      {
+        "keys": [
+          "ArrowUp"
+        ],
+        "durationMs": 80,
+        "label": "fire-airborne-repress",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 1800,
+        "label": "fire-descend-land",
+        "sampleEveryMs": 100
+      },
+      {
+        "keys": [
+          "w"
+        ],
+        "durationMs": 80,
+        "label": "water-grounded-jump",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 150,
+        "label": "water-release-rise",
+        "sampleEveryMs": 50
+      },
+      {
+        "keys": [
+          "w"
+        ],
+        "durationMs": 80,
+        "label": "water-airborne-repress",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 1800,
+        "label": "water-descend-land",
+        "sampleEveryMs": 100
+      },
+      {
+        "keys": [
+          "ArrowUp",
+          "w"
+        ],
+        "durationMs": 80,
+        "label": "both-grounded-jump",
+        "sampleEveryMs": 80
+      },
+      {
+        "keys": [],
+        "durationMs": 1800,
+        "label": "both-land",
+        "sampleEveryMs": 100
+      }
+    ]
+  },
+  "sourceSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "startedAt": "2026-10-06T07:00:04.175Z",
+  "observations": [
+    {
+      "label": "startup",
+      "file": "screenshots/0000-startup.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270005308,
+        "hostMonotonicMs": 85960514.370958,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1014.5,
+        "browserEpochMs": 1791270005310
+      },
+      "after": {
+        "hostEpochMs": 1791270005341,
+        "hostMonotonicMs": 85960547.15075,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1046.3999999761581,
+        "browserEpochMs": 1791270005341
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-grounded-jump-0",
+      "file": "screenshots/0001-fire-grounded-jump-0.png",
+      "held": [
+        "ArrowUp"
+      ],
+      "before": {
+        "hostEpochMs": 1791270005426,
+        "hostMonotonicMs": 85960632.452625,
+        "requestedMs": 80,
+        "browserPerformanceMs": 1131.5,
+        "browserEpochMs": 1791270005426
+      },
+      "after": {
+        "hostEpochMs": 1791270005440,
+        "hostMonotonicMs": 85960646.516417,
+        "requestedMs": 80,
+        "browserPerformanceMs": 1145.5999999940395,
+        "browserEpochMs": 1791270005441
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-release-rise-0",
+      "file": "screenshots/0002-fire-release-rise-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270005494,
+        "hostMonotonicMs": 85960700.53325,
+        "requestedMs": 130,
+        "browserPerformanceMs": 1199.5999999940395,
+        "browserEpochMs": 1791270005495
+      },
+      "after": {
+        "hostEpochMs": 1791270005512,
+        "hostMonotonicMs": 85960718.224958,
+        "requestedMs": 130,
+        "browserPerformanceMs": 1217.2999999821186,
+        "browserEpochMs": 1791270005512
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-release-rise-1",
+      "file": "screenshots/0003-fire-release-rise-1.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270005565,
+        "hostMonotonicMs": 85960771.409792,
+        "requestedMs": 180,
+        "browserPerformanceMs": 1270.5,
+        "browserEpochMs": 1791270005565
+      },
+      "after": {
+        "hostEpochMs": 1791270005596,
+        "hostMonotonicMs": 85960802.318917,
+        "requestedMs": 180,
+        "browserPerformanceMs": 1301.3999999761581,
+        "browserEpochMs": 1791270005596
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-release-rise-2",
+      "file": "screenshots/0004-fire-release-rise-2.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270005651,
+        "hostMonotonicMs": 85960857.549958,
+        "requestedMs": 230,
+        "browserPerformanceMs": 1356.5999999940395,
+        "browserEpochMs": 1791270005652
+      },
+      "after": {
+        "hostEpochMs": 1791270005667,
+        "hostMonotonicMs": 85960872.699292,
+        "requestedMs": 230,
+        "browserPerformanceMs": 1371.7999999821186,
+        "browserEpochMs": 1791270005667
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-airborne-repress-0",
+      "file": "screenshots/0005-fire-airborne-repress-0.png",
+      "held": [
+        "ArrowUp"
+      ],
+      "before": {
+        "hostEpochMs": 1791270005750,
+        "hostMonotonicMs": 85960956.477958,
+        "requestedMs": 310,
+        "browserPerformanceMs": 1455.5,
+        "browserEpochMs": 1791270005751
+      },
+      "after": {
+        "hostEpochMs": 1791270005767,
+        "hostMonotonicMs": 85960973.166958,
+        "requestedMs": 310,
+        "browserPerformanceMs": 1472.199999988079,
+        "browserEpochMs": 1791270005767
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-0",
+      "file": "screenshots/0006-fire-descend-land-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270005871,
+        "hostMonotonicMs": 85961077.287792,
+        "requestedMs": 410,
+        "browserPerformanceMs": 1576.3999999761581,
+        "browserEpochMs": 1791270005871
+      },
+      "after": {
+        "hostEpochMs": 1791270005890,
+        "hostMonotonicMs": 85961096.240542,
+        "requestedMs": 410,
+        "browserPerformanceMs": 1595.3999999761581,
+        "browserEpochMs": 1791270005890
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-1",
+      "file": "screenshots/0007-fire-descend-land-1.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270005994,
+        "hostMonotonicMs": 85961199.684333,
+        "requestedMs": 510,
+        "browserPerformanceMs": 1698.7999999821186,
+        "browserEpochMs": 1791270005994
+      },
+      "after": {
+        "hostEpochMs": 1791270006019,
+        "hostMonotonicMs": 85961224.926583,
+        "requestedMs": 510,
+        "browserPerformanceMs": 1724,
+        "browserEpochMs": 1791270006019
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-2",
+      "file": "screenshots/0008-fire-descend-land-2.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270006121,
+        "hostMonotonicMs": 85961327.256708,
+        "requestedMs": 610,
+        "browserPerformanceMs": 1826.2999999821186,
+        "browserEpochMs": 1791270006121
+      },
+      "after": {
+        "hostEpochMs": 1791270006138,
+        "hostMonotonicMs": 85961343.773083,
+        "requestedMs": 610,
+        "browserPerformanceMs": 1842.8999999761581,
+        "browserEpochMs": 1791270006138
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-3",
+      "file": "screenshots/0009-fire-descend-land-3.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270006241,
+        "hostMonotonicMs": 85961447.183167,
+        "requestedMs": 710,
+        "browserPerformanceMs": 1946.2999999821186,
+        "browserEpochMs": 1791270006241
+      },
+      "after": {
+        "hostEpochMs": 1791270006260,
+        "hostMonotonicMs": 85961466.316792,
+        "requestedMs": 710,
+        "browserPerformanceMs": 1965.5,
+        "browserEpochMs": 1791270006260
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-4",
+      "file": "screenshots/0010-fire-descend-land-4.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270006364,
+        "hostMonotonicMs": 85961569.763125,
+        "requestedMs": 810,
+        "browserPerformanceMs": 2068.7999999821186,
+        "browserEpochMs": 1791270006364
+      },
+      "after": {
+        "hostEpochMs": 1791270006384,
+        "hostMonotonicMs": 85961590.555625,
+        "requestedMs": 810,
+        "browserPerformanceMs": 2089.699999988079,
+        "browserEpochMs": 1791270006385
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-5",
+      "file": "screenshots/0011-fire-descend-land-5.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270006487,
+        "hostMonotonicMs": 85961692.677875,
+        "requestedMs": 910,
+        "browserPerformanceMs": 2191.7999999821186,
+        "browserEpochMs": 1791270006487
+      },
+      "after": {
+        "hostEpochMs": 1791270006506,
+        "hostMonotonicMs": 85961711.793208,
+        "requestedMs": 910,
+        "browserPerformanceMs": 2210.899999976158,
+        "browserEpochMs": 1791270006506
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-6",
+      "file": "screenshots/0012-fire-descend-land-6.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270006609,
+        "hostMonotonicMs": 85961815.100833,
+        "requestedMs": 1010,
+        "browserPerformanceMs": 2314.0999999940395,
+        "browserEpochMs": 1791270006609
+      },
+      "after": {
+        "hostEpochMs": 1791270006625,
+        "hostMonotonicMs": 85961831.167417,
+        "requestedMs": 1010,
+        "browserPerformanceMs": 2330.2999999821186,
+        "browserEpochMs": 1791270006625
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-7",
+      "file": "screenshots/0013-fire-descend-land-7.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270006728,
+        "hostMonotonicMs": 85961934.501083,
+        "requestedMs": 1110,
+        "browserPerformanceMs": 2433.5999999940395,
+        "browserEpochMs": 1791270006729
+      },
+      "after": {
+        "hostEpochMs": 1791270006751,
+        "hostMonotonicMs": 85961957.357708,
+        "requestedMs": 1110,
+        "browserPerformanceMs": 2456.5,
+        "browserEpochMs": 1791270006752
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-8",
+      "file": "screenshots/0014-fire-descend-land-8.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270006855,
+        "hostMonotonicMs": 85962060.888125,
+        "requestedMs": 1210,
+        "browserPerformanceMs": 2560,
+        "browserEpochMs": 1791270006855
+      },
+      "after": {
+        "hostEpochMs": 1791270006874,
+        "hostMonotonicMs": 85962079.698083,
+        "requestedMs": 1210,
+        "browserPerformanceMs": 2578.7999999821186,
+        "browserEpochMs": 1791270006874
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-9",
+      "file": "screenshots/0015-fire-descend-land-9.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270006976,
+        "hostMonotonicMs": 85962182.031542,
+        "requestedMs": 1310,
+        "browserPerformanceMs": 2681.0999999940395,
+        "browserEpochMs": 1791270006976
+      },
+      "after": {
+        "hostEpochMs": 1791270007001,
+        "hostMonotonicMs": 85962207.28375,
+        "requestedMs": 1310,
+        "browserPerformanceMs": 2706.399999976158,
+        "browserEpochMs": 1791270007001
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-10",
+      "file": "screenshots/0016-fire-descend-land-10.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270007103,
+        "hostMonotonicMs": 85962309.575292,
+        "requestedMs": 1410,
+        "browserPerformanceMs": 2808.699999988079,
+        "browserEpochMs": 1791270007104
+      },
+      "after": {
+        "hostEpochMs": 1791270007123,
+        "hostMonotonicMs": 85962328.620875,
+        "requestedMs": 1410,
+        "browserPerformanceMs": 2827.699999988079,
+        "browserEpochMs": 1791270007123
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-11",
+      "file": "screenshots/0017-fire-descend-land-11.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270007225,
+        "hostMonotonicMs": 85962430.923958,
+        "requestedMs": 1510,
+        "browserPerformanceMs": 2930,
+        "browserEpochMs": 1791270007225
+      },
+      "after": {
+        "hostEpochMs": 1791270007239,
+        "hostMonotonicMs": 85962445.600833,
+        "requestedMs": 1510,
+        "browserPerformanceMs": 2944.699999988079,
+        "browserEpochMs": 1791270007240
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-12",
+      "file": "screenshots/0018-fire-descend-land-12.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270007343,
+        "hostMonotonicMs": 85962548.939458,
+        "requestedMs": 1610,
+        "browserPerformanceMs": 3048,
+        "browserEpochMs": 1791270007343
+      },
+      "after": {
+        "hostEpochMs": 1791270007367,
+        "hostMonotonicMs": 85962573.399542,
+        "requestedMs": 1610,
+        "browserPerformanceMs": 3072.5999999940395,
+        "browserEpochMs": 1791270007368
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-13",
+      "file": "screenshots/0019-fire-descend-land-13.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270007471,
+        "hostMonotonicMs": 85962676.968583,
+        "requestedMs": 1710,
+        "browserPerformanceMs": 3176.0999999940395,
+        "browserEpochMs": 1791270007471
+      },
+      "after": {
+        "hostEpochMs": 1791270007490,
+        "hostMonotonicMs": 85962696.504125,
+        "requestedMs": 1710,
+        "browserPerformanceMs": 3195.5,
+        "browserEpochMs": 1791270007491
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-14",
+      "file": "screenshots/0020-fire-descend-land-14.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270007593,
+        "hostMonotonicMs": 85962798.725458,
+        "requestedMs": 1810,
+        "browserPerformanceMs": 3297.7999999821186,
+        "browserEpochMs": 1791270007593
+      },
+      "after": {
+        "hostEpochMs": 1791270007620,
+        "hostMonotonicMs": 85962825.684542,
+        "requestedMs": 1810,
+        "browserPerformanceMs": 3324.899999976158,
+        "browserEpochMs": 1791270007620
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-15",
+      "file": "screenshots/0021-fire-descend-land-15.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270007721,
+        "hostMonotonicMs": 85962927.447125,
+        "requestedMs": 1910,
+        "browserPerformanceMs": 3426.5,
+        "browserEpochMs": 1791270007722
+      },
+      "after": {
+        "hostEpochMs": 1791270007740,
+        "hostMonotonicMs": 85962945.621208,
+        "requestedMs": 1910,
+        "browserPerformanceMs": 3444.699999988079,
+        "browserEpochMs": 1791270007740
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-16",
+      "file": "screenshots/0022-fire-descend-land-16.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270007842,
+        "hostMonotonicMs": 85963048.083,
+        "requestedMs": 2010,
+        "browserPerformanceMs": 3547.199999988079,
+        "browserEpochMs": 1791270007842
+      },
+      "after": {
+        "hostEpochMs": 1791270007860,
+        "hostMonotonicMs": 85963065.727875,
+        "requestedMs": 2010,
+        "browserPerformanceMs": 3564.7999999821186,
+        "browserEpochMs": 1791270007860
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-descend-land-17",
+      "file": "screenshots/0023-fire-descend-land-17.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270007962,
+        "hostMonotonicMs": 85963168.105083,
+        "requestedMs": 2110,
+        "browserPerformanceMs": 3667.199999988079,
+        "browserEpochMs": 1791270007962
+      },
+      "after": {
+        "hostEpochMs": 1791270007984,
+        "hostMonotonicMs": 85963190.107667,
+        "requestedMs": 2110,
+        "browserPerformanceMs": 3689.2999999821186,
+        "browserEpochMs": 1791270007984
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-grounded-jump-0",
+      "file": "screenshots/0024-water-grounded-jump-0.png",
+      "held": [
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270008068,
+        "hostMonotonicMs": 85963274.403792,
+        "requestedMs": 2190,
+        "browserPerformanceMs": 3773.399999976158,
+        "browserEpochMs": 1791270008069
+      },
+      "after": {
+        "hostEpochMs": 1791270008086,
+        "hostMonotonicMs": 85963291.8545,
+        "requestedMs": 2190,
+        "browserPerformanceMs": 3790.899999976158,
+        "browserEpochMs": 1791270008086
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-release-rise-0",
+      "file": "screenshots/0025-water-release-rise-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270008140,
+        "hostMonotonicMs": 85963345.864167,
+        "requestedMs": 2240,
+        "browserPerformanceMs": 3844.899999976158,
+        "browserEpochMs": 1791270008140
+      },
+      "after": {
+        "hostEpochMs": 1791270008156,
+        "hostMonotonicMs": 85963361.732292,
+        "requestedMs": 2240,
+        "browserPerformanceMs": 3860.7999999821186,
+        "browserEpochMs": 1791270008156
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-release-rise-1",
+      "file": "screenshots/0026-water-release-rise-1.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270008209,
+        "hostMonotonicMs": 85963414.931958,
+        "requestedMs": 2290,
+        "browserPerformanceMs": 3914,
+        "browserEpochMs": 1791270008209
+      },
+      "after": {
+        "hostEpochMs": 1791270008224,
+        "hostMonotonicMs": 85963430.50375,
+        "requestedMs": 2290,
+        "browserPerformanceMs": 3929.699999988079,
+        "browserEpochMs": 1791270008225
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-release-rise-2",
+      "file": "screenshots/0027-water-release-rise-2.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270008278,
+        "hostMonotonicMs": 85963483.648792,
+        "requestedMs": 2340,
+        "browserPerformanceMs": 3982.5999999940395,
+        "browserEpochMs": 1791270008278
+      },
+      "after": {
+        "hostEpochMs": 1791270008297,
+        "hostMonotonicMs": 85963503.045625,
+        "requestedMs": 2340,
+        "browserPerformanceMs": 4002.199999988079,
+        "browserEpochMs": 1791270008297
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-airborne-repress-0",
+      "file": "screenshots/0028-water-airborne-repress-0.png",
+      "held": [
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270008381,
+        "hostMonotonicMs": 85963587.059,
+        "requestedMs": 2420,
+        "browserPerformanceMs": 4086,
+        "browserEpochMs": 1791270008381
+      },
+      "after": {
+        "hostEpochMs": 1791270008396,
+        "hostMonotonicMs": 85963602.256458,
+        "requestedMs": 2420,
+        "browserPerformanceMs": 4101.399999976158,
+        "browserEpochMs": 1791270008396
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-0",
+      "file": "screenshots/0029-water-descend-land-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270008499,
+        "hostMonotonicMs": 85963704.681167,
+        "requestedMs": 2520,
+        "browserPerformanceMs": 4203.899999976158,
+        "browserEpochMs": 1791270008499
+      },
+      "after": {
+        "hostEpochMs": 1791270008517,
+        "hostMonotonicMs": 85963723.209333,
+        "requestedMs": 2520,
+        "browserPerformanceMs": 4222.299999982119,
+        "browserEpochMs": 1791270008517
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-1",
+      "file": "screenshots/0030-water-descend-land-1.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270008621,
+        "hostMonotonicMs": 85963827.600125,
+        "requestedMs": 2620,
+        "browserPerformanceMs": 4326.5999999940395,
+        "browserEpochMs": 1791270008622
+      },
+      "after": {
+        "hostEpochMs": 1791270008640,
+        "hostMonotonicMs": 85963846.18575,
+        "requestedMs": 2620,
+        "browserPerformanceMs": 4345.299999982119,
+        "browserEpochMs": 1791270008640
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-2",
+      "file": "screenshots/0031-water-descend-land-2.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270008743,
+        "hostMonotonicMs": 85963948.652875,
+        "requestedMs": 2720,
+        "browserPerformanceMs": 4447.799999982119,
+        "browserEpochMs": 1791270008743
+      },
+      "after": {
+        "hostEpochMs": 1791270008768,
+        "hostMonotonicMs": 85963974.131833,
+        "requestedMs": 2720,
+        "browserPerformanceMs": 4473.299999982119,
+        "browserEpochMs": 1791270008768
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-3",
+      "file": "screenshots/0032-water-descend-land-3.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270008872,
+        "hostMonotonicMs": 85964077.735958,
+        "requestedMs": 2820,
+        "browserPerformanceMs": 4576.799999982119,
+        "browserEpochMs": 1791270008872
+      },
+      "after": {
+        "hostEpochMs": 1791270008891,
+        "hostMonotonicMs": 85964096.683167,
+        "requestedMs": 2820,
+        "browserPerformanceMs": 4595.699999988079,
+        "browserEpochMs": 1791270008891
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-4",
+      "file": "screenshots/0033-water-descend-land-4.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270008994,
+        "hostMonotonicMs": 85964200.166708,
+        "requestedMs": 2920,
+        "browserPerformanceMs": 4699.299999982119,
+        "browserEpochMs": 1791270008994
+      },
+      "after": {
+        "hostEpochMs": 1791270009018,
+        "hostMonotonicMs": 85964224.397458,
+        "requestedMs": 2920,
+        "browserPerformanceMs": 4723.5,
+        "browserEpochMs": 1791270009019
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-5",
+      "file": "screenshots/0034-water-descend-land-5.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270009122,
+        "hostMonotonicMs": 85964327.86075,
+        "requestedMs": 3020,
+        "browserPerformanceMs": 4826.899999976158,
+        "browserEpochMs": 1791270009122
+      },
+      "after": {
+        "hostEpochMs": 1791270009140,
+        "hostMonotonicMs": 85964345.983208,
+        "requestedMs": 3020,
+        "browserPerformanceMs": 4845.199999988079,
+        "browserEpochMs": 1791270009140
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-6",
+      "file": "screenshots/0035-water-descend-land-6.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270009242,
+        "hostMonotonicMs": 85964448.285042,
+        "requestedMs": 3120,
+        "browserPerformanceMs": 4947.299999982119,
+        "browserEpochMs": 1791270009242
+      },
+      "after": {
+        "hostEpochMs": 1791270009261,
+        "hostMonotonicMs": 85964467.180917,
+        "requestedMs": 3120,
+        "browserPerformanceMs": 4966.299999982119,
+        "browserEpochMs": 1791270009261
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-7",
+      "file": "screenshots/0036-water-descend-land-7.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270009364,
+        "hostMonotonicMs": 85964570.450167,
+        "requestedMs": 3220,
+        "browserPerformanceMs": 5069.5,
+        "browserEpochMs": 1791270009365
+      },
+      "after": {
+        "hostEpochMs": 1791270009402,
+        "hostMonotonicMs": 85964608.263625,
+        "requestedMs": 3220,
+        "browserPerformanceMs": 5107.399999976158,
+        "browserEpochMs": 1791270009402
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-8",
+      "file": "screenshots/0037-water-descend-land-8.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270009504,
+        "hostMonotonicMs": 85964710.519958,
+        "requestedMs": 3320,
+        "browserPerformanceMs": 5209.5999999940395,
+        "browserEpochMs": 1791270009505
+      },
+      "after": {
+        "hostEpochMs": 1791270009523,
+        "hostMonotonicMs": 85964729.226708,
+        "requestedMs": 3320,
+        "browserPerformanceMs": 5228.299999982119,
+        "browserEpochMs": 1791270009523
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-9",
+      "file": "screenshots/0038-water-descend-land-9.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270009628,
+        "hostMonotonicMs": 85964834.123583,
+        "requestedMs": 3420,
+        "browserPerformanceMs": 5333.199999988079,
+        "browserEpochMs": 1791270009628
+      },
+      "after": {
+        "hostEpochMs": 1791270009649,
+        "hostMonotonicMs": 85964855.327917,
+        "requestedMs": 3420,
+        "browserPerformanceMs": 5354.699999988079,
+        "browserEpochMs": 1791270009650
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-10",
+      "file": "screenshots/0039-water-descend-land-10.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270009752,
+        "hostMonotonicMs": 85964957.998333,
+        "requestedMs": 3520,
+        "browserPerformanceMs": 5457.0999999940395,
+        "browserEpochMs": 1791270009752
+      },
+      "after": {
+        "hostEpochMs": 1791270009770,
+        "hostMonotonicMs": 85964975.980333,
+        "requestedMs": 3520,
+        "browserPerformanceMs": 5475.0999999940395,
+        "browserEpochMs": 1791270009770
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-11",
+      "file": "screenshots/0040-water-descend-land-11.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270009872,
+        "hostMonotonicMs": 85965078.548958,
+        "requestedMs": 3620,
+        "browserPerformanceMs": 5577.5999999940395,
+        "browserEpochMs": 1791270009873
+      },
+      "after": {
+        "hostEpochMs": 1791270009885,
+        "hostMonotonicMs": 85965091.509292,
+        "requestedMs": 3620,
+        "browserPerformanceMs": 5590.5999999940395,
+        "browserEpochMs": 1791270009886
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-12",
+      "file": "screenshots/0041-water-descend-land-12.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270009989,
+        "hostMonotonicMs": 85965194.95475,
+        "requestedMs": 3720,
+        "browserPerformanceMs": 5694.0999999940395,
+        "browserEpochMs": 1791270009989
+      },
+      "after": {
+        "hostEpochMs": 1791270010005,
+        "hostMonotonicMs": 85965211.216083,
+        "requestedMs": 3720,
+        "browserPerformanceMs": 5710.299999982119,
+        "browserEpochMs": 1791270010005
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-13",
+      "file": "screenshots/0042-water-descend-land-13.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270010107,
+        "hostMonotonicMs": 85965312.819833,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5812,
+        "browserEpochMs": 1791270010107
+      },
+      "after": {
+        "hostEpochMs": 1791270010124,
+        "hostMonotonicMs": 85965330.103167,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5829.199999988079,
+        "browserEpochMs": 1791270010124
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-14",
+      "file": "screenshots/0043-water-descend-land-14.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270010226,
+        "hostMonotonicMs": 85965432.508875,
+        "requestedMs": 3920,
+        "browserPerformanceMs": 5931.5999999940395,
+        "browserEpochMs": 1791270010227
+      },
+      "after": {
+        "hostEpochMs": 1791270010252,
+        "hostMonotonicMs": 85965457.903458,
+        "requestedMs": 3920,
+        "browserPerformanceMs": 5957,
+        "browserEpochMs": 1791270010252
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-15",
+      "file": "screenshots/0044-water-descend-land-15.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270010355,
+        "hostMonotonicMs": 85965561.184333,
+        "requestedMs": 4020,
+        "browserPerformanceMs": 6060.299999982119,
+        "browserEpochMs": 1791270010355
+      },
+      "after": {
+        "hostEpochMs": 1791270010373,
+        "hostMonotonicMs": 85965578.779167,
+        "requestedMs": 4020,
+        "browserPerformanceMs": 6077.799999982119,
+        "browserEpochMs": 1791270010373
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-16",
+      "file": "screenshots/0045-water-descend-land-16.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270010475,
+        "hostMonotonicMs": 85965681.076,
+        "requestedMs": 4120,
+        "browserPerformanceMs": 6180.0999999940395,
+        "browserEpochMs": 1791270010475
+      },
+      "after": {
+        "hostEpochMs": 1791270010489,
+        "hostMonotonicMs": 85965695.382708,
+        "requestedMs": 4120,
+        "browserPerformanceMs": 6194.399999976158,
+        "browserEpochMs": 1791270010490
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-descend-land-17",
+      "file": "screenshots/0046-water-descend-land-17.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270010592,
+        "hostMonotonicMs": 85965798.137292,
+        "requestedMs": 4220,
+        "browserPerformanceMs": 6297.199999988079,
+        "browserEpochMs": 1791270010592
+      },
+      "after": {
+        "hostEpochMs": 1791270010610,
+        "hostMonotonicMs": 85965816.09775,
+        "requestedMs": 4220,
+        "browserPerformanceMs": 6315.199999988079,
+        "browserEpochMs": 1791270010610
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-grounded-jump-0",
+      "file": "screenshots/0047-both-grounded-jump-0.png",
+      "held": [
+        "ArrowUp",
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270010697,
+        "hostMonotonicMs": 85965903.416583,
+        "requestedMs": 4300,
+        "browserPerformanceMs": 6402.5,
+        "browserEpochMs": 1791270010698
+      },
+      "after": {
+        "hostEpochMs": 1791270010735,
+        "hostMonotonicMs": 85965940.908917,
+        "requestedMs": 4300,
+        "browserPerformanceMs": 6440.0999999940395,
+        "browserEpochMs": 1791270010735
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-0",
+      "file": "screenshots/0048-both-land-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270010840,
+        "hostMonotonicMs": 85966045.888542,
+        "requestedMs": 4400,
+        "browserPerformanceMs": 6544.899999976158,
+        "browserEpochMs": 1791270010840
+      },
+      "after": {
+        "hostEpochMs": 1791270010854,
+        "hostMonotonicMs": 85966060.034333,
+        "requestedMs": 4400,
+        "browserPerformanceMs": 6559.0999999940395,
+        "browserEpochMs": 1791270010854
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-1",
+      "file": "screenshots/0049-both-land-1.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270010956,
+        "hostMonotonicMs": 85966162.445792,
+        "requestedMs": 4500,
+        "browserPerformanceMs": 6661.5,
+        "browserEpochMs": 1791270010957
+      },
+      "after": {
+        "hostEpochMs": 1791270010975,
+        "hostMonotonicMs": 85966181.218042,
+        "requestedMs": 4500,
+        "browserPerformanceMs": 6680.299999982119,
+        "browserEpochMs": 1791270010975
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-2",
+      "file": "screenshots/0050-both-land-2.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270011078,
+        "hostMonotonicMs": 85966283.89125,
+        "requestedMs": 4600,
+        "browserPerformanceMs": 6783,
+        "browserEpochMs": 1791270011078
+      },
+      "after": {
+        "hostEpochMs": 1791270011099,
+        "hostMonotonicMs": 85966304.967917,
+        "requestedMs": 4600,
+        "browserPerformanceMs": 6804.299999982119,
+        "browserEpochMs": 1791270011099
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-3",
+      "file": "screenshots/0051-both-land-3.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270011203,
+        "hostMonotonicMs": 85966409.041917,
+        "requestedMs": 4700,
+        "browserPerformanceMs": 6908.199999988079,
+        "browserEpochMs": 1791270011203
+      },
+      "after": {
+        "hostEpochMs": 1791270011222,
+        "hostMonotonicMs": 85966427.653708,
+        "requestedMs": 4700,
+        "browserPerformanceMs": 6926.799999982119,
+        "browserEpochMs": 1791270011222
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-4",
+      "file": "screenshots/0052-both-land-4.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270011325,
+        "hostMonotonicMs": 85966531.048417,
+        "requestedMs": 4800,
+        "browserPerformanceMs": 7030.0999999940395,
+        "browserEpochMs": 1791270011325
+      },
+      "after": {
+        "hostEpochMs": 1791270011341,
+        "hostMonotonicMs": 85966547.073083,
+        "requestedMs": 4800,
+        "browserPerformanceMs": 7046.199999988079,
+        "browserEpochMs": 1791270011341
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-5",
+      "file": "screenshots/0053-both-land-5.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270011443,
+        "hostMonotonicMs": 85966648.663917,
+        "requestedMs": 4900,
+        "browserPerformanceMs": 7147.699999988079,
+        "browserEpochMs": 1791270011443
+      },
+      "after": {
+        "hostEpochMs": 1791270011467,
+        "hostMonotonicMs": 85966673.125167,
+        "requestedMs": 4900,
+        "browserPerformanceMs": 7172.299999982119,
+        "browserEpochMs": 1791270011467
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-6",
+      "file": "screenshots/0054-both-land-6.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270011571,
+        "hostMonotonicMs": 85966776.679792,
+        "requestedMs": 5000,
+        "browserPerformanceMs": 7275.799999982119,
+        "browserEpochMs": 1791270011571
+      },
+      "after": {
+        "hostEpochMs": 1791270011591,
+        "hostMonotonicMs": 85966796.960583,
+        "requestedMs": 5000,
+        "browserPerformanceMs": 7296,
+        "browserEpochMs": 1791270011591
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-7",
+      "file": "screenshots/0055-both-land-7.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270011697,
+        "hostMonotonicMs": 85966902.654167,
+        "requestedMs": 5100,
+        "browserPerformanceMs": 7401.899999976158,
+        "browserEpochMs": 1791270011697
+      },
+      "after": {
+        "hostEpochMs": 1791270011718,
+        "hostMonotonicMs": 85966924.048125,
+        "requestedMs": 5100,
+        "browserPerformanceMs": 7423.199999988079,
+        "browserEpochMs": 1791270011718
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-8",
+      "file": "screenshots/0056-both-land-8.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270011822,
+        "hostMonotonicMs": 85967027.662333,
+        "requestedMs": 5200,
+        "browserPerformanceMs": 7526.899999976158,
+        "browserEpochMs": 1791270011822
+      },
+      "after": {
+        "hostEpochMs": 1791270011842,
+        "hostMonotonicMs": 85967047.813167,
+        "requestedMs": 5200,
+        "browserPerformanceMs": 7547,
+        "browserEpochMs": 1791270011842
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-9",
+      "file": "screenshots/0057-both-land-9.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270011944,
+        "hostMonotonicMs": 85967150.082083,
+        "requestedMs": 5300,
+        "browserPerformanceMs": 7649.0999999940395,
+        "browserEpochMs": 1791270011944
+      },
+      "after": {
+        "hostEpochMs": 1791270011965,
+        "hostMonotonicMs": 85967170.922125,
+        "requestedMs": 5300,
+        "browserPerformanceMs": 7670,
+        "browserEpochMs": 1791270011965
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-10",
+      "file": "screenshots/0058-both-land-10.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270012067,
+        "hostMonotonicMs": 85967273.370833,
+        "requestedMs": 5400,
+        "browserPerformanceMs": 7772.399999976158,
+        "browserEpochMs": 1791270012068
+      },
+      "after": {
+        "hostEpochMs": 1791270012086,
+        "hostMonotonicMs": 85967292.461583,
+        "requestedMs": 5400,
+        "browserPerformanceMs": 7791.5999999940395,
+        "browserEpochMs": 1791270012087
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-11",
+      "file": "screenshots/0059-both-land-11.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270012189,
+        "hostMonotonicMs": 85967394.660708,
+        "requestedMs": 5500,
+        "browserPerformanceMs": 7893.699999988079,
+        "browserEpochMs": 1791270012189
+      },
+      "after": {
+        "hostEpochMs": 1791270012204,
+        "hostMonotonicMs": 85967409.789917,
+        "requestedMs": 5500,
+        "browserPerformanceMs": 7908.799999982119,
+        "browserEpochMs": 1791270012204
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-12",
+      "file": "screenshots/0060-both-land-12.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270012306,
+        "hostMonotonicMs": 85967512.070375,
+        "requestedMs": 5600,
+        "browserPerformanceMs": 8011.199999988079,
+        "browserEpochMs": 1791270012306
+      },
+      "after": {
+        "hostEpochMs": 1791270012324,
+        "hostMonotonicMs": 85967529.73275,
+        "requestedMs": 5600,
+        "browserPerformanceMs": 8028.899999976158,
+        "browserEpochMs": 1791270012324
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-13",
+      "file": "screenshots/0061-both-land-13.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270012426,
+        "hostMonotonicMs": 85967632.042875,
+        "requestedMs": 5700,
+        "browserPerformanceMs": 8131.0999999940395,
+        "browserEpochMs": 1791270012426
+      },
+      "after": {
+        "hostEpochMs": 1791270012452,
+        "hostMonotonicMs": 85967658.226917,
+        "requestedMs": 5700,
+        "browserPerformanceMs": 8157.399999976158,
+        "browserEpochMs": 1791270012452
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-14",
+      "file": "screenshots/0062-both-land-14.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270012556,
+        "hostMonotonicMs": 85967761.634375,
+        "requestedMs": 5800,
+        "browserPerformanceMs": 8260.699999988079,
+        "browserEpochMs": 1791270012556
+      },
+      "after": {
+        "hostEpochMs": 1791270012572,
+        "hostMonotonicMs": 85967777.902375,
+        "requestedMs": 5800,
+        "browserPerformanceMs": 8277,
+        "browserEpochMs": 1791270012572
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-15",
+      "file": "screenshots/0063-both-land-15.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270012677,
+        "hostMonotonicMs": 85967883.508417,
+        "requestedMs": 5900,
+        "browserPerformanceMs": 8382.59999999404,
+        "browserEpochMs": 1791270012678
+      },
+      "after": {
+        "hostEpochMs": 1791270012701,
+        "hostMonotonicMs": 85967907.279042,
+        "requestedMs": 5900,
+        "browserPerformanceMs": 8406.399999976158,
+        "browserEpochMs": 1791270012701
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-16",
+      "file": "screenshots/0064-both-land-16.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270012804,
+        "hostMonotonicMs": 85968009.983708,
+        "requestedMs": 6000,
+        "browserPerformanceMs": 8509.09999999404,
+        "browserEpochMs": 1791270012804
+      },
+      "after": {
+        "hostEpochMs": 1791270012824,
+        "hostMonotonicMs": 85968029.641792,
+        "requestedMs": 6000,
+        "browserPerformanceMs": 8528.699999988079,
+        "browserEpochMs": 1791270012824
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "both-land-17",
+      "file": "screenshots/0065-both-land-17.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270012927,
+        "hostMonotonicMs": 85968133.072042,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 8632.199999988079,
+        "browserEpochMs": 1791270012927
+      },
+      "after": {
+        "hostEpochMs": 1791270012950,
+        "hostMonotonicMs": 85968156.349625,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 8655.399999976158,
+        "browserEpochMs": 1791270012951
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "final",
+      "file": "screenshots/0066-final.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270012951,
+        "hostMonotonicMs": 85968156.772875,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 8655.799999982119,
+        "browserEpochMs": 1791270012951
+      },
+      "after": {
+        "hostEpochMs": 1791270012980,
+        "hostMonotonicMs": 85968185.822292,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 8684.899999976158,
+        "browserEpochMs": 1791270012980
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "navigation",
+      "before": {
+        "hostEpochMs": 1791270004292,
+        "hostMonotonicMs": 85959498.501708,
+        "requestedMs": 0,
+        "browserPerformanceMs": 43.69999998807907,
+        "browserEpochMs": 1791270004294
+      },
+      "after": {
+        "hostEpochMs": 1791270004303,
+        "hostMonotonicMs": 85959508.748333,
+        "requestedMs": 0,
+        "browserPerformanceMs": 11.899999976158142,
+        "browserEpochMs": 1791270004307
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowUp",
+      "label": "fire-grounded-jump",
+      "before": {
+        "hostEpochMs": 1791270005342,
+        "hostMonotonicMs": 85960547.824917,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1046.8999999761581,
+        "browserEpochMs": 1791270005342
+      },
+      "after": {
+        "hostEpochMs": 1791270005343,
+        "hostMonotonicMs": 85960549.18325,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1048.199999988079,
+        "browserEpochMs": 1791270005343
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-grounded-jump",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270005343,
+        "hostMonotonicMs": 85960549.544125,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1048.5,
+        "browserEpochMs": 1791270005344
+      },
+      "after": {
+        "hostEpochMs": 1791270005426,
+        "hostMonotonicMs": 85960631.837292,
+        "requestedMs": 80,
+        "browserPerformanceMs": 1131.0999999940395,
+        "browserEpochMs": 1791270005426
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowUp",
+      "label": "fire-release-rise",
+      "before": {
+        "hostEpochMs": 1791270005441,
+        "hostMonotonicMs": 85960646.947667,
+        "requestedMs": 80,
+        "browserPerformanceMs": 1146,
+        "browserEpochMs": 1791270005441
+      },
+      "after": {
+        "hostEpochMs": 1791270005441,
+        "hostMonotonicMs": 85960647.5535,
+        "requestedMs": 80,
+        "browserPerformanceMs": 1146.5,
+        "browserEpochMs": 1791270005442
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-release-rise",
+      "durationMs": 50,
+      "before": {
+        "hostEpochMs": 1791270005442,
+        "hostMonotonicMs": 85960647.766625,
+        "requestedMs": 80,
+        "browserPerformanceMs": 1146.699999988079,
+        "browserEpochMs": 1791270005442
+      },
+      "after": {
+        "hostEpochMs": 1791270005494,
+        "hostMonotonicMs": 85960700.008292,
+        "requestedMs": 130,
+        "browserPerformanceMs": 1199.199999988079,
+        "browserEpochMs": 1791270005494
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-release-rise",
+      "durationMs": 50,
+      "before": {
+        "hostEpochMs": 1791270005512,
+        "hostMonotonicMs": 85960718.594417,
+        "requestedMs": 130,
+        "browserPerformanceMs": 1217.5,
+        "browserEpochMs": 1791270005513
+      },
+      "after": {
+        "hostEpochMs": 1791270005565,
+        "hostMonotonicMs": 85960770.851417,
+        "requestedMs": 180,
+        "browserPerformanceMs": 1270,
+        "browserEpochMs": 1791270005565
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-release-rise",
+      "durationMs": 50,
+      "before": {
+        "hostEpochMs": 1791270005597,
+        "hostMonotonicMs": 85960802.680167,
+        "requestedMs": 180,
+        "browserPerformanceMs": 1301.699999988079,
+        "browserEpochMs": 1791270005597
+      },
+      "after": {
+        "hostEpochMs": 1791270005651,
+        "hostMonotonicMs": 85960856.685875,
+        "requestedMs": 230,
+        "browserPerformanceMs": 1356.0999999940395,
+        "browserEpochMs": 1791270005651
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowUp",
+      "label": "fire-airborne-repress",
+      "before": {
+        "hostEpochMs": 1791270005667,
+        "hostMonotonicMs": 85960873.142917,
+        "requestedMs": 230,
+        "browserPerformanceMs": 1372.199999988079,
+        "browserEpochMs": 1791270005667
+      },
+      "after": {
+        "hostEpochMs": 1791270005668,
+        "hostMonotonicMs": 85960873.725667,
+        "requestedMs": 230,
+        "browserPerformanceMs": 1372.699999988079,
+        "browserEpochMs": 1791270005668
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-airborne-repress",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270005668,
+        "hostMonotonicMs": 85960873.974458,
+        "requestedMs": 230,
+        "browserPerformanceMs": 1372.8999999761581,
+        "browserEpochMs": 1791270005668
+      },
+      "after": {
+        "hostEpochMs": 1791270005750,
+        "hostMonotonicMs": 85960955.820875,
+        "requestedMs": 310,
+        "browserPerformanceMs": 1455.0999999940395,
+        "browserEpochMs": 1791270005750
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowUp",
+      "label": "fire-descend-land",
+      "before": {
+        "hostEpochMs": 1791270005767,
+        "hostMonotonicMs": 85960973.529417,
+        "requestedMs": 310,
+        "browserPerformanceMs": 1472.5,
+        "browserEpochMs": 1791270005768
+      },
+      "after": {
+        "hostEpochMs": 1791270005768,
+        "hostMonotonicMs": 85960974.0445,
+        "requestedMs": 310,
+        "browserPerformanceMs": 1473,
+        "browserEpochMs": 1791270005768
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270005768,
+        "hostMonotonicMs": 85960974.329458,
+        "requestedMs": 310,
+        "browserPerformanceMs": 1473.2999999821186,
+        "browserEpochMs": 1791270005768
+      },
+      "after": {
+        "hostEpochMs": 1791270005871,
+        "hostMonotonicMs": 85961076.644333,
+        "requestedMs": 410,
+        "browserPerformanceMs": 1575.8999999761581,
+        "browserEpochMs": 1791270005871
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270005891,
+        "hostMonotonicMs": 85961096.637208,
+        "requestedMs": 410,
+        "browserPerformanceMs": 1595.699999988079,
+        "browserEpochMs": 1791270005891
+      },
+      "after": {
+        "hostEpochMs": 1791270005993,
+        "hostMonotonicMs": 85961199.007958,
+        "requestedMs": 510,
+        "browserPerformanceMs": 1698.2999999821186,
+        "browserEpochMs": 1791270005993
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270006019,
+        "hostMonotonicMs": 85961225.313,
+        "requestedMs": 510,
+        "browserPerformanceMs": 1724.3999999761581,
+        "browserEpochMs": 1791270006019
+      },
+      "after": {
+        "hostEpochMs": 1791270006120,
+        "hostMonotonicMs": 85961326.541833,
+        "requestedMs": 610,
+        "browserPerformanceMs": 1825.7999999821186,
+        "browserEpochMs": 1791270006121
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270006138,
+        "hostMonotonicMs": 85961344.126708,
+        "requestedMs": 610,
+        "browserPerformanceMs": 1843.0999999940395,
+        "browserEpochMs": 1791270006138
+      },
+      "after": {
+        "hostEpochMs": 1791270006240,
+        "hostMonotonicMs": 85961446.43925,
+        "requestedMs": 710,
+        "browserPerformanceMs": 1945.699999988079,
+        "browserEpochMs": 1791270006241
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270006261,
+        "hostMonotonicMs": 85961466.759417,
+        "requestedMs": 710,
+        "browserPerformanceMs": 1965.7999999821186,
+        "browserEpochMs": 1791270006261
+      },
+      "after": {
+        "hostEpochMs": 1791270006363,
+        "hostMonotonicMs": 85961569.103708,
+        "requestedMs": 810,
+        "browserPerformanceMs": 2068.399999976158,
+        "browserEpochMs": 1791270006363
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270006385,
+        "hostMonotonicMs": 85961591.012583,
+        "requestedMs": 810,
+        "browserPerformanceMs": 2090,
+        "browserEpochMs": 1791270006385
+      },
+      "after": {
+        "hostEpochMs": 1791270006486,
+        "hostMonotonicMs": 85961691.993375,
+        "requestedMs": 910,
+        "browserPerformanceMs": 2191.199999988079,
+        "browserEpochMs": 1791270006486
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270006506,
+        "hostMonotonicMs": 85961712.197292,
+        "requestedMs": 910,
+        "browserPerformanceMs": 2211.199999988079,
+        "browserEpochMs": 1791270006506
+      },
+      "after": {
+        "hostEpochMs": 1791270006608,
+        "hostMonotonicMs": 85961814.519125,
+        "requestedMs": 1010,
+        "browserPerformanceMs": 2313.699999988079,
+        "browserEpochMs": 1791270006609
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270006626,
+        "hostMonotonicMs": 85961831.668042,
+        "requestedMs": 1010,
+        "browserPerformanceMs": 2330.699999988079,
+        "browserEpochMs": 1791270006626
+      },
+      "after": {
+        "hostEpochMs": 1791270006728,
+        "hostMonotonicMs": 85961933.754542,
+        "requestedMs": 1110,
+        "browserPerformanceMs": 2433.0999999940395,
+        "browserEpochMs": 1791270006728
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270006752,
+        "hostMonotonicMs": 85961957.833542,
+        "requestedMs": 1110,
+        "browserPerformanceMs": 2456.899999976158,
+        "browserEpochMs": 1791270006752
+      },
+      "after": {
+        "hostEpochMs": 1791270006854,
+        "hostMonotonicMs": 85962060.185708,
+        "requestedMs": 1210,
+        "browserPerformanceMs": 2559.5,
+        "browserEpochMs": 1791270006855
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270006874,
+        "hostMonotonicMs": 85962080.099917,
+        "requestedMs": 1210,
+        "browserPerformanceMs": 2579.0999999940395,
+        "browserEpochMs": 1791270006874
+      },
+      "after": {
+        "hostEpochMs": 1791270006975,
+        "hostMonotonicMs": 85962181.332625,
+        "requestedMs": 1310,
+        "browserPerformanceMs": 2680.699999988079,
+        "browserEpochMs": 1791270006976
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270007002,
+        "hostMonotonicMs": 85962207.748375,
+        "requestedMs": 1310,
+        "browserPerformanceMs": 2706.7999999821186,
+        "browserEpochMs": 1791270007002
+      },
+      "after": {
+        "hostEpochMs": 1791270007103,
+        "hostMonotonicMs": 85962308.857917,
+        "requestedMs": 1410,
+        "browserPerformanceMs": 2808.199999988079,
+        "browserEpochMs": 1791270007103
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270007123,
+        "hostMonotonicMs": 85962329.016292,
+        "requestedMs": 1410,
+        "browserPerformanceMs": 2828.0999999940395,
+        "browserEpochMs": 1791270007123
+      },
+      "after": {
+        "hostEpochMs": 1791270007224,
+        "hostMonotonicMs": 85962430.251833,
+        "requestedMs": 1510,
+        "browserPerformanceMs": 2929.5999999940395,
+        "browserEpochMs": 1791270007225
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270007240,
+        "hostMonotonicMs": 85962445.932042,
+        "requestedMs": 1510,
+        "browserPerformanceMs": 2944.899999976158,
+        "browserEpochMs": 1791270007240
+      },
+      "after": {
+        "hostEpochMs": 1791270007342,
+        "hostMonotonicMs": 85962548.236333,
+        "requestedMs": 1610,
+        "browserPerformanceMs": 3047.5,
+        "browserEpochMs": 1791270007343
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270007368,
+        "hostMonotonicMs": 85962573.911542,
+        "requestedMs": 1610,
+        "browserPerformanceMs": 3072.899999976158,
+        "browserEpochMs": 1791270007368
+      },
+      "after": {
+        "hostEpochMs": 1791270007470,
+        "hostMonotonicMs": 85962676.268125,
+        "requestedMs": 1710,
+        "browserPerformanceMs": 3175.5999999940395,
+        "browserEpochMs": 1791270007471
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270007491,
+        "hostMonotonicMs": 85962696.874875,
+        "requestedMs": 1710,
+        "browserPerformanceMs": 3195.899999976158,
+        "browserEpochMs": 1791270007491
+      },
+      "after": {
+        "hostEpochMs": 1791270007592,
+        "hostMonotonicMs": 85962797.976875,
+        "requestedMs": 1810,
+        "browserPerformanceMs": 3297.2999999821186,
+        "browserEpochMs": 1791270007592
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270007620,
+        "hostMonotonicMs": 85962826.245833,
+        "requestedMs": 1810,
+        "browserPerformanceMs": 3325.399999976158,
+        "browserEpochMs": 1791270007620
+      },
+      "after": {
+        "hostEpochMs": 1791270007721,
+        "hostMonotonicMs": 85962926.716083,
+        "requestedMs": 1910,
+        "browserPerformanceMs": 3426,
+        "browserEpochMs": 1791270007721
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270007740,
+        "hostMonotonicMs": 85962946.066583,
+        "requestedMs": 1910,
+        "browserPerformanceMs": 3445.0999999940395,
+        "browserEpochMs": 1791270007740
+      },
+      "after": {
+        "hostEpochMs": 1791270007841,
+        "hostMonotonicMs": 85963047.307917,
+        "requestedMs": 2010,
+        "browserPerformanceMs": 3546.699999988079,
+        "browserEpochMs": 1791270007842
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270007860,
+        "hostMonotonicMs": 85963066.110125,
+        "requestedMs": 2010,
+        "browserPerformanceMs": 3565.199999988079,
+        "browserEpochMs": 1791270007860
+      },
+      "after": {
+        "hostEpochMs": 1791270007961,
+        "hostMonotonicMs": 85963167.40775,
+        "requestedMs": 2110,
+        "browserPerformanceMs": 3666.699999988079,
+        "browserEpochMs": 1791270007962
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "w",
+      "label": "water-grounded-jump",
+      "before": {
+        "hostEpochMs": 1791270007984,
+        "hostMonotonicMs": 85963190.571542,
+        "requestedMs": 2110,
+        "browserPerformanceMs": 3689.5999999940395,
+        "browserEpochMs": 1791270007985
+      },
+      "after": {
+        "hostEpochMs": 1791270007985,
+        "hostMonotonicMs": 85963191.276667,
+        "requestedMs": 2110,
+        "browserPerformanceMs": 3690.2999999821186,
+        "browserEpochMs": 1791270007985
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-grounded-jump",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270007985,
+        "hostMonotonicMs": 85963191.562083,
+        "requestedMs": 2110,
+        "browserPerformanceMs": 3690.5,
+        "browserEpochMs": 1791270007986
+      },
+      "after": {
+        "hostEpochMs": 1791270008068,
+        "hostMonotonicMs": 85963273.84925,
+        "requestedMs": 2190,
+        "browserPerformanceMs": 3773,
+        "browserEpochMs": 1791270008068
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "w",
+      "label": "water-release-rise",
+      "before": {
+        "hostEpochMs": 1791270008086,
+        "hostMonotonicMs": 85963292.254417,
+        "requestedMs": 2190,
+        "browserPerformanceMs": 3791.2999999821186,
+        "browserEpochMs": 1791270008086
+      },
+      "after": {
+        "hostEpochMs": 1791270008087,
+        "hostMonotonicMs": 85963292.768708,
+        "requestedMs": 2190,
+        "browserPerformanceMs": 3791.7999999821186,
+        "browserEpochMs": 1791270008087
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-release-rise",
+      "durationMs": 50,
+      "before": {
+        "hostEpochMs": 1791270008087,
+        "hostMonotonicMs": 85963293.0095,
+        "requestedMs": 2190,
+        "browserPerformanceMs": 3792,
+        "browserEpochMs": 1791270008087
+      },
+      "after": {
+        "hostEpochMs": 1791270008139,
+        "hostMonotonicMs": 85963345.345375,
+        "requestedMs": 2240,
+        "browserPerformanceMs": 3844.5999999940395,
+        "browserEpochMs": 1791270008140
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-release-rise",
+      "durationMs": 50,
+      "before": {
+        "hostEpochMs": 1791270008156,
+        "hostMonotonicMs": 85963362.125833,
+        "requestedMs": 2240,
+        "browserPerformanceMs": 3861.199999988079,
+        "browserEpochMs": 1791270008156
+      },
+      "after": {
+        "hostEpochMs": 1791270008208,
+        "hostMonotonicMs": 85963414.419542,
+        "requestedMs": 2290,
+        "browserPerformanceMs": 3913.5999999940395,
+        "browserEpochMs": 1791270008209
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-release-rise",
+      "durationMs": 50,
+      "before": {
+        "hostEpochMs": 1791270008225,
+        "hostMonotonicMs": 85963430.91525,
+        "requestedMs": 2290,
+        "browserPerformanceMs": 3929.899999976158,
+        "browserEpochMs": 1791270008225
+      },
+      "after": {
+        "hostEpochMs": 1791270008277,
+        "hostMonotonicMs": 85963483.193167,
+        "requestedMs": 2340,
+        "browserPerformanceMs": 3982.399999976158,
+        "browserEpochMs": 1791270008277
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "w",
+      "label": "water-airborne-repress",
+      "before": {
+        "hostEpochMs": 1791270008297,
+        "hostMonotonicMs": 85963503.418417,
+        "requestedMs": 2340,
+        "browserPerformanceMs": 4002.399999976158,
+        "browserEpochMs": 1791270008297
+      },
+      "after": {
+        "hostEpochMs": 1791270008298,
+        "hostMonotonicMs": 85963503.9125,
+        "requestedMs": 2340,
+        "browserPerformanceMs": 4002.899999976158,
+        "browserEpochMs": 1791270008298
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-airborne-repress",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270008298,
+        "hostMonotonicMs": 85963504.157125,
+        "requestedMs": 2340,
+        "browserPerformanceMs": 4003.0999999940395,
+        "browserEpochMs": 1791270008298
+      },
+      "after": {
+        "hostEpochMs": 1791270008380,
+        "hostMonotonicMs": 85963586.476667,
+        "requestedMs": 2420,
+        "browserPerformanceMs": 4085.699999988079,
+        "browserEpochMs": 1791270008381
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "w",
+      "label": "water-descend-land",
+      "before": {
+        "hostEpochMs": 1791270008396,
+        "hostMonotonicMs": 85963602.588,
+        "requestedMs": 2420,
+        "browserPerformanceMs": 4101.5999999940395,
+        "browserEpochMs": 1791270008397
+      },
+      "after": {
+        "hostEpochMs": 1791270008397,
+        "hostMonotonicMs": 85963603.055792,
+        "requestedMs": 2420,
+        "browserPerformanceMs": 4102,
+        "browserEpochMs": 1791270008397
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270008397,
+        "hostMonotonicMs": 85963603.270417,
+        "requestedMs": 2420,
+        "browserPerformanceMs": 4102.199999988079,
+        "browserEpochMs": 1791270008397
+      },
+      "after": {
+        "hostEpochMs": 1791270008498,
+        "hostMonotonicMs": 85963704.000667,
+        "requestedMs": 2520,
+        "browserPerformanceMs": 4203.299999982119,
+        "browserEpochMs": 1791270008498
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270008518,
+        "hostMonotonicMs": 85963723.6985,
+        "requestedMs": 2520,
+        "browserPerformanceMs": 4222.799999982119,
+        "browserEpochMs": 1791270008518
+      },
+      "after": {
+        "hostEpochMs": 1791270008621,
+        "hostMonotonicMs": 85963826.765625,
+        "requestedMs": 2620,
+        "browserPerformanceMs": 4326.199999988079,
+        "browserEpochMs": 1791270008621
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270008640,
+        "hostMonotonicMs": 85963846.595792,
+        "requestedMs": 2620,
+        "browserPerformanceMs": 4345.5999999940395,
+        "browserEpochMs": 1791270008641
+      },
+      "after": {
+        "hostEpochMs": 1791270008742,
+        "hostMonotonicMs": 85963947.84275,
+        "requestedMs": 2720,
+        "browserPerformanceMs": 4447.199999988079,
+        "browserEpochMs": 1791270008742
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270008769,
+        "hostMonotonicMs": 85963974.630583,
+        "requestedMs": 2720,
+        "browserPerformanceMs": 4473.699999988079,
+        "browserEpochMs": 1791270008769
+      },
+      "after": {
+        "hostEpochMs": 1791270008871,
+        "hostMonotonicMs": 85964077.027125,
+        "requestedMs": 2820,
+        "browserPerformanceMs": 4576.299999982119,
+        "browserEpochMs": 1791270008871
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270008891,
+        "hostMonotonicMs": 85964097.072458,
+        "requestedMs": 2820,
+        "browserPerformanceMs": 4596.0999999940395,
+        "browserEpochMs": 1791270008891
+      },
+      "after": {
+        "hostEpochMs": 1791270008993,
+        "hostMonotonicMs": 85964199.463083,
+        "requestedMs": 2920,
+        "browserPerformanceMs": 4698.699999988079,
+        "browserEpochMs": 1791270008994
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270009019,
+        "hostMonotonicMs": 85964224.811542,
+        "requestedMs": 2920,
+        "browserPerformanceMs": 4723.799999982119,
+        "browserEpochMs": 1791270009019
+      },
+      "after": {
+        "hostEpochMs": 1791270009121,
+        "hostMonotonicMs": 85964327.158417,
+        "requestedMs": 3020,
+        "browserPerformanceMs": 4826.5,
+        "browserEpochMs": 1791270009121
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270009140,
+        "hostMonotonicMs": 85964346.498917,
+        "requestedMs": 3020,
+        "browserPerformanceMs": 4845.799999982119,
+        "browserEpochMs": 1791270009141
+      },
+      "after": {
+        "hostEpochMs": 1791270009241,
+        "hostMonotonicMs": 85964447.577875,
+        "requestedMs": 3120,
+        "browserPerformanceMs": 4946.899999976158,
+        "browserEpochMs": 1791270009242
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270009261,
+        "hostMonotonicMs": 85964467.543625,
+        "requestedMs": 3120,
+        "browserPerformanceMs": 4966.5999999940395,
+        "browserEpochMs": 1791270009262
+      },
+      "after": {
+        "hostEpochMs": 1791270009364,
+        "hostMonotonicMs": 85964569.83775,
+        "requestedMs": 3220,
+        "browserPerformanceMs": 5069.0999999940395,
+        "browserEpochMs": 1791270009364
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270009403,
+        "hostMonotonicMs": 85964608.670417,
+        "requestedMs": 3220,
+        "browserPerformanceMs": 5107.699999988079,
+        "browserEpochMs": 1791270009403
+      },
+      "after": {
+        "hostEpochMs": 1791270009504,
+        "hostMonotonicMs": 85964709.728625,
+        "requestedMs": 3320,
+        "browserPerformanceMs": 5209.0999999940395,
+        "browserEpochMs": 1791270009504
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270009524,
+        "hostMonotonicMs": 85964729.661625,
+        "requestedMs": 3320,
+        "browserPerformanceMs": 5228.5999999940395,
+        "browserEpochMs": 1791270009524
+      },
+      "after": {
+        "hostEpochMs": 1791270009627,
+        "hostMonotonicMs": 85964833.275958,
+        "requestedMs": 3420,
+        "browserPerformanceMs": 5332.699999988079,
+        "browserEpochMs": 1791270009628
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270009650,
+        "hostMonotonicMs": 85964855.980792,
+        "requestedMs": 3420,
+        "browserPerformanceMs": 5355,
+        "browserEpochMs": 1791270009650
+      },
+      "after": {
+        "hostEpochMs": 1791270009751,
+        "hostMonotonicMs": 85964957.322208,
+        "requestedMs": 3520,
+        "browserPerformanceMs": 5456.5999999940395,
+        "browserEpochMs": 1791270009752
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270009770,
+        "hostMonotonicMs": 85964976.390583,
+        "requestedMs": 3520,
+        "browserPerformanceMs": 5475.399999976158,
+        "browserEpochMs": 1791270009770
+      },
+      "after": {
+        "hostEpochMs": 1791270009872,
+        "hostMonotonicMs": 85965077.999167,
+        "requestedMs": 3620,
+        "browserPerformanceMs": 5577.299999982119,
+        "browserEpochMs": 1791270009872
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270009886,
+        "hostMonotonicMs": 85965091.904875,
+        "requestedMs": 3620,
+        "browserPerformanceMs": 5590.899999976158,
+        "browserEpochMs": 1791270009886
+      },
+      "after": {
+        "hostEpochMs": 1791270009988,
+        "hostMonotonicMs": 85965194.210875,
+        "requestedMs": 3720,
+        "browserPerformanceMs": 5693.5,
+        "browserEpochMs": 1791270009989
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270010006,
+        "hostMonotonicMs": 85965211.641625,
+        "requestedMs": 3720,
+        "browserPerformanceMs": 5710.5999999940395,
+        "browserEpochMs": 1791270010006
+      },
+      "after": {
+        "hostEpochMs": 1791270010106,
+        "hostMonotonicMs": 85965312.164333,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5811.5,
+        "browserEpochMs": 1791270010106
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270010124,
+        "hostMonotonicMs": 85965330.476208,
+        "requestedMs": 3820,
+        "browserPerformanceMs": 5829.5,
+        "browserEpochMs": 1791270010125
+      },
+      "after": {
+        "hostEpochMs": 1791270010226,
+        "hostMonotonicMs": 85965431.762208,
+        "requestedMs": 3920,
+        "browserPerformanceMs": 5931.0999999940395,
+        "browserEpochMs": 1791270010226
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270010252,
+        "hostMonotonicMs": 85965458.318792,
+        "requestedMs": 3920,
+        "browserPerformanceMs": 5957.299999982119,
+        "browserEpochMs": 1791270010252
+      },
+      "after": {
+        "hostEpochMs": 1791270010354,
+        "hostMonotonicMs": 85965560.504625,
+        "requestedMs": 4020,
+        "browserPerformanceMs": 6059.799999982119,
+        "browserEpochMs": 1791270010355
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270010373,
+        "hostMonotonicMs": 85965579.147375,
+        "requestedMs": 4020,
+        "browserPerformanceMs": 6078.199999988079,
+        "browserEpochMs": 1791270010373
+      },
+      "after": {
+        "hostEpochMs": 1791270010474,
+        "hostMonotonicMs": 85965680.45225,
+        "requestedMs": 4120,
+        "browserPerformanceMs": 6179.699999988079,
+        "browserEpochMs": 1791270010475
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-descend-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270010490,
+        "hostMonotonicMs": 85965695.742083,
+        "requestedMs": 4120,
+        "browserPerformanceMs": 6194.699999988079,
+        "browserEpochMs": 1791270010490
+      },
+      "after": {
+        "hostEpochMs": 1791270010591,
+        "hostMonotonicMs": 85965797.402667,
+        "requestedMs": 4220,
+        "browserPerformanceMs": 6296.699999988079,
+        "browserEpochMs": 1791270010592
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowUp",
+      "label": "both-grounded-jump",
+      "before": {
+        "hostEpochMs": 1791270010610,
+        "hostMonotonicMs": 85965816.536292,
+        "requestedMs": 4220,
+        "browserPerformanceMs": 6315.5999999940395,
+        "browserEpochMs": 1791270010611
+      },
+      "after": {
+        "hostEpochMs": 1791270010611,
+        "hostMonotonicMs": 85965817.138042,
+        "requestedMs": 4220,
+        "browserPerformanceMs": 6316.0999999940395,
+        "browserEpochMs": 1791270010611
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "w",
+      "label": "both-grounded-jump",
+      "before": {
+        "hostEpochMs": 1791270010611,
+        "hostMonotonicMs": 85965817.405917,
+        "requestedMs": 4220,
+        "browserPerformanceMs": 6316.399999976158,
+        "browserEpochMs": 1791270010611
+      },
+      "after": {
+        "hostEpochMs": 1791270010612,
+        "hostMonotonicMs": 85965817.848583,
+        "requestedMs": 4220,
+        "browserPerformanceMs": 6316.799999982119,
+        "browserEpochMs": 1791270010612
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-grounded-jump",
+      "durationMs": 80,
+      "before": {
+        "hostEpochMs": 1791270010612,
+        "hostMonotonicMs": 85965818.092583,
+        "requestedMs": 4220,
+        "browserPerformanceMs": 6317.0999999940395,
+        "browserEpochMs": 1791270010612
+      },
+      "after": {
+        "hostEpochMs": 1791270010696,
+        "hostMonotonicMs": 85965902.53875,
+        "requestedMs": 4300,
+        "browserPerformanceMs": 6402,
+        "browserEpochMs": 1791270010697
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowUp",
+      "label": "both-land",
+      "before": {
+        "hostEpochMs": 1791270010735,
+        "hostMonotonicMs": 85965941.36925,
+        "requestedMs": 4300,
+        "browserPerformanceMs": 6440.399999976158,
+        "browserEpochMs": 1791270010735
+      },
+      "after": {
+        "hostEpochMs": 1791270010736,
+        "hostMonotonicMs": 85965942.024042,
+        "requestedMs": 4300,
+        "browserPerformanceMs": 6441,
+        "browserEpochMs": 1791270010736
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "w",
+      "label": "both-land",
+      "before": {
+        "hostEpochMs": 1791270010736,
+        "hostMonotonicMs": 85965942.313958,
+        "requestedMs": 4300,
+        "browserPerformanceMs": 6441.299999982119,
+        "browserEpochMs": 1791270010736
+      },
+      "after": {
+        "hostEpochMs": 1791270010737,
+        "hostMonotonicMs": 85965942.773958,
+        "requestedMs": 4300,
+        "browserPerformanceMs": 6441.699999988079,
+        "browserEpochMs": 1791270010737
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270010737,
+        "hostMonotonicMs": 85965943.054583,
+        "requestedMs": 4300,
+        "browserPerformanceMs": 6442.0999999940395,
+        "browserEpochMs": 1791270010737
+      },
+      "after": {
+        "hostEpochMs": 1791270010839,
+        "hostMonotonicMs": 85966045.356542,
+        "requestedMs": 4400,
+        "browserPerformanceMs": 6544.5999999940395,
+        "browserEpochMs": 1791270010840
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270010854,
+        "hostMonotonicMs": 85966060.367333,
+        "requestedMs": 4400,
+        "browserPerformanceMs": 6559.399999976158,
+        "browserEpochMs": 1791270010854
+      },
+      "after": {
+        "hostEpochMs": 1791270010956,
+        "hostMonotonicMs": 85966161.732042,
+        "requestedMs": 4500,
+        "browserPerformanceMs": 6661.0999999940395,
+        "browserEpochMs": 1791270010956
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270010976,
+        "hostMonotonicMs": 85966181.5955,
+        "requestedMs": 4500,
+        "browserPerformanceMs": 6680.5999999940395,
+        "browserEpochMs": 1791270010976
+      },
+      "after": {
+        "hostEpochMs": 1791270011077,
+        "hostMonotonicMs": 85966283.228833,
+        "requestedMs": 4600,
+        "browserPerformanceMs": 6782.5,
+        "browserEpochMs": 1791270011078
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270011100,
+        "hostMonotonicMs": 85966305.839208,
+        "requestedMs": 4600,
+        "browserPerformanceMs": 6805,
+        "browserEpochMs": 1791270011100
+      },
+      "after": {
+        "hostEpochMs": 1791270011202,
+        "hostMonotonicMs": 85966408.27225,
+        "requestedMs": 4700,
+        "browserPerformanceMs": 6907.5999999940395,
+        "browserEpochMs": 1791270011203
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270011222,
+        "hostMonotonicMs": 85966428.072792,
+        "requestedMs": 4700,
+        "browserPerformanceMs": 6927.0999999940395,
+        "browserEpochMs": 1791270011222
+      },
+      "after": {
+        "hostEpochMs": 1791270011324,
+        "hostMonotonicMs": 85966530.424625,
+        "requestedMs": 4800,
+        "browserPerformanceMs": 7029.699999988079,
+        "browserEpochMs": 1791270011325
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270011341,
+        "hostMonotonicMs": 85966547.431292,
+        "requestedMs": 4800,
+        "browserPerformanceMs": 7046.399999976158,
+        "browserEpochMs": 1791270011341
+      },
+      "after": {
+        "hostEpochMs": 1791270011442,
+        "hostMonotonicMs": 85966647.851917,
+        "requestedMs": 4900,
+        "browserPerformanceMs": 7147.199999988079,
+        "browserEpochMs": 1791270011442
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270011467,
+        "hostMonotonicMs": 85966673.548375,
+        "requestedMs": 4900,
+        "browserPerformanceMs": 7172.5999999940395,
+        "browserEpochMs": 1791270011468
+      },
+      "after": {
+        "hostEpochMs": 1791270011570,
+        "hostMonotonicMs": 85966775.898625,
+        "requestedMs": 5000,
+        "browserPerformanceMs": 7275.199999988079,
+        "browserEpochMs": 1791270011570
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270011591,
+        "hostMonotonicMs": 85966797.356917,
+        "requestedMs": 5000,
+        "browserPerformanceMs": 7296.399999976158,
+        "browserEpochMs": 1791270011591
+      },
+      "after": {
+        "hostEpochMs": 1791270011696,
+        "hostMonotonicMs": 85966901.61,
+        "requestedMs": 5100,
+        "browserPerformanceMs": 7401.0999999940395,
+        "browserEpochMs": 1791270011696
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270011718,
+        "hostMonotonicMs": 85966924.509792,
+        "requestedMs": 5100,
+        "browserPerformanceMs": 7423.5999999940395,
+        "browserEpochMs": 1791270011719
+      },
+      "after": {
+        "hostEpochMs": 1791270011821,
+        "hostMonotonicMs": 85967026.849542,
+        "requestedMs": 5200,
+        "browserPerformanceMs": 7526.199999988079,
+        "browserEpochMs": 1791270011821
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270011842,
+        "hostMonotonicMs": 85967048.251208,
+        "requestedMs": 5200,
+        "browserPerformanceMs": 7547.299999982119,
+        "browserEpochMs": 1791270011842
+      },
+      "after": {
+        "hostEpochMs": 1791270011943,
+        "hostMonotonicMs": 85967149.440833,
+        "requestedMs": 5300,
+        "browserPerformanceMs": 7648.699999988079,
+        "browserEpochMs": 1791270011944
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270011965,
+        "hostMonotonicMs": 85967171.366458,
+        "requestedMs": 5300,
+        "browserPerformanceMs": 7670.5,
+        "browserEpochMs": 1791270011966
+      },
+      "after": {
+        "hostEpochMs": 1791270012067,
+        "hostMonotonicMs": 85967272.612042,
+        "requestedMs": 5400,
+        "browserPerformanceMs": 7772,
+        "browserEpochMs": 1791270012067
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270012087,
+        "hostMonotonicMs": 85967292.942208,
+        "requestedMs": 5400,
+        "browserPerformanceMs": 7792,
+        "browserEpochMs": 1791270012087
+      },
+      "after": {
+        "hostEpochMs": 1791270012188,
+        "hostMonotonicMs": 85967394.003667,
+        "requestedMs": 5500,
+        "browserPerformanceMs": 7893.199999988079,
+        "browserEpochMs": 1791270012188
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270012204,
+        "hostMonotonicMs": 85967410.139375,
+        "requestedMs": 5500,
+        "browserPerformanceMs": 7909.0999999940395,
+        "browserEpochMs": 1791270012204
+      },
+      "after": {
+        "hostEpochMs": 1791270012305,
+        "hostMonotonicMs": 85967511.495208,
+        "requestedMs": 5600,
+        "browserPerformanceMs": 8010.699999988079,
+        "browserEpochMs": 1791270012306
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270012324,
+        "hostMonotonicMs": 85967530.106833,
+        "requestedMs": 5600,
+        "browserPerformanceMs": 8029.0999999940395,
+        "browserEpochMs": 1791270012324
+      },
+      "after": {
+        "hostEpochMs": 1791270012425,
+        "hostMonotonicMs": 85967631.299667,
+        "requestedMs": 5700,
+        "browserPerformanceMs": 8130.699999988079,
+        "browserEpochMs": 1791270012426
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270012453,
+        "hostMonotonicMs": 85967658.723,
+        "requestedMs": 5700,
+        "browserPerformanceMs": 8157.699999988079,
+        "browserEpochMs": 1791270012453
+      },
+      "after": {
+        "hostEpochMs": 1791270012555,
+        "hostMonotonicMs": 85967760.957208,
+        "requestedMs": 5800,
+        "browserPerformanceMs": 8260.199999988079,
+        "browserEpochMs": 1791270012555
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270012572,
+        "hostMonotonicMs": 85967778.313917,
+        "requestedMs": 5800,
+        "browserPerformanceMs": 8277.399999976158,
+        "browserEpochMs": 1791270012572
+      },
+      "after": {
+        "hostEpochMs": 1791270012676,
+        "hostMonotonicMs": 85967882.5325,
+        "requestedMs": 5900,
+        "browserPerformanceMs": 8382,
+        "browserEpochMs": 1791270012677
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270012702,
+        "hostMonotonicMs": 85967907.758583,
+        "requestedMs": 5900,
+        "browserPerformanceMs": 8406.799999982119,
+        "browserEpochMs": 1791270012702
+      },
+      "after": {
+        "hostEpochMs": 1791270012803,
+        "hostMonotonicMs": 85968009.291417,
+        "requestedMs": 6000,
+        "browserPerformanceMs": 8508.59999999404,
+        "browserEpochMs": 1791270012804
+      }
+    },
+    {
+      "type": "advance",
+      "label": "both-land",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270012824,
+        "hostMonotonicMs": 85968030.008125,
+        "requestedMs": 6000,
+        "browserPerformanceMs": 8529,
+        "browserEpochMs": 1791270012824
+      },
+      "after": {
+        "hostEpochMs": 1791270012926,
+        "hostMonotonicMs": 85968132.334708,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 8631.699999988079,
+        "browserEpochMs": 1791270012927
+      }
+    }
+  ],
+  "candidateEvents": [
+    {
+      "type": "pageerror",
+      "message": "Cannot read properties of undefined (reading 'startsWith')",
+      "requestedMs": 0
+    }
+  ],
+  "evaluatorErrors": [],
+  "clock": "real",
+  "privateStateReads": 0,
+  "candidateMutations": 0,
+  "reference": false,
+  "deadlineExceeded": false,
+  "browserVersion": "153.0.8010.12",
+  "video": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/cerebras/assessment/real-jumps/videos/page@93dd00decd23f6ba146de01993a94e2d.webm",
+  "finishedAt": "2026-10-06T07:00:13.062Z",
+  "durationMs": 8886.749665990472,
+  "sourceAfterSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "sourceUnchanged": true
+}

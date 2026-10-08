@@ -1,0 +1,40 @@
+{
+  "issues": [
+    {
+      "id": "GREEN_POOL_METADATA_CONTRADICTION",
+      "origin": "evaluator-task-authoring",
+      "affectedCriterion": "LAYOUT/pools",
+      "appliesTo": [
+        "gemini",
+        "cerebras",
+        "openrouter"
+      ],
+      "frozenPackageUnchanged": true,
+      "canonicalGrid": [
+        {
+          "x": 256,
+          "y": 480,
+          "width": 288
+        },
+        {
+          "x": 736,
+          "y": 480,
+          "width": 224
+        }
+      ],
+      "duplicateMetadata": [
+        {
+          "x": 416,
+          "y": 480,
+          "width": 288
+        },
+        {
+          "x": 896,
+          "y": 480,
+          "width": 224
+        }
+      ],
+      "reason": "Identical frozen textual evidence supplied to every configuration contains inconsistent duplicate green-pool locations. No post-generation repair or candidate penalty for choosing either representation. Pool placement criterion left unassessed; independently observed bottom-pool and reset failures are unaffected."
+    }
+  ]
+}

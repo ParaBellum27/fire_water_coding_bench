@@ -1,0 +1,128 @@
+{
+  "purpose": "One unchanged screenshot-based recreation pilot; short qualitative checklist, not a model ranking",
+  "provider": "Mistral",
+  "modelRequested": "ministral-8b-latest",
+  "modelReturned": "ministral-8b-latest",
+  "evidence": {
+    "frames": 80,
+    "imageAttachments": 3,
+    "package": "../../task-public/groq-screenshot-pilot",
+    "limitation": "Contact-sheet thumbnails are lower-detail evidence than 80 separate images; not directly comparable to the earlier 40-image Gemini input."
+  },
+  "generation": {
+    "requests": 1,
+    "elapsedMs": 102769,
+    "usage": {
+      "prompt_tokens": 4599,
+      "total_tokens": 11524,
+      "completion_tokens": 6925,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "service_tier": "standard"
+    },
+    "finishReason": "stop",
+    "assistantRepairs": 0,
+    "htmlSha256": "e14ae2f0a0e0903ff2b29be369e9e122ef6b82af283d7c83916ddfbe251f1445",
+    "unchangedAfterExercise": true
+  },
+  "method": {
+    "browser": "Chromium 153.0.8010.12",
+    "viewport": {
+      "width": 1280,
+      "height": 960
+    },
+    "interaction": "Keyboard events, restart clicks, and reload only. Browser clock controlled for intervals, including 50 simulated seconds with no player input.",
+    "observations": "Rendered feedback and screenshots plus read-only position/gem diagnostics. No candidate state mutation, teleports, patches, or forced victory.",
+    "network": "Only local candidate origin allowed; service workers and WebSockets blocked."
+  },
+  "verdict": "FAIL: does not recreate the playable reference level; timed victory is invalid completion",
+  "overallPercentage": null,
+  "checklist": [
+    {
+      "check": "Launch",
+      "result": "PASS",
+      "finding": "Canvas game loads without observed JavaScript exceptions.",
+      "evidence": [
+        "assessment/01-initial.png"
+      ]
+    },
+    {
+      "check": "Output contract",
+      "result": "FAIL",
+      "finding": "Response adds prose and Markdown fences despite HTML-only instruction. Served exactly as returned; no wrapper removal."
+    },
+    {
+      "check": "Layout/progression",
+      "result": "FAIL",
+      "finding": "Sparse rectangular platforms, five red gems and one lower-right exit do not match the demonstrated multilevel layout and paired upper-left exits.",
+      "evidence": [
+        "assessment/01-initial.png"
+      ]
+    },
+    {
+      "check": "Controls",
+      "result": "FAIL/PARTIAL",
+      "finding": "Fireboy ArrowRight moves. Standard lowercase d does not move Watergirl; uppercase D does.",
+      "evidence": [
+        "assessment/03-lowercase-watergirl-control.png",
+        "assessment/04-uppercase-watergirl-control.png"
+      ]
+    },
+    {
+      "check": "Gravity/jumping",
+      "result": "FAIL",
+      "finding": "Characters remain suspended at y=300 with no input. A brief jump continues upward after release; Fireboy reaches y=-3 and visible loss.",
+      "evidence": [
+        "assessment/02-idle-no-gravity.png",
+        "assessment/06-jump-after-release.png",
+        "assessment/09-jump-causes-top-boundary-loss.png"
+      ]
+    },
+    {
+      "check": "Hazards",
+      "result": "NOT REACHED",
+      "finding": "No reference-like elemental pool encounter exercised. Upward boundary loss is not evidence of elemental hazard rules."
+    },
+    {
+      "check": "Cooperative mechanisms",
+      "result": "NOT REACHED",
+      "finding": "No normal route to cooperative interactions established; submitted source uses static platform objects and does not update switch activation."
+    },
+    {
+      "check": "Gem collection",
+      "result": "NOT REACHED",
+      "finding": "No pickups exercised; all five generated gems remain during automatic victory."
+    },
+    {
+      "check": "Restart",
+      "result": "FAIL/PARTIAL",
+      "finding": "R leaves positions and victory unchanged. Button restores moved Fireboy to initial position and hides victory, but displayed timer does not reset to zero.",
+      "evidence": [
+        "assessment/07-r-does-not-reset.png",
+        "assessment/11-r-leaves-victory-visible.png",
+        "assessment/13-button-position-reset-timer-not-reset.png"
+      ]
+    },
+    {
+      "check": "Completion",
+      "result": "FAIL",
+      "finding": "With no player input after reload, visible You Win appears at displayed Time:48.5s. Characters remain at initial positions with five gems remaining.",
+      "evidence": [
+        "assessment/10-win-without-playing.png"
+      ]
+    }
+  ],
+  "sourceDiagnosis": {
+    "timedVictory": "updateGame advances through supplied frameTimes by elapsed time and declares victory when the final index is reached.",
+    "jump": "While jumping, y decreases by a fixed amount each frame; no downward gravity phase.",
+    "controls": "Keyboard lookup uses uppercase A/D/W and exact e.key matches.",
+    "restart": "No R key handler; initGame sets lastTime=0, causing the next update to count elapsed page time again."
+  },
+  "runtimePageErrors": [],
+  "limits": [
+    "Single attempt, no repairs or feedback.",
+    "No legitimate full playthrough established; automatic victory is not counted as success.",
+    "No independently validated percentage rubric."
+  ]
+}

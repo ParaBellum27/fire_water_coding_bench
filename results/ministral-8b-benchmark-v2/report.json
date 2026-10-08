@@ -1,0 +1,155 @@
+{
+  "version": 2,
+  "purpose": "One source-blind recreation submission under a frozen public mechanics contract; qualitative behavior checklist, not a validated automated grader or model ranking",
+  "verdict": "FAIL",
+  "modelRequested": "ministral-8b-latest",
+  "modelReturned": "ministral-8b-latest",
+  "evidence": {
+    "frames": 80,
+    "attachments": 3,
+    "condition": "Same three JPEG contact sheets as the earlier Ministral attempt; explicit written contract added",
+    "protocol": "../../task-public/ministral-benchmark-v2/protocol.json",
+    "noPriorSubmissionOrFeedback": true
+  },
+  "generation": {
+    "httpStatus": 200,
+    "modelRequested": "ministral-8b-latest",
+    "modelReturned": "ministral-8b-latest",
+    "startedAt": "2026-10-05T19:29:03.065Z",
+    "finishedAt": "2026-10-05T19:31:17.363Z",
+    "elapsedMs": 134298,
+    "finishReason": "stop",
+    "usage": {
+      "prompt_tokens": 5517,
+      "total_tokens": 16007,
+      "completion_tokens": 10490,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "service_tier": "standard"
+    },
+    "requests": 1,
+    "assistantRepairs": 0,
+    "htmlSha256": "56087009a5150ae001099e2085482da4333a6f2bf7ee2801fed6f669590674ee"
+  },
+  "exercise": {
+    "browser": "Chromium 153.0.8010.12",
+    "initialViewport": {
+      "width": 1280,
+      "height": 960
+    },
+    "resizeViewport": {
+      "width": 1200,
+      "height": 900
+    },
+    "input": "Real Playwright keyboard presses, clicks, and viewport resize",
+    "timing": "Controlled browser clock; explicit runFor intervals, including 60,000 ms neutral interval in a fresh context",
+    "candidateStateWrites": 0,
+    "teleportation": false,
+    "assistantRepairs": 0,
+    "network": "Candidate origin only; other HTTP requests blocked and WebSockets closed",
+    "observedRuntimeEvents": [],
+    "artifacts": {
+      "inputs": "assessment/keyboard-actions.json",
+      "runtimeEvents": "assessment/runtime-events.json",
+      "screenshots": "assessment/"
+    },
+    "unchangedSubmission": true,
+    "diagnostics": "Read-only candidate state supplements visible outcomes. Candidate win/state fields are not trusted proof of correctness."
+  },
+  "checks": [
+    {
+      "id": "BOOT",
+      "result": "FAIL",
+      "observed": "HTTP page and visible counters/Restart load without observed JavaScript exceptions, but canvas initially contains only background. Response includes leading prose and Markdown fences. Usable surface and HTML-only contract fail.",
+      "evidence": [
+        "assessment/01-initial-blank-canvas.png"
+      ]
+    },
+    {
+      "id": "LAYOUT",
+      "result": "FAIL",
+      "observed": "Initial level is invisible. A normal window resize renders an unrelated rectangular arrangement: exits at opposite upper sides rather than both upper left; pictured suspended platforms/chains and traversable level route are not preserved.",
+      "evidence": [
+        "assessment/10-window-resize-renders-level.png"
+      ]
+    },
+    {
+      "id": "CONTROLS",
+      "result": "FAIL",
+      "observed": "The first 200 ms holding ArrowRight+d leaves both x positions unchanged. Holding d alone later jumps Watergirl from x=120 to x=1260 upon floor overlap instead of normal movement. No usable grounded jump was reached.",
+      "evidence": [
+        "assessment/keyboard-actions.json",
+        "assessment/03-simultaneous-controls.png",
+        "assessment/04-independent-key-release.png"
+      ]
+    },
+    {
+      "id": "PHYSICS",
+      "result": "FAIL",
+      "observed": "After normal resize, both characters are visible above the bottom floor. In 500 ms they fall through it and leave the visible level. Diagnostics show y=700.5 to y=964 with no grounded state; canvas floor is at logical y=800. Wall/ceiling contact and grounded jump arc were not reached.",
+      "evidence": [
+        "assessment/10-window-resize-renders-level.png",
+        "assessment/11-resized-floor-fall-through.png"
+      ]
+    },
+    {
+      "id": "HAZARDS",
+      "result": "NOT REACHED",
+      "observed": "Safe/lethal elemental contact and death feedback were not reached through normal play."
+    },
+    {
+      "id": "DIAMONDS",
+      "result": "NOT REACHED",
+      "observed": "Matching/wrong-character pickups and counter changes were not reached through normal play."
+    },
+    {
+      "id": "PRESSURE PLATES",
+      "result": "NOT REACHED",
+      "observed": "Plate contact, either-plate activation, release/return and traversable mechanism geometry were not reached."
+    },
+    {
+      "id": "HANGING PLATFORMS",
+      "result": "NOT REACHED",
+      "observed": "Landing, weight-dependent tilt and support were not reached."
+    },
+    {
+      "id": "EXITS",
+      "result": "NOT REACHED",
+      "observed": "Single, wrong and both matching exit contacts were not reached; no successful level completion observed."
+    },
+    {
+      "id": "RESET",
+      "result": "FAIL",
+      "observed": "R leaves the fallen attempt unchanged. Restart button restores diagnostic starting positions and counters, but discards rendering scale and blanks the level on the next frame, including at the resized viewport. Post-pickup/mechanism/terminal reset cases were not reached.",
+      "evidence": [
+        "assessment/08-r-does-not-reset.png",
+        "assessment/09-button-reset-blank-canvas.png",
+        "assessment/12-reset-removes-rendered-level.png"
+      ]
+    },
+    {
+      "id": "NO PLAYBACK",
+      "result": "PASS",
+      "observed": "Fresh context received no player input for 60,000 ms of controlled browser time. No route traversal or visible victory occurred; all 16 generated gems remained. Both characters instead fell below the level, graded separately as PHYSICS failure. This pass covers only the exercised neutral interval.",
+      "evidence": [
+        "assessment/02-neutral-60-seconds.png",
+        "assessment/keyboard-actions.json"
+      ]
+    }
+  ],
+  "sourceDiagnosis": {
+    "scope": "Explanation of exercised failures, not substitute execution of unreachable mechanics",
+    "rendering": "resizeCanvas() sets state.scale, then initialization resetGame() replaces state without scale. A browser resize restores scale; Restart discards it again.",
+    "movement": "updateGame() sets velocityX but never integrates it into x. checkCollisions() instead assigns x to the far platform edge on overlapping horizontal contact.",
+    "floor": "Landing check tests a sub-pixel interval at the platform underside rather than crossing the supporting top surface; observed initial fall skips support.",
+    "rShortcut": "keydown returns immediately when gameOver is true, while its r branch only calls resetGame when gameOver is true. Therefore the restart condition is unreachable."
+  },
+  "limits": [
+    "One stochastic submission; no model reliability estimate or overall percentage.",
+    "Latest model alias does not pin provider weights.",
+    "Low-detail evidence remains unchanged at user request.",
+    "No successful route; five mechanic categories are NOT REACHED.",
+    "No model feedback, automatic repair, new recorder, grader framework, dependency or permanent test was added."
+  ]
+}

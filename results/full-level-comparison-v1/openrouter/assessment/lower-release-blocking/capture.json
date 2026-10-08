@@ -1,0 +1,3892 @@
+{
+  "version": 1,
+  "scenario": {
+    "id": "lower-release-blocking",
+    "clock": "controlled",
+    "hostDeadlineMs": 240000,
+    "sampleEveryMs": 500,
+    "segments": [
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 800
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d",
+          "w"
+        ],
+        "durationMs": 800
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d"
+        ],
+        "durationMs": 950
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d"
+        ],
+        "durationMs": 650,
+        "label": "Jump Fireboy from the center floor onto the red shelf"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "d"
+        ],
+        "durationMs": 800,
+        "label": "Cross the second pair of pools"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 1300,
+        "label": "Climb the right-hand stairs"
+      },
+      {
+        "keys": [
+          "ArrowRight",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 800,
+        "label": "Reach the first pressure plate"
+      },
+      {
+        "keys": [],
+        "durationMs": 120,
+        "label": "Release both jump keys"
+      },
+      {
+        "keys": [
+          "ArrowLeft",
+          "ArrowUp",
+          "d",
+          "w"
+        ],
+        "durationMs": 650,
+        "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp"
+      },
+      {
+        "keys": [
+          "ArrowLeft"
+        ],
+        "durationMs": 120,
+        "label": "Fireboy approaches right pressure plate"
+      },
+      {
+        "keys": [
+          "ArrowLeft",
+          "a",
+          "w"
+        ],
+        "durationMs": 650,
+        "label": "Watergirl joins upper floor"
+      },
+      {
+        "keys": [],
+        "durationMs": 300,
+        "label": "Settle on the pressure plate floor"
+      },
+      {
+        "keys": [
+          "ArrowLeft",
+          "a"
+        ],
+        "durationMs": 180,
+        "label": "Watergirl steps onto the right plate"
+      },
+      {
+        "keys": [
+          "ArrowLeft"
+        ],
+        "durationMs": 1500,
+        "label": "Watergirl holds the gate open while Fireboy crosses"
+      },
+      {
+        "keys": [
+          "a"
+        ],
+        "durationMs": 350,
+        "label": "Watergirl centers on the pressure plate"
+      },
+      {
+        "keys": [],
+        "durationMs": 450,
+        "label": "Observe gate opening"
+      },
+      {
+        "keys": [
+          "a"
+        ],
+        "durationMs": 800,
+        "label": "water-leave-right-plate"
+      },
+      {
+        "keys": [],
+        "durationMs": 1800,
+        "label": "barrier-return-no-contact"
+      },
+      {
+        "keys": [
+          "ArrowRight"
+        ],
+        "durationMs": 1600,
+        "label": "fire-return-blocking-probe"
+      },
+      {
+        "keys": [],
+        "durationMs": 300,
+        "label": "blocked-or-crossed"
+      }
+    ]
+  },
+  "sourceSha256": "9acb855d2b11c87c46ec5073df880c63a9e369f4ba33b45196791401f9b47cf5",
+  "startedAt": "2026-10-06T07:03:04.798Z",
+  "observations": [
+    {
+      "label": "startup",
+      "file": "screenshots/0000-startup.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270185262,
+        "hostMonotonicMs": 86140467.036542,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1000,
+        "browserEpochMs": 1791288002000
+      },
+      "after": {
+        "hostEpochMs": 1791270185298,
+        "hostMonotonicMs": 86140502.73675,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1000,
+        "browserEpochMs": 1791288002000
+      },
+      "visible": {
+        "text": "Time: 1.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "segment-00-0",
+      "file": "screenshots/0001-segment-00-0.png",
+      "held": [
+        "ArrowRight"
+      ],
+      "before": {
+        "hostEpochMs": 1791270185460,
+        "hostMonotonicMs": 86140665.188167,
+        "requestedMs": 500,
+        "browserPerformanceMs": 1500,
+        "browserEpochMs": 1791288002500
+      },
+      "after": {
+        "hostEpochMs": 1791270185495,
+        "hostMonotonicMs": 86140699.633333,
+        "requestedMs": 500,
+        "browserPerformanceMs": 1500,
+        "browserEpochMs": 1791288002500
+      },
+      "visible": {
+        "text": "Time: 1.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "segment-00-1",
+      "file": "screenshots/0002-segment-00-1.png",
+      "held": [
+        "ArrowRight"
+      ],
+      "before": {
+        "hostEpochMs": 1791270185583,
+        "hostMonotonicMs": 86140788.093708,
+        "requestedMs": 800,
+        "browserPerformanceMs": 1800,
+        "browserEpochMs": 1791288002800
+      },
+      "after": {
+        "hostEpochMs": 1791270185615,
+        "hostMonotonicMs": 86140819.841417,
+        "requestedMs": 800,
+        "browserPerformanceMs": 1800,
+        "browserEpochMs": 1791288002800
+      },
+      "visible": {
+        "text": "Time: 1.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "segment-01-0",
+      "file": "screenshots/0003-segment-01-0.png",
+      "held": [
+        "ArrowRight",
+        "d",
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270185780,
+        "hostMonotonicMs": 86140985.317375,
+        "requestedMs": 1300,
+        "browserPerformanceMs": 2300,
+        "browserEpochMs": 1791288003300
+      },
+      "after": {
+        "hostEpochMs": 1791270185834,
+        "hostMonotonicMs": 86141038.961125,
+        "requestedMs": 1300,
+        "browserPerformanceMs": 2300,
+        "browserEpochMs": 1791288003300
+      },
+      "visible": {
+        "text": "Time: 2.3 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "segment-01-1",
+      "file": "screenshots/0004-segment-01-1.png",
+      "held": [
+        "ArrowRight",
+        "d",
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270185920,
+        "hostMonotonicMs": 86141124.654042,
+        "requestedMs": 1600,
+        "browserPerformanceMs": 2600,
+        "browserEpochMs": 1791288003600
+      },
+      "after": {
+        "hostEpochMs": 1791270185945,
+        "hostMonotonicMs": 86141149.91325,
+        "requestedMs": 1600,
+        "browserPerformanceMs": 2600,
+        "browserEpochMs": 1791288003600
+      },
+      "visible": {
+        "text": "Time: 2.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "segment-02-0",
+      "file": "screenshots/0005-segment-02-0.png",
+      "held": [
+        "ArrowRight",
+        "d"
+      ],
+      "before": {
+        "hostEpochMs": 1791270185947,
+        "hostMonotonicMs": 86141151.660167,
+        "requestedMs": 2100,
+        "browserPerformanceMs": 3100,
+        "browserEpochMs": 1791288004100
+      },
+      "after": {
+        "hostEpochMs": 1791270185977,
+        "hostMonotonicMs": 86141182.097292,
+        "requestedMs": 2100,
+        "browserPerformanceMs": 3100,
+        "browserEpochMs": 1791288004100
+      },
+      "visible": {
+        "text": "Time: 3.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "segment-02-1",
+      "file": "screenshots/0006-segment-02-1.png",
+      "held": [
+        "ArrowRight",
+        "d"
+      ],
+      "before": {
+        "hostEpochMs": 1791270185978,
+        "hostMonotonicMs": 86141183.227208,
+        "requestedMs": 2550,
+        "browserPerformanceMs": 3550,
+        "browserEpochMs": 1791288004550
+      },
+      "after": {
+        "hostEpochMs": 1791270186010,
+        "hostMonotonicMs": 86141215.09775,
+        "requestedMs": 2550,
+        "browserPerformanceMs": 3550,
+        "browserEpochMs": 1791288004550
+      },
+      "visible": {
+        "text": "Time: 3.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Jump Fireboy from the center floor onto the red shelf-0",
+      "file": "screenshots/0007-Jump-Fireboy-from-the-center-floor-onto-the-red-shelf-0.png",
+      "held": [
+        "ArrowRight",
+        "d",
+        "ArrowUp"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186012,
+        "hostMonotonicMs": 86141217.336958,
+        "requestedMs": 3050,
+        "browserPerformanceMs": 4050,
+        "browserEpochMs": 1791288005050
+      },
+      "after": {
+        "hostEpochMs": 1791270186059,
+        "hostMonotonicMs": 86141264.033208,
+        "requestedMs": 3050,
+        "browserPerformanceMs": 4050,
+        "browserEpochMs": 1791288005050
+      },
+      "visible": {
+        "text": "Time: 4.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Jump Fireboy from the center floor onto the red shelf-1",
+      "file": "screenshots/0008-Jump-Fireboy-from-the-center-floor-onto-the-red-shelf-1.png",
+      "held": [
+        "ArrowRight",
+        "d",
+        "ArrowUp"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186060,
+        "hostMonotonicMs": 86141265.114875,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 4200,
+        "browserEpochMs": 1791288005200
+      },
+      "after": {
+        "hostEpochMs": 1791270186077,
+        "hostMonotonicMs": 86141282.161708,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 4200,
+        "browserEpochMs": 1791288005200
+      },
+      "visible": {
+        "text": "Time: 4.2 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Cross the second pair of pools-0",
+      "file": "screenshots/0009-Cross-the-second-pair-of-pools-0.png",
+      "held": [
+        "ArrowRight",
+        "d"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186079,
+        "hostMonotonicMs": 86141284.326125,
+        "requestedMs": 3700,
+        "browserPerformanceMs": 4700,
+        "browserEpochMs": 1791288005700
+      },
+      "after": {
+        "hostEpochMs": 1791270186110,
+        "hostMonotonicMs": 86141315.247583,
+        "requestedMs": 3700,
+        "browserPerformanceMs": 4700,
+        "browserEpochMs": 1791288005700
+      },
+      "visible": {
+        "text": "Time: 4.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Cross the second pair of pools-1",
+      "file": "screenshots/0010-Cross-the-second-pair-of-pools-1.png",
+      "held": [
+        "ArrowRight",
+        "d"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186111,
+        "hostMonotonicMs": 86141316.301,
+        "requestedMs": 4000,
+        "browserPerformanceMs": 5000,
+        "browserEpochMs": 1791288006000
+      },
+      "after": {
+        "hostEpochMs": 1791270186141,
+        "hostMonotonicMs": 86141345.72175,
+        "requestedMs": 4000,
+        "browserPerformanceMs": 5000,
+        "browserEpochMs": 1791288006000
+      },
+      "visible": {
+        "text": "Time: 5.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Climb the right-hand stairs-0",
+      "file": "screenshots/0011-Climb-the-right-hand-stairs-0.png",
+      "held": [
+        "ArrowRight",
+        "d",
+        "ArrowUp",
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186143,
+        "hostMonotonicMs": 86141347.510958,
+        "requestedMs": 4500,
+        "browserPerformanceMs": 5500,
+        "browserEpochMs": 1791288006500
+      },
+      "after": {
+        "hostEpochMs": 1791270186157,
+        "hostMonotonicMs": 86141362.061458,
+        "requestedMs": 4500,
+        "browserPerformanceMs": 5500,
+        "browserEpochMs": 1791288006500
+      },
+      "visible": {
+        "text": "Time: 5.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Climb the right-hand stairs-1",
+      "file": "screenshots/0012-Climb-the-right-hand-stairs-1.png",
+      "held": [
+        "ArrowRight",
+        "d",
+        "ArrowUp",
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186158,
+        "hostMonotonicMs": 86141363.160083,
+        "requestedMs": 5000,
+        "browserPerformanceMs": 6000,
+        "browserEpochMs": 1791288007000
+      },
+      "after": {
+        "hostEpochMs": 1791270186176,
+        "hostMonotonicMs": 86141380.704917,
+        "requestedMs": 5000,
+        "browserPerformanceMs": 6000,
+        "browserEpochMs": 1791288007000
+      },
+      "visible": {
+        "text": "Time: 6.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Climb the right-hand stairs-2",
+      "file": "screenshots/0013-Climb-the-right-hand-stairs-2.png",
+      "held": [
+        "ArrowRight",
+        "d",
+        "ArrowUp",
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186177,
+        "hostMonotonicMs": 86141381.52025,
+        "requestedMs": 5300,
+        "browserPerformanceMs": 6300,
+        "browserEpochMs": 1791288007300
+      },
+      "after": {
+        "hostEpochMs": 1791270186191,
+        "hostMonotonicMs": 86141395.642625,
+        "requestedMs": 5300,
+        "browserPerformanceMs": 6300,
+        "browserEpochMs": 1791288007300
+      },
+      "visible": {
+        "text": "Time: 6.3 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Reach the first pressure plate-0",
+      "file": "screenshots/0014-Reach-the-first-pressure-plate-0.png",
+      "held": [
+        "ArrowRight",
+        "d",
+        "ArrowUp",
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186192,
+        "hostMonotonicMs": 86141396.791125,
+        "requestedMs": 5800,
+        "browserPerformanceMs": 6800,
+        "browserEpochMs": 1791288007800
+      },
+      "after": {
+        "hostEpochMs": 1791270186210,
+        "hostMonotonicMs": 86141414.562333,
+        "requestedMs": 5800,
+        "browserPerformanceMs": 6800,
+        "browserEpochMs": 1791288007800
+      },
+      "visible": {
+        "text": "Time: 6.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Reach the first pressure plate-1",
+      "file": "screenshots/0015-Reach-the-first-pressure-plate-1.png",
+      "held": [
+        "ArrowRight",
+        "d",
+        "ArrowUp",
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186211,
+        "hostMonotonicMs": 86141415.571042,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 7100,
+        "browserEpochMs": 1791288008100
+      },
+      "after": {
+        "hostEpochMs": 1791270186224,
+        "hostMonotonicMs": 86141428.985083,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 7100,
+        "browserEpochMs": 1791288008100
+      },
+      "visible": {
+        "text": "Time: 7.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Release both jump keys-0",
+      "file": "screenshots/0016-Release-both-jump-keys-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270186227,
+        "hostMonotonicMs": 86141432.227583,
+        "requestedMs": 6220,
+        "browserPerformanceMs": 7220,
+        "browserEpochMs": 1791288008220
+      },
+      "after": {
+        "hostEpochMs": 1791270186240,
+        "hostMonotonicMs": 86141445.116792,
+        "requestedMs": 6220,
+        "browserPerformanceMs": 7220,
+        "browserEpochMs": 1791288008220
+      },
+      "visible": {
+        "text": "Time: 7.2 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp-0",
+      "file": "screenshots/0017-Jump-Fireboy-left-onto-the-upper-ramp-and-Watergirl-up-the-lower-ramp-0.png",
+      "held": [
+        "ArrowLeft",
+        "ArrowUp",
+        "d",
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186243,
+        "hostMonotonicMs": 86141447.612917,
+        "requestedMs": 6720,
+        "browserPerformanceMs": 7720,
+        "browserEpochMs": 1791288008720
+      },
+      "after": {
+        "hostEpochMs": 1791270186258,
+        "hostMonotonicMs": 86141463.08,
+        "requestedMs": 6720,
+        "browserPerformanceMs": 7720,
+        "browserEpochMs": 1791288008720
+      },
+      "visible": {
+        "text": "Time: 7.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp-1",
+      "file": "screenshots/0018-Jump-Fireboy-left-onto-the-upper-ramp-and-Watergirl-up-the-lower-ramp-1.png",
+      "held": [
+        "ArrowLeft",
+        "ArrowUp",
+        "d",
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186259,
+        "hostMonotonicMs": 86141464.178833,
+        "requestedMs": 6870,
+        "browserPerformanceMs": 7870,
+        "browserEpochMs": 1791288008870
+      },
+      "after": {
+        "hostEpochMs": 1791270186275,
+        "hostMonotonicMs": 86141479.776875,
+        "requestedMs": 6870,
+        "browserPerformanceMs": 7870,
+        "browserEpochMs": 1791288008870
+      },
+      "visible": {
+        "text": "Time: 7.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Fireboy approaches right pressure plate-0",
+      "file": "screenshots/0019-Fireboy-approaches-right-pressure-plate-0.png",
+      "held": [
+        "ArrowLeft"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186277,
+        "hostMonotonicMs": 86141481.618667,
+        "requestedMs": 6990,
+        "browserPerformanceMs": 7990,
+        "browserEpochMs": 1791288008990
+      },
+      "after": {
+        "hostEpochMs": 1791270186291,
+        "hostMonotonicMs": 86141495.401917,
+        "requestedMs": 6990,
+        "browserPerformanceMs": 7990,
+        "browserEpochMs": 1791288008990
+      },
+      "visible": {
+        "text": "Time: 7.9 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Watergirl joins upper floor-0",
+      "file": "screenshots/0020-Watergirl-joins-upper-floor-0.png",
+      "held": [
+        "ArrowLeft",
+        "a",
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186293,
+        "hostMonotonicMs": 86141497.544458,
+        "requestedMs": 7490,
+        "browserPerformanceMs": 8490,
+        "browserEpochMs": 1791288009490
+      },
+      "after": {
+        "hostEpochMs": 1791270186310,
+        "hostMonotonicMs": 86141514.456542,
+        "requestedMs": 7490,
+        "browserPerformanceMs": 8490,
+        "browserEpochMs": 1791288009490
+      },
+      "visible": {
+        "text": "Time: 8.4 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Watergirl joins upper floor-1",
+      "file": "screenshots/0021-Watergirl-joins-upper-floor-1.png",
+      "held": [
+        "ArrowLeft",
+        "a",
+        "w"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186311,
+        "hostMonotonicMs": 86141515.381792,
+        "requestedMs": 7640,
+        "browserPerformanceMs": 8640,
+        "browserEpochMs": 1791288009640
+      },
+      "after": {
+        "hostEpochMs": 1791270186324,
+        "hostMonotonicMs": 86141528.751833,
+        "requestedMs": 7640,
+        "browserPerformanceMs": 8640,
+        "browserEpochMs": 1791288009640
+      },
+      "visible": {
+        "text": "Time: 8.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Settle on the pressure plate floor-0",
+      "file": "screenshots/0022-Settle-on-the-pressure-plate-floor-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270186327,
+        "hostMonotonicMs": 86141531.424917,
+        "requestedMs": 7940,
+        "browserPerformanceMs": 8940,
+        "browserEpochMs": 1791288009940
+      },
+      "after": {
+        "hostEpochMs": 1791270186343,
+        "hostMonotonicMs": 86141547.705583,
+        "requestedMs": 7940,
+        "browserPerformanceMs": 8940,
+        "browserEpochMs": 1791288009940
+      },
+      "visible": {
+        "text": "Time: 8.9 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Watergirl steps onto the right plate-0",
+      "file": "screenshots/0023-Watergirl-steps-onto-the-right-plate-0.png",
+      "held": [
+        "ArrowLeft",
+        "a"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186345,
+        "hostMonotonicMs": 86141549.829167,
+        "requestedMs": 8120,
+        "browserPerformanceMs": 9120,
+        "browserEpochMs": 1791288010120
+      },
+      "after": {
+        "hostEpochMs": 1791270186357,
+        "hostMonotonicMs": 86141562.13625,
+        "requestedMs": 8120,
+        "browserPerformanceMs": 9120,
+        "browserEpochMs": 1791288010120
+      },
+      "visible": {
+        "text": "Time: 9.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Watergirl holds the gate open while Fireboy crosses-0",
+      "file": "screenshots/0024-Watergirl-holds-the-gate-open-while-Fireboy-crosses-0.png",
+      "held": [
+        "ArrowLeft"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186359,
+        "hostMonotonicMs": 86141563.487125,
+        "requestedMs": 8620,
+        "browserPerformanceMs": 9620,
+        "browserEpochMs": 1791288010620
+      },
+      "after": {
+        "hostEpochMs": 1791270186376,
+        "hostMonotonicMs": 86141580.718083,
+        "requestedMs": 8620,
+        "browserPerformanceMs": 9620,
+        "browserEpochMs": 1791288010620
+      },
+      "visible": {
+        "text": "Time: 9.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Watergirl holds the gate open while Fireboy crosses-1",
+      "file": "screenshots/0025-Watergirl-holds-the-gate-open-while-Fireboy-crosses-1.png",
+      "held": [
+        "ArrowLeft"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186377,
+        "hostMonotonicMs": 86141581.750458,
+        "requestedMs": 9120,
+        "browserPerformanceMs": 10120,
+        "browserEpochMs": 1791288011120
+      },
+      "after": {
+        "hostEpochMs": 1791270186391,
+        "hostMonotonicMs": 86141595.574792,
+        "requestedMs": 9120,
+        "browserPerformanceMs": 10120,
+        "browserEpochMs": 1791288011120
+      },
+      "visible": {
+        "text": "Time: 10.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Watergirl holds the gate open while Fireboy crosses-2",
+      "file": "screenshots/0026-Watergirl-holds-the-gate-open-while-Fireboy-crosses-2.png",
+      "held": [
+        "ArrowLeft"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186392,
+        "hostMonotonicMs": 86141596.637875,
+        "requestedMs": 9620,
+        "browserPerformanceMs": 10620,
+        "browserEpochMs": 1791288011620
+      },
+      "after": {
+        "hostEpochMs": 1791270186407,
+        "hostMonotonicMs": 86141612.280083,
+        "requestedMs": 9620,
+        "browserPerformanceMs": 10620,
+        "browserEpochMs": 1791288011620
+      },
+      "visible": {
+        "text": "Time: 10.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Watergirl centers on the pressure plate-0",
+      "file": "screenshots/0027-Watergirl-centers-on-the-pressure-plate-0.png",
+      "held": [
+        "a"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186410,
+        "hostMonotonicMs": 86141614.55575,
+        "requestedMs": 9970,
+        "browserPerformanceMs": 10970,
+        "browserEpochMs": 1791288011970
+      },
+      "after": {
+        "hostEpochMs": 1791270186426,
+        "hostMonotonicMs": 86141631.026833,
+        "requestedMs": 9970,
+        "browserPerformanceMs": 10970,
+        "browserEpochMs": 1791288011970
+      },
+      "visible": {
+        "text": "Time: 10.9 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Observe gate opening-0",
+      "file": "screenshots/0028-Observe-gate-opening-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270186428,
+        "hostMonotonicMs": 86141632.743333,
+        "requestedMs": 10420,
+        "browserPerformanceMs": 11420,
+        "browserEpochMs": 1791288012420
+      },
+      "after": {
+        "hostEpochMs": 1791270186441,
+        "hostMonotonicMs": 86141645.738625,
+        "requestedMs": 10420,
+        "browserPerformanceMs": 11420,
+        "browserEpochMs": 1791288012420
+      },
+      "visible": {
+        "text": "Time: 11.4 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-leave-right-plate-0",
+      "file": "screenshots/0029-water-leave-right-plate-0.png",
+      "held": [
+        "a"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186443,
+        "hostMonotonicMs": 86141647.509333,
+        "requestedMs": 10920,
+        "browserPerformanceMs": 11920,
+        "browserEpochMs": 1791288012920
+      },
+      "after": {
+        "hostEpochMs": 1791270186457,
+        "hostMonotonicMs": 86141662.119583,
+        "requestedMs": 10920,
+        "browserPerformanceMs": 11920,
+        "browserEpochMs": 1791288012920
+      },
+      "visible": {
+        "text": "Time: 11.9 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "water-leave-right-plate-1",
+      "file": "screenshots/0030-water-leave-right-plate-1.png",
+      "held": [
+        "a"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186458,
+        "hostMonotonicMs": 86141663.15325,
+        "requestedMs": 11220,
+        "browserPerformanceMs": 12220,
+        "browserEpochMs": 1791288013220
+      },
+      "after": {
+        "hostEpochMs": 1791270186475,
+        "hostMonotonicMs": 86141679.438667,
+        "requestedMs": 11220,
+        "browserPerformanceMs": 12220,
+        "browserEpochMs": 1791288013220
+      },
+      "visible": {
+        "text": "Time: 12.2 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "barrier-return-no-contact-0",
+      "file": "screenshots/0031-barrier-return-no-contact-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270186476,
+        "hostMonotonicMs": 86141680.928042,
+        "requestedMs": 11720,
+        "browserPerformanceMs": 12720,
+        "browserEpochMs": 1791288013720
+      },
+      "after": {
+        "hostEpochMs": 1791270186491,
+        "hostMonotonicMs": 86141695.564083,
+        "requestedMs": 11720,
+        "browserPerformanceMs": 12720,
+        "browserEpochMs": 1791288013720
+      },
+      "visible": {
+        "text": "Time: 12.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "barrier-return-no-contact-1",
+      "file": "screenshots/0032-barrier-return-no-contact-1.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270186492,
+        "hostMonotonicMs": 86141696.618042,
+        "requestedMs": 12220,
+        "browserPerformanceMs": 13220,
+        "browserEpochMs": 1791288014220
+      },
+      "after": {
+        "hostEpochMs": 1791270186509,
+        "hostMonotonicMs": 86141714.27975,
+        "requestedMs": 12220,
+        "browserPerformanceMs": 13220,
+        "browserEpochMs": 1791288014220
+      },
+      "visible": {
+        "text": "Time: 13.2 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "barrier-return-no-contact-2",
+      "file": "screenshots/0033-barrier-return-no-contact-2.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270186510,
+        "hostMonotonicMs": 86141715.276417,
+        "requestedMs": 12720,
+        "browserPerformanceMs": 13720,
+        "browserEpochMs": 1791288014720
+      },
+      "after": {
+        "hostEpochMs": 1791270186524,
+        "hostMonotonicMs": 86141728.967833,
+        "requestedMs": 12720,
+        "browserPerformanceMs": 13720,
+        "browserEpochMs": 1791288014720
+      },
+      "visible": {
+        "text": "Time: 13.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "barrier-return-no-contact-3",
+      "file": "screenshots/0034-barrier-return-no-contact-3.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270186525,
+        "hostMonotonicMs": 86141729.97875,
+        "requestedMs": 13020,
+        "browserPerformanceMs": 14020,
+        "browserEpochMs": 1791288015020
+      },
+      "after": {
+        "hostEpochMs": 1791270186541,
+        "hostMonotonicMs": 86141745.447792,
+        "requestedMs": 13020,
+        "browserPerformanceMs": 14020,
+        "browserEpochMs": 1791288015020
+      },
+      "visible": {
+        "text": "Time: 14.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-return-blocking-probe-0",
+      "file": "screenshots/0035-fire-return-blocking-probe-0.png",
+      "held": [
+        "ArrowRight"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186542,
+        "hostMonotonicMs": 86141746.694875,
+        "requestedMs": 13520,
+        "browserPerformanceMs": 14520,
+        "browserEpochMs": 1791288015520
+      },
+      "after": {
+        "hostEpochMs": 1791270186557,
+        "hostMonotonicMs": 86141762.004292,
+        "requestedMs": 13520,
+        "browserPerformanceMs": 14520,
+        "browserEpochMs": 1791288015520
+      },
+      "visible": {
+        "text": "Time: 14.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-return-blocking-probe-1",
+      "file": "screenshots/0036-fire-return-blocking-probe-1.png",
+      "held": [
+        "ArrowRight"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186558,
+        "hostMonotonicMs": 86141762.911667,
+        "requestedMs": 14020,
+        "browserPerformanceMs": 15020,
+        "browserEpochMs": 1791288016020
+      },
+      "after": {
+        "hostEpochMs": 1791270186574,
+        "hostMonotonicMs": 86141778.664583,
+        "requestedMs": 14020,
+        "browserPerformanceMs": 15020,
+        "browserEpochMs": 1791288016020
+      },
+      "visible": {
+        "text": "Time: 15.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-return-blocking-probe-2",
+      "file": "screenshots/0037-fire-return-blocking-probe-2.png",
+      "held": [
+        "ArrowRight"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186575,
+        "hostMonotonicMs": 86141779.697625,
+        "requestedMs": 14520,
+        "browserPerformanceMs": 15520,
+        "browserEpochMs": 1791288016520
+      },
+      "after": {
+        "hostEpochMs": 1791270186593,
+        "hostMonotonicMs": 86141797.646083,
+        "requestedMs": 14520,
+        "browserPerformanceMs": 15520,
+        "browserEpochMs": 1791288016520
+      },
+      "visible": {
+        "text": "Time: 15.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "fire-return-blocking-probe-3",
+      "file": "screenshots/0038-fire-return-blocking-probe-3.png",
+      "held": [
+        "ArrowRight"
+      ],
+      "before": {
+        "hostEpochMs": 1791270186594,
+        "hostMonotonicMs": 86141798.730583,
+        "requestedMs": 14620,
+        "browserPerformanceMs": 15620,
+        "browserEpochMs": 1791288016620
+      },
+      "after": {
+        "hostEpochMs": 1791270186607,
+        "hostMonotonicMs": 86141811.690542,
+        "requestedMs": 14620,
+        "browserPerformanceMs": 15620,
+        "browserEpochMs": 1791288016620
+      },
+      "visible": {
+        "text": "Time: 15.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "blocked-or-crossed-0",
+      "file": "screenshots/0039-blocked-or-crossed-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270186609,
+        "hostMonotonicMs": 86141813.384042,
+        "requestedMs": 14920,
+        "browserPerformanceMs": 15920,
+        "browserEpochMs": 1791288016920
+      },
+      "after": {
+        "hostEpochMs": 1791270186625,
+        "hostMonotonicMs": 86141829.489458,
+        "requestedMs": 14920,
+        "browserPerformanceMs": 15920,
+        "browserEpochMs": 1791288016920
+      },
+      "visible": {
+        "text": "Time: 15.9 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "final",
+      "file": "screenshots/0040-final.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270186625,
+        "hostMonotonicMs": 86141829.779958,
+        "requestedMs": 14920,
+        "browserPerformanceMs": 15920,
+        "browserEpochMs": 1791288016920
+      },
+      "after": {
+        "hostEpochMs": 1791270186643,
+        "hostMonotonicMs": 86141847.678958,
+        "requestedMs": 14920,
+        "browserPerformanceMs": 15920,
+        "browserEpochMs": 1791288016920
+      },
+      "visible": {
+        "text": "Time: 15.9 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 1189.8125,
+              "y": 5,
+              "width": 85.1875,
+              "height": 25
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "navigation",
+      "before": {
+        "hostEpochMs": 1791270184905,
+        "hostMonotonicMs": 86140109.827458,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1000,
+        "browserEpochMs": 1791288001000
+      },
+      "after": {
+        "hostEpochMs": 1791270184915,
+        "hostMonotonicMs": 86140119.503042,
+        "requestedMs": 0,
+        "browserPerformanceMs": 0,
+        "browserEpochMs": 1791288001000
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowRight",
+      "label": "segment-00",
+      "before": {
+        "hostEpochMs": 1791270185298,
+        "hostMonotonicMs": 86140503.168292,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1000,
+        "browserEpochMs": 1791288002000
+      },
+      "after": {
+        "hostEpochMs": 1791270185299,
+        "hostMonotonicMs": 86140504.000042,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1000,
+        "browserEpochMs": 1791288002000
+      }
+    },
+    {
+      "type": "advance",
+      "label": "segment-00",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270185299,
+        "hostMonotonicMs": 86140504.2735,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1000,
+        "browserEpochMs": 1791288002000
+      },
+      "after": {
+        "hostEpochMs": 1791270185460,
+        "hostMonotonicMs": 86140664.733292,
+        "requestedMs": 500,
+        "browserPerformanceMs": 1500,
+        "browserEpochMs": 1791288002500
+      }
+    },
+    {
+      "type": "advance",
+      "label": "segment-00",
+      "durationMs": 300,
+      "before": {
+        "hostEpochMs": 1791270185495,
+        "hostMonotonicMs": 86140699.999958,
+        "requestedMs": 500,
+        "browserPerformanceMs": 1500,
+        "browserEpochMs": 1791288002500
+      },
+      "after": {
+        "hostEpochMs": 1791270185582,
+        "hostMonotonicMs": 86140787.374042,
+        "requestedMs": 800,
+        "browserPerformanceMs": 1800,
+        "browserEpochMs": 1791288002800
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "d",
+      "label": "segment-01",
+      "before": {
+        "hostEpochMs": 1791270185615,
+        "hostMonotonicMs": 86140820.254167,
+        "requestedMs": 800,
+        "browserPerformanceMs": 1800,
+        "browserEpochMs": 1791288002800
+      },
+      "after": {
+        "hostEpochMs": 1791270185616,
+        "hostMonotonicMs": 86140820.824458,
+        "requestedMs": 800,
+        "browserPerformanceMs": 1800,
+        "browserEpochMs": 1791288002800
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "w",
+      "label": "segment-01",
+      "before": {
+        "hostEpochMs": 1791270185616,
+        "hostMonotonicMs": 86140821.182625,
+        "requestedMs": 800,
+        "browserPerformanceMs": 1800,
+        "browserEpochMs": 1791288002800
+      },
+      "after": {
+        "hostEpochMs": 1791270185617,
+        "hostMonotonicMs": 86140821.831958,
+        "requestedMs": 800,
+        "browserPerformanceMs": 1800,
+        "browserEpochMs": 1791288002800
+      }
+    },
+    {
+      "type": "advance",
+      "label": "segment-01",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270185617,
+        "hostMonotonicMs": 86140822.145625,
+        "requestedMs": 800,
+        "browserPerformanceMs": 1800,
+        "browserEpochMs": 1791288002800
+      },
+      "after": {
+        "hostEpochMs": 1791270185780,
+        "hostMonotonicMs": 86140984.706125,
+        "requestedMs": 1300,
+        "browserPerformanceMs": 2300,
+        "browserEpochMs": 1791288003300
+      }
+    },
+    {
+      "type": "advance",
+      "label": "segment-01",
+      "durationMs": 300,
+      "before": {
+        "hostEpochMs": 1791270185835,
+        "hostMonotonicMs": 86141039.442583,
+        "requestedMs": 1300,
+        "browserPerformanceMs": 2300,
+        "browserEpochMs": 1791288003300
+      },
+      "after": {
+        "hostEpochMs": 1791270185919,
+        "hostMonotonicMs": 86141124.157708,
+        "requestedMs": 1600,
+        "browserPerformanceMs": 2600,
+        "browserEpochMs": 1791288003600
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "w",
+      "label": "segment-02",
+      "before": {
+        "hostEpochMs": 1791270185945,
+        "hostMonotonicMs": 86141150.239833,
+        "requestedMs": 1600,
+        "browserPerformanceMs": 2600,
+        "browserEpochMs": 1791288003600
+      },
+      "after": {
+        "hostEpochMs": 1791270185946,
+        "hostMonotonicMs": 86141150.715458,
+        "requestedMs": 1600,
+        "browserPerformanceMs": 2600,
+        "browserEpochMs": 1791288003600
+      }
+    },
+    {
+      "type": "advance",
+      "label": "segment-02",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270185946,
+        "hostMonotonicMs": 86141150.931583,
+        "requestedMs": 1600,
+        "browserPerformanceMs": 2600,
+        "browserEpochMs": 1791288003600
+      },
+      "after": {
+        "hostEpochMs": 1791270185947,
+        "hostMonotonicMs": 86141151.491542,
+        "requestedMs": 2100,
+        "browserPerformanceMs": 3100,
+        "browserEpochMs": 1791288004100
+      }
+    },
+    {
+      "type": "advance",
+      "label": "segment-02",
+      "durationMs": 450,
+      "before": {
+        "hostEpochMs": 1791270185978,
+        "hostMonotonicMs": 86141182.421583,
+        "requestedMs": 2100,
+        "browserPerformanceMs": 3100,
+        "browserEpochMs": 1791288004100
+      },
+      "after": {
+        "hostEpochMs": 1791270185978,
+        "hostMonotonicMs": 86141183.056208,
+        "requestedMs": 2550,
+        "browserPerformanceMs": 3550,
+        "browserEpochMs": 1791288004550
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowUp",
+      "label": "Jump Fireboy from the center floor onto the red shelf",
+      "before": {
+        "hostEpochMs": 1791270186011,
+        "hostMonotonicMs": 86141215.397708,
+        "requestedMs": 2550,
+        "browserPerformanceMs": 3550,
+        "browserEpochMs": 1791288004550
+      },
+      "after": {
+        "hostEpochMs": 1791270186011,
+        "hostMonotonicMs": 86141215.8175,
+        "requestedMs": 2550,
+        "browserPerformanceMs": 3550,
+        "browserEpochMs": 1791288004550
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Jump Fireboy from the center floor onto the red shelf",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186011,
+        "hostMonotonicMs": 86141216.002792,
+        "requestedMs": 2550,
+        "browserPerformanceMs": 3550,
+        "browserEpochMs": 1791288004550
+      },
+      "after": {
+        "hostEpochMs": 1791270186012,
+        "hostMonotonicMs": 86141216.856125,
+        "requestedMs": 3050,
+        "browserPerformanceMs": 4050,
+        "browserEpochMs": 1791288005050
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Jump Fireboy from the center floor onto the red shelf",
+      "durationMs": 150,
+      "before": {
+        "hostEpochMs": 1791270186059,
+        "hostMonotonicMs": 86141264.318,
+        "requestedMs": 3050,
+        "browserPerformanceMs": 4050,
+        "browserEpochMs": 1791288005050
+      },
+      "after": {
+        "hostEpochMs": 1791270186060,
+        "hostMonotonicMs": 86141264.923542,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 4200,
+        "browserEpochMs": 1791288005200
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowUp",
+      "label": "Cross the second pair of pools",
+      "before": {
+        "hostEpochMs": 1791270186078,
+        "hostMonotonicMs": 86141282.508958,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 4200,
+        "browserEpochMs": 1791288005200
+      },
+      "after": {
+        "hostEpochMs": 1791270186078,
+        "hostMonotonicMs": 86141282.957917,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 4200,
+        "browserEpochMs": 1791288005200
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Cross the second pair of pools",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186078,
+        "hostMonotonicMs": 86141283.146292,
+        "requestedMs": 3200,
+        "browserPerformanceMs": 4200,
+        "browserEpochMs": 1791288005200
+      },
+      "after": {
+        "hostEpochMs": 1791270186079,
+        "hostMonotonicMs": 86141283.718333,
+        "requestedMs": 3700,
+        "browserPerformanceMs": 4700,
+        "browserEpochMs": 1791288005700
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Cross the second pair of pools",
+      "durationMs": 300,
+      "before": {
+        "hostEpochMs": 1791270186111,
+        "hostMonotonicMs": 86141315.579667,
+        "requestedMs": 3700,
+        "browserPerformanceMs": 4700,
+        "browserEpochMs": 1791288005700
+      },
+      "after": {
+        "hostEpochMs": 1791270186111,
+        "hostMonotonicMs": 86141316.143208,
+        "requestedMs": 4000,
+        "browserPerformanceMs": 5000,
+        "browserEpochMs": 1791288006000
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowUp",
+      "label": "Climb the right-hand stairs",
+      "before": {
+        "hostEpochMs": 1791270186141,
+        "hostMonotonicMs": 86141346.045375,
+        "requestedMs": 4000,
+        "browserPerformanceMs": 5000,
+        "browserEpochMs": 1791288006000
+      },
+      "after": {
+        "hostEpochMs": 1791270186142,
+        "hostMonotonicMs": 86141346.440833,
+        "requestedMs": 4000,
+        "browserPerformanceMs": 5000,
+        "browserEpochMs": 1791288006000
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "w",
+      "label": "Climb the right-hand stairs",
+      "before": {
+        "hostEpochMs": 1791270186142,
+        "hostMonotonicMs": 86141346.591292,
+        "requestedMs": 4000,
+        "browserPerformanceMs": 5000,
+        "browserEpochMs": 1791288006000
+      },
+      "after": {
+        "hostEpochMs": 1791270186142,
+        "hostMonotonicMs": 86141346.842583,
+        "requestedMs": 4000,
+        "browserPerformanceMs": 5000,
+        "browserEpochMs": 1791288006000
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Climb the right-hand stairs",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186142,
+        "hostMonotonicMs": 86141346.9725,
+        "requestedMs": 4000,
+        "browserPerformanceMs": 5000,
+        "browserEpochMs": 1791288006000
+      },
+      "after": {
+        "hostEpochMs": 1791270186142,
+        "hostMonotonicMs": 86141347.362917,
+        "requestedMs": 4500,
+        "browserPerformanceMs": 5500,
+        "browserEpochMs": 1791288006500
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Climb the right-hand stairs",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186157,
+        "hostMonotonicMs": 86141362.337792,
+        "requestedMs": 4500,
+        "browserPerformanceMs": 5500,
+        "browserEpochMs": 1791288006500
+      },
+      "after": {
+        "hostEpochMs": 1791270186158,
+        "hostMonotonicMs": 86141362.951625,
+        "requestedMs": 5000,
+        "browserPerformanceMs": 6000,
+        "browserEpochMs": 1791288007000
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Climb the right-hand stairs",
+      "durationMs": 300,
+      "before": {
+        "hostEpochMs": 1791270186176,
+        "hostMonotonicMs": 86141380.950125,
+        "requestedMs": 5000,
+        "browserPerformanceMs": 6000,
+        "browserEpochMs": 1791288007000
+      },
+      "after": {
+        "hostEpochMs": 1791270186177,
+        "hostMonotonicMs": 86141381.392208,
+        "requestedMs": 5300,
+        "browserPerformanceMs": 6300,
+        "browserEpochMs": 1791288007300
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Reach the first pressure plate",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186191,
+        "hostMonotonicMs": 86141395.978208,
+        "requestedMs": 5300,
+        "browserPerformanceMs": 6300,
+        "browserEpochMs": 1791288007300
+      },
+      "after": {
+        "hostEpochMs": 1791270186192,
+        "hostMonotonicMs": 86141396.584708,
+        "requestedMs": 5800,
+        "browserPerformanceMs": 6800,
+        "browserEpochMs": 1791288007800
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Reach the first pressure plate",
+      "durationMs": 300,
+      "before": {
+        "hostEpochMs": 1791270186210,
+        "hostMonotonicMs": 86141414.842167,
+        "requestedMs": 5800,
+        "browserPerformanceMs": 6800,
+        "browserEpochMs": 1791288007800
+      },
+      "after": {
+        "hostEpochMs": 1791270186211,
+        "hostMonotonicMs": 86141415.421458,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 7100,
+        "browserEpochMs": 1791288008100
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowRight",
+      "label": "Release both jump keys",
+      "before": {
+        "hostEpochMs": 1791270186224,
+        "hostMonotonicMs": 86141429.256417,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 7100,
+        "browserEpochMs": 1791288008100
+      },
+      "after": {
+        "hostEpochMs": 1791270186225,
+        "hostMonotonicMs": 86141429.669708,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 7100,
+        "browserEpochMs": 1791288008100
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "d",
+      "label": "Release both jump keys",
+      "before": {
+        "hostEpochMs": 1791270186225,
+        "hostMonotonicMs": 86141429.874,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 7100,
+        "browserEpochMs": 1791288008100
+      },
+      "after": {
+        "hostEpochMs": 1791270186225,
+        "hostMonotonicMs": 86141430.232625,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 7100,
+        "browserEpochMs": 1791288008100
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowUp",
+      "label": "Release both jump keys",
+      "before": {
+        "hostEpochMs": 1791270186226,
+        "hostMonotonicMs": 86141430.434667,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 7100,
+        "browserEpochMs": 1791288008100
+      },
+      "after": {
+        "hostEpochMs": 1791270186226,
+        "hostMonotonicMs": 86141430.794042,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 7100,
+        "browserEpochMs": 1791288008100
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "w",
+      "label": "Release both jump keys",
+      "before": {
+        "hostEpochMs": 1791270186226,
+        "hostMonotonicMs": 86141430.997875,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 7100,
+        "browserEpochMs": 1791288008100
+      },
+      "after": {
+        "hostEpochMs": 1791270186226,
+        "hostMonotonicMs": 86141431.329667,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 7100,
+        "browserEpochMs": 1791288008100
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Release both jump keys",
+      "durationMs": 120,
+      "before": {
+        "hostEpochMs": 1791270186227,
+        "hostMonotonicMs": 86141431.518,
+        "requestedMs": 6100,
+        "browserPerformanceMs": 7100,
+        "browserEpochMs": 1791288008100
+      },
+      "after": {
+        "hostEpochMs": 1791270186227,
+        "hostMonotonicMs": 86141432.057125,
+        "requestedMs": 6220,
+        "browserPerformanceMs": 7220,
+        "browserEpochMs": 1791288008220
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowLeft",
+      "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp",
+      "before": {
+        "hostEpochMs": 1791270186241,
+        "hostMonotonicMs": 86141445.385917,
+        "requestedMs": 6220,
+        "browserPerformanceMs": 7220,
+        "browserEpochMs": 1791288008220
+      },
+      "after": {
+        "hostEpochMs": 1791270186241,
+        "hostMonotonicMs": 86141445.798125,
+        "requestedMs": 6220,
+        "browserPerformanceMs": 7220,
+        "browserEpochMs": 1791288008220
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowUp",
+      "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp",
+      "before": {
+        "hostEpochMs": 1791270186241,
+        "hostMonotonicMs": 86141445.975833,
+        "requestedMs": 6220,
+        "browserPerformanceMs": 7220,
+        "browserEpochMs": 1791288008220
+      },
+      "after": {
+        "hostEpochMs": 1791270186241,
+        "hostMonotonicMs": 86141446.27425,
+        "requestedMs": 6220,
+        "browserPerformanceMs": 7220,
+        "browserEpochMs": 1791288008220
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "d",
+      "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp",
+      "before": {
+        "hostEpochMs": 1791270186242,
+        "hostMonotonicMs": 86141446.409292,
+        "requestedMs": 6220,
+        "browserPerformanceMs": 7220,
+        "browserEpochMs": 1791288008220
+      },
+      "after": {
+        "hostEpochMs": 1791270186242,
+        "hostMonotonicMs": 86141446.636208,
+        "requestedMs": 6220,
+        "browserPerformanceMs": 7220,
+        "browserEpochMs": 1791288008220
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "w",
+      "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp",
+      "before": {
+        "hostEpochMs": 1791270186242,
+        "hostMonotonicMs": 86141446.764167,
+        "requestedMs": 6220,
+        "browserPerformanceMs": 7220,
+        "browserEpochMs": 1791288008220
+      },
+      "after": {
+        "hostEpochMs": 1791270186242,
+        "hostMonotonicMs": 86141446.99275,
+        "requestedMs": 6220,
+        "browserPerformanceMs": 7220,
+        "browserEpochMs": 1791288008220
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186242,
+        "hostMonotonicMs": 86141447.116833,
+        "requestedMs": 6220,
+        "browserPerformanceMs": 7220,
+        "browserEpochMs": 1791288008220
+      },
+      "after": {
+        "hostEpochMs": 1791270186243,
+        "hostMonotonicMs": 86141447.497625,
+        "requestedMs": 6720,
+        "browserPerformanceMs": 7720,
+        "browserEpochMs": 1791288008720
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Jump Fireboy left onto the upper ramp and Watergirl up the lower ramp",
+      "durationMs": 150,
+      "before": {
+        "hostEpochMs": 1791270186259,
+        "hostMonotonicMs": 86141463.391083,
+        "requestedMs": 6720,
+        "browserPerformanceMs": 7720,
+        "browserEpochMs": 1791288008720
+      },
+      "after": {
+        "hostEpochMs": 1791270186259,
+        "hostMonotonicMs": 86141463.976458,
+        "requestedMs": 6870,
+        "browserPerformanceMs": 7870,
+        "browserEpochMs": 1791288008870
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowUp",
+      "label": "Fireboy approaches right pressure plate",
+      "before": {
+        "hostEpochMs": 1791270186275,
+        "hostMonotonicMs": 86141479.997583,
+        "requestedMs": 6870,
+        "browserPerformanceMs": 7870,
+        "browserEpochMs": 1791288008870
+      },
+      "after": {
+        "hostEpochMs": 1791270186275,
+        "hostMonotonicMs": 86141480.321667,
+        "requestedMs": 6870,
+        "browserPerformanceMs": 7870,
+        "browserEpochMs": 1791288008870
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "d",
+      "label": "Fireboy approaches right pressure plate",
+      "before": {
+        "hostEpochMs": 1791270186276,
+        "hostMonotonicMs": 86141480.464333,
+        "requestedMs": 6870,
+        "browserPerformanceMs": 7870,
+        "browserEpochMs": 1791288008870
+      },
+      "after": {
+        "hostEpochMs": 1791270186276,
+        "hostMonotonicMs": 86141480.692167,
+        "requestedMs": 6870,
+        "browserPerformanceMs": 7870,
+        "browserEpochMs": 1791288008870
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "w",
+      "label": "Fireboy approaches right pressure plate",
+      "before": {
+        "hostEpochMs": 1791270186276,
+        "hostMonotonicMs": 86141480.813917,
+        "requestedMs": 6870,
+        "browserPerformanceMs": 7870,
+        "browserEpochMs": 1791288008870
+      },
+      "after": {
+        "hostEpochMs": 1791270186276,
+        "hostMonotonicMs": 86141481.02525,
+        "requestedMs": 6870,
+        "browserPerformanceMs": 7870,
+        "browserEpochMs": 1791288008870
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Fireboy approaches right pressure plate",
+      "durationMs": 120,
+      "before": {
+        "hostEpochMs": 1791270186276,
+        "hostMonotonicMs": 86141481.151792,
+        "requestedMs": 6870,
+        "browserPerformanceMs": 7870,
+        "browserEpochMs": 1791288008870
+      },
+      "after": {
+        "hostEpochMs": 1791270186277,
+        "hostMonotonicMs": 86141481.501667,
+        "requestedMs": 6990,
+        "browserPerformanceMs": 7990,
+        "browserEpochMs": 1791288008990
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "a",
+      "label": "Watergirl joins upper floor",
+      "before": {
+        "hostEpochMs": 1791270186291,
+        "hostMonotonicMs": 86141495.697,
+        "requestedMs": 6990,
+        "browserPerformanceMs": 7990,
+        "browserEpochMs": 1791288008990
+      },
+      "after": {
+        "hostEpochMs": 1791270186291,
+        "hostMonotonicMs": 86141496.15975,
+        "requestedMs": 6990,
+        "browserPerformanceMs": 7990,
+        "browserEpochMs": 1791288008990
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "w",
+      "label": "Watergirl joins upper floor",
+      "before": {
+        "hostEpochMs": 1791270186291,
+        "hostMonotonicMs": 86141496.335667,
+        "requestedMs": 6990,
+        "browserPerformanceMs": 7990,
+        "browserEpochMs": 1791288008990
+      },
+      "after": {
+        "hostEpochMs": 1791270186292,
+        "hostMonotonicMs": 86141496.705667,
+        "requestedMs": 6990,
+        "browserPerformanceMs": 7990,
+        "browserEpochMs": 1791288008990
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Watergirl joins upper floor",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186292,
+        "hostMonotonicMs": 86141496.879792,
+        "requestedMs": 6990,
+        "browserPerformanceMs": 7990,
+        "browserEpochMs": 1791288008990
+      },
+      "after": {
+        "hostEpochMs": 1791270186293,
+        "hostMonotonicMs": 86141497.4055,
+        "requestedMs": 7490,
+        "browserPerformanceMs": 8490,
+        "browserEpochMs": 1791288009490
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Watergirl joins upper floor",
+      "durationMs": 150,
+      "before": {
+        "hostEpochMs": 1791270186310,
+        "hostMonotonicMs": 86141514.734458,
+        "requestedMs": 7490,
+        "browserPerformanceMs": 8490,
+        "browserEpochMs": 1791288009490
+      },
+      "after": {
+        "hostEpochMs": 1791270186310,
+        "hostMonotonicMs": 86141515.244458,
+        "requestedMs": 7640,
+        "browserPerformanceMs": 8640,
+        "browserEpochMs": 1791288009640
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowLeft",
+      "label": "Settle on the pressure plate floor",
+      "before": {
+        "hostEpochMs": 1791270186324,
+        "hostMonotonicMs": 86141529.023625,
+        "requestedMs": 7640,
+        "browserPerformanceMs": 8640,
+        "browserEpochMs": 1791288009640
+      },
+      "after": {
+        "hostEpochMs": 1791270186325,
+        "hostMonotonicMs": 86141529.451792,
+        "requestedMs": 7640,
+        "browserPerformanceMs": 8640,
+        "browserEpochMs": 1791288009640
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "a",
+      "label": "Settle on the pressure plate floor",
+      "before": {
+        "hostEpochMs": 1791270186325,
+        "hostMonotonicMs": 86141529.632458,
+        "requestedMs": 7640,
+        "browserPerformanceMs": 8640,
+        "browserEpochMs": 1791288009640
+      },
+      "after": {
+        "hostEpochMs": 1791270186325,
+        "hostMonotonicMs": 86141529.996417,
+        "requestedMs": 7640,
+        "browserPerformanceMs": 8640,
+        "browserEpochMs": 1791288009640
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "w",
+      "label": "Settle on the pressure plate floor",
+      "before": {
+        "hostEpochMs": 1791270186325,
+        "hostMonotonicMs": 86141530.177333,
+        "requestedMs": 7640,
+        "browserPerformanceMs": 8640,
+        "browserEpochMs": 1791288009640
+      },
+      "after": {
+        "hostEpochMs": 1791270186326,
+        "hostMonotonicMs": 86141530.515375,
+        "requestedMs": 7640,
+        "browserPerformanceMs": 8640,
+        "browserEpochMs": 1791288009640
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Settle on the pressure plate floor",
+      "durationMs": 300,
+      "before": {
+        "hostEpochMs": 1791270186326,
+        "hostMonotonicMs": 86141530.711458,
+        "requestedMs": 7640,
+        "browserPerformanceMs": 8640,
+        "browserEpochMs": 1791288009640
+      },
+      "after": {
+        "hostEpochMs": 1791270186326,
+        "hostMonotonicMs": 86141531.251417,
+        "requestedMs": 7940,
+        "browserPerformanceMs": 8940,
+        "browserEpochMs": 1791288009940
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowLeft",
+      "label": "Watergirl steps onto the right plate",
+      "before": {
+        "hostEpochMs": 1791270186343,
+        "hostMonotonicMs": 86141547.973125,
+        "requestedMs": 7940,
+        "browserPerformanceMs": 8940,
+        "browserEpochMs": 1791288009940
+      },
+      "after": {
+        "hostEpochMs": 1791270186344,
+        "hostMonotonicMs": 86141548.420292,
+        "requestedMs": 7940,
+        "browserPerformanceMs": 8940,
+        "browserEpochMs": 1791288009940
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "a",
+      "label": "Watergirl steps onto the right plate",
+      "before": {
+        "hostEpochMs": 1791270186344,
+        "hostMonotonicMs": 86141548.611042,
+        "requestedMs": 7940,
+        "browserPerformanceMs": 8940,
+        "browserEpochMs": 1791288009940
+      },
+      "after": {
+        "hostEpochMs": 1791270186344,
+        "hostMonotonicMs": 86141548.933583,
+        "requestedMs": 7940,
+        "browserPerformanceMs": 8940,
+        "browserEpochMs": 1791288009940
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Watergirl steps onto the right plate",
+      "durationMs": 180,
+      "before": {
+        "hostEpochMs": 1791270186344,
+        "hostMonotonicMs": 86141549.118917,
+        "requestedMs": 7940,
+        "browserPerformanceMs": 8940,
+        "browserEpochMs": 1791288009940
+      },
+      "after": {
+        "hostEpochMs": 1791270186345,
+        "hostMonotonicMs": 86141549.678,
+        "requestedMs": 8120,
+        "browserPerformanceMs": 9120,
+        "browserEpochMs": 1791288010120
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "a",
+      "label": "Watergirl holds the gate open while Fireboy crosses",
+      "before": {
+        "hostEpochMs": 1791270186358,
+        "hostMonotonicMs": 86141562.40825,
+        "requestedMs": 8120,
+        "browserPerformanceMs": 9120,
+        "browserEpochMs": 1791288010120
+      },
+      "after": {
+        "hostEpochMs": 1791270186358,
+        "hostMonotonicMs": 86141562.80575,
+        "requestedMs": 8120,
+        "browserPerformanceMs": 9120,
+        "browserEpochMs": 1791288010120
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Watergirl holds the gate open while Fireboy crosses",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186358,
+        "hostMonotonicMs": 86141562.976917,
+        "requestedMs": 8120,
+        "browserPerformanceMs": 9120,
+        "browserEpochMs": 1791288010120
+      },
+      "after": {
+        "hostEpochMs": 1791270186358,
+        "hostMonotonicMs": 86141563.361542,
+        "requestedMs": 8620,
+        "browserPerformanceMs": 9620,
+        "browserEpochMs": 1791288010620
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Watergirl holds the gate open while Fireboy crosses",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186376,
+        "hostMonotonicMs": 86141580.962292,
+        "requestedMs": 8620,
+        "browserPerformanceMs": 9620,
+        "browserEpochMs": 1791288010620
+      },
+      "after": {
+        "hostEpochMs": 1791270186377,
+        "hostMonotonicMs": 86141581.550583,
+        "requestedMs": 9120,
+        "browserPerformanceMs": 10120,
+        "browserEpochMs": 1791288011120
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Watergirl holds the gate open while Fireboy crosses",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186391,
+        "hostMonotonicMs": 86141595.82475,
+        "requestedMs": 9120,
+        "browserPerformanceMs": 10120,
+        "browserEpochMs": 1791288011120
+      },
+      "after": {
+        "hostEpochMs": 1791270186392,
+        "hostMonotonicMs": 86141596.411583,
+        "requestedMs": 9620,
+        "browserPerformanceMs": 10620,
+        "browserEpochMs": 1791288011620
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowLeft",
+      "label": "Watergirl centers on the pressure plate",
+      "before": {
+        "hostEpochMs": 1791270186408,
+        "hostMonotonicMs": 86141612.551792,
+        "requestedMs": 9620,
+        "browserPerformanceMs": 10620,
+        "browserEpochMs": 1791288011620
+      },
+      "after": {
+        "hostEpochMs": 1791270186408,
+        "hostMonotonicMs": 86141612.988542,
+        "requestedMs": 9620,
+        "browserPerformanceMs": 10620,
+        "browserEpochMs": 1791288011620
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "a",
+      "label": "Watergirl centers on the pressure plate",
+      "before": {
+        "hostEpochMs": 1791270186408,
+        "hostMonotonicMs": 86141613.1685,
+        "requestedMs": 9620,
+        "browserPerformanceMs": 10620,
+        "browserEpochMs": 1791288011620
+      },
+      "after": {
+        "hostEpochMs": 1791270186409,
+        "hostMonotonicMs": 86141613.560667,
+        "requestedMs": 9620,
+        "browserPerformanceMs": 10620,
+        "browserEpochMs": 1791288011620
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Watergirl centers on the pressure plate",
+      "durationMs": 350,
+      "before": {
+        "hostEpochMs": 1791270186409,
+        "hostMonotonicMs": 86141613.751667,
+        "requestedMs": 9620,
+        "browserPerformanceMs": 10620,
+        "browserEpochMs": 1791288011620
+      },
+      "after": {
+        "hostEpochMs": 1791270186409,
+        "hostMonotonicMs": 86141614.333833,
+        "requestedMs": 9970,
+        "browserPerformanceMs": 10970,
+        "browserEpochMs": 1791288011970
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "a",
+      "label": "Observe gate opening",
+      "before": {
+        "hostEpochMs": 1791270186426,
+        "hostMonotonicMs": 86141631.320958,
+        "requestedMs": 9970,
+        "browserPerformanceMs": 10970,
+        "browserEpochMs": 1791288011970
+      },
+      "after": {
+        "hostEpochMs": 1791270186427,
+        "hostMonotonicMs": 86141631.778583,
+        "requestedMs": 9970,
+        "browserPerformanceMs": 10970,
+        "browserEpochMs": 1791288011970
+      }
+    },
+    {
+      "type": "advance",
+      "label": "Observe gate opening",
+      "durationMs": 450,
+      "before": {
+        "hostEpochMs": 1791270186427,
+        "hostMonotonicMs": 86141631.9855,
+        "requestedMs": 9970,
+        "browserPerformanceMs": 10970,
+        "browserEpochMs": 1791288011970
+      },
+      "after": {
+        "hostEpochMs": 1791270186428,
+        "hostMonotonicMs": 86141632.577125,
+        "requestedMs": 10420,
+        "browserPerformanceMs": 11420,
+        "browserEpochMs": 1791288012420
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "a",
+      "label": "water-leave-right-plate",
+      "before": {
+        "hostEpochMs": 1791270186441,
+        "hostMonotonicMs": 86141646.067875,
+        "requestedMs": 10420,
+        "browserPerformanceMs": 11420,
+        "browserEpochMs": 1791288012420
+      },
+      "after": {
+        "hostEpochMs": 1791270186442,
+        "hostMonotonicMs": 86141646.529917,
+        "requestedMs": 10420,
+        "browserPerformanceMs": 11420,
+        "browserEpochMs": 1791288012420
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-leave-right-plate",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186442,
+        "hostMonotonicMs": 86141646.749,
+        "requestedMs": 10420,
+        "browserPerformanceMs": 11420,
+        "browserEpochMs": 1791288012420
+      },
+      "after": {
+        "hostEpochMs": 1791270186442,
+        "hostMonotonicMs": 86141647.318917,
+        "requestedMs": 10920,
+        "browserPerformanceMs": 11920,
+        "browserEpochMs": 1791288012920
+      }
+    },
+    {
+      "type": "advance",
+      "label": "water-leave-right-plate",
+      "durationMs": 300,
+      "before": {
+        "hostEpochMs": 1791270186458,
+        "hostMonotonicMs": 86141662.39275,
+        "requestedMs": 10920,
+        "browserPerformanceMs": 11920,
+        "browserEpochMs": 1791288012920
+      },
+      "after": {
+        "hostEpochMs": 1791270186458,
+        "hostMonotonicMs": 86141662.962542,
+        "requestedMs": 11220,
+        "browserPerformanceMs": 12220,
+        "browserEpochMs": 1791288013220
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "a",
+      "label": "barrier-return-no-contact",
+      "before": {
+        "hostEpochMs": 1791270186475,
+        "hostMonotonicMs": 86141679.72725,
+        "requestedMs": 11220,
+        "browserPerformanceMs": 12220,
+        "browserEpochMs": 1791288013220
+      },
+      "after": {
+        "hostEpochMs": 1791270186475,
+        "hostMonotonicMs": 86141680.127833,
+        "requestedMs": 11220,
+        "browserPerformanceMs": 12220,
+        "browserEpochMs": 1791288013220
+      }
+    },
+    {
+      "type": "advance",
+      "label": "barrier-return-no-contact",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186475,
+        "hostMonotonicMs": 86141680.323875,
+        "requestedMs": 11220,
+        "browserPerformanceMs": 12220,
+        "browserEpochMs": 1791288013220
+      },
+      "after": {
+        "hostEpochMs": 1791270186476,
+        "hostMonotonicMs": 86141680.794458,
+        "requestedMs": 11720,
+        "browserPerformanceMs": 12720,
+        "browserEpochMs": 1791288013720
+      }
+    },
+    {
+      "type": "advance",
+      "label": "barrier-return-no-contact",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186491,
+        "hostMonotonicMs": 86141695.842583,
+        "requestedMs": 11720,
+        "browserPerformanceMs": 12720,
+        "browserEpochMs": 1791288013720
+      },
+      "after": {
+        "hostEpochMs": 1791270186492,
+        "hostMonotonicMs": 86141696.421542,
+        "requestedMs": 12220,
+        "browserPerformanceMs": 13220,
+        "browserEpochMs": 1791288014220
+      }
+    },
+    {
+      "type": "advance",
+      "label": "barrier-return-no-contact",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186510,
+        "hostMonotonicMs": 86141714.5485,
+        "requestedMs": 12220,
+        "browserPerformanceMs": 13220,
+        "browserEpochMs": 1791288014220
+      },
+      "after": {
+        "hostEpochMs": 1791270186510,
+        "hostMonotonicMs": 86141715.118792,
+        "requestedMs": 12720,
+        "browserPerformanceMs": 13720,
+        "browserEpochMs": 1791288014720
+      }
+    },
+    {
+      "type": "advance",
+      "label": "barrier-return-no-contact",
+      "durationMs": 300,
+      "before": {
+        "hostEpochMs": 1791270186524,
+        "hostMonotonicMs": 86141729.220333,
+        "requestedMs": 12720,
+        "browserPerformanceMs": 13720,
+        "browserEpochMs": 1791288014720
+      },
+      "after": {
+        "hostEpochMs": 1791270186525,
+        "hostMonotonicMs": 86141729.778333,
+        "requestedMs": 13020,
+        "browserPerformanceMs": 14020,
+        "browserEpochMs": 1791288015020
+      }
+    },
+    {
+      "type": "key-down",
+      "key": "ArrowRight",
+      "label": "fire-return-blocking-probe",
+      "before": {
+        "hostEpochMs": 1791270186541,
+        "hostMonotonicMs": 86141745.702875,
+        "requestedMs": 13020,
+        "browserPerformanceMs": 14020,
+        "browserEpochMs": 1791288015020
+      },
+      "after": {
+        "hostEpochMs": 1791270186541,
+        "hostMonotonicMs": 86141746.042333,
+        "requestedMs": 13020,
+        "browserPerformanceMs": 14020,
+        "browserEpochMs": 1791288015020
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-return-blocking-probe",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186541,
+        "hostMonotonicMs": 86141746.178458,
+        "requestedMs": 13020,
+        "browserPerformanceMs": 14020,
+        "browserEpochMs": 1791288015020
+      },
+      "after": {
+        "hostEpochMs": 1791270186542,
+        "hostMonotonicMs": 86141746.559875,
+        "requestedMs": 13520,
+        "browserPerformanceMs": 14520,
+        "browserEpochMs": 1791288015520
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-return-blocking-probe",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186557,
+        "hostMonotonicMs": 86141762.249042,
+        "requestedMs": 13520,
+        "browserPerformanceMs": 14520,
+        "browserEpochMs": 1791288015520
+      },
+      "after": {
+        "hostEpochMs": 1791270186558,
+        "hostMonotonicMs": 86141762.768125,
+        "requestedMs": 14020,
+        "browserPerformanceMs": 15020,
+        "browserEpochMs": 1791288016020
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-return-blocking-probe",
+      "durationMs": 500,
+      "before": {
+        "hostEpochMs": 1791270186574,
+        "hostMonotonicMs": 86141778.943917,
+        "requestedMs": 14020,
+        "browserPerformanceMs": 15020,
+        "browserEpochMs": 1791288016020
+      },
+      "after": {
+        "hostEpochMs": 1791270186575,
+        "hostMonotonicMs": 86141779.512042,
+        "requestedMs": 14520,
+        "browserPerformanceMs": 15520,
+        "browserEpochMs": 1791288016520
+      }
+    },
+    {
+      "type": "advance",
+      "label": "fire-return-blocking-probe",
+      "durationMs": 100,
+      "before": {
+        "hostEpochMs": 1791270186593,
+        "hostMonotonicMs": 86141797.931875,
+        "requestedMs": 14520,
+        "browserPerformanceMs": 15520,
+        "browserEpochMs": 1791288016520
+      },
+      "after": {
+        "hostEpochMs": 1791270186594,
+        "hostMonotonicMs": 86141798.535625,
+        "requestedMs": 14620,
+        "browserPerformanceMs": 15620,
+        "browserEpochMs": 1791288016620
+      }
+    },
+    {
+      "type": "key-up",
+      "key": "ArrowRight",
+      "label": "blocked-or-crossed",
+      "before": {
+        "hostEpochMs": 1791270186607,
+        "hostMonotonicMs": 86141811.975417,
+        "requestedMs": 14620,
+        "browserPerformanceMs": 15620,
+        "browserEpochMs": 1791288016620
+      },
+      "after": {
+        "hostEpochMs": 1791270186608,
+        "hostMonotonicMs": 86141812.415542,
+        "requestedMs": 14620,
+        "browserPerformanceMs": 15620,
+        "browserEpochMs": 1791288016620
+      }
+    },
+    {
+      "type": "advance",
+      "label": "blocked-or-crossed",
+      "durationMs": 300,
+      "before": {
+        "hostEpochMs": 1791270186608,
+        "hostMonotonicMs": 86141812.637333,
+        "requestedMs": 14620,
+        "browserPerformanceMs": 15620,
+        "browserEpochMs": 1791288016620
+      },
+      "after": {
+        "hostEpochMs": 1791270186608,
+        "hostMonotonicMs": 86141813.1965,
+        "requestedMs": 14920,
+        "browserPerformanceMs": 15920,
+        "browserEpochMs": 1791288016920
+      }
+    }
+  ],
+  "candidateEvents": [],
+  "evaluatorErrors": [],
+  "clock": "controlled",
+  "privateStateReads": 0,
+  "candidateMutations": 0,
+  "reference": false,
+  "deadlineExceeded": false,
+  "browserVersion": "153.0.8010.12",
+  "finishedAt": "2026-10-06T07:03:06.658Z",
+  "durationMs": 1860.2125000059605,
+  "sourceAfterSha256": "9acb855d2b11c87c46ec5073df880c63a9e369f4ba33b45196791401f9b47cf5",
+  "sourceUnchanged": true
+}

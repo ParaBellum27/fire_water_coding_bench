@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Level-state canvas calibration</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+    body { color: #eff5ff; background: #14263b; font: 18px/1.45 system-ui, sans-serif; }
+    canvas { position: fixed; inset: 0; width: 100%; height: 100%; }
+    header { position: absolute; top: 22px; left: 30px; right: 30px; }
+    h1 { margin: 0 0 8px; font-size: 26px; }
+    p { margin: 4px 0; }
+    #restart { margin-top: 12px; padding: 8px 18px; color: white; background: #284963; border: 2px solid #c9e1f1; border-radius: 5px; font: inherit; cursor: pointer; }
+    #restart:focus-visible { outline: 3px solid #ffe288; }
+    #status { font-size: 23px; font-weight: bold; color: #ffe288; }
+    #hud { margin-top: 12px; font-variant-numeric: tabular-nums; }
+    #details { color: #bfd7e8; }
+  </style>
+</head>
+<body>
+  <canvas id="scene" width="1280" height="960" aria-label="Level-state calibration game"></canvas>
+  <header>
+    <h1>Level-state canvas calibration</h1>
+    <p id="setup"></p>
+    <p>Fireboy: Arrow Left / Right / Up. Watergirl: A / D / W (either letter case).</p>
+    <p>R or Restart restores this scene's initial state. All interactions use contact and ordinary controls.</p>
+    <button id="restart" type="button">Restart</button>
+    <div id="hud"></div>
+    <div id="details"></div>
+    <div id="status" role="status"></div>
+  </header>
+  <script>
+    (() => {
+      'use strict';
+      // Fresh URL selection changes only the initial layout and the named deliberate defect.
+      // Public routes: hazards actor=fire|water & pool=red|blue|green: walk right 1.7 s.
+      // exits: ArrowRight 0.65 s alone (no win), then D 0.65 s (win with 0/2 gems).
+      // exits-wrong: ArrowRight + D 0.65 s contacts both wrong doors without winning.
+      // exit-death: D 0.65 s, release, then ArrowRight 0.65 s dies at the red door.
+      // reset-progress: ArrowRight + D 1.65 s traverses both boards, picks both gems,
+      // and latches the barrier/bridge. Reset before the pickup bell's four-second delay.
+      // reset-death: the same two controls for 2.8 s produces loss after that progress.
+      // reset-win: the same controls until terminal (about 5.7 s) occupies both exits.
+      // Test R and the button independently; reset while moving/jumping to check input
+      // and velocity clearing. Release the physical key afterward, then press it anew.
+      //
+      // Named defects affect only the following rule:
+      // matching-lethal kills matching red/blue; wrong-immunity allows foreign red/blue.
+      // element-swap reverses red/blue immunity; harmless-green removes green lethality.
+      // missing-death-freeze retains LOSS/dead markings but continues movement/physics.
+      // single-exit-win needs one matching door; wrong-exit-win accepts wrong occupants.
+      // death-can-win permits a dead occupant and overrides LOSS during exit evaluation.
+      // gems-required adds a gem-count prerequisite to the otherwise unchanged victory.
+      // stale-gems/mechanisms/tilt/terminal/input/timer retain only their named reset state.
+      // stale-callback keeps the pickup timeout and omits its previous-epoch guard, so an
+      // old pickup can visibly turn the reset bell ON; missing-reset disables both routes.
+      // The off-center pivots give a traversal nonzero net torque; damping retains angle,
+      // rather than using canned tilt changes or a scripted successful route.
+      const query = new URLSearchParams(location.search);
+      const scenes = new Set(['hazards', 'exits', 'exits-wrong', 'exit-death', 'reset-progress', 'reset-death', 'reset-win']);
+      const scene = scenes.has(query.get('scene')) ? query.get('scene') : 'reset-progress';
+      const faults = new Set(['matching-lethal', 'wrong-immunity', 'element-swap', 'harmless-green', 'missing-death-freeze', 'single-exit-win', 'wrong-exit-win', 'death-can-win', 'gems-required', 'stale-gems', 'stale-mechanisms', 'stale-tilt', 'stale-terminal', 'stale-input', 'stale-timer', 'stale-callback', 'missing-reset']);
+      const fault = faults.has(query.get('fault')) ? query.get('fault') : 'none';
+      const poolColor = ['red', 'blue', 'green'].includes(query.get('pool')) ? query.get('pool') : 'red';
+      const selectedActor = query.get('actor') === 'water' ? 'water' : 'fire';
+      const isResetScene = scene.startsWith('reset-');
+      const W = 26, H = 36, FLOOR = 760, SPEED = 160, GRAVITY = 800, JUMP = 300;
+      const colors = { red: '#ed433a', blue: '#278ee3', green: '#3dd36b' };
+      const canvas = document.getElementById('scene');
+      const ctx = canvas.getContext('2d');
+      const hud = document.getElementById('hud');
+      const details = document.getElementById('details');
+      const statusText = document.getElementById('status');
+      const held = new Set(), pendingJumps = new Set(), callbacks = new Set();
+      let epoch = 0, elapsed = 0, lastFrame = performance.now(), status = 'RUNNING';
+      let plate = false, barrierOpen = false, bridgeExtended = false;
+      let bell = 'OFF', callbackScheduled = false;
+      const boards = [
+        { x: 180, width: 120, angle: 0, angularVelocity: 0 },
+        { x: 630, width: 120, angle: 0, angularVelocity: 0 },
+      ];
+      const pools = [];
+      const doors = [];
+      const gems = [];
+      let spawnFire = 110, spawnWater = 560;
+      if (scene === 'hazards') {
+        spawnFire = selectedActor === 'fire' ? 260 : 1000;
+        spawnWater = selectedActor === 'water' ? 260 : 1000;
+        pools.push({ x: 360, width: 160, color: poolColor });
+      } else if (!isResetScene) {
+        spawnFire = scene === 'exits-wrong' ? 800 : 260;
+        spawnWater = scene === 'exits-wrong' ? 260 : 800;
+        doors.push({ x: 360, width: 70, color: 'red' }, { x: 900, width: 70, color: 'blue' });
+        gems.push({ x: 60, color: 'red', collected: false }, { x: 100, color: 'blue', collected: false });
+        // The lethal pool and red doorway share their left edge: contact can kill in the exit.
+        if (scene === 'exit-death') pools.push({ x: 360, width: 70, color: 'green' });
+      } else {
+        gems.push({ x: 270, color: 'red', collected: false }, { x: 720, color: 'blue', collected: false });
+        doors.push({ x: 1040, width: 80, color: 'red' }, { x: 1160, width: 110, color: 'blue' });
+        if (scene === 'reset-death') pools.push({ x: 1000, width: 70, color: 'green' });
+      }
+      const actors = [
+        { name: 'Fireboy', color: 'red', spawn: spawnFire, x: spawnFire, y: FLOOR - H, vx: 0, vy: 0, grounded: true, dead: false, left: 'ArrowLeft', right: 'ArrowRight', jump: 'ArrowUp' },
+        { name: 'Watergirl', color: 'blue', spawn: spawnWater, x: spawnWater, y: FLOOR - H, vx: 0, vy: 0, grounded: true, dead: false, left: 'KeyA', right: 'KeyD', jump: 'KeyW' },
+      ];
+      document.getElementById('setup').textContent = `Scene: ${scene} · Fault: ${fault}${scene === 'hazards' ? ` · ${selectedActor} / ${poolColor} pool` : ''}`;
+
+      function scheduleBell() {
+        if (callbackScheduled) return;
+        callbackScheduled = true;
+        bell = 'WAITING (4 seconds after pickup)';
+        const scheduledEpoch = epoch;
+        const id = setTimeout(() => {
+          callbacks.delete(id);
+          if (fault === 'stale-callback' || scheduledEpoch === epoch) bell = 'ON';
+        }, 4000);
+        callbacks.add(id);
+      }
+
+      function reset(initial = false) {
+        if (!initial && fault === 'missing-reset') return;
+        epoch++;
+        if (fault !== 'stale-callback' || initial) {
+          for (const id of callbacks) clearTimeout(id);
+          callbacks.clear();
+        }
+        bell = 'OFF';
+        callbackScheduled = false;
+        if (fault !== 'stale-input' || initial) { held.clear(); pendingJumps.clear(); }
+        for (const actor of actors) {
+          actor.x = actor.spawn;
+          actor.y = FLOOR - H;
+          if (fault !== 'stale-input' || initial) { actor.vx = 0; actor.vy = 0; }
+          actor.grounded = true;
+          if (fault !== 'stale-terminal' || initial) actor.dead = false;
+        }
+        if (fault !== 'stale-gems' || initial) for (const gem of gems) gem.collected = false;
+        if (fault !== 'stale-mechanisms' || initial) { plate = false; barrierOpen = false; bridgeExtended = false; }
+        if (fault !== 'stale-tilt' || initial) for (const board of boards) { board.angle = 0; board.angularVelocity = 0; }
+        if (fault !== 'stale-terminal' || initial) status = 'RUNNING';
+        if (fault !== 'stale-timer' || initial) elapsed = 0;
+        lastFrame = performance.now();
+        draw();
+      }
+
+      function controlCode(event) {
+        if (['KeyA', 'KeyD', 'KeyW', 'KeyR'].includes(event.code)) return event.code;
+        if (['ArrowLeft', 'ArrowRight', 'ArrowUp'].includes(event.key)) return event.key;
+        const letter = event.key.toLowerCase();
+        return ['a', 'd', 'w', 'r'].includes(letter) ? `Key${letter.toUpperCase()}` : null;
+      }
+      window.addEventListener('keydown', event => {
+        const code = controlCode(event);
+        if (!code) return;
+        event.preventDefault();
+        if (event.repeat) return;
+        if (code === 'KeyR') { reset(); return; }
+        if (!held.has(code) && (code === 'ArrowUp' || code === 'KeyW')) pendingJumps.add(code);
+        held.add(code);
+      });
+      window.addEventListener('keyup', event => {
+        const code = controlCode(event);
+        if (!code) return;
+        event.preventDefault();
+        held.delete(code);
+      });
+      window.addEventListener('blur', () => { held.clear(); pendingJumps.clear(); });
+      document.getElementById('restart').addEventListener('click', () => reset());
+
+      function overlaps(actor, x, width) { return actor.x + W > x && actor.x < x + width; }
+      function boardAt(x) { return isResetScene ? boards.find(board => x >= board.x && x <= board.x + board.width) : undefined; }
+      function supportAt(x) {
+        const board = boardAt(x);
+        if (board) return FLOOR + Math.tan(board.angle) * (x - board.x - board.width * 0.35);
+        if (isResetScene && x > 860 && x < 940 && !bridgeExtended) return Infinity;
+        return FLOOR;
+      }
+      function lethal(actor, pool) {
+        if (pool.color === 'green') return fault !== 'harmless-green';
+        if (fault === 'element-swap') return actor.color === pool.color;
+        if (fault === 'matching-lethal' && actor.color === pool.color) return true;
+        if (fault === 'wrong-immunity' && actor.color !== pool.color) return false;
+        return actor.color !== pool.color;
+      }
+      function lose(actor) {
+        actor.dead = true;
+        status = 'LOSS';
+        if (fault !== 'missing-death-freeze') {
+          for (const other of actors) { other.vx = 0; other.vy = 0; }
+          held.clear();
+          pendingJumps.clear();
+        }
+      }
+      function stepActor(actor, dt) {
+        const oldBottom = actor.y + H;
+        const oldX = actor.x;
+        actor.vx = (Number(held.has(actor.right)) - Number(held.has(actor.left))) * SPEED;
+        if (pendingJumps.has(actor.jump) && actor.grounded) { actor.vy = -JUMP; actor.grounded = false; }
+        actor.x = Math.max(8, Math.min(1280 - W - 8, actor.x + actor.vx * dt));
+        if (isResetScene && !barrierOpen && overlaps(actor, 450, 20) && actor.y + H > 640) {
+          actor.x = oldX < 450 ? 450 - W : 470;
+          actor.vx = 0;
+        }
+        const support = supportAt(actor.x + W / 2);
+        actor.vy += GRAVITY * dt;
+        actor.y += actor.vy * dt;
+        // Adjacent slopes are walkable; airborne actors can land only while descending.
+        if (actor.vy >= 0 && actor.y + H >= support && (oldBottom <= support + 8 || actor.grounded)) {
+          actor.y = support - H;
+          actor.vy = 0;
+          actor.grounded = true;
+        } else actor.grounded = false;
+        if (actor.y > 920) lose(actor);
+        for (const pool of pools) {
+          if (overlaps(actor, pool.x, pool.width) && actor.y + H >= FLOOR - 2 && lethal(actor, pool)) lose(actor);
+        }
+        if (actor.dead) return;
+        for (const gem of gems) {
+          if (!gem.collected && gem.color === actor.color && overlaps(actor, gem.x - 10, 20) && actor.y < FLOOR - 10 && actor.y + H > FLOOR - 40) {
+            gem.collected = true;
+            scheduleBell();
+          }
+        }
+        if (isResetScene && actor.grounded && actor.y + H >= FLOOR - 3) {
+          if (overlaps(actor, 340, 40)) { plate = true; barrierOpen = true; }
+          if (overlaps(actor, 790, 40)) bridgeExtended = true;
+        }
+      }
+      function updateBoards(dt) {
+        if (!isResetScene) return;
+        for (const board of boards) {
+          let torque = 0;
+          for (const actor of actors) {
+            const center = actor.x + W / 2;
+            if (!actor.dead && actor.grounded && boardAt(center) === board) torque += (center - board.x - board.width * 0.35) / 60;
+          }
+          board.angularVelocity += torque * 1.8 * dt;
+          board.angularVelocity *= Math.exp(-5 * dt);
+          board.angle = Math.max(-0.23, Math.min(0.23, board.angle + board.angularVelocity * dt));
+          if (Math.abs(board.angle) === 0.23) board.angularVelocity = 0;
+        }
+      }
+      function checkExits() {
+        if (!doors.length || status === 'WIN') return;
+        if (status === 'LOSS' && fault !== 'death-can-win') return;
+        const contacts = doors.map(door => actors.some(actor =>
+          (!actor.dead || fault === 'death-can-win') &&
+          (actor.color === door.color || fault === 'wrong-exit-win') &&
+          overlaps(actor, door.x, door.width) && actor.y + H >= FLOOR - 3 && actor.y < FLOOR));
+        const enough = fault === 'single-exit-win' ? contacts.some(Boolean) : contacts.every(Boolean);
+        if (enough && (fault !== 'gems-required' || gems.every(gem => gem.collected))) {
+          status = 'WIN';
+          for (const actor of actors) { actor.vx = 0; actor.vy = 0; }
+          held.clear();
+          pendingJumps.clear();
+        }
+      }
+      function text(label, x, y, color = '#eff5ff') { ctx.fillStyle = color; ctx.font = '17px system-ui'; ctx.fillText(label, x, y); }
+      function draw() {
+        ctx.clearRect(0, 0, 1280, 960);
+        ctx.fillStyle = '#45654b'; ctx.fillRect(0, FLOOR, 1280, 200);
+        ctx.fillStyle = '#89ad72'; ctx.fillRect(0, FLOOR, 1280, 5);
+        for (const door of doors) {
+          ctx.fillStyle = colors[door.color]; ctx.fillRect(door.x, FLOOR - 80, door.width, 80);
+          ctx.fillStyle = '#182d40'; ctx.fillRect(door.x + 6, FLOOR - 74, door.width - 12, 74);
+          text(door.color === 'red' ? 'FIRE EXIT' : 'WATER EXIT', door.x - 8, FLOOR - 95, colors[door.color]);
+        }
+        if (isResetScene) {
+          for (let i = 0; i < boards.length; i++) {
+            const board = boards[i];
+            ctx.fillStyle = '#14263b'; ctx.fillRect(board.x, 740, board.width, 70);
+            ctx.save(); ctx.translate(board.x + board.width * 0.35, FLOOR); ctx.rotate(board.angle);
+            ctx.fillStyle = '#f3c76c'; ctx.fillRect(-board.width * 0.35, 0, board.width, 8); ctx.restore();
+            const pivot = board.x + board.width * 0.35;
+            ctx.fillStyle = '#8999aa'; ctx.beginPath(); ctx.moveTo(pivot - 10, 805); ctx.lineTo(pivot, FLOOR + 8); ctx.lineTo(pivot + 10, 805); ctx.fill();
+            text(`Tilt ${i + 1}: ${(board.angle * 180 / Math.PI).toFixed(1)}°`, board.x - 5, 850);
+          }
+          ctx.fillStyle = plate ? '#ffe288' : '#a9a0dc'; ctx.fillRect(340, FLOOR - (plate ? 3 : 8), 40, plate ? 3 : 8);
+          text(`Latch plate: ${plate ? 'DOWN' : 'UP'}`, 305, 890);
+          ctx.fillStyle = barrierOpen ? '#38596b' : '#d5bb79'; ctx.fillRect(450, barrierOpen ? 785 : 640, 20, barrierOpen ? 16 : 120);
+          text(`Barrier: ${barrierOpen ? 'OPEN' : 'CLOSED'}`, 425, 870);
+          ctx.fillStyle = bridgeExtended ? '#ffe288' : '#a9a0dc'; ctx.fillRect(790, FLOOR - (bridgeExtended ? 3 : 8), 40, bridgeExtended ? 3 : 8);
+          ctx.fillStyle = '#14263b'; ctx.fillRect(860, FLOOR, 80, 170);
+          if (bridgeExtended) { ctx.fillStyle = '#e7b75f'; ctx.fillRect(860, FLOOR, 80, 8); }
+          text(`Bridge: ${bridgeExtended ? 'EXTENDED' : 'RETRACTED'}`, 785, 890);
+        }
+        for (const pool of pools) {
+          ctx.fillStyle = colors[pool.color]; ctx.fillRect(pool.x, FLOOR, pool.width, 26);
+          text(`${pool.color.toUpperCase()} POOL`, pool.x, 825, colors[pool.color]);
+        }
+        for (const gem of gems) if (!gem.collected) {
+          ctx.fillStyle = colors[gem.color]; ctx.beginPath(); ctx.moveTo(gem.x, FLOOR - 42); ctx.lineTo(gem.x + 10, FLOOR - 28); ctx.lineTo(gem.x, FLOOR - 14); ctx.lineTo(gem.x - 10, FLOOR - 28); ctx.fill();
+        }
+        for (const actor of actors) {
+          ctx.fillStyle = colors[actor.color]; ctx.fillRect(actor.x, actor.y, W, H);
+          ctx.fillStyle = '#fff'; ctx.fillRect(actor.x + 5, actor.y + 10, 4, 5); ctx.fillRect(actor.x + 17, actor.y + 10, 4, 5);
+          ctx.fillStyle = '#182032'; ctx.fillRect(actor.x + 9, actor.y + 22, 8, 3);
+          if (actor.dead) { ctx.strokeStyle = '#ffe288'; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(actor.x, actor.y); ctx.lineTo(actor.x + W, actor.y + H); ctx.moveTo(actor.x + W, actor.y); ctx.lineTo(actor.x, actor.y + H); ctx.stroke(); }
+          text(`${actor.name}${actor.dead ? ' DEAD' : ''}`, actor.x - 18, actor.y - 12, colors[actor.color]);
+        }
+        hud.textContent = `Elapsed: ${elapsed.toFixed(2)} s · Gems: ${gems.filter(gem => gem.collected).length}/${gems.length} · Pickup bell: ${bell}`;
+        details.textContent = isResetScene ? 'Gold boards retain their physical tilt. Red latch opens barrier; blue latch extends bridge. A pickup schedules the visible bell in 4 seconds.' : 'Matching red/blue pools are safe; other pools kill. Only two living actors in their matching exits can win, even with gems left.';
+        statusText.textContent = status === 'WIN' ? 'WIN — both matching exits occupied' : status === 'LOSS' ? 'LOSS — an actor died' : 'RUNNING';
+      }
+      function animate(now) {
+        const dt = Math.max(0, Math.min(0.05, (now - lastFrame) / 1000));
+        lastFrame = now;
+        if (status === 'RUNNING' || (status === 'LOSS' && fault === 'missing-death-freeze')) {
+          if (status === 'RUNNING') elapsed += dt;
+          updateBoards(dt);
+          for (const actor of actors) {
+            if (status !== 'RUNNING' && fault !== 'missing-death-freeze') break;
+            stepActor(actor, dt);
+          }
+          checkExits();
+        }
+        pendingJumps.clear();
+        draw();
+        requestAnimationFrame(animate);
+      }
+      reset(true);
+      requestAnimationFrame(animate);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1043 @@
+{
+  "version": 1,
+  "scenario": {
+    "id": "neutral-real-60s",
+    "clock": "real",
+    "hostDeadlineMs": 90000,
+    "sampleEveryMs": 5000,
+    "segments": [
+      {
+        "keys": [],
+        "durationMs": 60000,
+        "label": "neutral-no-input",
+        "sampleEveryMs": 5000
+      }
+    ]
+  },
+  "sourceSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "startedAt": "2026-10-06T07:00:21.121Z",
+  "observations": [
+    {
+      "label": "startup",
+      "file": "screenshots/0000-startup.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270022256,
+        "hostMonotonicMs": 85977462.035042,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1013.8999999761581,
+        "browserEpochMs": 1791270022257
+      },
+      "after": {
+        "hostEpochMs": 1791270022285,
+        "hostMonotonicMs": 85977491.145333,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1042.2999999821186,
+        "browserEpochMs": 1791270022285
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "neutral-no-input-0",
+      "file": "screenshots/0001-neutral-no-input-0.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270027289,
+        "hostMonotonicMs": 85982495.237375,
+        "requestedMs": 5000,
+        "browserPerformanceMs": 6046.5,
+        "browserEpochMs": 1791270027290
+      },
+      "after": {
+        "hostEpochMs": 1791270027321,
+        "hostMonotonicMs": 85982526.751625,
+        "requestedMs": 5000,
+        "browserPerformanceMs": 6077.899999976158,
+        "browserEpochMs": 1791270027321
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "neutral-no-input-1",
+      "file": "screenshots/0002-neutral-no-input-1.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270032329,
+        "hostMonotonicMs": 85987534.642042,
+        "requestedMs": 10000,
+        "browserPerformanceMs": 11085.799999982119,
+        "browserEpochMs": 1791270032329
+      },
+      "after": {
+        "hostEpochMs": 1791270032363,
+        "hostMonotonicMs": 85987569.175625,
+        "requestedMs": 10000,
+        "browserPerformanceMs": 11120.399999976158,
+        "browserEpochMs": 1791270032364
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "neutral-no-input-2",
+      "file": "screenshots/0003-neutral-no-input-2.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270037374,
+        "hostMonotonicMs": 85992580.332542,
+        "requestedMs": 15000,
+        "browserPerformanceMs": 16131.899999976158,
+        "browserEpochMs": 1791270037375
+      },
+      "after": {
+        "hostEpochMs": 1791270037402,
+        "hostMonotonicMs": 85992607.744458,
+        "requestedMs": 15000,
+        "browserPerformanceMs": 16159,
+        "browserEpochMs": 1791270037402
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "neutral-no-input-3",
+      "file": "screenshots/0004-neutral-no-input-3.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270042406,
+        "hostMonotonicMs": 85997611.975583,
+        "requestedMs": 20000,
+        "browserPerformanceMs": 21163.59999999404,
+        "browserEpochMs": 1791270042407
+      },
+      "after": {
+        "hostEpochMs": 1791270042438,
+        "hostMonotonicMs": 85997643.540625,
+        "requestedMs": 20000,
+        "browserPerformanceMs": 21194.69999998808,
+        "browserEpochMs": 1791270042438
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "neutral-no-input-4",
+      "file": "screenshots/0005-neutral-no-input-4.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270047449,
+        "hostMonotonicMs": 86002654.88775,
+        "requestedMs": 25000,
+        "browserPerformanceMs": 26207.399999976158,
+        "browserEpochMs": 1791270047451
+      },
+      "after": {
+        "hostEpochMs": 1791270047478,
+        "hostMonotonicMs": 86002684.107833,
+        "requestedMs": 25000,
+        "browserPerformanceMs": 26235.19999998808,
+        "browserEpochMs": 1791270047479
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "neutral-no-input-5",
+      "file": "screenshots/0006-neutral-no-input-5.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270052486,
+        "hostMonotonicMs": 86007692.243,
+        "requestedMs": 30000,
+        "browserPerformanceMs": 31243.5,
+        "browserEpochMs": 1791270052487
+      },
+      "after": {
+        "hostEpochMs": 1791270052508,
+        "hostMonotonicMs": 86007714.01875,
+        "requestedMs": 30000,
+        "browserPerformanceMs": 31265.09999999404,
+        "browserEpochMs": 1791270052508
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "neutral-no-input-6",
+      "file": "screenshots/0007-neutral-no-input-6.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270057518,
+        "hostMonotonicMs": 86012724.262208,
+        "requestedMs": 35000,
+        "browserPerformanceMs": 36275.5,
+        "browserEpochMs": 1791270057519
+      },
+      "after": {
+        "hostEpochMs": 1791270057542,
+        "hostMonotonicMs": 86012747.775917,
+        "requestedMs": 35000,
+        "browserPerformanceMs": 36298.89999997616,
+        "browserEpochMs": 1791270057542
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "neutral-no-input-7",
+      "file": "screenshots/0008-neutral-no-input-7.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270062548,
+        "hostMonotonicMs": 86017753.3005,
+        "requestedMs": 40000,
+        "browserPerformanceMs": 41304.79999998212,
+        "browserEpochMs": 1791270062548
+      },
+      "after": {
+        "hostEpochMs": 1791270062577,
+        "hostMonotonicMs": 86017782.917875,
+        "requestedMs": 40000,
+        "browserPerformanceMs": 41334.09999999404,
+        "browserEpochMs": 1791270062577
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "neutral-no-input-8",
+      "file": "screenshots/0009-neutral-no-input-8.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270067585,
+        "hostMonotonicMs": 86022790.654125,
+        "requestedMs": 45000,
+        "browserPerformanceMs": 46341.89999997616,
+        "browserEpochMs": 1791270067585
+      },
+      "after": {
+        "hostEpochMs": 1791270067602,
+        "hostMonotonicMs": 86022807.501167,
+        "requestedMs": 45000,
+        "browserPerformanceMs": 46358.59999999404,
+        "browserEpochMs": 1791270067602
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "neutral-no-input-9",
+      "file": "screenshots/0010-neutral-no-input-9.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270072609,
+        "hostMonotonicMs": 86027814.268417,
+        "requestedMs": 50000,
+        "browserPerformanceMs": 51365.5,
+        "browserEpochMs": 1791270072609
+      },
+      "after": {
+        "hostEpochMs": 1791270072634,
+        "hostMonotonicMs": 86027840.118417,
+        "requestedMs": 50000,
+        "browserPerformanceMs": 51391.19999998808,
+        "browserEpochMs": 1791270072635
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "neutral-no-input-10",
+      "file": "screenshots/0011-neutral-no-input-10.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270077645,
+        "hostMonotonicMs": 86032851.003375,
+        "requestedMs": 55000,
+        "browserPerformanceMs": 56402.69999998808,
+        "browserEpochMs": 1791270077646
+      },
+      "after": {
+        "hostEpochMs": 1791270077678,
+        "hostMonotonicMs": 86032883.250625,
+        "requestedMs": 55000,
+        "browserPerformanceMs": 56434.39999997616,
+        "browserEpochMs": 1791270077678
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "neutral-no-input-11",
+      "file": "screenshots/0012-neutral-no-input-11.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270082682,
+        "hostMonotonicMs": 86037887.778542,
+        "requestedMs": 60000,
+        "browserPerformanceMs": 61439.59999999404,
+        "browserEpochMs": 1791270082683
+      },
+      "after": {
+        "hostEpochMs": 1791270082719,
+        "hostMonotonicMs": 86037924.875583,
+        "requestedMs": 60000,
+        "browserPerformanceMs": 61476.19999998808,
+        "browserEpochMs": 1791270082720
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "final",
+      "file": "screenshots/0013-final.png",
+      "held": [],
+      "before": {
+        "hostEpochMs": 1791270082720,
+        "hostMonotonicMs": 86037925.647583,
+        "requestedMs": 60000,
+        "browserPerformanceMs": 61476.89999997616,
+        "browserEpochMs": 1791270082720
+      },
+      "after": {
+        "hostEpochMs": 1791270082745,
+        "hostMonotonicMs": 86037950.281958,
+        "requestedMs": 60000,
+        "browserPerformanceMs": 61501.39999997616,
+        "browserEpochMs": 1791270082745
+      },
+      "visible": {
+        "text": "Fireboy: 0 / 8 Watergirl: 0 / 8 Time: 0.0 s Restart (R)",
+        "viewport": {
+          "width": 1280,
+          "height": 960
+        },
+        "scroll": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 960
+        },
+        "surfaces": [
+          {
+            "tag": "CANVAS",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 1280,
+              "height": 960
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Restart (R)",
+            "rect": {
+              "x": 348.71875,
+              "y": 10,
+              "width": 81.1875,
+              "height": 21
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "navigation",
+      "before": {
+        "hostEpochMs": 1791270021241,
+        "hostMonotonicMs": 85976446.656583,
+        "requestedMs": 0,
+        "browserPerformanceMs": 44.900000005960464,
+        "browserEpochMs": 1791270021242
+      },
+      "after": {
+        "hostEpochMs": 1791270021250,
+        "hostMonotonicMs": 85976456.498667,
+        "requestedMs": 0,
+        "browserPerformanceMs": 11.599999994039536,
+        "browserEpochMs": 1791270021255
+      }
+    },
+    {
+      "type": "advance",
+      "label": "neutral-no-input",
+      "durationMs": 5000,
+      "before": {
+        "hostEpochMs": 1791270022286,
+        "hostMonotonicMs": 85977491.647542,
+        "requestedMs": 0,
+        "browserPerformanceMs": 1042.699999988079,
+        "browserEpochMs": 1791270022286
+      },
+      "after": {
+        "hostEpochMs": 1791270027288,
+        "hostMonotonicMs": 85982493.971708,
+        "requestedMs": 5000,
+        "browserPerformanceMs": 6045.5999999940395,
+        "browserEpochMs": 1791270027289
+      }
+    },
+    {
+      "type": "advance",
+      "label": "neutral-no-input",
+      "durationMs": 5000,
+      "before": {
+        "hostEpochMs": 1791270027321,
+        "hostMonotonicMs": 85982527.324167,
+        "requestedMs": 5000,
+        "browserPerformanceMs": 6078.399999976158,
+        "browserEpochMs": 1791270027322
+      },
+      "after": {
+        "hostEpochMs": 1791270032328,
+        "hostMonotonicMs": 85987533.765,
+        "requestedMs": 10000,
+        "browserPerformanceMs": 11085.199999988079,
+        "browserEpochMs": 1791270032328
+      }
+    },
+    {
+      "type": "advance",
+      "label": "neutral-no-input",
+      "durationMs": 5000,
+      "before": {
+        "hostEpochMs": 1791270032364,
+        "hostMonotonicMs": 85987569.631833,
+        "requestedMs": 10000,
+        "browserPerformanceMs": 11120.699999988079,
+        "browserEpochMs": 1791270032364
+      },
+      "after": {
+        "hostEpochMs": 1791270037372,
+        "hostMonotonicMs": 85992577.68925,
+        "requestedMs": 15000,
+        "browserPerformanceMs": 16130.299999982119,
+        "browserEpochMs": 1791270037374
+      }
+    },
+    {
+      "type": "advance",
+      "label": "neutral-no-input",
+      "durationMs": 5000,
+      "before": {
+        "hostEpochMs": 1791270037402,
+        "hostMonotonicMs": 85992608.394708,
+        "requestedMs": 15000,
+        "browserPerformanceMs": 16159.5,
+        "browserEpochMs": 1791270037403
+      },
+      "after": {
+        "hostEpochMs": 1791270042404,
+        "hostMonotonicMs": 85997609.940583,
+        "requestedMs": 20000,
+        "browserPerformanceMs": 21162.09999999404,
+        "browserEpochMs": 1791270042405
+      }
+    },
+    {
+      "type": "advance",
+      "label": "neutral-no-input",
+      "durationMs": 5000,
+      "before": {
+        "hostEpochMs": 1791270042438,
+        "hostMonotonicMs": 85997644.070625,
+        "requestedMs": 20000,
+        "browserPerformanceMs": 21195.19999998808,
+        "browserEpochMs": 1791270042438
+      },
+      "after": {
+        "hostEpochMs": 1791270047446,
+        "hostMonotonicMs": 86002651.952208,
+        "requestedMs": 25000,
+        "browserPerformanceMs": 26204.69999998808,
+        "browserEpochMs": 1791270047448
+      }
+    },
+    {
+      "type": "advance",
+      "label": "neutral-no-input",
+      "durationMs": 5000,
+      "before": {
+        "hostEpochMs": 1791270047479,
+        "hostMonotonicMs": 86002684.61375,
+        "requestedMs": 25000,
+        "browserPerformanceMs": 26235.69999998808,
+        "browserEpochMs": 1791270047479
+      },
+      "after": {
+        "hostEpochMs": 1791270052485,
+        "hostMonotonicMs": 86007691.020708,
+        "requestedMs": 30000,
+        "browserPerformanceMs": 31242.69999998808,
+        "browserEpochMs": 1791270052486
+      }
+    },
+    {
+      "type": "advance",
+      "label": "neutral-no-input",
+      "durationMs": 5000,
+      "before": {
+        "hostEpochMs": 1791270052509,
+        "hostMonotonicMs": 86007714.425333,
+        "requestedMs": 30000,
+        "browserPerformanceMs": 31265.5,
+        "browserEpochMs": 1791270052509
+      },
+      "after": {
+        "hostEpochMs": 1791270057517,
+        "hostMonotonicMs": 86012722.882542,
+        "requestedMs": 35000,
+        "browserPerformanceMs": 36274.59999999404,
+        "browserEpochMs": 1791270057518
+      }
+    },
+    {
+      "type": "advance",
+      "label": "neutral-no-input",
+      "durationMs": 5000,
+      "before": {
+        "hostEpochMs": 1791270057543,
+        "hostMonotonicMs": 86012748.313708,
+        "requestedMs": 35000,
+        "browserPerformanceMs": 36299.39999997616,
+        "browserEpochMs": 1791270057543
+      },
+      "after": {
+        "hostEpochMs": 1791270062545,
+        "hostMonotonicMs": 86017750.531792,
+        "requestedMs": 40000,
+        "browserPerformanceMs": 41303.19999998808,
+        "browserEpochMs": 1791270062547
+      }
+    },
+    {
+      "type": "advance",
+      "label": "neutral-no-input",
+      "durationMs": 5000,
+      "before": {
+        "hostEpochMs": 1791270062578,
+        "hostMonotonicMs": 86017783.434375,
+        "requestedMs": 40000,
+        "browserPerformanceMs": 41334.5,
+        "browserEpochMs": 1791270062578
+      },
+      "after": {
+        "hostEpochMs": 1791270067584,
+        "hostMonotonicMs": 86022789.614542,
+        "requestedMs": 45000,
+        "browserPerformanceMs": 46341.19999998808,
+        "browserEpochMs": 1791270067585
+      }
+    },
+    {
+      "type": "advance",
+      "label": "neutral-no-input",
+      "durationMs": 5000,
+      "before": {
+        "hostEpochMs": 1791270067602,
+        "hostMonotonicMs": 86022807.935458,
+        "requestedMs": 45000,
+        "browserPerformanceMs": 46359,
+        "browserEpochMs": 1791270067602
+      },
+      "after": {
+        "hostEpochMs": 1791270072607,
+        "hostMonotonicMs": 86027812.734458,
+        "requestedMs": 50000,
+        "browserPerformanceMs": 51364.59999999404,
+        "browserEpochMs": 1791270072608
+      }
+    },
+    {
+      "type": "advance",
+      "label": "neutral-no-input",
+      "durationMs": 5000,
+      "before": {
+        "hostEpochMs": 1791270072635,
+        "hostMonotonicMs": 86027840.622125,
+        "requestedMs": 50000,
+        "browserPerformanceMs": 51391.69999998808,
+        "browserEpochMs": 1791270072635
+      },
+      "after": {
+        "hostEpochMs": 1791270077641,
+        "hostMonotonicMs": 86032846.163375,
+        "requestedMs": 55000,
+        "browserPerformanceMs": 56400.19999998808,
+        "browserEpochMs": 1791270077644
+      }
+    },
+    {
+      "type": "advance",
+      "label": "neutral-no-input",
+      "durationMs": 5000,
+      "before": {
+        "hostEpochMs": 1791270077678,
+        "hostMonotonicMs": 86032883.793,
+        "requestedMs": 55000,
+        "browserPerformanceMs": 56434.89999997616,
+        "browserEpochMs": 1791270077678
+      },
+      "after": {
+        "hostEpochMs": 1791270082679,
+        "hostMonotonicMs": 86037884.92275,
+        "requestedMs": 60000,
+        "browserPerformanceMs": 61437.59999999404,
+        "browserEpochMs": 1791270082681
+      }
+    }
+  ],
+  "candidateEvents": [
+    {
+      "type": "pageerror",
+      "message": "Cannot read properties of undefined (reading 'startsWith')",
+      "requestedMs": 0
+    }
+  ],
+  "evaluatorErrors": [],
+  "clock": "real",
+  "privateStateReads": 0,
+  "candidateMutations": 0,
+  "reference": false,
+  "deadlineExceeded": false,
+  "browserVersion": "153.0.8010.12",
+  "video": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/cerebras/assessment/neutral-real-60s/videos/page@c88fc188de0126826a601c551355b59c.webm",
+  "finishedAt": "2026-10-06T07:01:23.461Z",
+  "durationMs": 62340.1634169966,
+  "sourceAfterSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "sourceUnchanged": true
+}

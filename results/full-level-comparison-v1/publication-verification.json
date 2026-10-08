@@ -1,0 +1,10 @@
+{
+  "scope": "Pre-publication local evidence integrity and source integration; not a new gameplay or model trial",
+  "archiveFile": "gameplay-evidence-complete-2026-10-06.tar.gz",
+  "filesVerified": 9779,
+  "method": "Stream-decompress every tar member and compare its size and SHA-256 against the original-file inventory",
+  "missingFiles": [],
+  "hashMismatches": [],
+  "typecheck": { "command": "npm run check", "result": "passed" },
+  "publicationVerification": "Remote push, release availability and asset identities are checked separately during publication"
+}

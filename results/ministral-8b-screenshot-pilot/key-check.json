@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-05T18:56:17.990Z",
+  "request": {
+    "model": "ministral-8b-latest",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply exactly OK."
+      }
+    ],
+    "max_tokens": 8,
+    "temperature": 0
+  },
+  "httpStatus": 200,
+  "modelReturned": "ministral-8b-latest",
+  "reply": "OK.",
+  "usage": {
+    "prompt_tokens": 7,
+    "total_tokens": 10,
+    "completion_tokens": 3,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "service_tier": "standard"
+  },
+  "elapsedMs": 309,
+  "rateLimitHeaders": {
+    "x-max-retry-attempts-reached": "false",
+    "x-ratelimit-limit-req-minute": "188",
+    "x-ratelimit-limit-tokens-minute": "625000",
+    "x-ratelimit-remaining-req-minute": "187",
+    "x-ratelimit-remaining-tokens-minute": "624990",
+    "x-ratelimit-tokens-query-cost": "10"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "frozenAt": "2026-10-06T06:52:28.427Z",
+  "purpose": "Identical complete textual Level2 requirements/evidence/public walkthrough and weighted rubric for one fresh generation each across three configurations.",
+  "files": [
+    {
+      "file": "protocol.json",
+      "sha256": "ca9a316e741cb20fa15349f0aa4d364160f30a631fb714a91e983071d65fe9ad",
+      "bytes": 2304
+    },
+    {
+      "file": "prompt.txt",
+      "sha256": "da4c681dc82aa588a1ad1f375316690453572c7086a8ce15bed834be81abd43b",
+      "bytes": 6385
+    },
+    {
+      "file": "reference-evidence.json",
+      "sha256": "1128f014cd85950c5e909839a2e838b3d34334db8f6d103c49e122856de3a7cd",
+      "bytes": 8659
+    },
+    {
+      "file": "walkthrough.json",
+      "sha256": "1700a700e8a0ea4c0b5d1523879e8cc1dd955dd10c5b334d1844d35ef88d23e7",
+      "bytes": 8657
+    },
+    {
+      "file": "walkthrough-program.mjs",
+      "sha256": "973946a26d632a205dd2f4cdef0a102d4d2db999bddc628e7d49b132fb05c503",
+      "bytes": 1297
+    },
+    {
+      "file": "rubric.json",
+      "sha256": "adca681d0b249748a33001e1a4c0d9fad228986a7f3a8bcf088231d3d12352ae",
+      "bytes": 15898
+    }
+  ]
+}

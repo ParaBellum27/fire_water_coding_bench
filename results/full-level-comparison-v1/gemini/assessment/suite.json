@@ -1,0 +1,346 @@
+{
+  "results": [
+    {
+      "id": "public-walkthrough",
+      "capture": "public-walkthrough/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "real-controls",
+      "capture": "real-controls/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "real-jumps",
+      "capture": "real-jumps/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "real-reset-held",
+      "capture": "real-reset-held/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "neutral-real-60s",
+      "capture": "neutral-real-60s/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "red-safe-pickup-revisit",
+      "capture": "red-safe-pickup-revisit/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "red-foreign-death",
+      "capture": "red-foreign-death/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "blue-foreign-death",
+      "capture": "blue-foreign-death/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "blue-upper-wrong-pickup",
+      "capture": "blue-upper-wrong-pickup/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "blue-safe-pickup-revisit",
+      "capture": "blue-safe-pickup-revisit/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "lower-release-blocking",
+      "capture": "lower-release-blocking/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "green-fire-contact",
+      "capture": "green-fire-contact/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "green-water-contact",
+      "capture": "green-water-contact/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "first-hanging-contact",
+      "capture": "first-hanging-contact/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "second-hanging-contact",
+      "capture": "second-hanging-contact/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "upper-release-return",
+      "capture": "upper-release-return/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "single-and-wrong-exits",
+      "capture": "single-and-wrong-exits/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "reset-after-route-R",
+      "capture": "reset-after-route-R/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    },
+    {
+      "id": "reset-after-route-button",
+      "capture": "reset-after-route-button/capture.json",
+      "screenshots": 0,
+      "status": "NOT_REACHED",
+      "evaluatorErrors": [],
+      "candidateEvents": [
+        {
+          "type": "output-contract-failure",
+          "reasons": [
+            "Submission is not JSON (no fences or other repairs are permitted).",
+            "Submission must be exactly one JSON field, html, containing a string.",
+            "Provider reported output truncation."
+          ]
+        }
+      ],
+      "sourceUnchanged": null
+    }
+  ]
+}

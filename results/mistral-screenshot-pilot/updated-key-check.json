@@ -1,0 +1,53 @@
+{
+  "purpose": "Retest after user replaced the local MISTRAL_API_KEY",
+  "savedKeyDiffersFromPrevious": true,
+  "modelsEndpoint": {
+    "httpStatus": 200,
+    "modelRequested": "mistral-medium-latest",
+    "catalogAliases": [
+      "mistral-medium",
+      "mistral-medium-3-5",
+      "mistral-medium-3.5",
+      "mistral-medium-3",
+      "mistral-medium-2604",
+      "mistral-vibe-cli-latest",
+      "mistral-vibe-cli-with-tools",
+      "magistral-medium-latest"
+    ],
+    "visionSupported": true
+  },
+  "generationCheck": {
+    "request": {
+      "model": "mistral-medium-latest",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Reply exactly OK."
+        }
+      ],
+      "max_tokens": 8,
+      "temperature": 0
+    },
+    "checkedAt": "2026-10-05T18:52:05.669Z",
+    "modelRequested": "mistral-medium-latest",
+    "httpStatus": 429,
+    "elapsedMs": 191,
+    "rateLimitHeaders": {
+      "x-ratelimit-limit-req-minute": "0",
+      "x-ratelimit-remaining-req-minute": "0"
+    },
+    "error": {
+      "object": "error",
+      "message": "Rate limit exceeded",
+      "type": "rate_limited",
+      "param": null,
+      "code": "1300",
+      "raw_status_code": 429
+    }
+  },
+  "recreationRequests": 0,
+  "screenshotsUploaded": 0,
+  "generatedSubmissions": 0,
+  "gameplayAssessment": "NOT RUN: generation allowance is zero",
+  "nextAction": "Check the key’s project/account generation limits at https://console.mistral.ai/limits/. Responses do not establish the account-side cause."
+}

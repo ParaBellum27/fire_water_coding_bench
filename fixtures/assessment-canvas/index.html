@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Canvas evaluator calibration arena</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+    body { color: #eff5ff; background: linear-gradient(#101d32, #253f58); font: 18px/1.5 system-ui, sans-serif; }
+    canvas { position: fixed; inset: 0; }
+    header { position: absolute; top: 28px; left: 36px; right: 36px; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    p { margin: 4px 0; }
+    .notice { color: #c1d7e8; }
+    .controls { margin-top: 18px; }
+    .fire-label { color: #ff9288; }
+    .water-label { color: #8bcfff; }
+    #restart { margin-top: 16px; padding: 10px 18px; border: 2px solid #d5e6f5; border-radius: 6px; background: #284963; color: #fff; font: inherit; cursor: pointer; }
+    #restart:focus-visible { outline: 3px solid #ffe288; outline-offset: 4px; }
+    .clock { position: absolute; right: 0; top: 0; padding: 8px 14px; border: 1px solid #8299ae; border-radius: 6px; background: #122638; font-variant-numeric: tabular-nums; }
+    .floor-label { position: absolute; top: 800px; left: 36px; color: #e1f1d7; }
+  </style>
+</head>
+<body>
+  <canvas id="scene" aria-label="Canvas calibration game"></canvas>
+  <header>
+    <h1>Canvas calibration arena</h1>
+    <p class="notice">Evaluator calibration only — not a full Forest Temple level. Actors and floor are canvas pixels, not DOM boxes.</p>
+    <div class="controls">
+      <p class="fire-label">Fireboy: Arrow Left / Right to move, Arrow Up to jump.</p>
+      <p class="water-label">Watergirl: A / D to move, W to jump (either letter case).</p>
+      <p>Hold both characters' controls together. Jump only from the floor.</p>
+      <p>Press R or use Restart to reset both characters, held controls, and the timer.</p>
+    </div>
+    <button id="restart" type="button">Restart</button>
+    <div class="clock">Elapsed: <span id="timer">0.00 s</span></div>
+  </header>
+  <div class="floor-label">Solid support floor · no hazards or moving platforms</div>
+  <script>
+    (() => {
+      'use strict';
+
+      const MOVE_SPEED = 160;
+      const JUMP_SPEED = 300;
+      const GRAVITY = 800;
+      const FLOOR_COLLISION = 760;
+      const CHARACTER_WIDTH = 26;
+      const CHARACTER_HEIGHT = 36;
+      const MAX_FRAME_SECONDS = 0.05;
+      const INITIAL_CONFIG = Object.freeze({
+        fireboy: Object.freeze({ x: 180, y: FLOOR_COLLISION - CHARACTER_HEIGHT }),
+        watergirl: Object.freeze({ x: 650, y: FLOOR_COLLISION - CHARACTER_HEIGHT }),
+        startupLift: 12,
+      });
+      const canvas = document.getElementById('scene');
+      const context = canvas.getContext('2d');
+      function resize() { canvas.width = innerWidth; canvas.height = innerHeight; }
+      window.addEventListener('resize', resize);
+      resize();
+      const timerElement = document.getElementById('timer');
+      const restartButton = document.getElementById('restart');
+      const heldKeys = new Set();
+      const pendingJumps = new Set();
+      const bodies = {
+        fireboy: { x: INITIAL_CONFIG.fireboy.x, y: INITIAL_CONFIG.fireboy.y - INITIAL_CONFIG.startupLift, vx: 0, vy: 0, grounded: false },
+        watergirl: { x: INITIAL_CONFIG.watergirl.x, y: INITIAL_CONFIG.watergirl.y - INITIAL_CONFIG.startupLift, vx: 0, vy: 0, grounded: false },
+      };
+      let startedAt = performance.now();
+      let lastFrameAt = startedAt;
+
+      function drawCharacter(body, color) {
+        context.fillStyle = color;
+        context.fillRect(body.x, body.y, CHARACTER_WIDTH, CHARACTER_HEIGHT);
+        context.fillStyle = '#fff';
+        context.fillRect(body.x + 5, body.y + 10, 4, 5);
+        context.fillRect(body.x + 17, body.y + 10, 4, 5);
+        context.fillStyle = '#182032';
+        context.fillRect(body.x + 9, body.y + 22, 8, 3);
+      }
+
+      function render(now) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.fillStyle = '#45654b';
+        context.fillRect(0, FLOOR_COLLISION, canvas.width, canvas.height - FLOOR_COLLISION);
+        context.fillStyle = '#89ad72';
+        context.fillRect(0, FLOOR_COLLISION, canvas.width, 5);
+        drawCharacter(bodies.fireboy, '#ed433a');
+        drawCharacter(bodies.watergirl, '#278ee3');
+        timerElement.textContent = `${(Math.max(0, now - startedAt) / 1000).toFixed(2)} s`;
+      }
+
+      function resetGame() {
+        heldKeys.clear();
+        pendingJumps.clear();
+        for (const name of ['fireboy', 'watergirl']) {
+          const body = bodies[name];
+          body.x = INITIAL_CONFIG[name].x;
+          body.y = INITIAL_CONFIG[name].y;
+          body.vx = 0;
+          body.vy = 0;
+          body.grounded = true;
+        }
+        startedAt = performance.now();
+        lastFrameAt = startedAt;
+        render(startedAt);
+      }
+
+      function controlCode(event) {
+        if (event.code === 'KeyA' || event.code === 'KeyD' || event.code === 'KeyW' || event.code === 'KeyR') return event.code;
+        if (event.key.startsWith('Arrow')) return event.key;
+        const letter = event.key.toLowerCase();
+        if (letter === 'a' || letter === 'd' || letter === 'w' || letter === 'r') return `Key${letter.toUpperCase()}`;
+        return null;
+      }
+
+      window.addEventListener('keydown', (event) => {
+        const code = controlCode(event);
+        if (!code) return;
+        event.preventDefault();
+        if (event.repeat) return;
+        if (code === 'KeyR') {
+          resetGame();
+          return;
+        }
+        if (!heldKeys.has(code) && (code === 'ArrowUp' || code === 'KeyW')) pendingJumps.add(code);
+        heldKeys.add(code);
+      });
+
+      window.addEventListener('keyup', (event) => {
+        const code = controlCode(event);
+        if (!code) return;
+        event.preventDefault();
+        heldKeys.delete(code);
+      });
+
+      window.addEventListener('blur', () => {
+        heldKeys.clear();
+        pendingJumps.clear();
+      });
+      restartButton.addEventListener('click', resetGame);
+
+      function stepCharacter(body, left, right, jump, dt) {
+        const direction = Number(heldKeys.has(right)) - Number(heldKeys.has(left));
+        body.vx = direction * MOVE_SPEED;
+        if (pendingJumps.has(jump) && body.grounded) {
+          body.vy = -JUMP_SPEED;
+          body.grounded = false;
+        }
+        body.x = Math.max(8, Math.min(window.innerWidth - CHARACTER_WIDTH - 8, body.x + body.vx * dt));
+        body.vy += GRAVITY * dt;
+        body.y += body.vy * dt;
+        if (body.y + CHARACTER_HEIGHT >= FLOOR_COLLISION) {
+          body.y = FLOOR_COLLISION - CHARACTER_HEIGHT;
+          body.vy = 0;
+          body.grounded = true;
+        } else {
+          body.grounded = false;
+        }
+      }
+
+      function animate(now) {
+        const dt = Math.max(0, Math.min(MAX_FRAME_SECONDS, (now - lastFrameAt) / 1000));
+        lastFrameAt = now;
+        stepCharacter(bodies.fireboy, 'ArrowLeft', 'ArrowRight', 'ArrowUp', dt);
+        stepCharacter(bodies.watergirl, 'KeyA', 'KeyD', 'KeyW', dt);
+        pendingJumps.clear();
+        render(now);
+        requestAnimationFrame(animate);
+      }
+
+      render(startedAt);
+      requestAnimationFrame(animate);
+    })();
+  </script>
+</body>
+</html>

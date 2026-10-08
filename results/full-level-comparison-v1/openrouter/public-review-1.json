@@ -1,0 +1,117 @@
+{
+  "image": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/public-review-1.png",
+  "columns": 3,
+  "width": 640,
+  "height": 480,
+  "crop": null,
+  "sourceOrder": [
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0035-Fireboy-travels-to-the-left-plate-1.png",
+      "label": "Fireboy travels to the left plate-1",
+      "requestedMs": 13620,
+      "text": "Time: 14.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0036-Fireboy-returns-to-the-left-pressure-plate-0.png",
+      "label": "Fireboy returns to the left pressure plate-0",
+      "requestedMs": 13940,
+      "text": "Time: 14.9 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0037-Hold-the-opposite-plate-0.png",
+      "label": "Hold the opposite plate-0",
+      "requestedMs": 14190,
+      "text": "Time: 15.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0045-Watergirl-traverses-while-Fireboy-holds-the-left-plate-7.png",
+      "label": "Watergirl traverses while Fireboy holds the left plate-7",
+      "requestedMs": 17790,
+      "text": "Time: 18.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0047-Both-players-jump-onto-the-left-ledge-1.png",
+      "label": "Both players jump onto the left ledge-1",
+      "requestedMs": 18540,
+      "text": "Time: 19.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0048-Settle-on-the-left-ledge-0.png",
+      "label": "Settle on the left ledge-0",
+      "requestedMs": 18790,
+      "text": "Time: 19.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0050-Jump-close-to-the-left-ledge-1.png",
+      "label": "Jump close to the left ledge-1",
+      "requestedMs": 19440,
+      "text": "Time: 20.4 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0051-Settle-before-crossing-poison-chamber-0.png",
+      "label": "Settle before crossing poison chamber-0",
+      "requestedMs": 19640,
+      "text": "Time: 20.6 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0052-Approach-the-left-ledge-edge-0.png",
+      "label": "Approach the left ledge edge-0",
+      "requestedMs": 19990,
+      "text": "Time: 20.9 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0053-Jump-to-the-safe-ledge-beside-the-green-pool-0.png",
+      "label": "Jump to the safe ledge beside the green pool-0",
+      "requestedMs": 20490,
+      "text": "Time: 21.4 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0054-Land-before-the-green-pool-0.png",
+      "label": "Land before the green pool-0",
+      "requestedMs": 20740,
+      "text": "Time: 21.7 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0055-Settle-on-the-narrow-safe-ledge-0.png",
+      "label": "Settle on the narrow safe ledge-0",
+      "requestedMs": 21040,
+      "text": "Time: 22.0 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0057-Jump-onto-the-first-hanging-platform-1.png",
+      "label": "Jump onto the first hanging platform-1",
+      "requestedMs": 21560,
+      "text": "Time: 22.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0058-Stand-on-the-first-hanging-platform-0.png",
+      "label": "Stand on the first hanging platform-0",
+      "requestedMs": 21860,
+      "text": "Time: 22.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0059-Wait-for-first-platform-contact-0.png",
+      "label": "Wait for first platform contact-0",
+      "requestedMs": 21960,
+      "text": "Time: 22.9 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0061-Jump-to-the-central-island-before-the-loaded-platform-rotates-1.png",
+      "label": "Jump to the central island before the loaded platform rotates-1",
+      "requestedMs": 22810,
+      "text": "Time: 23.8 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0062-Land-on-the-central-island-0.png",
+      "label": "Land on the central island-0",
+      "requestedMs": 23110,
+      "text": "Time: 24.1 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    },
+    {
+      "path": "/Users/Pierre/Desktop/fire_water_coding_bench/artifacts/full-level-comparison/2026-10-06T06-46-15-297Z/openrouter/assessment/public-walkthrough/screenshots/0063-Collect-the-central-blue-diamond-and-approach-second-pool-0.png",
+      "label": "Collect the central blue diamond and approach second pool-0",
+      "requestedMs": 23540,
+      "text": "Time: 24.5 s\nFireboy Diamonds: 0 / 8\nWatergirl Diamonds: 0 / 8\nGame Over\nRestart (R)"
+    }
+  ]
+}

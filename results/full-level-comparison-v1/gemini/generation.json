@@ -1,0 +1,55 @@
+{
+  "id": "gemini",
+  "provider": "gemini",
+  "modelRequested": "gemini-3.8-flash",
+  "modelReturned": "gemini-3.8-flash",
+  "servingProvider": "Google",
+  "servingProviderAttribution": "direct_endpoint",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent",
+  "settings": {
+    "temperature": 1,
+    "maxOutputTokens": 16384,
+    "timeoutMs": 600000
+  },
+  "payloadSha256": "7cc8b61abf62c4d70bfa5ebd934e374d1b927b52ed76dfe8cac5783f93540a26",
+  "requestSha256": "1ff6f59010965a5b35a1268f6df1e0d5a6c54796f6de9787d25b12031e647131",
+  "manifestSha256": "e2c6653954697f223e29a9c33926d936f27d2d24a9c94a7949f26123fe03a931",
+  "protocolSha256": "ca9a316e741cb20fa15349f0aa4d364160f30a631fb714a91e983071d65fe9ad",
+  "publicFiles": [
+    "prompt.txt",
+    "reference-evidence.json",
+    "walkthrough.json",
+    "walkthrough-program.mjs",
+    "rubric.json"
+  ],
+  "requestCount": 1,
+  "usage": {
+    "promptTokenCount": 12542,
+    "candidatesTokenCount": 642,
+    "totalTokenCount": 28912,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12542
+      }
+    ],
+    "thoughtsTokenCount": 15728,
+    "serviceTier": "standard"
+  },
+  "reportedCost": null,
+  "httpStatus": 200,
+  "finishReason": "MAX_TOKENS",
+  "durationMs": 117709.196084,
+  "status": "output_contract_failure",
+  "outputContract": {
+    "status": "INVALID",
+    "reasons": [
+      "Submission is not JSON (no fences or other repairs are permitted).",
+      "Submission must be exactly one JSON field, html, containing a string.",
+      "Provider reported output truncation."
+    ]
+  },
+  "startedAt": "2026-10-06T06:53:16.305Z",
+  "reportedProvider": null,
+  "finishedAt": "2026-10-06T06:55:14.019Z"
+}

@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "releaseTag": "full-level-comparison-paper-2026-10-06",
+  "publicationStatus": "Release artifact manifest; verify availability and checksums at the recorded release URL.",
+  "releaseType": "paper and saved evidence, not a validated benchmark release",
+  "originalComparisonPath": "artifacts/full-level-comparison/2026-10-06T06-46-15-297Z",
+  "acquisitionInstructions": "acquisition.html",
+  "archive": {
+    "filename": "gameplay-evidence-complete-2026-10-06.tar.gz",
+    "url": "https://github.com/ParaBellum27/fire_water_coding_bench/releases/download/full-level-comparison-paper-2026-10-06/gameplay-evidence-complete-2026-10-06.tar.gz",
+    "bytes": 1848137276,
+    "sha256": "50a9ca1161c6b0cbc5afdaff30238c681cce8722181891747bc65ae7bebde9e8",
+    "fileCount": 9779,
+    "uncompressedBytes": 1973680482,
+    "relativePathPrefix": "artifacts/",
+    "coverage": [
+      {
+        "path": "artifacts/full-level-comparison",
+        "files": 1713,
+        "bytes": 71583504
+      },
+      {
+        "path": "artifacts/canvas-validation",
+        "files": 1205,
+        "bytes": 196657013
+      },
+      {
+        "path": "artifacts/assessment-validation",
+        "files": 475,
+        "bytes": 34648475
+      },
+      {
+        "path": "artifacts/migration-smoke",
+        "files": 500,
+        "bytes": 129974729
+      },
+      {
+        "path": "artifacts/screenshot-pilot-contact-sheet.png",
+        "files": 1,
+        "bytes": 765830
+      },
+      {
+        "path": "artifacts/three-provider-smoke",
+        "files": 182,
+        "bytes": 3079757
+      },
+      {
+        "path": "artifacts/model-pilots",
+        "files": 26,
+        "bytes": 20070853
+      },
+      {
+        "path": "artifacts/reference-runs",
+        "files": 4975,
+        "bytes": 1307092322
+      },
+      {
+        "path": "artifacts/openrouter-readiness",
+        "files": 62,
+        "bytes": 1029983
+      },
+      {
+        "path": "artifacts/gemini-smoke",
+        "files": 2,
+        "bytes": 2419
+      },
+      {
+        "path": "artifacts/full-level-development",
+        "files": 638,
+        "bytes": 208775597
+      }
+    ]
+  },
+  "compactCopy": {
+    "sourceFiles": 136,
+    "preserved": "All current comparison non-media files; candidate HTML, JSON, text and frozen package bytes unchanged.",
+    "modified": "HTML reports/galleries: absent image/video evidence replaced by acquisition links; original HTML unchanged in release archive.",
+    "mediaPolicy": "All PNG/WebM/MP4 evidence in archive, not Git blobs."
+  },
+  "omissions": {
+    "fromArtifactsArchive": [],
+    "outsideArchive": "Only artifacts/ is archived; repository source/docs/results/public packages are committed separately. .env, node_modules, reference-game/html5 and original upstream executable/assets are not included.",
+    "redactions": []
+  },
+  "safety": {
+    "textFilesScanned": 683,
+    "checks": [
+      "Known .env secret values checked without disclosure",
+      "Common API-token and private-key patterns checked",
+      "No artifact symlinks",
+      "Artifact hashes compared against local upstream reference-game/html5 file hashes"
+    ],
+    "flaggedSecretPaths": [],
+    "exactUpstreamFileMatches": [
+      "artifacts/three-provider-smoke/2026-10-06T04-43-20-427Z/groq/submission-response.txt"
+    ],
+    "upstreamMatchExplanation": "The only exact hash match is a zero-byte failed-provider response and a zero-byte upstream README.md; no upstream executable or asset bytes are present.",
+    "limitations": "Pattern scan is not a guarantee of absence of all sensitive data. Reference imagery does not confer upstream licensing rights."
+  },
+  "publicationVerification": {
+    "archiveMemberPathsMatchInventory": true,
+    "archiveMembers": 9779,
+    "archiveUncompressedBytes": 1973680482,
+    "copiedNonReportBytesUnchanged": true,
+    "unresolvedCompactLocalLinks": 0,
+    "gameplayRerun": false,
+    "generationCalls": false
+  },
+  "priorReleases": [
+    {
+      "tag": "gameplay-evidence-2026-10-05",
+      "archiveBytes": 1405005102
+    },
+    {
+      "tag": "gemini-screenshot-pilot-2026-10-05",
+      "archiveBytes": 27489928
+    }
+  ],
+  "inventory": "evidence-inventory.csv"
+}

@@ -1,0 +1,17 @@
+{
+  "purpose": "Minimal Groq key check; not a recreation test",
+  "httpStatus": 200,
+  "model": "qwen/qwen3.8-27b",
+  "reply": "OK",
+  "finishReason": "stop",
+  "usage": {
+    "queue_time": 0.033565489,
+    "prompt_tokens": 17,
+    "prompt_time": 0.001378575,
+    "completion_tokens": 2,
+    "completion_time": 0.004198835,
+    "total_tokens": 19,
+    "total_time": 0.00557741
+  },
+  "elapsedMs": 79
+}

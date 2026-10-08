@@ -1,0 +1,66 @@
+{
+  "purpose": "Quick Mistral access and limit check before uploading recreation evidence",
+  "modelsEndpoint": {
+    "httpStatus": 200
+  },
+  "evidence": {
+    "frames": 80,
+    "attachments": 3,
+    "imageBytes": [
+      2246887,
+      2168445,
+      1897786
+    ],
+    "dimensions": {
+      "width": 1936,
+      "height": 4648
+    }
+  },
+  "documentedImageLimits": {
+    "imagesPerRequest": 8,
+    "fileSizeMB": 10,
+    "maxDimension": 10000,
+    "source": "https://docs.mistral.ai/studio/conversations/vision"
+  },
+  "checks": [
+    {
+      "modelRequested": "mistral-medium-latest",
+      "httpStatus": 429,
+      "elapsedMs": 194,
+      "error": {
+        "object": "error",
+        "message": "Rate limit exceeded",
+        "type": "rate_limited",
+        "param": null,
+        "code": "1300",
+        "raw_status_code": 429
+      },
+      "rateLimitHeaders": {
+        "x-ratelimit-limit-req-minute": "0",
+        "x-ratelimit-remaining-req-minute": "0"
+      }
+    },
+    {
+      "modelRequested": "mistral-small-latest",
+      "httpStatus": 429,
+      "elapsedMs": 157,
+      "rateLimitHeaders": {
+        "x-ratelimit-limit-req-minute": "0",
+        "x-ratelimit-remaining-req-minute": "0"
+      },
+      "error": {
+        "object": "error",
+        "message": "Rate limit exceeded",
+        "type": "rate_limited",
+        "param": null,
+        "code": "1300",
+        "raw_status_code": 429
+      }
+    }
+  ],
+  "recreationRequests": 0,
+  "generatedSubmissions": 0,
+  "status": "BLOCKED: both tested generation models report 0 requests per minute",
+  "gameplayAssessment": "NOT RUN: no game returned",
+  "nextAction": "Check project/account generation allowance at https://console.mistral.ai/limits/; no full evidence upload until generation is enabled."
+}

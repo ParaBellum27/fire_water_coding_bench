@@ -5,7 +5,19 @@ import { loadEnvFile } from 'node:process';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const evidenceRoot = join(root, 'task-public/screenshot-pilot');
+let evidenceRoot = join(root, 'task-public/screenshot-pilot');
+let outputRoot = join(root, 'artifacts/model-pilots');
+const args = process.argv.slice(2);
+for (let index = 0; index < args.length; index += 2) {
+  const flag = args[index], value = args[index + 1];
+  if (!value || (flag !== '--package' && flag !== '--out')) {
+    throw new Error('Usage: npm run pilot:gemini -- [--package <public-package>] [--out <artifact-root>]');
+  }
+  if (flag === '--package') evidenceRoot = resolve(root, value);
+  else outputRoot = resolve(root, value);
+}
+const publicRoot = join(root, 'task-public');
+if (!evidenceRoot.startsWith(publicRoot + sep)) throw new Error('Pilot package must be inside task-public.');
 const model = 'gemini-3.8-flash';
 const generationConfig = {
   temperature: 1,
@@ -20,29 +32,39 @@ if (!key) throw new Error('Set GEMINI_API_KEY in the local ignored .env file.');
 
 const manifestBytes = await readFile(join(evidenceRoot, 'manifest.json'));
 const evidence = JSON.parse(manifestBytes.toString()) as {
-  images: Array<{ file: string; atMs: number; sha256: string }>;
+  purpose?: string;
+  rubricFile?: string;
+  rubricSha256?: string;
+  images: Array<{ file: string; atMs?: number; sha256: string; mimeType?: 'image/png' | 'image/jpeg'; label?: string }>;
 };
 const prompt = await readFile(join(evidenceRoot, 'prompt.txt'), 'utf8');
 const parts: Array<{ text: string } | { inlineData: { mimeType: string; data: string } }> = [{ text: prompt }];
+if (evidence.rubricFile) {
+  const rubricPath = resolve(evidenceRoot, evidence.rubricFile);
+  if (!rubricPath.startsWith(evidenceRoot + sep)) throw new Error('Rubric escapes its package.');
+  const rubric = await readFile(rubricPath, 'utf8');
+  if (sha256(rubric) !== evidence.rubricSha256) throw new Error('Frozen rubric changed.');
+  parts.push({ text: `Frozen evaluation rubric:\n${rubric}` });
+}
 for (const [index, image] of evidence.images.entries()) {
   const path = resolve(evidenceRoot, image.file);
-  if (!path.startsWith(evidenceRoot + sep)) throw new Error('Evidence image escapes its package.');
+  if (!path.startsWith(publicRoot + sep)) throw new Error('Evidence image escapes task-public.');
   const bytes = await readFile(path);
   if (sha256(bytes) !== image.sha256) throw new Error(`Frozen screenshot changed: ${image.file}`);
-  parts.push({ text: `Screenshot ${index + 1}/${evidence.images.length}; simulated gameplay time ${image.atMs} ms.` });
-  parts.push({ inlineData: { mimeType: 'image/png', data: bytes.toString('base64') } });
+  parts.push({ text: image.label ?? `Screenshot ${index + 1}/${evidence.images.length}; simulated gameplay time ${image.atMs} ms.` });
+  parts.push({ inlineData: { mimeType: image.mimeType ?? 'image/png', data: bytes.toString('base64') } });
 }
 const request = { contents: [{ role: 'user', parts }], generationConfig };
-const outputRoot = join(root, 'artifacts/model-pilots');
 await mkdir(outputRoot, { recursive: true });
 const out = await mkdtemp(join(outputRoot, `${new Date().toISOString().replace(/[:.]/g, '-')}-${model}-`));
 const metadata: Record<string, unknown> = {
-  purpose: 'One screenshot-first recreation attempt; not a validated benchmark score',
+  purpose: evidence.purpose ?? 'One screenshot-first recreation attempt; not a validated benchmark score',
   modelRequested: model,
   startedAt: new Date().toISOString(),
   screenshotCount: evidence.images.length,
   evidenceManifestSha256: sha256(manifestBytes),
   promptSha256: sha256(prompt),
+  rubricSha256: evidence.rubricSha256,
   generationConfig,
   requestCount: 1,
   assistantCodeRepairs: 0,
@@ -77,9 +99,13 @@ try {
   metadata.finishReason = candidate?.finishReason;
   const text = candidate?.content?.parts?.filter(part => part.text && !part.thought).map(part => part.text).join('\n');
   if (!text) throw new Error('Gemini returned no submission text.');
+  if (candidate?.finishReason === 'MAX_TOKENS') throw new Error('Gemini reported output truncation.');
   await writeFile(join(out, 'submission-response.txt'), text);
   const submission = JSON.parse(text) as { html?: unknown };
-  if (typeof submission.html !== 'string' || !submission.html.trim()) throw new Error('Submission does not contain HTML.');
+  if (Object.keys(submission).length !== 1 || typeof submission.html !== 'string'
+    || !/^<!doctype html>/i.test(submission.html.trim()) || !submission.html.trim().toLowerCase().endsWith('</html>')) {
+    throw new Error('Submission is not a complete HTML document in the required single-field JSON envelope.');
+  }
   await mkdir(join(out, 'submission'));
   await writeFile(join(out, 'submission/index.html'), submission.html);
   metadata.htmlSha256 = sha256(submission.html);

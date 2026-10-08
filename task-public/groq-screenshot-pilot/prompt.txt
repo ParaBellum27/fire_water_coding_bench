@@ -1,0 +1,7 @@
+Recreate this playable level in one standalone index.html with inline HTML/CSS/JS.
+
+Evidence: 80 chronological frames in three sheets (1–27, 28–54, 55–80). Read left-to-right, top-to-bottom; last cell blank. Captures 1280x960, thumbnails 640x480. Labels are frame numbers; supplied times are simulated seconds. No original code, assets, private state, or input trace. Draw original graphics; do not fetch an existing game. Infer only a coherent game from visible transitions, not certainty about unseen rules.
+
+Match the layout, characters, pools, gems, switches, bridges/barriers, hanging platforms, exits, and cooperative progression. Real gravity, collisions, interactive platforms, and alternative routes—not decoration or playback. Fireboy: arrows left/right/up. Watergirl: A/D/W. Simultaneous held controls; prevent scrolling. Restart button and R reset all progress. Visible loss/win; responsive scaling. No screenshot backgrounds, scripted routes, position interpolation, or timed victory.
+
+Run from a static server in Chromium: no dependencies, external assets, imports, network, or backend. Complete implementation, no TODOs. Return only HTML starting <!doctype html>, no fences/commentary. One unchanged submission; no feedback or repairs.

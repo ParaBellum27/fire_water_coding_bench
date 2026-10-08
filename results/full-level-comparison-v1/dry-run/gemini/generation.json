@@ -1,0 +1,37 @@
+{
+  "id": "gemini",
+  "provider": "gemini",
+  "modelRequested": "gemini-3.8-flash",
+  "modelReturned": null,
+  "servingProvider": "Google",
+  "servingProviderAttribution": "direct_endpoint",
+  "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent",
+  "settings": {
+    "temperature": 1,
+    "maxOutputTokens": 16384,
+    "timeoutMs": 600000
+  },
+  "payloadSha256": "7cc8b61abf62c4d70bfa5ebd934e374d1b927b52ed76dfe8cac5783f93540a26",
+  "requestSha256": "1ff6f59010965a5b35a1268f6df1e0d5a6c54796f6de9787d25b12031e647131",
+  "manifestSha256": "e2c6653954697f223e29a9c33926d936f27d2d24a9c94a7949f26123fe03a931",
+  "protocolSha256": "ca9a316e741cb20fa15349f0aa4d364160f30a631fb714a91e983071d65fe9ad",
+  "publicFiles": [
+    "prompt.txt",
+    "reference-evidence.json",
+    "walkthrough.json",
+    "walkthrough-program.mjs",
+    "rubric.json"
+  ],
+  "requestCount": 0,
+  "usage": null,
+  "reportedCost": null,
+  "httpStatus": null,
+  "finishReason": null,
+  "durationMs": 0,
+  "status": "dry_run",
+  "outputContract": {
+    "status": "NOT_ASSESSED",
+    "reasons": []
+  },
+  "startedAt": "2026-10-06T06:52:41.725Z"
+}

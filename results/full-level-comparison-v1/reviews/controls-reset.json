@@ -1,0 +1,326 @@
+{
+  "decisions": [
+    {
+      "group": "CONTROLS",
+      "id": "fireboy",
+      "status": "PASS",
+      "reason": "In native real-controls, ArrowRight moves the red actor from approximately x72 to x102 and ArrowLeft returns him while green Watergirl remains at x152. In real-jumps, ArrowUp raises only Fireboy while Watergirl remains supported. Thus all three assigned arrow controls act only on Fireboy in the observed live attempt.",
+      "evidence": [
+        "openrouter/assessment/real-controls/capture.json",
+        "openrouter/assessment/real-controls/screenshots/0000-startup.png",
+        "openrouter/assessment/real-controls/screenshots/0002-fire-right-1.png",
+        "openrouter/assessment/real-controls/screenshots/0004-fire-left-1.png",
+        "openrouter/assessment/real-jumps/screenshots/0001-fire-grounded-jump-0.png"
+      ]
+    },
+    {
+      "group": "CONTROLS",
+      "id": "watergirl",
+      "status": "NOT_REACHED",
+      "reason": "Lowercase d/a move only the green actor and lowercase w jumps only that actor, establishing Watergirl identity without relying on the expected palette. The Shift+D and uppercase A segments occur after a real Game Over and an ineffective R restart: Watergirl is already absent and the surviving red actor is frozen. Those segments cannot distinguish uppercase binding behavior from the failed restart. Caps Lock and uppercase W are not established. Full lowercase/Shift/Caps Lock conjunction therefore remains unverified, not failed.",
+      "evidence": [
+        "openrouter/assessment/real-controls/capture.json",
+        "openrouter/assessment/real-controls/screenshots/0006-water-right-1.png",
+        "openrouter/assessment/real-controls/screenshots/0008-water-left-1.png",
+        "openrouter/assessment/real-jumps/screenshots/0024-water-grounded-jump-0.png",
+        "openrouter/assessment/real-controls/screenshots/0011-release-fire-retain-water-0.png",
+        "openrouter/assessment/real-controls/screenshots/0030-reset-before-uppercase-3.png",
+        "openrouter/assessment/real-controls/screenshots/0032-shift-D-water-right-1.png",
+        "openrouter/assessment/real-controls/screenshots/0034-uppercase-A-water-left-1.png"
+      ]
+    },
+    {
+      "group": "CONTROLS",
+      "id": "simultaneous",
+      "status": "PASS",
+      "reason": "Before the control trial loses, ArrowRight+d displace both actors together. In the separate native jump trial, ArrowUp+w raises both actors simultaneously and both subsequently land. Both movement and jump conjuncts are observed in live states.",
+      "evidence": [
+        "openrouter/assessment/real-controls/screenshots/0008-water-left-1.png",
+        "openrouter/assessment/real-controls/screenshots/0010-both-right-1.png",
+        "openrouter/assessment/real-jumps/capture.json",
+        "openrouter/assessment/real-jumps/screenshots/0047-both-grounded-jump-0.png",
+        "openrouter/assessment/real-jumps/screenshots/0066-final.png"
+      ]
+    },
+    {
+      "group": "CONTROLS",
+      "id": "independent-release",
+      "status": "NOT_REACHED",
+      "reason": "The first release direction stops Fireboy while Watergirl proceeds into the nearby red hazard and disappears with Game Over by the first retained-d sample. R then removes the loss text but does not restore a playable pair: the reverse-release baseline and result show the same frozen red actor and absent Watergirl. Consequently both independent-release directions were not verified; the missing reverse encounter is not a new binding failure.",
+      "evidence": [
+        "openrouter/assessment/real-controls/capture.json",
+        "openrouter/assessment/real-controls/screenshots/0010-both-right-1.png",
+        "openrouter/assessment/real-controls/screenshots/0011-release-fire-retain-water-0.png",
+        "openrouter/assessment/real-controls/screenshots/0019-reset-before-reverse-3.png",
+        "openrouter/assessment/real-controls/screenshots/0021-both-right-reverse-1.png",
+        "openrouter/assessment/real-controls/screenshots/0023-release-water-retain-fire-1.png"
+      ]
+    },
+    {
+      "group": "CONTROLS",
+      "id": "no-page-scroll",
+      "status": "PASS",
+      "reason": "Every recorded native control and jump observation retains scroll x=0,y=0; the initial arrow and letter controls visibly move/jump actors without losing interaction. The resize observation also retains zero scroll, although its 800x600 viewport clips the fixed-size map; that is not evidence of control-key scrolling. No keys were exercised at the resized viewport, so this PASS does not assert resized-layout correctness.",
+      "evidence": [
+        "openrouter/assessment/real-controls/capture.json",
+        "openrouter/assessment/real-jumps/capture.json",
+        "openrouter/assessment/real-controls/screenshots/0002-fire-right-1.png",
+        "openrouter/assessment/real-jumps/screenshots/0047-both-grounded-jump-0.png",
+        "openrouter/assessment/real-controls/screenshots/0038-resize-800-600.png"
+      ]
+    },
+    {
+      "group": "PHYSICS",
+      "id": "gravity-and-jump",
+      "status": "PASS",
+      "reason": "Native real-jumps shows grounded ascent, an apex, descent, and supported landing for each actor separately and for both together. Fireboy rises from y856 to about y719, is descending after the airborne ArrowUp repress, and lands; Watergirl follows a comparable arc through the airborne w repress rather than receiving a second full jump. Subsequent idle landing samples remain grounded. This is qualitative observed jump behavior, not an exact-physics claim.",
+      "evidence": [
+        "openrouter/assessment/real-jumps/capture.json",
+        "openrouter/assessment/real-jumps/screenshots/0001-fire-grounded-jump-0.png",
+        "openrouter/assessment/real-jumps/screenshots/0004-fire-release-rise-2.png",
+        "openrouter/assessment/real-jumps/screenshots/0005-fire-airborne-repress-0.png",
+        "openrouter/assessment/real-jumps/screenshots/0006-fire-descend-land-0.png",
+        "openrouter/assessment/real-jumps/screenshots/0023-fire-descend-land-17.png",
+        "openrouter/assessment/real-jumps/screenshots/0024-water-grounded-jump-0.png",
+        "openrouter/assessment/real-jumps/screenshots/0027-water-release-rise-2.png",
+        "openrouter/assessment/real-jumps/screenshots/0028-water-airborne-repress-0.png",
+        "openrouter/assessment/real-jumps/screenshots/0030-water-descend-land-1.png",
+        "openrouter/assessment/real-jumps/screenshots/0046-water-descend-land-17.png",
+        "openrouter/assessment/real-jumps/screenshots/0066-final.png"
+      ]
+    },
+    {
+      "group": "PHYSICS",
+      "id": "landing-and-support",
+      "status": "FAIL",
+      "reason": "Ordinary spawn-floor jump landings and the 60-second neutral support interval work, but the reachable matching red pool does not support Fireboy. In red-safe-pickup-revisit he enters the first red pool, appears at x230,y924 with his body extending below the visible floor/backing, and disappears below the viewport by the next sample without Game Over. The frozen reference explicitly requires solid lower-half pool backing and supported matching-character traversal. This is an observed support contradiction, not failure to follow the timed route or an assumed pickup precondition.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/red-safe-pickup-revisit/screenshots/0000-startup.png",
+        "openrouter/assessment/red-safe-pickup-revisit/screenshots/0002-fire-traverse-red-1.png",
+        "openrouter/assessment/red-safe-pickup-revisit/screenshots/0003-fire-traverse-red-2.png",
+        "openrouter/pixel-measurements.json",
+        "openrouter/hazards-pickups-lower-review.png",
+        "openrouter/assessment/neutral-real-60s/screenshots/0013-final.png"
+      ]
+    },
+    {
+      "group": "PHYSICS",
+      "id": "solid-boundaries",
+      "status": "FAIL",
+      "reason": "The first red pool is reachable without a jump and its mandated solid backing is crossed: Fireboy descends through the rendered floor to y924 and then entirely out of the viewport instead of being blocked by the pool lower half at y912..928. Thus the floor conjunct is contradicted even though upper walls and ceiling were not all reached. This finding concerns unambiguous bottom red backing, not the conflicting upper-green pool metadata.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/red-safe-pickup-revisit/screenshots/0002-fire-traverse-red-1.png",
+        "openrouter/assessment/red-safe-pickup-revisit/screenshots/0003-fire-traverse-red-2.png",
+        "openrouter/pixel-measurements.json",
+        "openrouter/hazards-pickups-lower-review.png"
+      ]
+    },
+    {
+      "group": "PHYSICS",
+      "id": "moving-surface-contact",
+      "status": "NOT_REACHED",
+      "reason": "The first- and second-hanging scenarios are already in Game Over with no actors on either board at their load/settle segments. Rendered boards and barrier movement alone do not establish actor contact with a moving or tilted supporting surface. No moving/tilted collision agreement verdict can be made from these missed encounters.",
+      "evidence": [
+        "openrouter/assessment/first-hanging-contact/capture.json",
+        "openrouter/assessment/first-hanging-contact/screenshots/0076-first-right-load-settle-4.png",
+        "openrouter/assessment/second-hanging-contact/capture.json",
+        "openrouter/assessment/second-hanging-contact/screenshots/0087-second-right-load-settle-4.png"
+      ]
+    },
+    {
+      "group": "RESET",
+      "id": "R-spawns",
+      "status": "FAIL",
+      "reason": "After actual displacement and Watergirl death in real-controls, R restarts the timer and removes Game Over but leaves Fireboy at the displaced x97 position and Watergirl absent rather than restoring both startup positions. The full-route R reset independently ends with both actors absent. Resetting HUD text is not restoration of both spawns.",
+      "evidence": [
+        "openrouter/assessment/real-controls/capture.json",
+        "openrouter/assessment/real-controls/screenshots/0000-startup.png",
+        "openrouter/assessment/real-controls/screenshots/0011-release-fire-retain-water-0.png",
+        "openrouter/assessment/real-controls/screenshots/0019-reset-before-reverse-3.png",
+        "openrouter/assessment/reset-after-route-R/capture.json",
+        "openrouter/assessment/reset-after-route-R/screenshots/0132-final.png"
+      ]
+    },
+    {
+      "group": "RESET",
+      "id": "button-spawns",
+      "status": "FAIL",
+      "reason": "The visible Restart button is actually clicked after Game Over in real-reset-held. It restarts the timer and removes loss text, but Fireboy remains at the old x129 location and Watergirl stays absent through button-held and subsequent released-key samples. The final full-route button reset also leaves both actors absent, not at their startup spawns.",
+      "evidence": [
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/real-reset-held/screenshots/0012-both-displaced-again-1.png",
+        "openrouter/assessment/real-reset-held/screenshots/0013-button-held-0.png",
+        "openrouter/assessment/real-reset-held/screenshots/0016-button-held-3.png",
+        "openrouter/assessment/reset-after-route-button/capture.json",
+        "openrouter/assessment/reset-after-route-button/screenshots/0132-final.png"
+      ]
+    },
+    {
+      "group": "RESET",
+      "id": "diamonds-counters",
+      "status": "NOT_REACHED",
+      "reason": "The pickup/revisit and terminal-route captures retain 0/8 for both actors before reset. No collected diamond or changed progress counter is established, so an unchanged zero counter after reset cannot prove collectible restoration.",
+      "evidence": [
+        "openrouter/assessment/red-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/blue-safe-pickup-revisit/capture.json",
+        "openrouter/assessment/reset-after-route-R/capture.json",
+        "openrouter/assessment/reset-after-route-button/capture.json"
+      ]
+    },
+    {
+      "group": "RESET",
+      "id": "timer",
+      "status": "PASS",
+      "reason": "The elapsed HUD timer visibly drops from a positive value to approximately 0.1 seconds after both R and button resets and advances again afterward. This independently verifies timer restart even though actor restoration fails.",
+      "evidence": [
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/real-reset-held/screenshots/0002-both-displaced-1.png",
+        "openrouter/assessment/real-reset-held/screenshots/0003-R-held-0.png",
+        "openrouter/assessment/real-reset-held/screenshots/0006-R-held-3.png",
+        "openrouter/assessment/real-reset-held/screenshots/0012-both-displaced-again-1.png",
+        "openrouter/assessment/real-reset-held/screenshots/0013-button-held-0.png",
+        "openrouter/assessment/real-reset-held/screenshots/0016-button-held-3.png"
+      ]
+    },
+    {
+      "group": "RESET",
+      "id": "plates-barrier-bridge",
+      "status": "NOT_REACHED",
+      "reason": "Although the barrier drawing changes during lower-floor movement, actual occupation of the authored upper plates and displacement of the bridge were not established before reset. The full-route attempts are in Game Over before those encounters. The occupied-plates plus barrier/bridge reset conjunction cannot be credited from a reset of an unoccupied drawing.",
+      "evidence": [
+        "openrouter/assessment/real-controls/screenshots/0006-water-right-1.png",
+        "openrouter/assessment/reset-after-route-R/capture.json",
+        "openrouter/assessment/reset-after-route-button/capture.json",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-3.json"
+      ]
+    },
+    {
+      "group": "RESET",
+      "id": "hanging-state",
+      "status": "NOT_REACHED",
+      "reason": "Neither hanging board was actually loaded or tilted by an actor in the saved encounters. The scheduled first/second-board reset segments occur after earlier Game Over with no supporting contact. Returning unchanged unloaded drawings cannot verify restoration of both loaded platforms or their motion.",
+      "evidence": [
+        "openrouter/assessment/first-hanging-contact/capture.json",
+        "openrouter/assessment/first-hanging-contact/screenshots/0076-first-right-load-settle-4.png",
+        "openrouter/assessment/second-hanging-contact/capture.json",
+        "openrouter/assessment/second-hanging-contact/screenshots/0087-second-right-load-settle-4.png"
+      ]
+    },
+    {
+      "group": "RESET",
+      "id": "motion-state",
+      "status": "NOT_REACHED",
+      "reason": "The native airborne-before-R segment occurs after the failed post-death button restart and does not actually produce an airborne actor; the following reset therefore has no observed vertical-velocity/grounding precondition. Earlier horizontal movement during held R is directly scored as stale held-input leakage, but does not independently isolate saved velocity from still-active controls. Full motion-state restoration remains unverified.",
+      "evidence": [
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/real-reset-held/screenshots/0022-airborne-before-R-1.png",
+        "openrouter/assessment/real-reset-held/screenshots/0026-R-airborne-3.png"
+      ]
+    },
+    {
+      "group": "RESET",
+      "id": "after-death",
+      "status": "FAIL",
+      "reason": "Actual Game Over is seen in the native control and reset-held trials. Both reset methods clear its text and restart the timer, but do not restore a playable pair: Watergirl remains absent, Fireboy stays frozen, and subsequent new right/d or jump inputs do not move him. The full-route reset captures likewise end without actors. A fresh playable attempt after loss is therefore contradicted.",
+      "evidence": [
+        "openrouter/assessment/real-controls/screenshots/0011-release-fire-retain-water-0.png",
+        "openrouter/assessment/real-controls/screenshots/0019-reset-before-reverse-3.png",
+        "openrouter/assessment/real-controls/screenshots/0023-release-water-retain-fire-1.png",
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/real-reset-held/screenshots/0006-R-held-3.png",
+        "openrouter/assessment/real-reset-held/screenshots/0016-button-held-3.png",
+        "openrouter/assessment/real-reset-held/screenshots/0040-new-input-after-reset-1.png",
+        "openrouter/assessment/real-reset-held/screenshots/0045-final.png"
+      ]
+    },
+    {
+      "group": "RESET",
+      "id": "after-win",
+      "status": "NOT_REACHED",
+      "reason": "No victory is observed. The terminal route scenarios show Game Over and both counters 0/8 before the named terminal reset, not a win. Their reset results cannot establish or refute fresh play after victory.",
+      "evidence": [
+        "openrouter/assessment/reset-after-route-R/capture.json",
+        "openrouter/assessment/reset-after-route-button/capture.json",
+        "openrouter/public-review-3.png",
+        "openrouter/public-review-3.json"
+      ]
+    },
+    {
+      "group": "RESET",
+      "id": "held-input",
+      "status": "FAIL",
+      "reason": "Native real-reset-held records ArrowRight and d physically held across R with no intervening release or new directional keydown. After the timer restarts, both actors continue moving right between R-held-0 and R-held-1, then Watergirl disappears with Game Over during the same hold. R thus fails to clear stale held controls. The later button-held phase occurs after loss and is not independently diagnostic, but the mandatory both-methods conjunction already fails on R.",
+      "evidence": [
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/real-reset-held/screenshots/0003-R-held-0.png",
+        "openrouter/assessment/real-reset-held/screenshots/0004-R-held-1.png",
+        "openrouter/assessment/real-reset-held/screenshots/0006-R-held-3.png"
+      ]
+    },
+    {
+      "group": "RESET",
+      "id": "callback-isolation",
+      "status": "NOT_REACHED",
+      "reason": "No actual pending death/win/platform transition callback window is established by the visible evidence. The nominal terminal route ends in an old Game Over rather than newly triggered victory; airborne and board-loading preconditions also are not reached. An unchanged already-broken reset view cannot prove callback isolation, and no specific previous-attempt callback mutation is inferred.",
+      "evidence": [
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/reset-after-route-R/capture.json",
+        "openrouter/assessment/reset-after-route-button/capture.json",
+        "openrouter/assessment/first-hanging-contact/capture.json",
+        "openrouter/assessment/second-hanging-contact/capture.json"
+      ]
+    },
+    {
+      "group": "RESET",
+      "id": "repeated-reset",
+      "status": "FAIL",
+      "reason": "The native rapid-R-1 then rapid-button-2 sequence executes, with fresh timer values, but its end state is not a fresh playable level: Fireboy remains at the displaced x129 location, Watergirl remains absent, and the new-input-after-reset segment does not move Fireboy. Subsequent idle samples retain the same broken state. This contradicts the required stable fresh level, without claiming a new callback or acceleration defect.",
+      "evidence": [
+        "openrouter/assessment/real-reset-held/capture.json",
+        "openrouter/assessment/real-reset-held/screenshots/0034-rapid-R-1-3.png",
+        "openrouter/assessment/real-reset-held/screenshots/0038-rapid-button-2-3.png",
+        "openrouter/assessment/real-reset-held/screenshots/0040-new-input-after-reset-1.png",
+        "openrouter/assessment/real-reset-held/screenshots/0045-final.png"
+      ]
+    },
+    {
+      "group": "NO PLAYBACK",
+      "id": "no-auto-traversal",
+      "status": "PASS",
+      "reason": "The fresh native neutral-real-60s capture records no input for 60000 requested real-time milliseconds, with host timestamps spanning about 60.4 seconds between startup and the end of the neutral interval. Both actors remain supported at the same spawn-floor locations in startup, intermediate, and final screenshots, and counters remain 0/8. No route traversal occurs in the observed interval.",
+      "evidence": [
+        "openrouter/assessment/neutral-real-60s/capture.json",
+        "openrouter/assessment/neutral-real-60s/screenshots/0000-startup.png",
+        "openrouter/assessment/neutral-real-60s/screenshots/0006-neutral-no-input-5.png",
+        "openrouter/assessment/neutral-real-60s/screenshots/0010-neutral-no-input-9.png",
+        "openrouter/assessment/neutral-real-60s/screenshots/0013-final.png"
+      ]
+    },
+    {
+      "group": "NO PLAYBACK",
+      "id": "no-auto-victory",
+      "status": "PASS",
+      "reason": "The same fresh native no-input interval lasts at least 60 actual seconds. Its recorded HUD states and inspected screenshots show only the advancing timer, both counters at 0/8, and both actors on the spawn floor; no victory presentation occurs.",
+      "evidence": [
+        "openrouter/assessment/neutral-real-60s/capture.json",
+        "openrouter/assessment/neutral-real-60s/screenshots/0000-startup.png",
+        "openrouter/assessment/neutral-real-60s/screenshots/0006-neutral-no-input-5.png",
+        "openrouter/assessment/neutral-real-60s/screenshots/0010-neutral-no-input-9.png",
+        "openrouter/assessment/neutral-real-60s/screenshots/0013-final.png"
+      ]
+    }
+  ],
+  "notes": [
+    "Source-blind review of all 23 assigned frozen IDs only. No generated HTML, raw model response, original engine, candidate state, or implementation source was inspected. No generation, browser, gameplay, test, build, lint, or formatter was rerun.",
+    "Local verified score / coverage: CONTROLS 55/100 and 55%; PHYSICS 25/100 and 75%; RESET 5/100 and 45%; NO PLAYBACK 100/100 and 100%. Across these four groups: 7 PASS, 7 FAIL, 9 NOT_REACHED, 0 EVALUATOR_ERROR. Their weighted contribution is 10.8 verified overall points and 19.2 coverage points out of their combined 30-point overall weight; possible contribution interval [10.8,21.6].",
+    "Important contamination: real-controls loses during its first independent-release direction. The subsequent R does not restore play, so reverse release and Shift/uppercase segments are NOT_REACHED, not binding failures. Similarly real-reset-held loses during its first R-held period, so its later named airborne segment is not actually airborne.",
+    "Observed defect families: Fireboy falls through the first matching red-pool backing; R retains stale held rightward inputs; after loss both restart methods reset HUD text/timer but leave missing/frozen actors and no fresh playable attempt. Repeated reset retains the broken attempt. Separate criteria are scored independently per the frozen rubric, not as additional independent root causes.",
+    "Unknowns include Caps Lock/uppercase live controls, the second independent-release direction, moving/tilted support contact, actual collected-diamond restoration, occupied plate/bridge reset, loaded hanging reset, airborne motion reset, post-win reset, and a demonstrated pending-callback window. Timed route divergence alone was never scored FAIL.",
+    "Capture metadata for the reviewed native and encounter scenarios reports no candidate/evaluator JS events, no private-state reads or candidate mutations, and unchanged source hashes. These observations do not imply source correctness.",
+    "The parent reported conflicting shared upper-green pool coordinates. This review does not penalize that ambiguous geometry. Bottom red-pool backing, controls, native reset, and neutral evidence are unaffected.",
+    "Review tooling could not preview WebM because ffprobe was unavailable; an attempted offline contact-sheet command could not import PIL and produced no grids. Decisions use saved raw PNG screenshots, capture.json chronology, and existing mapped grids/pixel measurements instead; no video playback is claimed."
+  ]
+}

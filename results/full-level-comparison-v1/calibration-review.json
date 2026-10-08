@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "reference": {
+    "capture": "calibration/reference-public-walkthrough/capture.json",
+    "start": "calibration/reference-public-walkthrough/screenshots/0000-startup.png",
+    "finish": "calibration/reference-public-walkthrough/screenshots/0126-final.png",
+    "status": "PASS",
+    "evidence": "Actual upstream reference completed public route under the new capture driver; final rendered reward panel shows matching exits and diamonds checked, time target missed. No evaluator errors; source unchanged."
+  },
+  "compactCalibration": {
+    "separateFromComparison": true,
+    "artifact": "../../full-level-development/2026-10-06T05-19-53-917Z/calibration-summary.json",
+    "scope": "Previously exercised57 known-working and targeted broken fixture scenarios for hanging surfaces, hazards, exits and reset. These are compact mechanical fixtures, not a full-level independent replica or new candidate attempts."
+  },
+  "limits": [
+    "Working full-reference route calibration is new; compact defect calibration is retained prior evaluator evidence.",
+    "Generic source-blind visual scoring is manual review, not a validated autonomous vision grader.",
+    "Timed public path divergence alone cannot prove a candidate route impossible; downstream encounter criteria remain NOT_REACHED."
+  ]
+}

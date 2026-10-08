@@ -1,0 +1,52 @@
+{
+  "id": "cerebras",
+  "provider": "cerebras",
+  "modelRequested": "gpt-oss-120b",
+  "modelReturned": "gpt-oss-120b",
+  "servingProvider": "Cerebras",
+  "servingProviderAttribution": "direct_endpoint",
+  "endpoint": "https://api.cerebras.ai/v1/chat/completions",
+  "settings": {
+    "temperature": 1,
+    "maxOutputTokens": 16384,
+    "timeoutMs": 600000
+  },
+  "payloadSha256": "7cc8b61abf62c4d70bfa5ebd934e374d1b927b52ed76dfe8cac5783f93540a26",
+  "requestSha256": "d7491a1a45f09f733b932b41820a88d5b0f26efaf01643b4020932d47bb2b5dc",
+  "manifestSha256": "e2c6653954697f223e29a9c33926d936f27d2d24a9c94a7949f26123fe03a931",
+  "protocolSha256": "ca9a316e741cb20fa15349f0aa4d364160f30a631fb714a91e983071d65fe9ad",
+  "publicFiles": [
+    "prompt.txt",
+    "reference-evidence.json",
+    "walkthrough.json",
+    "walkthrough-program.mjs",
+    "rubric.json"
+  ],
+  "requestCount": 1,
+  "usage": {
+    "total_tokens": 18165,
+    "completion_tokens": 8025,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0,
+      "reasoning_tokens": 985
+    },
+    "prompt_tokens": 10140,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "reportedCost": null,
+  "httpStatus": 200,
+  "finishReason": "stop",
+  "durationMs": 4057.6566250000033,
+  "status": "submitted",
+  "outputContract": {
+    "status": "VALID",
+    "reasons": []
+  },
+  "startedAt": "2026-10-06T06:55:14.020Z",
+  "reportedProvider": null,
+  "htmlSha256": "1df909bebdb27687d740116b153ad832007e38b207e9e2c7d2cde7d458069baf",
+  "finishedAt": "2026-10-06T06:55:18.083Z"
+}

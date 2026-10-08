@@ -1,0 +1,21 @@
+{
+  "httpStatus": 200,
+  "modelRequested": "ministral-8b-latest",
+  "modelReturned": "ministral-8b-latest",
+  "startedAt": "2026-10-05T18:57:04.057Z",
+  "finishedAt": "2026-10-05T18:58:46.826Z",
+  "elapsedMs": 102769,
+  "finishReason": "stop",
+  "usage": {
+    "prompt_tokens": 4599,
+    "total_tokens": 11524,
+    "completion_tokens": 6925,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "service_tier": "standard"
+  },
+  "requests": 1,
+  "assistantRepairs": 0,
+  "htmlSha256": "e14ae2f0a0e0903ff2b29be369e9e122ef6b82af283d7c83916ddfbe251f1445"
+}
